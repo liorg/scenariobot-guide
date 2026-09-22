@@ -107,6 +107,16 @@ The test send works before publishing, and **any slot you leave empty is filled
 from the template's own examples** — so you can fire one off without typing
 anything but the recipient.
 
+## Sending one by hand
+
+You do not need a scenario to send a template. In the chat view
+([Chapter 12](12-chat-view.md)) the **📋** button next to the send arrow opens a
+picker of this phone's approved, published templates, fills the parameters from
+the examples, and sends.
+
+That is the way to **reopen a conversation** with someone who hasn't written to
+you in over 24 hours.
+
 ## Using one in a scenario
 
 In the designer, an **Input** step has a **template** mode. It lists the

@@ -92,6 +92,27 @@ doesn't compile, or the whole-scenario compile.
 
 → [Chapter 05](05-scenarios.md#saving-vs-publishing)
 
+## My message was rejected, or never arrived
+
+**Cause:** the 24-hour window is closed. WhatsApp only allows free text within
+24 hours of the contact's last incoming message.
+
+**Fix:** send an approved template instead — the **📋** button beside the send
+arrow. The coloured strip at the top of the chat tells you which state you are
+in.
+
+→ [Chapter 12](12-chat-view.md#the-24-hour-window)
+
+## The chat says "no incoming message yet" but they have written to me
+
+**Cause:** the window is judged from the messages currently on screen. If a long
+run of outgoing messages follows their last reply, it may not be loaded yet.
+
+**Fix:** scroll up in the conversation. The strip corrects itself once the
+inbound message loads.
+
+→ [Chapter 12](12-chat-view.md#the-24-hour-window)
+
 ## A template has been pending for a long time
 
 **Cause:** approval is automatic and normally takes about two minutes. If it
