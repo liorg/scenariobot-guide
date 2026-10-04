@@ -3,9 +3,9 @@
 **How to get there:** **Top bar → Phones**. This is the screen you land on after
 signing in.
 
-**URL:** `/phones`
+**URL:** [grossman.bot/phones](https://grossman.bot/phones)
 
-`/phones/new` to add one · `/phones/<phone>/reconnect` to reconnect
+Also [grossman.bot/phones/new](https://grossman.bot/phones/new) to add one, and `grossman.bot/phones/<phone>/reconnect` to reconnect.
 
 ## The phone list
 

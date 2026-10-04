@@ -3,7 +3,9 @@
 **How to get there:** **Top bar → Phones → a phone → 👥 Contacts → click a
 contact.** If a call is running, a live panel sits at the top of that screen.
 
-**URL:** `/phones/<phone>/contacts/<contact>/calls`
+**URL:** `grossman.bot/phones/<phone>/contacts/<contact>/calls`
+
+The parts in `<angle brackets>` are ids filled in as you click, so this one cannot be opened by typing it.
 
 ## What the live panel shows
 

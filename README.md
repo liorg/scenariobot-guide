@@ -8,7 +8,8 @@ single chapter without needing the rest.
 
 **Every chapter opens with a "How to get there" line and the screen's URL.** If
 someone asks "where do I do X", those two lines are the answer — one to click
-through, one to paste into the address bar.
+through, one to open directly. Where the screen doesn't depend on a particular
+phone or contact, the URL is a live link you can follow from here.
 
 ## Chapters
 
@@ -84,9 +85,14 @@ The product is a single web app, but **each screen has its own URL**. That means
 /privacy                              privacy policy
 ```
 
+All of these sit under **https://grossman.bot** — so the phone list in full is
+<https://grossman.bot/phones>.
+
 `<phone>`, `<contact>`, `<scenario>`, `<call>`, `<t>` and `<schedule>` are the
 internal ids. You never need to type one — they appear in the address bar as
-you click, and that is what makes a screen linkable.
+you click, and that is what makes a screen linkable. An address containing one
+of these can be copied out of the address bar and shared, but not typed from
+scratch.
 
 An address that doesn't exist sends you back to the phone list rather than
 showing an error.
@@ -95,10 +101,19 @@ showing an error.
 
 | Bookmark | Goes to |
 |---|---|
-| `/phones` | the home screen |
-| `/scheduling` | your schedules |
-| `/settings` | your profile |
-| `/guide/16-troubleshooting` | this guide's troubleshooting chapter |
+| [grossman.bot/phones](https://grossman.bot/phones) | the home screen |
+| [grossman.bot/phones/new](https://grossman.bot/phones/new) | add a phone |
+| [grossman.bot/phones/templates](https://grossman.bot/phones/templates) | templates |
+| [grossman.bot/scheduling](https://grossman.bot/scheduling) | your schedules |
+| [grossman.bot/executions](https://grossman.bot/executions) | parallel runs |
+| [grossman.bot/api](https://grossman.bot/api) | the API console |
+| [grossman.bot/settings](https://grossman.bot/settings) | your profile |
+| [grossman.bot/guide/16-troubleshooting](https://grossman.bot/guide/16-troubleshooting) | this guide's troubleshooting chapter |
+
+The last one is worth noting: **`grossman.bot/guide/<chapter>` opens this
+guide**, so any chapter can be linked from inside the product or from a
+message. The chapter name is the file name without its number — for example
+[grossman.bot/guide/08-templates](https://grossman.bot/guide/08-templates).
 
 The **designer** and **playback** still open as full-screen views over the
 screen beneath, and closing one returns you where you were — but they now have
@@ -111,7 +126,8 @@ matches the browser's own back button.
 ## Conventions in this guide
 
 - **Bold** with arrows is a click path: **Phones → a phone → 👥 Contacts**.
-- **`URL:`** under it is the same screen's address, with `<phone>`, `<contact>`
-  and similar standing for an id.
+- **`URL:`** under it is the same screen's address. It is a **live link** when
+  the screen doesn't depend on a particular record, and plain text containing
+  `<phone>`, `<contact>` or similar when it does.
 - Tab names include their icon, because that's how they appear on screen.
 - Where a term has a precise meaning, it's in [the glossary](17-glossary.md).

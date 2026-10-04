@@ -3,7 +3,9 @@
 **How to get there:** **Top bar → Phones → a phone → 👥 Contacts → click a
 contact.** The list below the live panel is every past call, newest first.
 
-**URL:** `/phones/<phone>/contacts/<contact>/calls/<call>`
+**URL:** `grossman.bot/phones/<phone>/contacts/<contact>/calls/<call>`
+
+The parts in `<angle brackets>` are ids filled in as you click, so this one cannot be opened by typing it.
 
 ## The list
 

@@ -3,7 +3,9 @@
 **How to get there:** **Top bar → Phones → a phone → 🤖 Scenarios → open a
 scenario.** The components are the two side columns of the designer.
 
-**URL:** `/phones/<phone>/scenarios/<scenario>/design`
+**URL:** `grossman.bot/phones/<phone>/scenarios/<scenario>/design`
+
+The parts in `<angle brackets>` are ids filled in as you click, so this one cannot be opened by typing it.
 
 ## EXPECT and SEND — which is which
 

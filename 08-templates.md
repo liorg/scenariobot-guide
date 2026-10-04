@@ -2,9 +2,9 @@
 
 **How to get there:** **Top bar → Phones → Templates tab.**
 
-**URL:** `/phones/templates`
+**URL:** [grossman.bot/phones/templates](https://grossman.bot/phones/templates)
 
-`/phones/templates/<phone>` for one phone · `…/new` to create · `…/<template>/edit` · `…/<template>/test`
+One phone: `grossman.bot/phones/templates/<phone>` · create: `…/new` · edit: `…/<template>/edit` · test: `…/<template>/test`.
 
 ## What a template is
 

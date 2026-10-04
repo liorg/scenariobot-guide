@@ -2,9 +2,9 @@
 
 **How to get there:** **Top bar → Schedules.**
 
-**URL:** `/scheduling`
+**URL:** [grossman.bot/scheduling](https://grossman.bot/scheduling)
 
-`/scheduling/new` to create · `/scheduling/<schedule>` for one
+Also [grossman.bot/scheduling/new](https://grossman.bot/scheduling/new) to create one, and `grossman.bot/scheduling/<schedule>` for a single schedule.
 
 ## What a schedule is
 

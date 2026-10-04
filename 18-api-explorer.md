@@ -3,7 +3,7 @@
 **How to get there:** **Top bar → API** (it may sit beside Executions
 depending on your build).
 
-**URL:** `/api`
+**URL:** [grossman.bot/api](https://grossman.bot/api)
 
 ## What it is
 

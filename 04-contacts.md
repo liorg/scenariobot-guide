@@ -2,9 +2,11 @@
 
 **How to get there:** **Top bar → Phones → click a phone → 👥 Contacts tab**.
 
-**URL:** `/phones/<phone>/contacts`
+**URL:** `grossman.bot/phones/<phone>/contacts`
 
-`/phones/<phone>/contacts/new` opens the wizard · `…/<contact>/edit` edits one
+The parts in `<angle brackets>` are ids filled in as you click, so this one cannot be opened by typing it.
+
+`…/contacts/new` opens the wizard · `…/contacts/<contact>/edit` edits one.
 
 ## Why this isn't just a form
 

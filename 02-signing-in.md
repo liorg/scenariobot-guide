@@ -3,7 +3,7 @@
 **How to get there:** open the site. If you're not signed in you land here
 automatically.
 
-**URL:** `/`
+**URL:** [grossman.bot/](https://grossman.bot/)
 
 ## First screen
 

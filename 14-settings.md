@@ -3,7 +3,7 @@
 **How to get there:** the **⚙️** button in the top bar, near your avatar.
 Settings opens as a full page; the back arrow returns you.
 
-**URL:** `/settings`
+**URL:** [grossman.bot/settings](https://grossman.bot/settings)
 
 ## Settings
 

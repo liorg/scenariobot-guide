@@ -2,7 +2,7 @@
 
 **How to get there:** **Top bar → Executions.**
 
-**URL:** `/executions`
+**URL:** [grossman.bot/executions](https://grossman.bot/executions)
 
 ## What it is
 

@@ -3,9 +3,11 @@
 **How to get there:** **Top bar → Phones → a phone → 📞 Calls tab**, then click
 a contact.
 
-**URL:** `/phones/<phone>/calls/<contact>`
+**URL:** `grossman.bot/phones/<phone>/calls/<contact>`
 
-`/phones/<phone>/contacts/<contact>/chat` opens the same conversation from the Contacts tab
+The parts in `<angle brackets>` are ids filled in as you click, so this one cannot be opened by typing it.
+
+`…/contacts/<contact>/chat` opens the same conversation from the Contacts tab.
 
 ## What it is
 

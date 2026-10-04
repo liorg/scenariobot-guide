@@ -3,10 +3,9 @@
 **How to get there:** **Top bar → Phones → click a phone → 🤖 Scenarios tab**.
 Create a new one, or click an existing one to open the designer.
 
-**URL:** `/phones/<phone>/scenarios`
+**URL:** `grossman.bot/phones/<phone>/scenarios`
 
-The designer opens **full screen** and covers everything. Closing it returns you
-to the scenarios tab.
+The parts in `<angle brackets>` are ids filled in as you click, so this one cannot be opened by typing it.
 
 ## The three columns
 
