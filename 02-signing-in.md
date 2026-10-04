@@ -3,6 +3,8 @@
 **How to get there:** open the site. If you're not signed in you land here
 automatically.
 
+**URL:** `/`
+
 ## First screen
 
 Signed out, you see the landing page with a **Log in** button. Pressing it opens
@@ -25,6 +27,12 @@ link opens a screen where you set a new one and are then signed in.
 ## Signing out
 
 **Logout** is at the far end of the top bar, next to your avatar.
+
+## After signing in
+
+You land on `/phones`. From there every screen has its own address — see
+[the map](README.md#every-screen-has-an-address). If you open a saved link
+while signed out, you are asked to sign in and then taken to it.
 
 ## Privacy policy
 

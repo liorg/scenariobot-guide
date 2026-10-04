@@ -2,6 +2,10 @@
 
 **How to get there:** **Top bar → Phones → click a phone → 👥 Contacts tab**.
 
+**URL:** `/phones/<phone>/contacts`
+
+`/phones/<phone>/contacts/new` opens the wizard · `…/<contact>/edit` edits one
+
 ## Why this isn't just a form
 
 Adding a contact is a **handshake**, not a text field. ScenarioBot has to be

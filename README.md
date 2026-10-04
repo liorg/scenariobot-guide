@@ -6,9 +6,9 @@ it. [Chapter 01](01-what-it-does.md) sets out the distinction.
 Written for end users, and structured so a chat assistant can answer from a
 single chapter without needing the rest.
 
-**Every chapter opens with a "How to get there" line** giving the exact click
-path from the top bar. If someone asks "where do I do X", that line is the
-answer.
+**Every chapter opens with a "How to get there" line and the screen's URL.** If
+someone asks "where do I do X", those two lines are the answer — one to click
+through, one to paste into the address bar.
 
 ## Chapters
 
@@ -34,43 +34,84 @@ answer.
 | 18 | [API Explorer](18-api-explorer.md) | the built-in API console (developers and support) |
 | 19 | [API reference](19-api-reference.md) | every endpoint the API offers, and what it's for |
 
-## Navigation map
+## Every screen has an address
 
-Everything in the product hangs off one top bar with three buttons.
+The product is a single web app, but **each screen has its own URL**. That means:
+
+- **The back and forward buttons work** the way you expect.
+- **Any screen can be bookmarked**, including a specific contact, a specific
+  scenario or one finished call.
+- **A URL can be shared.** Sending a colleague the link to a failed call opens
+  that call for them — provided they have access to that phone.
+- **Refreshing keeps you where you are**, instead of dropping you back to the
+  phone list.
+
+### The map
 
 ```
-Sign in
-  │
-  └── Top bar:  [ Phones ]  [ Schedules ]  [ Executions ]     🔔  ⚙️  Logout
-        │
-        ├── Phones  ........................... the default screen
-        │     ├── + Add Phone → phone wizard (3 steps)
-        │     └── click a phone card → Phone Detail
-        │           ├── 📞 Calls tab ......... chat view + call history
-        │           │     └── click a contact → that contact's calls
-        │           │           └── click a call → flow diagram + events
-        │           ├── 👥 Contacts tab ...... contact list + contact wizard
-        │           └── 🤖 Scenarios tab ..... scenario list
-        │                 ├── open a scenario → Designer (full screen)
-        │                 └── playback → Playback chat (full screen)
-        │
-        ├── Schedules ......................... schedule list + per-schedule log
-        ├── Executions ........................ parallel runs
-        └── API ............................... built-in API console
+/                                     landing / sign in
+/phones                               the phone list — the default screen
+/phones/new                           add-phone wizard
+/phones/<phone>/reconnect             reconnect an existing number
 
-  🔔  notifications        ⚙️  settings (full page)
-  footer → privacy policy
+/phones/<phone>/calls                 📞 Calls tab — conversation list
+/phones/<phone>/calls/<contact>       one conversation
+/phones/<phone>/contacts              👥 Contacts tab
+/phones/<phone>/contacts/new          contact wizard — new contact
+/phones/<phone>/contacts/<c>/wizard   contact wizard — finish an existing one
+/phones/<phone>/contacts/<c>/edit     edit a contact
+/phones/<phone>/contacts/<c>/chat     the full conversation
+/phones/<phone>/contacts/<c>/calls    that contact's scenario calls
+/phones/<phone>/contacts/<c>/calls/<call>   one call — flow diagram and events
+/phones/<phone>/scenarios             🤖 Scenarios tab
+/phones/<phone>/scenarios/<s>/design  the designer
+/phones/<phone>/scenarios/<s>/playback  playback
+
+/phones/templates                     Templates tab
+/phones/templates/<phone>             one phone's templates
+/phones/templates/<phone>/new         create a template
+/phones/templates/<phone>/<t>/edit    edit one
+/phones/templates/<phone>/<t>/test    test-send one
+
+/scheduling                           schedules
+/scheduling/new                       create a schedule
+/scheduling/<schedule>                one schedule and its calls
+
+/executions                           parallel runs
+/api                                  the API console
+/settings                             account settings
+/guide/<chapter>                      jumps to this guide
+/privacy                              privacy policy
 ```
 
-Two things are **full-screen overlays**, not tabs: the **Designer** and
-**Playback**. They cover the whole window and return you exactly where you were
-when you close them.
+`<phone>`, `<contact>`, `<scenario>`, `<call>`, `<t>` and `<schedule>` are the
+internal ids. You never need to type one — they appear in the address bar as
+you click, and that is what makes a screen linkable.
 
-The back arrow (top-left of any inner screen) always goes up one level. There
-are no browser-style URLs to bookmark for inner screens.
+An address that doesn't exist sends you back to the phone list rather than
+showing an error.
+
+### Quick links worth keeping
+
+| Bookmark | Goes to |
+|---|---|
+| `/phones` | the home screen |
+| `/scheduling` | your schedules |
+| `/settings` | your profile |
+| `/guide/16-troubleshooting` | this guide's troubleshooting chapter |
+
+The **designer** and **playback** still open as full-screen views over the
+screen beneath, and closing one returns you where you were — but they now have
+their own addresses too, so a scenario you are working on can be bookmarked
+mid-edit.
+
+The back arrow (top-left of any inner screen) always goes up one level, and
+matches the browser's own back button.
 
 ## Conventions in this guide
 
 - **Bold** with arrows is a click path: **Phones → a phone → 👥 Contacts**.
+- **`URL:`** under it is the same screen's address, with `<phone>`, `<contact>`
+  and similar standing for an id.
 - Tab names include their icon, because that's how they appear on screen.
 - Where a term has a precise meaning, it's in [the glossary](17-glossary.md).

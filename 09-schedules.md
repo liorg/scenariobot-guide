@@ -2,6 +2,10 @@
 
 **How to get there:** **Top bar → Schedules.**
 
+**URL:** `/scheduling`
+
+`/scheduling/new` to create · `/scheduling/<schedule>` for one
+
 ## What a schedule is
 
 A rule that fires a scenario at chosen times, so you don't have to start each

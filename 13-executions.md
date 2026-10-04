@@ -2,6 +2,8 @@
 
 **How to get there:** **Top bar → Executions.**
 
+**URL:** `/executions`
+
 ## What it is
 
 Running one scenario against **many phones at once**, rather than one call at a

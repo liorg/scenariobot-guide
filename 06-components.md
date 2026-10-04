@@ -3,6 +3,8 @@
 **How to get there:** **Top bar → Phones → a phone → 🤖 Scenarios → open a
 scenario.** The components are the two side columns of the designer.
 
+**URL:** `/phones/<phone>/scenarios/<scenario>/design`
+
 ## EXPECT and SEND — which is which
 
 This is the thing people get backwards, so it's worth stating plainly:

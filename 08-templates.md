@@ -2,6 +2,10 @@
 
 **How to get there:** **Top bar → Phones → Templates tab.**
 
+**URL:** `/phones/templates`
+
+`/phones/templates/<phone>` for one phone · `…/new` to create · `…/<template>/edit` · `…/<template>/test`
+
 ## What a template is
 
 A **pre-approved WhatsApp message format** with numbered placeholders:

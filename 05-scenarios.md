@@ -3,6 +3,8 @@
 **How to get there:** **Top bar → Phones → click a phone → 🤖 Scenarios tab**.
 Create a new one, or click an existing one to open the designer.
 
+**URL:** `/phones/<phone>/scenarios`
+
 The designer opens **full screen** and covers everything. Closing it returns you
 to the scenarios tab.
 

@@ -3,6 +3,8 @@
 **How to get there:** **Top bar → Phones → a phone → 👥 Contacts → click a
 contact.** If a call is running, a live panel sits at the top of that screen.
 
+**URL:** `/phones/<phone>/contacts/<contact>/calls`
+
 ## What the live panel shows
 
 - the **scenario name**, and whether the call is running or still pending

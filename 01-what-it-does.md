@@ -51,7 +51,10 @@ check-ins, intake questionnaires, and monitoring that another WhatsApp bot still
 answers correctly.
 
 The interface is available in English, Hebrew, Russian and Arabic, and flips to
-right-to-left for Hebrew and Arabic.
+right-to-left for Hebrew and Arabic. It comes in **light and dark**
+([Chapter 14](14-settings.md#light-and-dark-mode)), and **every screen has its
+own address**, so anything you are looking at can be bookmarked or sent to a
+colleague ([the map](README.md#every-screen-has-an-address)).
 
 ## The six things you work with
 

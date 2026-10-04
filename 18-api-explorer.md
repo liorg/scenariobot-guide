@@ -3,6 +3,8 @@
 **How to get there:** **Top bar → API** (it may sit beside Executions
 depending on your build).
 
+**URL:** `/api`
+
 ## What it is
 
 A built-in console for the ScenarioBot API — the same idea as Swagger UI, inside

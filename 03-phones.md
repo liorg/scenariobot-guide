@@ -3,6 +3,10 @@
 **How to get there:** **Top bar → Phones**. This is the screen you land on after
 signing in.
 
+**URL:** `/phones`
+
+`/phones/new` to add one · `/phones/<phone>/reconnect` to reconnect
+
 ## The phone list
 
 Every number you've connected, as a card showing its nickname, number, label,

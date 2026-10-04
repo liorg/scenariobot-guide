@@ -3,6 +3,8 @@
 **How to get there:** open a scenario in the designer, then the **playback**
 action. Or from the **🤖 Scenarios** tab on a phone.
 
+**URL:** `/phones/<phone>/scenarios/<scenario>/playback`
+
 Playback opens **full screen** and returns you where you were when you close it.
 
 ## What it is

@@ -3,6 +3,10 @@
 **How to get there:** **Top bar → Phones → a phone → 📞 Calls tab**, then click
 a contact.
 
+**URL:** `/phones/<phone>/calls/<contact>`
+
+`/phones/<phone>/contacts/<contact>/chat` opens the same conversation from the Contacts tab
+
 ## What it is
 
 The plain WhatsApp conversation with a contact — the same thing you'd see on
