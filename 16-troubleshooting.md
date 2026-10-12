@@ -11,6 +11,36 @@ You'll get the **Override** answer; complete step 3 by picking the reply.
 
 → [Chapter 04](04-contacts.md)
 
+## A name on the Calls tab starts with ~
+
+**Cause:** the contact is unidentified — someone wrote to the phone first, or a
+handshake was left unfinished. Scenarios won't run against it.
+
+**Fix:** **Phones → a phone → 📞 Calls** → **🔗 Connect** on that row, and
+enter the name and number.
+
+→ [Chapter 12](12-chat-view.md#connecting-an-unidentified-contact)
+
+## Connect says the number is linked to a different WhatsApp identity
+
+**Cause:** another contact on this phone already has that number, and it is tied
+to a different WhatsApp identity (LID) than the one you are connecting.
+
+**Fix:** check the number for a typo first. If both really are the same person,
+press **Connect anyway** to merge them.
+
+→ [Chapter 12](12-chat-view.md#connect)
+
+## A contact disappeared from the Calls tab
+
+**Cause:** it was ignored (🚫), or connected into an existing contact — in which
+case its conversation is now under that contact.
+
+**Fix:** look for the conversation under the contact with the same number. An
+ignored contact can be restored with `POST /api/contacts/{id}/unignore`.
+
+→ [Chapter 19](19-api-reference.md#connect-ignore-conversation)
+
 ## A call won't start for a contact
 
 **Cause:** a contact can only run **one call at a time**, and one is probably

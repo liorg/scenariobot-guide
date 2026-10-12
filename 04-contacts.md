@@ -73,9 +73,23 @@ contact usable.
 
 Confirm, and the contact is ready.
 
+## The other way in: connecting from the Calls tab
+
+The wizard is for people **you** reach out to. Someone may also write to the
+phone first — they then appear on the **📞 Calls tab** as an unidentified
+contact, with **`~`** before the name.
+
+You don't need the wizard for them: press **🔗 Connect** on that row, fill in
+the name and number, and the contact becomes active. If the number already
+belongs to an existing contact, the two are merged into that one. Full details
+in [Chapter 12](12-chat-view.md#connecting-an-unidentified-contact).
+
+**URL:** `grossman.bot/phones/<phone>/calls/<contact>/connect`
+
 ## The contact table
 
-Once linked, contacts appear in a table on the same tab. From there you can edit
+Once linked, contacts appear in a table on the same tab. The table shows
+contacts tagged **active** and **new**; ignored contacts are hidden. From there you can edit
 a contact, and open its calls.
 
 **Clicking a contact opens that contact's calls** →

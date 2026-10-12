@@ -1,5 +1,8 @@
 # 17. Glossary
 
+**`~` (tilde)** — shown before a name on the Calls tab: the contact is
+unidentified and not yet connected. Not part of the stored name.
+
 **Aborted** — a call someone stopped by hand. Distinct from failed.
 
 **Active** — a phone whose WhatsApp session is connected and working.
@@ -16,6 +19,10 @@ bottom.
 **Code card** — a step that runs your own JavaScript. Exists in both EXPECT and
 SEND forms.
 
+**Connect** — turning an unidentified (`~`) contact into an active one from the
+Calls tab, by entering its name and number. Merges into an existing contact
+when the number is already taken.
+
 **Contact** — a verified WhatsApp identity a phone can talk to. Verified through
 the PING/PONG handshake.
 
@@ -25,6 +32,9 @@ the PING/PONG handshake.
 against it.
 
 **Draft** — a saved but unpublished scenario. Editable, not runnable.
+
+**Draft contact** — a placeholder the system creates for someone who wrote to
+the phone but isn't a known contact. Unrelated to a draft scenario.
 
 **Events tab** — the raw timestamped timeline of a call.
 
@@ -38,6 +48,9 @@ products in future.
 
 **Flow diagram** — the visual record of a finished call, showing which steps ran
 and which failed.
+
+**Ignore** — hiding an unidentified contact from the Calls and Contacts tabs.
+Messages are kept; reversible through the API.
 
 **Linked** — a contact that completed the handshake and is usable.
 
@@ -75,6 +88,10 @@ change when you edit.
 
 **Template** — a WhatsApp-approved message format with numbered slots. Required
 outside the 24-hour window.
+
+**Unidentified** — a contact shown with `~`: created by an unfinished handshake,
+or by an incoming message from an unknown sender. Readable, but scenarios
+don't run against it until it is connected.
 
 **Trigger** — a scenario that fires on an incoming event rather than a timer.
 

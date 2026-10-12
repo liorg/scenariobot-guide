@@ -57,6 +57,7 @@ The product is a single web app, but **each screen has its own URL**. That means
 
 /phones/<phone>/calls                 📞 Calls tab — conversation list
 /phones/<phone>/calls/<contact>       one conversation
+/phones/<phone>/calls/<contact>/connect  connect an unidentified (~) contact
 /phones/<phone>/contacts              👥 Contacts tab
 /phones/<phone>/contacts/new          contact wizard — new contact
 /phones/<phone>/contacts/<c>/wizard   contact wizard — finish an existing one
