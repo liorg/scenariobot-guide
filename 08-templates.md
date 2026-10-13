@@ -86,6 +86,19 @@ Two consequences worth knowing:
 This is also why the wording is worth getting right before you create the
 template: nothing sits in review long enough for a second look.
 
+### On a Cloud API phone, templates are shared
+
+Templates belong to the **business account**, not to the phone. Twenty numbers
+on the same WhatsApp Business Account see **one catalogue** — create a template
+on one and it appears on all of them, and deleting it removes it everywhere.
+
+Approval is Meta's, and it is real: a new template sits as *pending* until Meta
+reviews it, which can take anything from minutes to a day. Nothing in this
+product can speed that up.
+
+That is the opposite of a linked phone, where templates are per phone and
+approval is immediate.
+
 ### Rules that catch people out
 
 - **A published template is locked.** You cannot edit or delete it until you

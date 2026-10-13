@@ -22,11 +22,36 @@ itself opens that phone** — see [Phone Detail](#what-is-inside-a-phone) below.
 
 There's also a **Templates** tab on this screen → [Chapter 08](08-templates.md).
 
+## Two kinds of phone
+
+Before adding one, the choice that shapes everything after it:
+
+| | **Linked phone** (Baileys) | **Cloud API** |
+|---|---|---|
+| How it connects | you scan a QR with a real handset | official credentials from Meta |
+| What you need | the handset, nearby | a WhatsApp Business Account, a phone number id and an access token |
+| The handset | must stay on and online | **not needed at all** |
+| Setup | minutes | Meta's business verification first |
+| Templates | per phone | shared across every number on the same business account |
+
+A linked phone is the quick way to start and the right choice for a number you
+already own and keep powered on. Cloud API is Meta's official route: nothing to
+keep charged, nothing to re-scan, and it is the one that scales.
+
+The rest of the product behaves identically either way. Scenarios, contacts,
+schedules and the chat view do not care which you picked.
+
 ## Adding a phone
 
-**Phones → + Add Phone.** A three-step wizard:
+**Phones → + Add Phone.**
 
-### Step 1 — Phone details
+### Step 1 — Choose the provider
+
+Pick **linked phone** or **Cloud API**. The wizard asks for different things
+after this, and the choice cannot be changed later — a number moves between
+providers by removing it and adding it again.
+
+### Step 2 — Phone details
 
 Nickname, number, a label (Business, Private, Marketing, Support, Sales,
 General) and a colour. Accept the terms to continue.
@@ -34,16 +59,23 @@ General) and a colour. Accept the terms to continue.
 The label and colour are only for your own organisation — they don't change
 behaviour.
 
-### Step 2 — QR scan
+**For Cloud API** you also supply the business account id, the phone number id
+and an access token, all from Meta's dashboard. They are checked against Meta
+before the phone is created, so a wrong value is rejected here rather than
+producing a phone that never works.
 
-Open WhatsApp on the physical handset → **Linked devices** → scan the code shown
-on screen.
+### Step 3 — Connect
 
-Keep the handset nearby: the code refreshes on a timer. A **pairing code** is
-offered as an alternative if scanning isn't practical — you type an 8-character
-code into WhatsApp instead.
+**Linked phone:** open WhatsApp on the handset → **Linked devices** → scan the
+code shown on screen. Keep the handset nearby, because the code refreshes on a
+timer. A **pairing code** is offered as an alternative if scanning isn't
+practical — you type an 8-character code into WhatsApp instead.
 
-### Step 3 — Confirm
+**Cloud API:** nothing to do. There is no QR and no pairing code; the
+credentials are the connection. The phone turns active once it has registered,
+which takes a few seconds.
+
+### Step 4 — Confirm
 
 The phone joins the list and turns active.
 
@@ -51,6 +83,10 @@ The phone joins the list and turns active.
 
 If a phone shows **disconnected**, use **Reconnect** on its card. The same
 wizard opens with the number already filled in, and you rescan.
+
+**A Cloud API phone has no session to lose**, so it does not drop the way a
+linked phone does. If one shows disconnected, the usual cause is an expired or
+revoked access token rather than anything on a handset.
 
 The session behaves like any WhatsApp Web session: it stays linked until
 something ends it. See [Chapter 15](15-tips.md) for what keeps it alive.
