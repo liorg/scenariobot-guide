@@ -12,7 +12,26 @@ the sign-in form.
 
 ## Signing in
 
-Email and password.
+Three ways, all on the same screen:
+
+- **Email and password.**
+- **A magic link** — leave the password box empty and you get a sign-in link by
+  email, valid for 60 minutes.
+- **Google or GitHub** — the two buttons below the divider.
+
+### Signing in with GitHub
+
+Press **GitHub** and approve the access request. GitHub asks for your profile
+and your email address; the email is needed because an account here is
+identified by it, and GitHub does not share it otherwise if you have hidden it
+on your profile.
+
+If your GitHub profile has no display name, you appear under your GitHub
+username until you set a name in Settings.
+
+**The method you first signed up with is the one to keep using.** Signing in
+with GitHub and with email are different routes into the same account only when
+they carry the same address.
 
 ## New accounts
 

@@ -34,13 +34,35 @@ is told which mode the page is in.
 
 | Control | Where | What it does |
 |---|---|---|
-| **🔔 Notifications** | top bar | the notification bell |
+| **🔔 Notifications** | top bar | the notification bell — see below |
 | **🌙 / ☀️ theme** | top bar | light or dark — see above |
 | **Language switcher** | top bar | English, Hebrew, Russian, Arabic — **your choice is remembered**, and the layout flips to right-to-left for Hebrew and Arabic |
 | **❓ Help** | top bar, beside ⚙️ | opens this guide |
 | **Your email and avatar** | top bar | shows which account you're in |
 | **Logout** | far end of the top bar | signs out |
 | **Version number** | far end, small grey text | useful when reporting a problem |
+
+## Notifications
+
+The bell collects things worth knowing about, and **every scenario that
+finishes writes one** — whether it succeeded or not.
+
+| Outcome | Shown as |
+|---|---|
+| finished cleanly | ✅ success |
+| finished, but some replies didn't match | ⚠️ warning |
+| failed | ❌ error |
+| cancelled | ℹ️ info |
+| expired, or timed out | ⚠️ warning |
+
+Each one names the contact, how long the call took, how many messages were sent
+and received, and how many didn't match. When something went wrong it also
+names the **last step reached**, which is usually the first thing you want.
+
+Clicking through takes you to that call ([Chapter 11](11-reading-a-call.md)).
+
+A scenario that finishes cleanly but with mismatches is deliberately a
+**warning, not a success** — it ran to the end, but not the way it was written.
 
 ## Privacy policy
 

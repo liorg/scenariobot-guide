@@ -569,6 +569,12 @@ arrives.
 `phone_id`, `log_level` (`info`, `success`, `warning`, `error` — default
 `info`), `is_send`, `source` and a free-form `extra` object.
 
+**`source` is how notifications are told apart.** Every finished scenario
+writes one with `source: "call_summary"`, and its `extra` carries `call_id`,
+`scenario_id`, `contact_id`, `status`, `duration_seconds`, `sender_count`,
+`expected_count`, `mismatch_count` and `last_step_id` — enough to link straight
+to the call without another request. See [Chapter 14](14-settings.md#notifications).
+
 The empty-`ids` behaviour on `mark-read` is the "mark all as read" button.
 
 ---
