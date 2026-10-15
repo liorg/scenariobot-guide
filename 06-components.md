@@ -43,6 +43,38 @@ On Text, Menu and Buttons:
 failed".** Trailing spaces, different capitalisation, or an extra word all fail
 it. `contains` is usually what was meant.
 
+### Pattern mode writes the pattern for you
+
+Choosing **pattern** replaces the message box with an assistant. Describe the
+condition in your own words — Hebrew, English, Russian or Arabic — and press
+**✨ Generate**:
+
+> *an answer that starts with yes or confirm, in any capitalisation*
+
+You get back a working pattern, which you can edit by hand afterwards if you
+want. **Ctrl/Cmd + Enter** generates without reaching for the button.
+
+**Test it before you rely on it.** Below the pattern there's a box for sample
+messages, one per line. Each gets a ✅ or ❌ as you type — no need to run the
+scenario to find out.
+
+The **+ name** and **+ answer** buttons insert a placeholder into your
+description, so you can ask for things like *a reply containing
+`"{{payload.target_contact.name}}"`*. A pattern that uses one shows which
+placeholders it depends on underneath.
+
+The **📋** button copies the pattern, which is useful when you want the same
+condition on another step.
+
+Two things worth knowing:
+
+- **Generation is instant the second time.** An identical description comes
+  back from cache, marked as such.
+- **A sample test is a shape test.** Placeholders are treated as "any word"
+  while testing, because their real values only exist while a call is running.
+  A ✅ means the pattern fits that kind of message, not that this exact text
+  will match at run time.
+
 ### Per-step timeout
 
 The **code card** is the only step with its own timeout. Left alone it inherits

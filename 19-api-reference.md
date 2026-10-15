@@ -268,7 +268,6 @@ contact but nothing works" case in [Chapter 16](16-troubleshooting.md).
 | `POST /api/contacts?phone_id=…` | create one directly |
 | `GET /api/contacts/{id}` | a **fresh** copy from the database |
 | `PATCH /api/contacts/{id}` | `name`, `email`, `tag`, `lid`, `lang` — only what you send |
-| `POST /api/contacts/{id}/connect` | see [Connect, ignore, conversation](#connect-ignore-conversation) |
 | `DELETE /api/contacts/{id}` | see below |
 | `GET /api/contacts/{id}/messages` | raw stored rows, oldest first |
 | `GET /api/calls/{call_id}/messages` | every message of one scenario call, oldest first |
@@ -281,57 +280,6 @@ deleted messages. Not a soft delete.
 `lid`, `lang`. Without `lang` the phone owner's language is used. The body has
 no schema, so nothing is validated — prefer the handshake, which produces a
 verified contact.
-
-### Connect, ignore, conversation
-
-For contacts that are not identified yet — the `~` rows on the Calls tab
-([Chapter 12](12-chat-view.md)). A contact counts as unidentified when its tag
-is `new`, or it is a `draft` with no `parent_contact_id` and `is_connect` false.
-
-| Endpoint | Does |
-|---|---|
-| `POST /api/contacts/{id}/connect` | complete the details and make the contact active |
-| `POST /api/contacts/{id}/ignore` | `tag = ignore` — hidden from the Calls and Contacts tabs |
-| `POST /api/contacts/{id}/unignore` | `ignore` → `new`, back in the unidentified list |
-| `GET /api/contacts/{id}/conversation` | the contact's messages including connected drafts, oldest first |
-
-**`connect`**
-
-```json
-{
-  "name": "Dana",           // required; a leading ~ is stripped
-  "number": "972501234567", // 7-15 digits; required when the contact has none
-  "lang": "he",             // else the contact's, else the phone owner's
-  "email": "dana@x.com",    // "" clears it
-  "move_messages": true,    // merge only — move messages to the target
-  "force": false            // merge even on lid_conflict
-}
-```
-
-Only contacts tagged `new` or `draft` can be connected; anything else is a 409.
-The result has a `mode`:
-
-| `mode` | When | What happens |
-|---|---|---|
-| `in_place` | no other contact on the phone has that number | the contact itself: `tag=active`, `is_connect=true`. Without a real LID, the number becomes the LID |
-| `merged` | another contact has that number | that one (the target) becomes `active` and takes name, language, email and the source's LID. The source becomes a `draft` with `parent_contact_id` = target. Drafts that pointed at the source are relinked to the target |
-
-Response: `success`, `mode`, `contact` (the active one), `draft_id` (the
-folded source, `merged` only) and `moved_messages`. Open `ping_sender` rows of
-both contacts are marked `completed`.
-
-| Status | `detail` starts with | Means |
-|---|---|---|
-| 400 | `name_required` | name empty after trimming `~` |
-| 400 | `number_required` | number not 7-15 digits |
-| 409 | `lid_conflict` | the target is tied to a different LID — resend with `"force": true` |
-| 409 | *Contact tag … cannot be connected* | the contact isn't `new`/`draft` |
-
-**`conversation`** — `?limit=` (1-200, default 50) and `?before=<sent_at>` for
-paging back. A connected draft resolves to its parent; the conversation is the
-root plus every draft with `parent_contact_id` = root and `is_connect` true.
-Returns `contact` (the root), `contact_ids`, `messages` and `has_more`. Each
-message adds parsed `content`, `type`, `text`, `media_url` and `incoming`.
 
 ### `GET /api/phones/{phone_id}/contacts/active`
 
@@ -625,6 +573,32 @@ The empty-`ids` behaviour on `mark-read` is the "mark all as read" button.
 
 ---
 
+## Regex AI
+
+Used by the designer's pattern mode ([Chapter 06](06-components.md)).
+
+| Endpoint | Does |
+|---|---|
+| `POST /ai/regex/generate` | a description → a regular expression |
+| `POST /ai/regex/test` | try a regex against sample messages; no AI involved |
+| `GET /ai/regex/health` | whether the AI service is up and serving the right model |
+
+```json
+{ "request": "an answer starting with yes or confirm", "samples": ["yes", "no"] }
+```
+
+Returns the `regex`, the `conditions` it was built from, which `params` it
+expects, whether it came from `cached`, and `ms`.
+
+Limits: the description is capped at **500 characters** and **20 samples**.
+
+**Read the status code before the message.** `400` means your input, `422`
+means the model could not produce something usable — rewording usually fixes
+it — and `502`/`503` mean the AI service itself is unreachable, which no
+rewording will help.
+
+---
+
 ## System
 
 | Endpoint | Tells you |
@@ -649,6 +623,7 @@ These three are **not** under `/api`.
 | Why won't this template publish? | `POST /…/templates/{id}/validate` |
 | Did the schedule fire? | `GET /api/schedules/{id}/calls` |
 | Is my token what I think it is? | `GET /api/auth/me` |
+| Is the regex assistant down? | `GET /ai/regex/health` — `ok:false` means it is |
 | Why won't the handshake start? | `POST /api/phones/{id}/templates/test` *(internal)* |
 | What happened inside that call? | `GET /api/schedules/calls/{call_id}/events` |
 
