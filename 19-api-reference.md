@@ -46,7 +46,7 @@ the top of the file: it **does not mint its own JWT**.
 | `POST /signup` | register; sends the verification email |
 | `POST /forgot-password` | send reset instructions |
 | `GET /settings` | your profile |
-| `PUT /settings` | update name, mobile or language |
+| `PUT /settings` | update name, mobile, language, trusted domain, email preferences |
 | `POST /avatar` | upload an avatar image |
 | `GET /me` | what the bearer token resolves to |
 | `GET /health` | liveness; no auth |
@@ -102,6 +102,75 @@ the raw body.
 
 `GET /settings` returns both `name` and `full_name` with the same value; the
 second is kept for the existing UI.
+
+The Settings screen sends six fields:
+
+```json
+{ "full_name": "Dana", "mobile": "0541234567", "lang": "he",
+  "trusted_domain": "example.com", "notify_email": true,
+  "notify_errors_only": true }
+```
+
+`trusted_domain` accepts a bare domain or a `*.` wildcard, and `""` clears it.
+`notify_errors_only` means *only* `error`, `critical` and `fatal`
+notifications are emailed.
+
+Saving a **different** `mobile` resets two-step verification — see below.
+
+### Two-step verification
+
+| Endpoint | Does |
+|---|---|
+| `POST /settings/2fa/request` | sends a six-digit code to the stored mobile over WhatsApp |
+| `POST /settings/2fa/verify` | `{ "code": "123456" }` |
+| `GET /settings/2fa/status` | `verified`, `verified_at`, `mobile_set`, `ttl_sec`, `resend_sec` |
+
+**Request has three success-ish outcomes, and the status code is the
+difference:**
+
+| Code | Meaning | What a client should do |
+|---|---|---|
+| **200** | `status: "sent"` | show the code entry |
+| **202** | `status: "queued"` | show the code entry — it is written but not yet sent |
+| **502** | could not send | offer a retry; the code is not coming |
+
+The request **waits up to 8 seconds** for the sender to pick the row up, so 200
+is the normal answer and 202 means something was briefly slow. Treating 202 as
+a failure is the mistake to avoid.
+
+The response's `sent_to` is **masked** — `+972 •••• 2491` — so it can be shown
+without the client holding the full number.
+
+Errors carry a ready-to-display sentence in `detail`:
+
+| Code | `detail` |
+|---|---|
+| 400 | `Add a mobile number first` · `Wrong code (N attempts left)` |
+| 409 | `Mobile is already verified` · `The mobile number changed. Request a new code` |
+| 410 | `The code has expired. Request a new one` |
+| 429 | `Please wait Ns…` · `Too many codes…` · `Too many attempts…` |
+
+Limits: **7 minutes** per code, **60 s** between codes, **5 codes/hour**,
+**5 attempts** per code. `verify` takes `^\d{6}$` — anything else is a 422
+before the attempt counter is touched.
+
+### `GET /phones/can_add`
+
+The add-phone gate, as data:
+
+```json
+{ "can_add": false, "is_admin": true, "two_factor_verified": false,
+  "reason": "2fa", "beta": true, "message": null,
+  "contact_email": "contact@grossman.bot" }
+```
+
+`reason` is `null`, `"beta"` or `"2fa"` — switch on that one field. Beta
+access is checked first, so `"beta"` is reported even when 2FA is also missing.
+
+Every endpoint that creates or assigns a phone enforces the same two gates, and
+every endpoint that creates a schedule enforces 2FA. A rejection is **403**
+with either the beta sentence or the literal `TWO_FACTOR_REQUIRED` in `detail`
+— that literal is a code to match on, not a message to show.
 
 ### Avatar
 

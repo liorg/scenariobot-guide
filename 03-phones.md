@@ -45,6 +45,20 @@ schedules and the chat view do not care which you picked.
 
 **Phones → + Add Phone.**
 
+### Before you can: two gates
+
+**Add Phone** is greyed out until both of these are true, and the button's own
+message says which one is in the way:
+
+| Gate | What to do |
+|---|---|
+| **Beta access** — adding phones is limited while the platform is in beta | contact **contact@grossman.bot** |
+| **Two-step verification** — your mobile number must be verified | [Settings → 🔐](https://grossman.bot/settings/2fa), see [Chapter 14](14-settings.md) |
+
+Beta access is checked first, so if you are not on the list yet, verifying your
+number will not unlock the button. Verification is the one you can resolve
+yourself, and it takes a minute.
+
 ### Step 1 — Choose the provider
 
 Pick **linked phone** or **Cloud API**. The wizard asks for different things

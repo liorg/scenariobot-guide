@@ -212,6 +212,72 @@ interface.
 
 → [Chapter 15](15-tips.md#3-getting-help)
 
+## The orange "two-step verification required" banner won't go away
+
+**Cause:** your mobile number is not verified, and the banner is deliberately
+not closable — it is a requirement, not a hint.
+
+**Fix:** press **Verify now** on the banner, or open
+[Settings → 🔐](https://grossman.bot/settings/2fa). It disappears the moment
+the code is accepted.
+
+→ [Chapter 14](14-settings.md)
+
+## The verification code never arrived
+
+**Cause:** usually the wrong number, or the message is a few seconds behind.
+Check the masked number shown under the code boxes — it's the number the code
+actually went to.
+
+**Fix:** wait a few seconds, then **Resend** (it unlocks a minute after the
+last code). If the screen said it **could not send the code over WhatsApp**,
+that one is on our side — try again shortly, and report it if it persists.
+
+→ [Chapter 14](14-settings.md)
+
+## "Add Phone" is greyed out
+
+**Cause:** one of two gates. Either adding phones is still limited to beta
+accounts, or your mobile number is not verified. The button's own message says
+which.
+
+**Fix:** verify your number in [Settings → 🔐](https://grossman.bot/settings/2fa),
+or contact **contact@grossman.bot** for beta access. Beta access is checked
+first, so verifying won't help if that's what's missing.
+
+→ [Chapter 03](03-phones.md)
+
+## I verified my number, but it says unverified again
+
+**Cause:** you saved a **different** mobile number. Changing the number resets
+verification by design.
+
+**Fix:** verify the new number. Reformatting the same number — `054…` versus
+`+972 54…` — is not a change and resets nothing.
+
+→ [Chapter 14](14-settings.md)
+
+## I'm not getting notification emails
+
+**Cause:** in order of likelihood — email notifications are off, **Errors
+only** is on and the notification was a success, or the account has no email
+address.
+
+**Fix:** [Settings → ⚙️ Advanced](https://grossman.bot/settings/advanced). Note
+that emails arrive as a **digest**, so a run against many phones is one email
+rather than one per phone.
+
+→ [Chapter 14](14-settings.md)
+
+## Save is blocked and the ⚙️ tab has a dot
+
+**Cause:** the **trusted domain** on the Advanced tab is not a valid domain.
+
+**Fix:** enter the domain alone — `example.com` or `*.example.com`, without
+`https://` or a trailing slash — or clear the field, which is also valid.
+
+→ [Chapter 14](14-settings.md)
+
 ---
 
 **Next:** [Glossary](17-glossary.md)

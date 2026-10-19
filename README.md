@@ -28,7 +28,7 @@ phone or contact, the URL is a live link you can follow from here.
 | 11 | [Reading a finished call](11-reading-a-call.md) | history, flow diagram, events |
 | 12 | [The chat view](12-chat-view.md) | plain WhatsApp conversation with a contact |
 | 13 | [Parallel executions](13-executions.md) | running against many phones at once |
-| 14 | [Settings and account](14-settings.md) | profile, language, notifications, logout |
+| 14 | [Settings and account](14-settings.md) | the three settings tabs, two-step verification, email notifications |
 | 15 | [Tips for a reliable setup](15-tips.md) | clean phone, keeping it online, support contacts |
 | 16 | [Troubleshooting](16-troubleshooting.md) | symptom → cause → fix |
 | 17 | [Glossary](17-glossary.md) | one-line definitions |
@@ -57,7 +57,6 @@ The product is a single web app, but **each screen has its own URL**. That means
 
 /phones/<phone>/calls                 📞 Calls tab — conversation list
 /phones/<phone>/calls/<contact>       one conversation
-/phones/<phone>/calls/<contact>/connect  connect an unidentified (~) contact
 /phones/<phone>/contacts              👥 Contacts tab
 /phones/<phone>/contacts/new          contact wizard — new contact
 /phones/<phone>/contacts/<c>/wizard   contact wizard — finish an existing one
@@ -81,7 +80,10 @@ The product is a single web app, but **each screen has its own URL**. That means
 
 /executions                           parallel runs
 /api                                  the API console
-/settings                             account settings
+/settings                             account settings — opens the personal tab
+/settings/personal                    name, email, avatar, language
+/settings/2fa                         two-step verification
+/settings/advanced                    trusted domain, email notifications
 /guide/<chapter>                      jumps to this guide
 /privacy                              privacy policy
 ```
@@ -109,6 +111,7 @@ showing an error.
 | [grossman.bot/executions](https://grossman.bot/executions) | parallel runs |
 | [grossman.bot/api](https://grossman.bot/api) | the API console |
 | [grossman.bot/settings](https://grossman.bot/settings) | your profile |
+| [grossman.bot/settings/2fa](https://grossman.bot/settings/2fa) | verify your mobile number |
 | [grossman.bot/guide/16-troubleshooting](https://grossman.bot/guide/16-troubleshooting) | this guide's troubleshooting chapter |
 
 The last one is worth noting: **`grossman.bot/guide/<chapter>` opens this

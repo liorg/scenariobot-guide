@@ -13,6 +13,11 @@ call by hand.
 
 ## Creating one
 
+**Two-step verification is required.** Creating a schedule needs a verified
+mobile number — [Settings → 🔐](https://grossman.bot/settings/2fa),
+[Chapter 14](14-settings.md). Until then the orange banner at the top of the
+screen is the shortest route to fixing it.
+
 Create a schedule and choose three things:
 
 1. **the phone** it runs from
