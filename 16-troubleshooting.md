@@ -212,6 +212,41 @@ interface.
 
 → [Chapter 15](15-tips.md#3-getting-help)
 
+## The API button has disappeared from the top bar
+
+**Cause:** it is hidden until two-step verification is done. Opening `/api`
+directly also bounces back to the phone list.
+
+**Fix:** verify your mobile number in
+[Settings → 🔐](https://grossman.bot/settings/2fa). The button appears
+immediately afterwards.
+
+→ [Chapter 18](18-api-explorer.md)
+
+## A schedule is active but never fires
+
+**Cause:** most often two-step verification. The Schedules screen stays open
+without it, so the schedule looks fine — but every run is refused.
+
+**Fix:** verify your mobile number in
+[Settings → 🔐](https://grossman.bot/settings/2fa). If the banner is already
+gone, check the usual causes instead: the scenario must be published and its
+contact linked.
+
+→ [Chapter 09](09-schedules.md)
+
+## "This number is one of your bot phones"
+
+**Cause:** you tried to verify a mobile number that is already one of your bot
+phones. The reverse is refused too — your verified mobile cannot be added as a
+bot phone.
+
+**Fix:** verify a personal handset instead, and keep the bot numbers for bots.
+A bot phone receiving your codes could read them itself, which is what the rule
+prevents.
+
+→ [Chapter 14](14-settings.md)
+
 ## The orange "two-step verification required" banner won't go away
 
 **Cause:** your mobile number is not verified, and the banner is deliberately

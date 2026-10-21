@@ -167,10 +167,21 @@ The add-phone gate, as data:
 `reason` is `null`, `"beta"` or `"2fa"` — switch on that one field. Beta
 access is checked first, so `"beta"` is reported even when 2FA is also missing.
 
-Every endpoint that creates or assigns a phone enforces the same two gates, and
-every endpoint that creates a schedule enforces 2FA. A rejection is **403**
-with either the beta sentence or the literal `TWO_FACTOR_REQUIRED` in `detail`
-— that literal is a code to match on, not a message to show.
+`POST /phones/provision` enforces both gates for a **new** phone. Reconnecting
+an existing one is deliberately ungated. Starting a scenario call is gated
+separately, in `spine_ensure_call`, which refuses with `TWO_FACTOR_REQUIRED` —
+so a schedule can exist, look active, and never fire.
+
+A rejection is **403** with either the beta sentence or the literal
+`TWO_FACTOR_REQUIRED` in `detail` — that literal is a code to match on, not a
+message to show.
+
+**The 2FA mobile and bot phones are mutually exclusive.** Verifying a number
+that is already one of your bot phones returns **409**
+(`This number is one of your bot phones…`), and provisioning your verified
+mobile as a bot phone returns **409** the other way
+(`This number is your two-step verification mobile…`). A bot phone that
+received the codes could read them itself, so both directions are closed.
 
 ### Avatar
 

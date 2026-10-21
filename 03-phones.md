@@ -73,6 +73,12 @@ General) and a colour. Accept the terms to continue.
 The label and colour are only for your own organisation — they don't change
 behaviour.
 
+**Your two-step verification mobile cannot be added here.** The number you
+verified in [Settings → 🔐](https://grossman.bot/settings/2fa) is rejected with
+*This number is your two-step verification mobile and cannot be added as a bot
+phone* — a bot phone that received your codes could read them itself. Use a
+different number ([Chapter 14](14-settings.md)).
+
 **For Cloud API** you also supply the business account id, the phone number id
 and an access token, all from Meta's dashboard. They are checked against Meta
 before the phone is created, so a wrong value is rejected here rather than

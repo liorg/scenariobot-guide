@@ -1,9 +1,19 @@
 # 18. API Explorer
 
-**How to get there:** **Top bar → API** (it may sit beside Executions
-depending on your build).
+**How to get there:** **Top bar → API** (it sits beside Executions).
 
 **URL:** [grossman.bot/api](https://grossman.bot/api)
+
+> **The API button only appears after two-step verification.** Until your
+> mobile number is verified there is no API button in the top bar, and opening
+> [/api](https://grossman.bot/api) directly sends you back to the phone list.
+> Verify in [Settings → 🔐](https://grossman.bot/settings/2fa) and the button
+> appears — see [Chapter 14](14-settings.md).
+
+The console sends **real requests signed with your own login**, which is why
+it is behind verification and the rest of the app is not. Everything it can do,
+an unverified account could otherwise do without ever proving it owns a phone
+number.
 
 ## What it is
 

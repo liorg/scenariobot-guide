@@ -13,10 +13,16 @@ call by hand.
 
 ## Creating one
 
-**Two-step verification is required.** Creating a schedule needs a verified
-mobile number — [Settings → 🔐](https://grossman.bot/settings/2fa),
-[Chapter 14](14-settings.md). Until then the orange banner at the top of the
-screen is the shortest route to fixing it.
+**Two-step verification is required for a schedule to run.** The screen stays
+open and you can set a schedule up, but **nothing will fire** until your mobile
+number is verified — the attempt is refused with `TWO_FACTOR_REQUIRED` and the
+schedule's log records it. Verify in
+[Settings → 🔐](https://grossman.bot/settings/2fa),
+[Chapter 14](14-settings.md); the orange banner at the top of the screen is the
+shortest route.
+
+A schedule that looks active but never produces a call is the symptom, so check
+the banner before anything else.
 
 Create a schedule and choose three things:
 

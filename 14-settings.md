@@ -79,6 +79,23 @@ seconds and then opens the boxes anyway — if the message has not arrived yet i
 usually will within a few more seconds. Only "could not send" means it is not
 coming.
 
+### It has to be your own number, not a bot's
+
+**The number you verify cannot be one of your own bot phones.** The platform
+refuses it in both directions:
+
+| What you try | What happens |
+|---|---|
+| verify a number you already added as a bot phone | refused — *This number is one of your bot phones* |
+| add your verified mobile as a bot phone | refused — *This number is your two-step verification mobile* |
+
+The reason is simple: a bot phone is automated, and the code arrives as a
+WhatsApp message on that phone. If the two were the same number, the automation
+could read its own verification code and the check would prove nothing.
+
+So use a real personal handset — the one in your pocket — and keep the bot
+numbers for bots. One verified mobile per account.
+
 ### Changing your number un-verifies it
 
 Saving a **different** mobile number resets verification: the banner comes back
