@@ -143,6 +143,53 @@ mid-edit.
 The back arrow (top-left of any inner screen) always goes up one level, and
 matches the browser's own back button.
 
+## Machine-readable index
+
+Two JSON files carry the whole guide as data, for a chat assistant that has to
+answer "where do I do X" without reading every chapter:
+
+| File | One entry per | Holds |
+|---|---|---|
+| `index.json` | chapter | title, URL, screens, keywords, section headings, related chapters, 2FA gate |
+| `img/index.json` | screen element | every `id` in every diagram, what it is, which chapter it belongs to |
+
+`index.json` is generated — run `python3 guide/_build_index.py` after editing
+any chapter's frontmatter or headings. It fails loudly if a chapter points at a
+screen that isn't filed under it, or at a `related:` chapter that doesn't exist.
+
+### Chapter frontmatter
+
+Every chapter opens with a YAML block:
+
+```yaml
+---
+id: 09-schedules
+title: Scheduling scenarios
+screen: screen-schedules
+url: /scheduling
+two_fa: run-blocked
+keywords:
+  - schedule
+  - cron
+  - run now
+related:
+  - 13-executions
+---
+```
+
+| Key | |
+|---|---|
+| `id` | the filename without `.md` — chapters reference each other by this |
+| `title` | a descriptive title for search; the `#` heading in the body stays as it is |
+| `screen` | the diagram in `img/`, **or a list** when the chapter has two |
+| `url` | the screen's path, `<phone>`-style placeholders included; omitted where the chapter isn't one screen |
+| `two_fa` | only on gated chapters — `tab-hidden` (the tab isn't there until the mobile number is verified), `run-blocked` (visible, but the run is refused), `add-phone-gated` |
+| `keywords` | what someone would actually type, including words the screen doesn't use |
+| `related` | chapter ids, nearest first |
+
+If the site build doesn't strip YAML frontmatter, it will print at the top of
+the page — check one rendered chapter after the first publish.
+
 ## Conventions in this guide
 
 - **Bold** with arrows is a click path: **Phones → a phone → 👥 Contacts**.

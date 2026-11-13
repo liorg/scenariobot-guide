@@ -1,3 +1,20 @@
+---
+id: 07-playback
+title: Testing a scenario with playback
+screen: screen-playback
+url: /phones/<phone>/scenarios/<scenario>/playback
+keywords:
+  - playback
+  - test a scenario
+  - dry run
+  - simulate
+  - preview
+  - without sending
+  - safe test
+related:
+  - 05-scenarios
+  - 10-watching-a-call
+---
 # 07. Playback
 
 **How to get there:** open a scenario in the designer, then the **playback**

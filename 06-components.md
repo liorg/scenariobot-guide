@@ -1,3 +1,26 @@
+---
+id: 06-components
+title: Scenario components — EXPECT, SEND and code steps
+url: /phones/<phone>/scenarios/<scenario>/design
+keywords:
+  - EXPECT
+  - SEND
+  - step
+  - component
+  - pattern
+  - regex
+  - condition
+  - custom code
+  - Deno
+  - fetch
+  - parameters
+  - placeholders
+  - retry
+  - wrong reply
+related:
+  - 05-scenarios
+  - 10-watching-a-call
+---
 # 06. Scenario components
 
 **How to get there:** **Top bar → Phones → a phone → 🤖 Scenarios → open a

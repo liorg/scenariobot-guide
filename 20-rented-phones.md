@@ -1,3 +1,26 @@
+---
+id: 20-rented-phones
+title: Renting a physical phone
+screen: screen-rent-list
+url: /rent
+two_fa: tab-hidden
+keywords:
+  - rent
+  - rented phone
+  - rental
+  - hire a phone
+  - physical phone
+  - end rental
+  - expiry
+  - wipe
+  - battery
+  - three warnings
+  - striped frame
+related:
+  - 21-sms
+  - 03-phones
+  - 14-settings
+---
 # 20. Renting a phone
 
 **How to get there:** **Top bar → Rented phones.**

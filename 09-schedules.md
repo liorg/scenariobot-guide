@@ -1,3 +1,24 @@
+---
+id: 09-schedules
+title: Scheduling scenarios
+screen: screen-schedules
+url: /scheduling
+two_fa: run-blocked
+keywords:
+  - schedule
+  - cron
+  - run now
+  - scheduled execution
+  - recurring
+  - timezone
+  - next run
+  - schedule log
+  - never fires
+related:
+  - 13-executions
+  - 10-watching-a-call
+  - 16-troubleshooting
+---
 # 09. Schedules
 
 **How to get there:** **Top bar → Schedules.**

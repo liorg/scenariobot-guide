@@ -1,3 +1,24 @@
+---
+id: 18-api-explorer
+title: The API Explorer console
+screen: screen-api
+url: /api
+two_fa: tab-hidden
+keywords:
+  - API
+  - API explorer
+  - console
+  - try an endpoint
+  - token
+  - curl
+  - copy as curl
+  - request
+  - response
+  - API button missing
+related:
+  - 19-api-reference
+  - 14-settings
+---
 # 18. API Explorer
 
 **How to get there:** **Top bar → API** (it sits beside Executions).

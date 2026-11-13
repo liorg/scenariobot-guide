@@ -1,3 +1,23 @@
+---
+id: 02-signing-in
+title: Signing in and creating an account
+screen: screen-login
+url: /
+keywords:
+  - sign in
+  - log in
+  - login
+  - password
+  - forgot password
+  - reset password
+  - create account
+  - sign up
+  - sign out
+  - privacy policy
+related:
+  - 14-settings
+  - 03-phones
+---
 # 02. Signing in
 
 **How to get there:** open the site. If you're not signed in you land here

@@ -1,3 +1,24 @@
+---
+id: 04-contacts
+title: Adding a contact and the PING/PONG handshake
+screen: screen-contacts
+url: /phones/<phone>/contacts
+keywords:
+  - add contact
+  - contact wizard
+  - PING PONG
+  - handshake
+  - activate contact
+  - deactivate
+  - inactive
+  - ignore contact
+  - restore
+  - bot number
+  - status changed
+related:
+  - 10-watching-a-call
+  - 16-troubleshooting
+---
 # 04. Adding a contact
 
 **How to get there:** **Top bar → Phones → click a phone → 👥 Contacts tab**.

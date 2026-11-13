@@ -1,3 +1,24 @@
+---
+id: 12-chat-view
+title: The chat view — talking to a contact by hand
+screen:
+  - screen-calls-list
+  - screen-chat-view
+url: /phones/<phone>/calls
+keywords:
+  - chat
+  - conversation
+  - manual message
+  - send a message
+  - 24 hour window
+  - unread
+  - inbox
+  - conversation list
+  - free text
+related:
+  - 08-templates
+  - 04-contacts
+---
 # 12. The chat view
 
 **How to get there:** **Top bar → Phones → a phone → 📞 Calls tab**, then click

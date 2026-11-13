@@ -1,0 +1,721 @@
+{
+ "guide": "ScenarioBot user guide",
+ "site": "https://liorg.github.io/scenariobot-guide",
+ "note": "One entry per chapter. Element-level ids are in img/index.json.",
+ "chapters": {
+  "01-what-it-does": {
+   "title": "What ScenarioBot does",
+   "file": "01-what-it-does.md",
+   "html": "01-what-it-does.html",
+   "url": null,
+   "screens": [],
+   "two_fa": null,
+   "keywords": [
+    "overview",
+    "what is scenariobot",
+    "Grossman.bot",
+    "brand",
+    "concepts",
+    "phone contact scenario template",
+    "how it fits together"
+   ],
+   "related": [
+    "17-glossary",
+    "05-scenarios"
+   ],
+   "sections": [
+    "Brand structure",
+    "What ScenarioBot does",
+    "The six things you work with",
+    "How they fit together"
+   ]
+  },
+  "02-signing-in": {
+   "title": "Signing in and creating an account",
+   "file": "02-signing-in.md",
+   "html": "02-signing-in.html",
+   "url": "/",
+   "screens": [
+    "screen-login"
+   ],
+   "two_fa": null,
+   "keywords": [
+    "sign in",
+    "log in",
+    "login",
+    "password",
+    "forgot password",
+    "reset password",
+    "create account",
+    "sign up",
+    "sign out",
+    "privacy policy"
+   ],
+   "related": [
+    "14-settings",
+    "03-phones"
+   ],
+   "sections": [
+    "First screen",
+    "Signing in",
+    "New accounts",
+    "Forgotten password",
+    "Signing out",
+    "After signing in",
+    "Privacy policy"
+   ]
+  },
+  "03-phones": {
+   "title": "Connecting a WhatsApp phone",
+   "file": "03-phones.md",
+   "html": "03-phones.html",
+   "url": "/phones",
+   "screens": [
+    "screen-phone-card",
+    "screen-phone-detail"
+   ],
+   "two_fa": "add-phone-gated",
+   "keywords": [
+    "add phone",
+    "connect phone",
+    "QR code",
+    "pair code",
+    "link device",
+    "disconnected",
+    "reconnect",
+    "phone card",
+    "battery",
+    "signal",
+    "Cloud API",
+    "Baileys",
+    "provision"
+   ],
+   "related": [
+    "20-rented-phones",
+    "04-contacts",
+    "16-troubleshooting"
+   ],
+   "sections": [
+    "The phone list",
+    "Two kinds of phone",
+    "Adding a phone",
+    "Reconnecting",
+    "What is inside a phone"
+   ]
+  },
+  "04-contacts": {
+   "title": "Adding a contact and the PING/PONG handshake",
+   "file": "04-contacts.md",
+   "html": "04-contacts.html",
+   "url": "/phones/<phone>/contacts",
+   "screens": [
+    "screen-contacts"
+   ],
+   "two_fa": null,
+   "keywords": [
+    "add contact",
+    "contact wizard",
+    "PING PONG",
+    "handshake",
+    "activate contact",
+    "deactivate",
+    "inactive",
+    "ignore contact",
+    "restore",
+    "bot number",
+    "status changed"
+   ],
+   "related": [
+    "10-watching-a-call",
+    "16-troubleshooting"
+   ],
+   "sections": [
+    "Why this isn't just a form",
+    "The wizard, step by step",
+    "The contact table",
+    "Deactivating, ignoring, restoring",
+    "Common problem"
+   ]
+  },
+  "05-scenarios": {
+   "title": "Building a scenario in the designer",
+   "file": "05-scenarios.md",
+   "html": "05-scenarios.html",
+   "url": "/phones/<phone>/scenarios",
+   "screens": [
+    "screen-scenarios",
+    "screen-designer"
+   ],
+   "two_fa": null,
+   "keywords": [
+    "scenario",
+    "designer",
+    "canvas",
+    "build a flow",
+    "save",
+    "publish",
+    "draft",
+    "active",
+    "export",
+    "import",
+    "fullscreen",
+    "Monaco",
+    "scenario settings"
+   ],
+   "related": [
+    "06-components",
+    "07-playback",
+    "08-templates"
+   ],
+   "sections": [
+    "The three columns",
+    "While you work",
+    "The designer",
+    "Export and import",
+    "Scenario settings",
+    "Saving vs publishing",
+    "Testing before it goes out"
+   ]
+  },
+  "06-components": {
+   "title": "Scenario components — EXPECT, SEND and code steps",
+   "file": "06-components.md",
+   "html": "06-components.html",
+   "url": "/phones/<phone>/scenarios/<scenario>/design",
+   "screens": [],
+   "two_fa": null,
+   "keywords": [
+    "EXPECT",
+    "SEND",
+    "step",
+    "component",
+    "pattern",
+    "regex",
+    "condition",
+    "custom code",
+    "Deno",
+    "fetch",
+    "parameters",
+    "placeholders",
+    "retry",
+    "wrong reply"
+   ],
+   "related": [
+    "05-scenarios",
+    "10-watching-a-call"
+   ],
+   "sections": [
+    "EXPECT and SEND — which is which",
+    "EXPECT steps",
+    "SEND steps",
+    "When the reply is wrong",
+    "Custom code steps",
+    "`{{ }}` parameters"
+   ]
+  },
+  "07-playback": {
+   "title": "Testing a scenario with playback",
+   "file": "07-playback.md",
+   "html": "07-playback.html",
+   "url": "/phones/<phone>/scenarios/<scenario>/playback",
+   "screens": [
+    "screen-playback"
+   ],
+   "two_fa": null,
+   "keywords": [
+    "playback",
+    "test a scenario",
+    "dry run",
+    "simulate",
+    "preview",
+    "without sending",
+    "safe test"
+   ],
+   "related": [
+    "05-scenarios",
+    "10-watching-a-call"
+   ],
+   "sections": [
+    "What it is",
+    "Why use it",
+    "What it doesn't do",
+    "Getting back to editing"
+   ]
+  },
+  "08-templates": {
+   "title": "Message templates and approval",
+   "file": "08-templates.md",
+   "html": "08-templates.html",
+   "url": "/phones/templates",
+   "screens": [
+    "screen-templates"
+   ],
+   "two_fa": null,
+   "keywords": [
+    "template",
+    "approved",
+    "pending",
+    "rejected",
+    "Cloud API template",
+    "send template",
+    "24 hour window",
+    "create template",
+    "edit template",
+    "seed templates"
+   ],
+   "related": [
+    "05-scenarios",
+    "12-chat-view",
+    "16-troubleshooting"
+   ],
+   "sections": [
+    "What a template is",
+    "Why they exist",
+    "What you can do here",
+    "The templates you start with",
+    "Approval happens by itself",
+    "Sending one by hand",
+    "Using one in a scenario"
+   ]
+  },
+  "09-schedules": {
+   "title": "Scheduling scenarios",
+   "file": "09-schedules.md",
+   "html": "09-schedules.html",
+   "url": "/scheduling",
+   "screens": [
+    "screen-schedules"
+   ],
+   "two_fa": "run-blocked",
+   "keywords": [
+    "schedule",
+    "cron",
+    "run now",
+    "scheduled execution",
+    "recurring",
+    "timezone",
+    "next run",
+    "schedule log",
+    "never fires"
+   ],
+   "related": [
+    "13-executions",
+    "10-watching-a-call",
+    "16-troubleshooting"
+   ],
+   "sections": [
+    "What a schedule is",
+    "Creating one",
+    "Running one now",
+    "The log",
+    "What can stop a scheduled call"
+   ]
+  },
+  "10-watching-a-call": {
+   "title": "Watching a call run live",
+   "file": "10-watching-a-call.md",
+   "html": "10-watching-a-call.html",
+   "url": "/phones/<phone>/contacts/<contact>/calls",
+   "screens": [],
+   "two_fa": null,
+   "keywords": [
+    "live call",
+    "running call",
+    "active call",
+    "current step",
+    "stop call",
+    "restart call",
+    "multiple active calls",
+    "live panel"
+   ],
+   "related": [
+    "11-reading-a-call",
+    "04-contacts"
+   ],
+   "sections": [
+    "What the live panel shows",
+    "The two buttons",
+    "If it warns about multiple active calls",
+    "If there's no panel"
+   ]
+  },
+  "11-reading-a-call": {
+   "title": "Reading a finished call",
+   "file": "11-reading-a-call.md",
+   "html": "11-reading-a-call.html",
+   "url": "/phones/<phone>/contacts/<contact>/calls/<call>",
+   "screens": [
+    "screen-call-history"
+   ],
+   "two_fa": null,
+   "keywords": [
+    "call history",
+    "past calls",
+    "flow diagram",
+    "events tab",
+    "timeline",
+    "why it stopped",
+    "expired",
+    "completed",
+    "failed",
+    "debug a call"
+   ],
+   "related": [
+    "10-watching-a-call",
+    "16-troubleshooting"
+   ],
+   "sections": [
+    "The list",
+    "The flow diagram",
+    "The events tab",
+    "Using the two together"
+   ]
+  },
+  "12-chat-view": {
+   "title": "The chat view — talking to a contact by hand",
+   "file": "12-chat-view.md",
+   "html": "12-chat-view.html",
+   "url": "/phones/<phone>/calls",
+   "screens": [
+    "screen-calls-list",
+    "screen-chat-view"
+   ],
+   "two_fa": null,
+   "keywords": [
+    "chat",
+    "conversation",
+    "manual message",
+    "send a message",
+    "24 hour window",
+    "unread",
+    "inbox",
+    "conversation list",
+    "free text"
+   ],
+   "related": [
+    "08-templates",
+    "04-contacts"
+   ],
+   "sections": [
+    "What it is",
+    "The chat screen",
+    "The conversation list",
+    "The 24-hour window",
+    "Sending a template",
+    "Reading the conversation",
+    "How it differs from scenario calls",
+    "When to use it"
+   ]
+  },
+  "13-executions": {
+   "title": "Parallel executions across many phones",
+   "file": "13-executions.md",
+   "html": "13-executions.html",
+   "url": "/executions",
+   "screens": [
+    "screen-executions"
+   ],
+   "two_fa": null,
+   "keywords": [
+    "execution",
+    "parallel",
+    "many phones",
+    "bulk run",
+    "wizard",
+    "pending",
+    "run",
+    "copied scenarios",
+    "targets"
+   ],
+   "related": [
+    "09-schedules",
+    "08-templates",
+    "16-troubleshooting"
+   ],
+   "sections": [
+    "What it is",
+    "Creating one — the wizard",
+    "The list",
+    "Running one",
+    "Worth knowing"
+   ]
+  },
+  "14-settings": {
+   "title": "Settings, two-step verification and notifications",
+   "file": "14-settings.md",
+   "html": "14-settings.html",
+   "url": "/settings",
+   "screens": [
+    "screen-settings"
+   ],
+   "two_fa": null,
+   "keywords": [
+    "settings",
+    "profile",
+    "personal details",
+    "two-step verification",
+    "2FA",
+    "OTP",
+    "verify number",
+    "dark mode",
+    "light mode",
+    "notifications",
+    "email alerts",
+    "advanced"
+   ],
+   "related": [
+    "02-signing-in",
+    "18-api-explorer",
+    "20-rented-phones"
+   ],
+   "sections": [
+    "👤 Personal details",
+    "🔐 Two-step verification",
+    "⚙️ Advanced",
+    "Light and dark mode",
+    "Elsewhere in the top bar",
+    "Notifications",
+    "Privacy policy"
+   ]
+  },
+  "16-troubleshooting": {
+   "title": "Troubleshooting — symptoms and fixes",
+   "file": "16-troubleshooting.md",
+   "html": "16-troubleshooting.html",
+   "url": null,
+   "screens": [],
+   "two_fa": null,
+   "keywords": [
+    "troubleshooting",
+    "not working",
+    "error",
+    "stuck",
+    "blocked",
+    "greyed out",
+    "no message",
+    "failed",
+    "fix",
+    "why"
+   ],
+   "related": [
+    "10-watching-a-call",
+    "11-reading-a-call",
+    "17-glossary"
+   ],
+   "sections": [
+    "A contact was added but nothing works",
+    "A call won't start for a contact",
+    "The phone shows disconnected",
+    "A call expired without a reply, but the person says they answered",
+    "The pattern assistant won't generate",
+    "A sent message has a blank where a name should be",
+    "A custom code step ran fine but stored nothing",
+    "Editing a scenario changed my old reports",
+    "A scheduled call didn't happen",
+    "Publish is blocked",
+    "The save button is greyed out",
+    "My message was rejected, or never arrived",
+    "The chat says \"no incoming message yet\" but they have written to me",
+    "A template has been pending for a long time",
+    "The Templates tab looks empty on a new phone",
+    "A duplicate template appeared",
+    "The contact handshake won't start at all",
+    "A template isn't in the designer's list",
+    "I can't edit or delete a template",
+    "Running a schedule now does nothing",
+    "Can a scenario be tested without messaging a real person?",
+    "The panel warns that multiple calls are active",
+    "A contact disappeared from the conversation list",
+    "How do I delete a contact?",
+    "Importing a scenario says the name already exists",
+    "An imported scenario won't publish — a template is pending",
+    "The ❓ Help button is gone from the top bar",
+    "Saving a scenario fails with \"not in trusted domains\"",
+    "\"dynamic host is not allowed\"",
+    "A trusted domain won't save",
+    "A code step that calls a URL hangs or stores nothing",
+    "An execution is stuck on \"pending\"",
+    "A phone can't be ticked as an execution target",
+    "I deleted an execution and the copied scenarios are still there",
+    "I got no warning before my rental ended",
+    "What is the striped frame around a phone card?",
+    "The battery icon on my phone is red",
+    "The Rented phones tab isn't there",
+    "\"Rent\" is greyed out on a phone",
+    "My rented phone disappeared",
+    "There's no SMS tab on my phone",
+    "An SMS never arrived",
+    "A phone is stuck greyed out after Disconnect",
+    "The API button has disappeared from the top bar",
+    "A schedule is active but never fires",
+    "\"This number is one of your bot phones\"",
+    "The orange \"two-step verification required\" banner won't go away",
+    "The verification code never arrived",
+    "\"Add Phone\" is greyed out",
+    "I verified my number, but it says unverified again",
+    "I'm not getting notification emails",
+    "Save is blocked and the ⚙️ tab has a dot"
+   ]
+  },
+  "17-glossary": {
+   "title": "Glossary of terms",
+   "file": "17-glossary.md",
+   "html": "17-glossary.html",
+   "url": null,
+   "screens": [],
+   "two_fa": null,
+   "keywords": [
+    "glossary",
+    "terms",
+    "definitions",
+    "what does X mean",
+    "vocabulary"
+   ],
+   "related": [
+    "01-what-it-does",
+    "06-components"
+   ],
+   "sections": []
+  },
+  "18-api-explorer": {
+   "title": "The API Explorer console",
+   "file": "18-api-explorer.md",
+   "html": "18-api-explorer.html",
+   "url": "/api",
+   "screens": [
+    "screen-api"
+   ],
+   "two_fa": "tab-hidden",
+   "keywords": [
+    "API",
+    "API explorer",
+    "console",
+    "try an endpoint",
+    "token",
+    "curl",
+    "copy as curl",
+    "request",
+    "response",
+    "API button missing"
+   ],
+   "related": [
+    "19-api-reference",
+    "14-settings"
+   ],
+   "sections": [
+    "What it is",
+    "The screen",
+    "Sending a request",
+    "Reading the result",
+    "Copy as curl",
+    "Careful",
+    "Useful first calls"
+   ]
+  },
+  "19-api-reference": {
+   "title": "API reference — every endpoint",
+   "file": "19-api-reference.md",
+   "html": "19-api-reference.html",
+   "url": null,
+   "screens": [],
+   "two_fa": null,
+   "keywords": [
+    "API reference",
+    "endpoints",
+    "openapi",
+    "REST",
+    "GET POST",
+    "auth",
+    "paging",
+    "resume",
+    "integration"
+   ],
+   "related": [
+    "18-api-explorer"
+   ],
+   "sections": [
+    "Before anything else",
+    "Auth",
+    "Phones",
+    "Contacts",
+    "Messages",
+    "Scenarios",
+    "Schedules",
+    "Templates",
+    "Executions",
+    "Notifications",
+    "Regex AI",
+    "System",
+    "Quick diagnostics"
+   ]
+  },
+  "20-rented-phones": {
+   "title": "Renting a physical phone",
+   "file": "20-rented-phones.md",
+   "html": "20-rented-phones.html",
+   "url": "/rent",
+   "screens": [
+    "screen-rent-list"
+   ],
+   "two_fa": "tab-hidden",
+   "keywords": [
+    "rent",
+    "rented phone",
+    "rental",
+    "hire a phone",
+    "physical phone",
+    "end rental",
+    "expiry",
+    "wipe",
+    "battery",
+    "three warnings",
+    "striped frame"
+   ],
+   "related": [
+    "21-sms",
+    "03-phones",
+    "14-settings"
+   ],
+   "sections": [
+    "What it is",
+    "The list",
+    "Renting one",
+    "While it is yours",
+    "You get told three times",
+    "Ending it",
+    "Worth knowing"
+   ]
+  },
+  "21-sms": {
+   "title": "SMS on a rented phone",
+   "file": "21-sms.md",
+   "html": "21-sms.html",
+   "url": "/phones/<phone>/sms",
+   "screens": [
+    "screen-sms"
+   ],
+   "two_fa": null,
+   "keywords": [
+    "SMS",
+    "text message",
+    "verification code",
+    "OTP by SMS",
+    "SMS tab",
+    "inbox",
+    "forwarded SMS",
+    "no SMS tab"
+   ],
+   "related": [
+    "20-rented-phones",
+    "03-phones"
+   ],
+   "sections": [
+    "What it is",
+    "The list",
+    "Reading a conversation",
+    "When a message doesn't arrive",
+    "Worth knowing"
+   ]
+  }
+ }
+}

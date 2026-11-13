@@ -1,3 +1,18 @@
+---
+id: 01-what-it-does
+title: What ScenarioBot does
+keywords:
+  - overview
+  - what is scenariobot
+  - Grossman.bot
+  - brand
+  - concepts
+  - phone contact scenario template
+  - how it fits together
+related:
+  - 17-glossary
+  - 05-scenarios
+---
 # 01. What ScenarioBot does
 
 **How to get there:** this is background — nothing to open.

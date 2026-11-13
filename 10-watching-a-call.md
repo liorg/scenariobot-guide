@@ -1,3 +1,20 @@
+---
+id: 10-watching-a-call
+title: Watching a call run live
+url: /phones/<phone>/contacts/<contact>/calls
+keywords:
+  - live call
+  - running call
+  - active call
+  - current step
+  - stop call
+  - restart call
+  - multiple active calls
+  - live panel
+related:
+  - 11-reading-a-call
+  - 04-contacts
+---
 # 10. Watching a call run
 
 **How to get there:** **Top bar → Phones → a phone → 👥 Contacts → click a

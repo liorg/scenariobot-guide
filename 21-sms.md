@@ -1,3 +1,21 @@
+---
+id: 21-sms
+title: SMS on a rented phone
+screen: screen-sms
+url: /phones/<phone>/sms
+keywords:
+  - SMS
+  - text message
+  - verification code
+  - OTP by SMS
+  - SMS tab
+  - inbox
+  - forwarded SMS
+  - no SMS tab
+related:
+  - 20-rented-phones
+  - 03-phones
+---
 # 21. SMS on a rented phone
 
 **How to get there:** **Top bar → Phones → a rented phone → ✉️ SMS tab.**

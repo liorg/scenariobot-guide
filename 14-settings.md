@@ -1,3 +1,26 @@
+---
+id: 14-settings
+title: Settings, two-step verification and notifications
+screen: screen-settings
+url: /settings
+keywords:
+  - settings
+  - profile
+  - personal details
+  - two-step verification
+  - 2FA
+  - OTP
+  - verify number
+  - dark mode
+  - light mode
+  - notifications
+  - email alerts
+  - advanced
+related:
+  - 02-signing-in
+  - 18-api-explorer
+  - 20-rented-phones
+---
 # 14. Settings and account
 
 **How to get there:** the **⚙️** button in the top bar, near your avatar.

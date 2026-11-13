@@ -1,3 +1,23 @@
+---
+id: 13-executions
+title: Parallel executions across many phones
+screen: screen-executions
+url: /executions
+keywords:
+  - execution
+  - parallel
+  - many phones
+  - bulk run
+  - wizard
+  - pending
+  - run
+  - copied scenarios
+  - targets
+related:
+  - 09-schedules
+  - 08-templates
+  - 16-troubleshooting
+---
 # 13. Parallel executions
 
 **How to get there:** **Top bar → Executions.**

@@ -1,3 +1,29 @@
+---
+id: 05-scenarios
+title: Building a scenario in the designer
+screen:
+  - screen-scenarios
+  - screen-designer
+url: /phones/<phone>/scenarios
+keywords:
+  - scenario
+  - designer
+  - canvas
+  - build a flow
+  - save
+  - publish
+  - draft
+  - active
+  - export
+  - import
+  - fullscreen
+  - Monaco
+  - scenario settings
+related:
+  - 06-components
+  - 07-playback
+  - 08-templates
+---
 # 05. Building a scenario
 
 **How to get there:** **Top bar → Phones → click a phone → 🤖 Scenarios tab**.

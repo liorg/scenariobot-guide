@@ -1,3 +1,30 @@
+---
+id: 03-phones
+title: Connecting a WhatsApp phone
+screen:
+  - screen-phone-card
+  - screen-phone-detail
+url: /phones
+two_fa: add-phone-gated
+keywords:
+  - add phone
+  - connect phone
+  - QR code
+  - pair code
+  - link device
+  - disconnected
+  - reconnect
+  - phone card
+  - battery
+  - signal
+  - Cloud API
+  - Baileys
+  - provision
+related:
+  - 20-rented-phones
+  - 04-contacts
+  - 16-troubleshooting
+---
 # 03. Connecting a phone
 
 **How to get there:** **Top bar → Phones**. This is the screen you land on after

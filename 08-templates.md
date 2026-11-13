@@ -1,3 +1,24 @@
+---
+id: 08-templates
+title: Message templates and approval
+screen: screen-templates
+url: /phones/templates
+keywords:
+  - template
+  - approved
+  - pending
+  - rejected
+  - Cloud API template
+  - send template
+  - 24 hour window
+  - create template
+  - edit template
+  - seed templates
+related:
+  - 05-scenarios
+  - 12-chat-view
+  - 16-troubleshooting
+---
 # 08. Templates
 
 **How to get there:** **Top bar → Phones → Templates tab.**

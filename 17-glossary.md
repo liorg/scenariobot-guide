@@ -1,3 +1,16 @@
+---
+id: 17-glossary
+title: Glossary of terms
+keywords:
+  - glossary
+  - terms
+  - definitions
+  - what does X mean
+  - vocabulary
+related:
+  - 01-what-it-does
+  - 06-components
+---
 # 17. Glossary
 
 **Aborted** — a call someone stopped by hand. Distinct from failed.

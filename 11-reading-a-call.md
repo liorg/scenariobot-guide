@@ -1,3 +1,23 @@
+---
+id: 11-reading-a-call
+title: Reading a finished call
+screen: screen-call-history
+url: /phones/<phone>/contacts/<contact>/calls/<call>
+keywords:
+  - call history
+  - past calls
+  - flow diagram
+  - events tab
+  - timeline
+  - why it stopped
+  - expired
+  - completed
+  - failed
+  - debug a call
+related:
+  - 10-watching-a-call
+  - 16-troubleshooting
+---
 # 11. Reading a finished call
 
 **How to get there:** **Top bar → Phones → a phone → 👥 Contacts → click a

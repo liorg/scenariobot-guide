@@ -1,3 +1,19 @@
+---
+id: 19-api-reference
+title: API reference — every endpoint
+keywords:
+  - API reference
+  - endpoints
+  - openapi
+  - REST
+  - GET POST
+  - auth
+  - paging
+  - resume
+  - integration
+related:
+  - 18-api-explorer
+---
 # 19. API reference
 
 **How to get there:** **Top bar → API** to try any of these live

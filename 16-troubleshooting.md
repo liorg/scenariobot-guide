@@ -1,3 +1,22 @@
+---
+id: 16-troubleshooting
+title: Troubleshooting — symptoms and fixes
+keywords:
+  - troubleshooting
+  - not working
+  - error
+  - stuck
+  - blocked
+  - greyed out
+  - no message
+  - failed
+  - fix
+  - why
+related:
+  - 10-watching-a-call
+  - 11-reading-a-call
+  - 17-glossary
+---
 # 16. Troubleshooting
 
 **How to get there:** each entry says where to go.
