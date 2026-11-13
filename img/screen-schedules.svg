@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 286" width="820" height="286" role="img" aria-label="The schedules screen">
+  <title>The schedules screen</title>
+
+  <style>
+    .bg{fill:#F7F9FC}.panel{fill:#FFFFFF;stroke:#E4EAF4;stroke-width:1.5}
+    .sub{fill:#F1F5F9;stroke:#E4EAF4;stroke-width:1}.line{stroke:#E4EAF4}
+    .t{font-family:'Segoe UI',Tahoma,sans-serif;fill:#1A2332}
+    .t-mut{font-family:'Segoe UI',Tahoma,sans-serif;fill:#8896A7}
+    .t-dis{font-family:'Segoe UI',Tahoma,sans-serif;fill:#BCC5D3}
+    .b{font-weight:700}.mono{font-family:Consolas,'JetBrains Mono',monospace}
+    .cal{fill:#7048E8}
+    .cal-t{font-family:'Segoe UI',Tahoma,sans-serif;fill:#FFF;font-weight:700;font-size:11px}
+    .dash{stroke:#7048E8;stroke-width:1.2;stroke-dasharray:3 3;fill:none}
+    @media (prefers-color-scheme:dark){
+      .bg{fill:#0F1420}.panel{fill:#171D2B;stroke:#2A3347}.sub{fill:#1F2738;stroke:#2A3347}
+      .line{stroke:#2A3347}.t{fill:#E6EAF2}.t-mut{fill:#7D8899}.t-dis{fill:#4F5A6B}
+      .cal{fill:#9775FA}.dash{stroke:#9775FA}
+    }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="820" height="286" rx="10"/>
+  <text id="sh-title" x="28" y="36" font-size="15" class="t b" text-anchor="start">⏰ Scheduling</text>
+  <text id="sh-count" x="150" y="36" font-size="12" class="t-mut" text-anchor="start">6 schedules</text>
+  <rect id="sh-phone-filter" x="480" y="18" width="150" height="28" rx="8" class="sub"/>
+  <text id="sh-phone-filter-label" x="496" y="37" font-size="11" class="t-mut" text-anchor="start">All phones ▾</text>
+  <rect id="sh-new" x="646" y="18" width="110" height="28" rx="8" class="" style="fill:#3B5BDB"/>
+  <text id="sh-new-label" x="701.0" y="36.0" font-size="11" class="t b" text-anchor="middle" style="fill:#FFFFFF">+ New schedule</text>
+  <rect id="sh-table" x="24" y="60" width="772" height="212" rx="10" class="panel"/>
+  <rect id="sh-head" x="24" y="60" width="772" height="30" rx="0" class="sub"/>
+  <text id="sh-th-name" x="44" y="79.0" font-size="9" class="t-mut b" text-anchor="start">NAME</text>
+  <text id="sh-th-scenario" x="190" y="79.0" font-size="9" class="t-mut b" text-anchor="start">SCENARIO</text>
+  <text id="sh-th-type" x="330" y="79.0" font-size="9" class="t-mut b" text-anchor="start">TYPE</text>
+  <text id="sh-th-phone" x="410" y="79.0" font-size="9" class="t-mut b" text-anchor="start">PHONE</text>
+  <text id="sh-th-next" x="540" y="79.0" font-size="9" class="t-mut b" text-anchor="start">NEXT RUN</text>
+  <text id="sh-th-status" x="670" y="79.0" font-size="9" class="t-mut b" text-anchor="start">STATUS</text>
+  <line x1="24" y1="90" x2="796" y2="90" class="line"/>
+  <text id="sh-0-name" x="44" y="122" font-size="12" class="t b mono" text-anchor="start">daily_ping</text>
+  <text id="sh-0-scenario" x="190" y="122" font-size="11" class="t" text-anchor="start">welcome_flow</text>
+  <rect id="sh-0-type" x="330" y="108" width="56" height="18" rx="9" class="" style="fill:#EEF2FF"/>
+  <text id="sh-0-type-text" x="358.0" y="121" font-size="9" class="t b" text-anchor="middle" style="fill:#3B5BDB">cron</text>
+  <text id="sh-0-phone" x="410" y="122" font-size="10" class="t-mut mono" text-anchor="start">972501234567</text>
+  <text id="sh-0-next" x="540" y="122" font-size="11" class="t" text-anchor="start">today 18:00</text>
+  <rect id="sh-0-status" x="670" y="108" width="58" height="18" rx="9" class="" style="fill:#EBFBEE"/>
+  <text id="sh-0-status-text" x="699.0" y="121" font-size="9" class="t b" text-anchor="middle" style="fill:#2F9E44">active</text>
+  <text id="sh-0-run" x="764" y="122" font-size="13" class="t" text-anchor="middle" style="fill:#2F9E44">▶</text>
+  <line x1="24" y1="144" x2="796" y2="144" class="line"/>
+  <text id="sh-1-name" x="44" y="176" font-size="12" class="t b mono" text-anchor="start">one_off</text>
+  <text id="sh-1-scenario" x="190" y="176" font-size="11" class="t" text-anchor="start">survey</text>
+  <rect id="sh-1-type" x="330" y="162" width="56" height="18" rx="9" class="" style="fill:#EEF2FF"/>
+  <text id="sh-1-type-text" x="358.0" y="175" font-size="9" class="t b" text-anchor="middle" style="fill:#3B5BDB">once</text>
+  <text id="sh-1-phone" x="410" y="176" font-size="10" class="t-mut mono" text-anchor="start">972501234567</text>
+  <text id="sh-1-next" x="540" y="176" font-size="11" class="t" text-anchor="start">14/11 09:30</text>
+  <rect id="sh-1-status" x="670" y="162" width="58" height="18" rx="9" class="" style="fill:#F1F3F5"/>
+  <text id="sh-1-status-text" x="699.0" y="175" font-size="9" class="t b" text-anchor="middle" style="fill:#868E96">paused</text>
+  <text id="sh-1-run" x="764" y="176" font-size="13" class="t" text-anchor="middle" style="fill:#2F9E44">▶</text>
+  <line x1="24" y1="198" x2="796" y2="198" class="line"/>
+  <text id="sh-2-name" x="44" y="230" font-size="12" class="t b mono" text-anchor="start">manual_run</text>
+  <text id="sh-2-scenario" x="190" y="230" font-size="11" class="t" text-anchor="start">welcome_flow</text>
+  <rect id="sh-2-type" x="330" y="216" width="56" height="18" rx="9" class="" style="fill:#EEF2FF"/>
+  <text id="sh-2-type-text" x="358.0" y="229" font-size="9" class="t b" text-anchor="middle" style="fill:#3B5BDB">manual</text>
+  <text id="sh-2-phone" x="410" y="230" font-size="10" class="t-mut mono" text-anchor="start">972501234567</text>
+  <text id="sh-2-next" x="540" y="230" font-size="11" class="t" text-anchor="start">—</text>
+  <rect id="sh-2-status" x="670" y="216" width="58" height="18" rx="9" class="" style="fill:#EBFBEE"/>
+  <text id="sh-2-status-text" x="699.0" y="229" font-size="9" class="t b" text-anchor="middle" style="fill:#2F9E44">active</text>
+  <text id="sh-2-run" x="764" y="230" font-size="13" class="t" text-anchor="middle" style="fill:#2F9E44">▶</text>
+  <g id="callout-1">
+    <circle cx="808" cy="32" r="11" class="cal"/>
+    <text x="808" y="36" class="cal-t" text-anchor="middle">1</text>
+  </g>
+  <path class="dash" d="M 797 32 L 756 32"/>
+  <g id="callout-2">
+    <circle cx="466" cy="32" r="11" class="cal"/>
+    <text x="466" y="36" class="cal-t" text-anchor="middle">2</text>
+  </g>
+  <path class="dash" d="M 477 32 L 476 32"/>
+  <g id="callout-3">
+    <circle cx="358" cy="276" r="11" class="cal"/>
+    <text x="358" y="280" class="cal-t" text-anchor="middle">3</text>
+  </g>
+  <g id="callout-4">
+    <circle cx="574" cy="276" r="11" class="cal"/>
+    <text x="574" y="280" class="cal-t" text-anchor="middle">4</text>
+  </g>
+  <g id="callout-5">
+    <circle cx="764" cy="276" r="11" class="cal"/>
+    <text x="764" y="280" class="cal-t" text-anchor="middle">5</text>
+  </g>
+</svg>

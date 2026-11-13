@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" role="img" aria-label="SMS on a rented phone">
+  <title>SMS on a rented phone</title>
+
+  <style>
+    .bg{fill:#F7F9FC}.panel{fill:#FFFFFF;stroke:#E4EAF4;stroke-width:1.5}
+    .sub{fill:#F1F5F9;stroke:#E4EAF4;stroke-width:1}.line{stroke:#E4EAF4}
+    .t{font-family:'Segoe UI',Tahoma,sans-serif;fill:#1A2332}
+    .t-mut{font-family:'Segoe UI',Tahoma,sans-serif;fill:#8896A7}
+    .t-dis{font-family:'Segoe UI',Tahoma,sans-serif;fill:#BCC5D3}
+    .b{font-weight:700}.mono{font-family:Consolas,'JetBrains Mono',monospace}
+    .cal{fill:#7048E8}
+    .cal-t{font-family:'Segoe UI',Tahoma,sans-serif;fill:#FFF;font-weight:700;font-size:11px}
+    .dash{stroke:#7048E8;stroke-width:1.2;stroke-dasharray:3 3;fill:none}
+    @media (prefers-color-scheme:dark){
+      .bg{fill:#0F1420}.panel{fill:#171D2B;stroke:#2A3347}.sub{fill:#1F2738;stroke:#2A3347}
+      .line{stroke:#2A3347}.t{fill:#E6EAF2}.t-mut{fill:#7D8899}.t-dis{fill:#4F5A6B}
+      .cal{fill:#9775FA}.dash{stroke:#9775FA}
+    }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="760" height="300" rx="10"/>
+  <text id="sms-title" x="28" y="36" font-size="14" class="t b" text-anchor="start">24 SMS messages</text>
+  <rect id="sms-search" x="520" y="20" width="214" height="28" rx="8" class="sub"/>
+  <text id="sms-search-ph" x="536" y="39" font-size="11" class="t-mut" text-anchor="start">Search sender or text…</text>
+  <rect id="sms-list" x="24" y="60" width="710" height="216" rx="10" class="panel"/>
+  <circle id="sms-0-avatar" cx="66" cy="96" r="18" fill="#3B5BDB" fill-opacity="0.15"/>
+  <text id="sms-0-icon" x="66" y="102" font-size="15" class="t b" text-anchor="middle" style="fill:#3B5BDB">✉</text>
+  <text id="sms-0-sender" x="98" y="92" font-size="12" class="t b mono" text-anchor="start">+972541112222</text>
+  <rect id="sms-0-count" x="230" y="80" width="30" height="18" rx="9" class="" style="fill:#EEF2FF"/>
+  <text id="sms-0-count-text" x="245.0" y="93" font-size="9" class="t b" text-anchor="middle" style="fill:#3B5BDB">3</text>
+  <text id="sms-0-preview" x="98" y="112" font-size="11" class="t-mut" text-anchor="start">Your code is 4921</text>
+  <text id="sms-0-time" x="700" y="92" font-size="10" class="t-mut" text-anchor="end">13/11 09:12</text>
+  <line x1="40" y1="134" x2="718" y2="134" class="line"/>
+  <circle id="sms-1-avatar" cx="66" cy="164" r="18" fill="#3B5BDB" fill-opacity="0.15"/>
+  <text id="sms-1-icon" x="66" y="170" font-size="15" class="t b" text-anchor="middle" style="fill:#3B5BDB">✉</text>
+  <text id="sms-1-sender" x="98" y="160" font-size="12" class="t b" text-anchor="start">BANK</text>
+  <rect id="sms-1-count" x="230" y="148" width="30" height="18" rx="9" class="" style="fill:#EEF2FF"/>
+  <text id="sms-1-count-text" x="245.0" y="161" font-size="9" class="t b" text-anchor="middle" style="fill:#3B5BDB">11</text>
+  <text id="sms-1-preview" x="98" y="180" font-size="11" class="t-mut" text-anchor="start">Transaction approved</text>
+  <text id="sms-1-time" x="700" y="160" font-size="10" class="t-mut" text-anchor="end">13/11 09:12</text>
+  <line x1="40" y1="202" x2="718" y2="202" class="line"/>
+  <circle id="sms-2-avatar" cx="66" cy="232" r="18" fill="#3B5BDB" fill-opacity="0.15"/>
+  <text id="sms-2-icon" x="66" y="238" font-size="15" class="t b" text-anchor="middle" style="fill:#3B5BDB">✉</text>
+  <text id="sms-2-sender" x="98" y="228" font-size="12" class="t b" text-anchor="start">Unknown sender</text>
+  <rect id="sms-2-count" x="230" y="216" width="30" height="18" rx="9" class="" style="fill:#EEF2FF"/>
+  <text id="sms-2-count-text" x="245.0" y="229" font-size="9" class="t b" text-anchor="middle" style="fill:#3B5BDB">1</text>
+  <text id="sms-2-preview" x="98" y="248" font-size="11" class="t-mut" text-anchor="start">Welcome!</text>
+  <text id="sms-2-time" x="700" y="228" font-size="10" class="t-mut" text-anchor="end">13/11 09:12</text>
+  <g id="callout-1">
+    <circle cx="748" cy="96" r="11" class="cal"/>
+    <text x="748" y="100" class="cal-t" text-anchor="middle">1</text>
+  </g>
+  <path class="dash" d="M 737 96 L 714 96"/>
+  <g id="callout-2">
+    <circle cx="272" cy="84" r="11" class="cal"/>
+    <text x="272" y="88" class="cal-t" text-anchor="middle">2</text>
+  </g>
+  <g id="callout-3">
+    <circle cx="748" cy="232" r="11" class="cal"/>
+    <text x="748" y="236" class="cal-t" text-anchor="middle">3</text>
+  </g>
+  <path class="dash" d="M 737 232 L 714 232"/>
+  <g id="callout-4">
+    <circle cx="506" cy="34" r="11" class="cal"/>
+    <text x="506" y="38" class="cal-t" text-anchor="middle">4</text>
+  </g>
+  <path class="dash" d="M 517 34 L 516 34"/>
+</svg>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 280" width="840" height="280" role="img" aria-label="Parallel executions">
+  <title>Parallel executions</title>
+
+  <style>
+    .bg{fill:#F7F9FC}.panel{fill:#FFFFFF;stroke:#E4EAF4;stroke-width:1.5}
+    .sub{fill:#F1F5F9;stroke:#E4EAF4;stroke-width:1}.line{stroke:#E4EAF4}
+    .t{font-family:'Segoe UI',Tahoma,sans-serif;fill:#1A2332}
+    .t-mut{font-family:'Segoe UI',Tahoma,sans-serif;fill:#8896A7}
+    .t-dis{font-family:'Segoe UI',Tahoma,sans-serif;fill:#BCC5D3}
+    .b{font-weight:700}.mono{font-family:Consolas,'JetBrains Mono',monospace}
+    .cal{fill:#7048E8}
+    .cal-t{font-family:'Segoe UI',Tahoma,sans-serif;fill:#FFF;font-weight:700;font-size:11px}
+    .dash{stroke:#7048E8;stroke-width:1.2;stroke-dasharray:3 3;fill:none}
+    @media (prefers-color-scheme:dark){
+      .bg{fill:#0F1420}.panel{fill:#171D2B;stroke:#2A3347}.sub{fill:#1F2738;stroke:#2A3347}
+      .line{stroke:#2A3347}.t{fill:#E6EAF2}.t-mut{fill:#7D8899}.t-dis{fill:#4F5A6B}
+      .cal{fill:#9775FA}.dash{stroke:#9775FA}
+    }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="840" height="280" rx="10"/>
+  <text id="ex-title" x="28" y="34" font-size="15" class="t b" text-anchor="start">Parallel Executions</text>
+  <text id="ex-sub" x="28" y="52" font-size="11" class="t-mut" text-anchor="start">one scenario, many phones, one contact</text>
+  <rect id="ex-refresh" x="646" y="22" width="40" height="26" rx="8" class="panel"/>
+  <text id="ex-refresh-label" x="666.0" y="39.0" font-size="11" class="t b" text-anchor="middle">⟳</text>
+  <rect id="ex-new" x="694" y="22" width="116" height="26" rx="8" class="" style="fill:#3B5BDB"/>
+  <text id="ex-new-label" x="752.0" y="39.0" font-size="11" class="t b" text-anchor="middle" style="fill:#FFFFFF">+ New Execution</text>
+  <rect id="ex-table" x="24" y="70" width="792" height="186" rx="10" class="panel"/>
+  <rect id="ex-head" x="24" y="70" width="792" height="30" rx="0" class="sub"/>
+  <text id="ex-th-contact" x="44" y="89.0" font-size="9" class="t-mut b" text-anchor="start">CONTACT</text>
+  <text id="ex-th-job" x="190" y="89.0" font-size="9" class="t-mut b" text-anchor="start">RUN / JOB</text>
+  <text id="ex-th-phones" x="320" y="89.0" font-size="9" class="t-mut b" text-anchor="start">PHONES</text>
+  <text id="ex-th-source" x="440" y="89.0" font-size="9" class="t-mut b" text-anchor="start">SOURCE</text>
+  <text id="ex-th-templates" x="560" y="89.0" font-size="9" class="t-mut b" text-anchor="start">TEMPLATES</text>
+  <text id="ex-th-status" x="680" y="89.0" font-size="9" class="t-mut b" text-anchor="start">STATUS</text>
+  <line x1="24" y1="100" x2="816" y2="100" class="line"/>
+  <text id="ex-0-contact" x="44" y="126" font-size="11" class="t b mono" text-anchor="start">+972541234567</text>
+  <text id="ex-0-contact-name" x="44" y="142" font-size="10" class="t-mut" text-anchor="start">Dana</text>
+  <text id="ex-0-job" x="190" y="126" font-size="11" class="t b" text-anchor="start">run_1130 JOB</text>
+  <text id="ex-0-job-type" x="190" y="142" font-size="10" class="t-mut" text-anchor="start">manual</text>
+  <g id="ex-0-phones">
+  <rect id="ex-0-phone-0" x="320" y="118" width="48" height="18" rx="9" class="" style="fill:#EEF2FF"/>
+  <text id="ex-0-phone-0-text" x="344.0" y="131" font-size="8" class="t b" text-anchor="middle" style="fill:#3B5BDB">…4567</text>
+  <rect id="ex-0-phone-1" x="372" y="118" width="48" height="18" rx="9" class="" style="fill:#EEF2FF"/>
+  <text id="ex-0-phone-1-text" x="396.0" y="131" font-size="8" class="t b" text-anchor="middle" style="fill:#3B5BDB">…4567</text>
+  </g>
+  <text id="ex-0-source" x="440" y="134" font-size="11" class="t" text-anchor="start">welcome_flow</text>
+  <text id="ex-0-templates" x="560" y="126" font-size="11" class="t b" text-anchor="start">2</text>
+  <text id="ex-0-prefix" x="560" y="142" font-size="9" class="t-mut mono" text-anchor="start">run_1130_*</text>
+  <rect id="ex-0-status" x="680" y="122" width="72" height="18" rx="9" class="" style="fill:#EEF2FF"/>
+  <text id="ex-0-status-text" x="716.0" y="135" font-size="9" class="t b" text-anchor="middle" style="fill:#3B5BDB">pending 3</text>
+  <rect id="ex-0-run" x="762" y="118" width="44" height="24" rx="8" class="" style="fill:#E4EAF4"/>
+  <text id="ex-0-run-label" x="784.0" y="134.0" font-size="11" class="t b" text-anchor="middle" style="fill:#8896A7">▶</text>
+  <line x1="24" y1="158" x2="816" y2="158" class="line"/>
+  <text id="ex-1-contact" x="44" y="184" font-size="11" class="t b mono" text-anchor="start">+972541234567</text>
+  <text id="ex-1-contact-name" x="44" y="200" font-size="10" class="t-mut" text-anchor="start">Dana</text>
+  <text id="ex-1-job" x="190" y="184" font-size="11" class="t b" text-anchor="start">run_0900 JOB</text>
+  <text id="ex-1-job-type" x="190" y="200" font-size="10" class="t-mut" text-anchor="start">manual</text>
+  <g id="ex-1-phones">
+  <rect id="ex-1-phone-0" x="320" y="176" width="48" height="18" rx="9" class="" style="fill:#EEF2FF"/>
+  <text id="ex-1-phone-0-text" x="344.0" y="189" font-size="8" class="t b" text-anchor="middle" style="fill:#3B5BDB">…4567</text>
+  <rect id="ex-1-phone-1" x="372" y="176" width="48" height="18" rx="9" class="" style="fill:#EEF2FF"/>
+  <text id="ex-1-phone-1-text" x="396.0" y="189" font-size="8" class="t b" text-anchor="middle" style="fill:#3B5BDB">…4567</text>
+  </g>
+  <text id="ex-1-source" x="440" y="192" font-size="11" class="t" text-anchor="start">welcome_flow</text>
+  <text id="ex-1-templates" x="560" y="184" font-size="11" class="t b" text-anchor="start">2</text>
+  <text id="ex-1-prefix" x="560" y="200" font-size="9" class="t-mut mono" text-anchor="start">run_1130_*</text>
+  <rect id="ex-1-status" x="680" y="180" width="72" height="18" rx="9" class="" style="fill:#EBFBEE"/>
+  <text id="ex-1-status-text" x="716.0" y="193" font-size="9" class="t b" text-anchor="middle" style="fill:#2F9E44">running</text>
+  <rect id="ex-1-run" x="762" y="176" width="44" height="24" rx="8" class="" style="fill:#3B5BDB"/>
+  <text id="ex-1-run-label" x="784.0" y="192.0" font-size="11" class="t b" text-anchor="middle" style="fill:#FFFFFF">▶</text>
+  <g id="callout-1">
+    <circle cx="828" cy="36" r="11" class="cal"/>
+    <text x="828" y="40" class="cal-t" text-anchor="middle">1</text>
+  </g>
+  <path class="dash" d="M 817 36 L 812 36"/>
+  <g id="callout-2">
+    <circle cx="346" cy="270" r="11" class="cal"/>
+    <text x="346" y="274" class="cal-t" text-anchor="middle">2</text>
+  </g>
+  <g id="callout-3">
+    <circle cx="590" cy="270" r="11" class="cal"/>
+    <text x="590" y="274" class="cal-t" text-anchor="middle">3</text>
+  </g>
+  <g id="callout-4">
+    <circle cx="716" cy="270" r="11" class="cal"/>
+    <text x="716" y="274" class="cal-t" text-anchor="middle">4</text>
+  </g>
+  <g id="callout-5">
+    <circle cx="784" cy="270" r="11" class="cal"/>
+    <text x="784" y="274" class="cal-t" text-anchor="middle">5</text>
+  </g>
+</svg>

@@ -1,0 +1,300 @@
+{
+  "generated_from": "src/screens + src/components (ui repo)",
+  "note": "Element ids match the id attributes in the matching .svg file.",
+  "screens": {
+    "screen-api": {
+      "title": "The API console",
+      "chapter": "18-api-explorer",
+      "url": "/api",
+      "elements": {
+        "api-token": "Your session token — the console signs requests as you",
+        "api-tag-0": "Endpoints grouped by tag",
+        "api-ep-0-method": "The method, colour-coded",
+        "api-send": "Send — this is a real request against your own data",
+        "api-response": "The real response"
+      },
+      "callouts": {
+        "1": "api-token",
+        "2": "api-tag-0",
+        "3": "api-ep-0-method",
+        "4": "api-send",
+        "5": "api-response"
+      }
+    },
+    "screen-call-history": {
+      "title": "A finished call",
+      "chapter": "11-reading-a-call",
+      "url": "/phones/<phone>/contacts/<contact>/calls/<call>",
+      "elements": {
+        "ch-outcome": "How the call ended",
+        "ch-stat-2-value": "Replies that matched no branch — the number to watch",
+        "ch-stat-3-value": "The last step reached — where it stopped",
+        "ch-ev-2-flag": "The reply that did not match, and what was expected"
+      },
+      "callouts": {
+        "1": "ch-outcome",
+        "2": "ch-stat-2-value",
+        "3": "ch-stat-3-value",
+        "4": "ch-ev-2-flag"
+      }
+    },
+    "screen-calls-list": {
+      "title": "The conversation list",
+      "chapter": "12-chat-view",
+      "url": "/phones/<phone>/calls",
+      "elements": {
+        "cl-unsynced": "Not identified yet — a ~ before the name, dashed ring",
+        "cl-active": "Active — the handshake finished",
+        "cl-inactive": "Inactive — set aside, still listed",
+        "cl-unsynced-0-connect": "Connect — links a contact, or brings an inactive one back"
+      },
+      "callouts": {
+        "1": "cl-unsynced",
+        "2": "cl-active",
+        "3": "cl-inactive",
+        "4": "cl-unsynced-0-connect"
+      }
+    },
+    "screen-chat-view": {
+      "title": "The chat view",
+      "chapter": "12-chat-view",
+      "url": "/phones/<phone>/calls/<contact>",
+      "elements": {
+        "chat-header": "The contact and how many messages are loaded",
+        "chat-window-banner": "Whether the 24-hour window is open",
+        "msg-in-1": "Incoming messages, on the left",
+        "msg-out-1": "Outgoing messages, on the right",
+        "chat-template-btn": "Send a template — works when the window is closed",
+        "chat-send-btn": "Send free text — needs the window open"
+      },
+      "callouts": {}
+    },
+    "screen-contacts": {
+      "title": "The contacts tab",
+      "chapter": "04-contacts",
+      "url": "/phones/<phone>/contacts",
+      "elements": {
+        "ct-add": "Add Contact — starts the PING handshake",
+        "ct-search": "Search by name or number",
+        "ct-0-status": "The contact's state — active, new, draft, inactive",
+        "ct-0-lang": "Language used for the PING and the bot's messages",
+        "ct-0-edit": "Edit — name, email, language"
+      },
+      "callouts": {
+        "1": "ct-add",
+        "2": "ct-search",
+        "3": "ct-0-status",
+        "4": "ct-0-lang",
+        "5": "ct-0-edit"
+      }
+    },
+    "screen-designer": {
+      "title": "The scenario designer",
+      "chapter": "05-scenarios",
+      "url": "/phones/<phone>/scenarios/<scenario>/design",
+      "elements": {
+        "designer-ribbon": "Save, Publish, Import, Export, Settings, Help",
+        "panel-expect": "EXPECT step types — wait for a reply",
+        "panel-canvas": "The conversation, top to bottom",
+        "panel-send": "SEND step types — send something",
+        "errors-panel": "What would block publishing",
+        "status-bar": "Event type, interval, steps, draft/active, saved"
+      },
+      "callouts": {}
+    },
+    "screen-executions": {
+      "title": "Parallel executions",
+      "chapter": "13-executions",
+      "url": "/executions",
+      "elements": {
+        "ex-new": "New Execution — the four-step wizard",
+        "ex-0-phones": "The target phones — first two, then +n",
+        "ex-0-templates": "How many templates were copied, and their prefix",
+        "ex-0-status": "pending n = the Scheduler has not picked the jobs up yet",
+        "ex-0-run": "Run — disabled while anything is pending"
+      },
+      "callouts": {
+        "1": "ex-new",
+        "2": "ex-0-phones",
+        "3": "ex-0-templates",
+        "4": "ex-0-status",
+        "5": "ex-0-run"
+      }
+    },
+    "screen-login": {
+      "title": "Signing in",
+      "chapter": "02-signing-in",
+      "url": "/",
+      "elements": {
+        "lg-email": "Email and password, or a provider below",
+        "lg-submit": "Sign in",
+        "lg-google": "Google and GitHub sign-in — same account either way",
+        "lg-github": "First sign-in creates the account"
+      },
+      "callouts": {
+        "1": "lg-email",
+        "2": "lg-submit",
+        "3": "lg-google",
+        "4": "lg-github"
+      }
+    },
+    "screen-phone-card": {
+      "title": "A phone card in the phone list",
+      "chapter": "03-phones",
+      "url": "/phones",
+      "elements": {
+        "phone-card": "The card itself — click it to open the phone",
+        "phone-name": "Nickname and number",
+        "rent-battery-fill": "Rental battery — drains as the rental runs",
+        "signal-bars": "Reception: green active, grey busy, outline disconnected",
+        "status-badge": "The phone's status",
+        "btn-disconnect": "Disconnect — asks first",
+        "btn-manage": "Manage — opens the phone"
+      },
+      "callouts": {}
+    },
+    "screen-phone-detail": {
+      "title": "A phone's own screen",
+      "chapter": "03-phones",
+      "url": "/phones/<phone>/calls",
+      "elements": {
+        "pd-back": "Back to the phone list",
+        "pd-header": "The phone itself — name, number, live status",
+        "pd-rent-clock": "Rental countdown — only on a rented phone",
+        "pd-tab-0": "Calls — the WhatsApp conversations",
+        "pd-tab-1": "Contacts — who this phone can talk to",
+        "pd-tab-2": "Scenarios — what it runs",
+        "pd-tab-3": "SMS — rented phones only"
+      },
+      "callouts": {
+        "1": "pd-back",
+        "2": "pd-header",
+        "3": "pd-rent-clock",
+        "4": "pd-tab-0",
+        "5": "pd-tab-1",
+        "6": "pd-tab-2",
+        "7": "pd-tab-3"
+      }
+    },
+    "screen-playback": {
+      "title": "Playback",
+      "chapter": "07-playback",
+      "url": "/phones/<phone>/scenarios/<scenario>/playback",
+      "elements": {
+        "pb-body": "The conversation as it would happen — nothing is sent",
+        "pb-msg-0-step": "Which step produced this message",
+        "pb-msg-1-expect": "What the scenario was waiting for",
+        "pb-play": "Play, or walk it one step at a time"
+      },
+      "callouts": {
+        "1": "pb-body",
+        "2": "pb-msg-0-step",
+        "3": "pb-msg-1-expect",
+        "4": "pb-play"
+      }
+    },
+    "screen-rent-list": {
+      "title": "The rented phones list",
+      "chapter": "20-rented-phones",
+      "url": "/rent",
+      "elements": {
+        "rent-row-1-number": "The number, with a Mine or Available chip",
+        "rent-row-1-whatsapp": "WhatsApp, Business, or not installed",
+        "rent-row-1-verified": "Whether the link to the handset is live",
+        "rent-row-1-dot": "Green = handset online, red = unplugged",
+        "rent-row-1-left": "Your rental's countdown",
+        "rent-row-1-btn": "Rent on an available row, End on yours"
+      },
+      "callouts": {}
+    },
+    "screen-scenarios": {
+      "title": "The scenarios tab",
+      "chapter": "05-scenarios",
+      "url": "/phones/<phone>/scenarios",
+      "elements": {
+        "sc-new": "New scenario — opens the designer empty",
+        "sc-0-status": "draft or active — only an active one runs",
+        "sc-0-design": "Design — opens the canvas",
+        "sc-0-playback": "Playback — replay it without sending",
+        "sc-0-contact": "The bot contact this scenario talks to"
+      },
+      "callouts": {
+        "1": "sc-new",
+        "2": "sc-0-status",
+        "3": "sc-0-design",
+        "4": "sc-0-playback",
+        "5": "sc-0-contact"
+      }
+    },
+    "screen-schedules": {
+      "title": "The schedules screen",
+      "chapter": "09-schedules",
+      "url": "/scheduling",
+      "elements": {
+        "sh-new": "New schedule — scenario, phone, when",
+        "sh-phone-filter": "Filter to one phone",
+        "sh-0-type": "cron, once or manual",
+        "sh-0-next": "When it fires next — the clearest sign it is really set up",
+        "sh-0-run": "Run it now, without waiting"
+      },
+      "callouts": {
+        "1": "sh-new",
+        "2": "sh-phone-filter",
+        "3": "sh-0-type",
+        "4": "sh-0-next",
+        "5": "sh-0-run"
+      }
+    },
+    "screen-settings": {
+      "title": "The settings dialog",
+      "chapter": "14-settings",
+      "url": "/settings",
+      "elements": {
+        "settings-dialog": "Settings, over the screen you were on",
+        "settings-tab-personal": "Personal details",
+        "settings-tab-two-step": "Two-step verification",
+        "settings-tab-advanced": "Trusted domains and email notifications",
+        "settings-tab-two-step-alert": "Orange dot — this tab needs attention",
+        "settings-avatar": "Click to upload a picture",
+        "settings-save": "One Save for all three tabs"
+      },
+      "callouts": {}
+    },
+    "screen-sms": {
+      "title": "SMS on a rented phone",
+      "chapter": "21-sms",
+      "url": "/phones/<phone>/sms",
+      "elements": {
+        "sms-0-sender": "One row per sender — tap to open the conversation",
+        "sms-0-count": "How many messages from that sender",
+        "sms-2-sender": "Messages with no readable sender land here",
+        "sms-search": "Search covers the sender and the text"
+      },
+      "callouts": {
+        "1": "sms-0-sender",
+        "2": "sms-0-count",
+        "3": "sms-2-sender",
+        "4": "sms-search"
+      }
+    },
+    "screen-templates": {
+      "title": "The templates tab",
+      "chapter": "08-templates",
+      "url": "/phones/templates/<phone>",
+      "elements": {
+        "tpl-filter-2": "Filter by status — the counts come from the server",
+        "tpl-new": "New template — saves as a draft, nothing is sent yet",
+        "tpl-0-status": "approved is the provider's answer, not yours",
+        "tpl-0-published": "Published — only a published template can be used in a scenario",
+        "tpl-1-actions": "Editing a published template is blocked — unpublish first"
+      },
+      "callouts": {
+        "1": "tpl-filter-2",
+        "2": "tpl-new",
+        "3": "tpl-0-status",
+        "4": "tpl-0-published",
+        "5": "tpl-1-actions"
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 300" width="620" height="300" role="img" aria-label="Signing in">
+  <title>Signing in</title>
+
+  <style>
+    .bg{fill:#F7F9FC}.panel{fill:#FFFFFF;stroke:#E4EAF4;stroke-width:1.5}
+    .sub{fill:#F1F5F9;stroke:#E4EAF4;stroke-width:1}.line{stroke:#E4EAF4}
+    .t{font-family:'Segoe UI',Tahoma,sans-serif;fill:#1A2332}
+    .t-mut{font-family:'Segoe UI',Tahoma,sans-serif;fill:#8896A7}
+    .t-dis{font-family:'Segoe UI',Tahoma,sans-serif;fill:#BCC5D3}
+    .b{font-weight:700}.mono{font-family:Consolas,'JetBrains Mono',monospace}
+    .cal{fill:#7048E8}
+    .cal-t{font-family:'Segoe UI',Tahoma,sans-serif;fill:#FFF;font-weight:700;font-size:11px}
+    .dash{stroke:#7048E8;stroke-width:1.2;stroke-dasharray:3 3;fill:none}
+    @media (prefers-color-scheme:dark){
+      .bg{fill:#0F1420}.panel{fill:#171D2B;stroke:#2A3347}.sub{fill:#1F2738;stroke:#2A3347}
+      .line{stroke:#2A3347}.t{fill:#E6EAF2}.t-mut{fill:#7D8899}.t-dis{fill:#4F5A6B}
+      .cal{fill:#9775FA}.dash{stroke:#9775FA}
+    }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="620" height="300" rx="10"/>
+  <rect id="lg-card" x="150" y="24" width="320" height="252" rx="14" class="panel"/>
+  <circle id="lg-logo" cx="310" cy="66" r="20" fill="#3B5BDB"/>
+  <text id="lg-logo-mark" x="310" y="72" font-size="17" class="t b" text-anchor="middle" style="fill:#FFFFFF">G</text>
+  <text id="lg-title" x="310" y="106" font-size="15" class="t b" text-anchor="middle">Sign in</text>
+  <rect id="lg-email" x="178" y="122" width="264" height="30" rx="8" class="sub"/>
+  <text id="lg-email-ph" x="194" y="142" font-size="11" class="t-mut" text-anchor="start">you@example.com</text>
+  <rect id="lg-password" x="178" y="158" width="264" height="30" rx="8" class="sub"/>
+  <text id="lg-password-ph" x="194" y="178" font-size="11" class="t-mut" text-anchor="start">••••••••</text>
+  <rect id="lg-submit" x="178" y="196" width="264" height="28" rx="8" class="" style="fill:#3B5BDB"/>
+  <text id="lg-submit-label" x="310.0" y="214.0" font-size="11" class="t b" text-anchor="middle" style="fill:#FFFFFF">Sign in</text>
+  <line x1="178" y1="238" x2="442" y2="238" class="line"/>
+  <rect id="lg-google" x="178" y="246" width="128" height="26" rx="8" class="panel"/>
+  <text id="lg-google-label" x="242.0" y="263.0" font-size="11" class="t b" text-anchor="middle">Google</text>
+  <rect id="lg-github" x="314" y="246" width="128" height="26" rx="8" class="panel"/>
+  <text id="lg-github-label" x="378.0" y="263.0" font-size="11" class="t b" text-anchor="middle">GitHub</text>
+  <g id="callout-1">
+    <circle cx="138" cy="137" r="11" class="cal"/>
+    <text x="138" y="141" class="cal-t" text-anchor="middle">1</text>
+  </g>
+  <path class="dash" d="M 149 137 L 174 137"/>
+  <g id="callout-2">
+    <circle cx="482" cy="210" r="11" class="cal"/>
+    <text x="482" y="214" class="cal-t" text-anchor="middle">2</text>
+  </g>
+  <path class="dash" d="M 471 210 L 446 210"/>
+  <g id="callout-3">
+    <circle cx="242" cy="290" r="11" class="cal"/>
+    <text x="242" y="294" class="cal-t" text-anchor="middle">3</text>
+  </g>
+  <g id="callout-4">
+    <circle cx="378" cy="290" r="11" class="cal"/>
+    <text x="378" y="294" class="cal-t" text-anchor="middle">4</text>
+  </g>
+</svg>

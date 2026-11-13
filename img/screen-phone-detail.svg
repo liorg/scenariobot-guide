@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 330" width="820" height="330" role="img" aria-label="A phone&#x27;s own screen">
+  <title>A phone&#x27;s own screen</title>
+
+  <style>
+    .bg{fill:#F7F9FC}.panel{fill:#FFFFFF;stroke:#E4EAF4;stroke-width:1.5}
+    .sub{fill:#F1F5F9;stroke:#E4EAF4;stroke-width:1}.line{stroke:#E4EAF4}
+    .t{font-family:'Segoe UI',Tahoma,sans-serif;fill:#1A2332}
+    .t-mut{font-family:'Segoe UI',Tahoma,sans-serif;fill:#8896A7}
+    .t-dis{font-family:'Segoe UI',Tahoma,sans-serif;fill:#BCC5D3}
+    .b{font-weight:700}.mono{font-family:Consolas,'JetBrains Mono',monospace}
+    .cal{fill:#7048E8}
+    .cal-t{font-family:'Segoe UI',Tahoma,sans-serif;fill:#FFF;font-weight:700;font-size:11px}
+    .dash{stroke:#7048E8;stroke-width:1.2;stroke-dasharray:3 3;fill:none}
+    @media (prefers-color-scheme:dark){
+      .bg{fill:#0F1420}.panel{fill:#171D2B;stroke:#2A3347}.sub{fill:#1F2738;stroke:#2A3347}
+      .line{stroke:#2A3347}.t{fill:#E6EAF2}.t-mut{fill:#7D8899}.t-dis{fill:#4F5A6B}
+      .cal{fill:#9775FA}.dash{stroke:#9775FA}
+    }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="820" height="330" rx="10"/>
+  <rect id="pd-back" x="24" y="20" width="78" height="28" rx="8" class="panel"/>
+  <text id="pd-back-label" x="63.0" y="38.0" font-size="11" class="t b" text-anchor="middle">Back</text>
+  <rect id="pd-header" x="24" y="60" width="772" height="70" rx="8" class="panel"/>
+  <circle id="pd-avatar" cx="66" cy="95" r="24" style="fill:#DBEAFE"/>
+  <text id="pd-avatar-letter" x="66" y="101" font-size="18" class="t b" text-anchor="middle" style="fill:#3B5BDB">S</text>
+  <text id="pd-name" x="104" y="90" font-size="15" class="t b" text-anchor="start">Sales</text>
+  <text id="pd-number" x="104" y="108" font-size="12" class="t-mut" text-anchor="start">972501234567</text>
+  <rect id="pd-rent-clock" x="230" y="86" width="92" height="18" rx="9" class="" style="fill:#EEF2FF"/>
+  <text id="pd-rent-clock-text" x="276.0" y="99" font-size="11" class="t b" text-anchor="middle" style="fill:#3B5BDB">0:42:10</text>
+  <circle id="pd-status-dot" cx="700" cy="95" r="5" style="fill:#2F9E44"/>
+  <text id="pd-status" x="714" y="100" font-size="12" class="t b" text-anchor="start" style="fill:#2F9E44">Active</text>
+  <rect id="pd-body" x="24" y="142" width="772" height="164" rx="8" class="panel"/>
+  <rect id="pd-tab-0" x="40" y="152" width="74" height="30" rx="8" class="" style="fill:#EEF2FF;stroke:#3B5BDB"/>
+  <text id="pd-tab-0-label" x="77.0" y="171" font-size="10" class="t b" text-anchor="middle" style="fill:#3B5BDB">📞 Calls</text>
+  <rect id="pd-tab-1" x="120" y="152" width="81.0" height="30" rx="8" class="sub"/>
+  <text id="pd-tab-1-label" x="160.5" y="171" font-size="10" class="t-mut" text-anchor="middle">👥 Contacts</text>
+  <rect id="pd-tab-2" x="207.0" y="152" width="88.2" height="30" rx="8" class="sub"/>
+  <text id="pd-tab-2-label" x="251.1" y="171" font-size="10" class="t-mut" text-anchor="middle">🤖 Scenarios</text>
+  <rect id="pd-tab-3" x="301.2" y="152" width="74" height="30" rx="8" class="sub"/>
+  <text id="pd-tab-3-label" x="338.2" y="171" font-size="10" class="t-mut" text-anchor="middle">SMS</text>
+  <line x1="24" y1="194" x2="796" y2="194" class="line"/>
+  <text id="pd-content" x="410" y="250" font-size="12" class="t-mut" text-anchor="middle">the selected tab&#x27;s content</text>
+  <g id="callout-1">
+    <circle cx="814" cy="34" r="11" class="cal"/>
+    <text x="814" y="38" class="cal-t" text-anchor="middle">1</text>
+  </g>
+  <path class="dash" d="M 803 34 L 106 34"/>
+  <g id="callout-2">
+    <circle cx="814" cy="95" r="11" class="cal"/>
+    <text x="814" y="99" class="cal-t" text-anchor="middle">2</text>
+  </g>
+  <path class="dash" d="M 803 95 L 800 95"/>
+  <g id="callout-3">
+    <circle cx="276" cy="62" r="11" class="cal"/>
+    <text x="276" y="66" class="cal-t" text-anchor="middle">3</text>
+  </g>
+  <g id="callout-4">
+    <circle cx="70" cy="320" r="11" class="cal"/>
+    <text x="70" y="324" class="cal-t" text-anchor="middle">4</text>
+  </g>
+  <g id="callout-5">
+    <circle cx="160" cy="320" r="11" class="cal"/>
+    <text x="160" y="324" class="cal-t" text-anchor="middle">5</text>
+  </g>
+  <g id="callout-6">
+    <circle cx="258" cy="320" r="11" class="cal"/>
+    <text x="258" y="324" class="cal-t" text-anchor="middle">6</text>
+  </g>
+  <g id="callout-7">
+    <circle cx="352" cy="320" r="11" class="cal"/>
+    <text x="352" y="324" class="cal-t" text-anchor="middle">7</text>
+  </g>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 300" width="780" height="300" role="img" aria-label="The templates tab">
+  <title>The templates tab</title>
+
+  <style>
+    .bg{fill:#F7F9FC}.panel{fill:#FFFFFF;stroke:#E4EAF4;stroke-width:1.5}
+    .sub{fill:#F1F5F9;stroke:#E4EAF4;stroke-width:1}.line{stroke:#E4EAF4}
+    .t{font-family:'Segoe UI',Tahoma,sans-serif;fill:#1A2332}
+    .t-mut{font-family:'Segoe UI',Tahoma,sans-serif;fill:#8896A7}
+    .t-dis{font-family:'Segoe UI',Tahoma,sans-serif;fill:#BCC5D3}
+    .b{font-weight:700}.mono{font-family:Consolas,'JetBrains Mono',monospace}
+    .cal{fill:#7048E8}
+    .cal-t{font-family:'Segoe UI',Tahoma,sans-serif;fill:#FFF;font-weight:700;font-size:11px}
+    .dash{stroke:#7048E8;stroke-width:1.2;stroke-dasharray:3 3;fill:none}
+    @media (prefers-color-scheme:dark){
+      .bg{fill:#0F1420}.panel{fill:#171D2B;stroke:#2A3347}.sub{fill:#1F2738;stroke:#2A3347}
+      .line{stroke:#2A3347}.t{fill:#E6EAF2}.t-mut{fill:#7D8899}.t-dis{fill:#4F5A6B}
+      .cal{fill:#9775FA}.dash{stroke:#9775FA}
+    }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="780" height="300" rx="10"/>
+  <rect id="tpl-filter-0" x="24" y="20" width="74" height="30" rx="8" class="sub"/>
+  <text id="tpl-filter-0-label" x="61.0" y="39" font-size="10" class="t-mut" text-anchor="middle">All</text>
+  <rect id="tpl-filter-1" x="104" y="20" width="74" height="30" rx="8" class="sub"/>
+  <text id="tpl-filter-1-label" x="141.0" y="39" font-size="10" class="t-mut" text-anchor="middle">Pending</text>
+  <rect id="tpl-filter-2" x="184" y="20" width="74" height="30" rx="8" class="" style="fill:#EEF2FF;stroke:#3B5BDB"/>
+  <text id="tpl-filter-2-label" x="221.0" y="39" font-size="10" class="t b" text-anchor="middle" style="fill:#3B5BDB">Approved</text>
+  <rect id="tpl-filter-3" x="264" y="20" width="74" height="30" rx="8" class="sub"/>
+  <text id="tpl-filter-3-label" x="301.0" y="39" font-size="10" class="t-mut" text-anchor="middle">Rejected</text>
+  <rect id="tpl-new" x="640" y="18" width="114" height="28" rx="8" class="" style="fill:#3B5BDB"/>
+  <text id="tpl-new-label" x="697.0" y="36.0" font-size="11" class="t b" text-anchor="middle" style="fill:#FFFFFF">+ New template</text>
+  <rect id="tpl-list" x="24" y="62" width="730" height="214" rx="10" class="panel"/>
+  <rect id="tpl-head" x="24" y="62" width="730" height="30" rx="0" class="sub"/>
+  <text id="tpl-th-name" x="44" y="81.0" font-size="9" class="t-mut b" text-anchor="start">NAME</text>
+  <text id="tpl-th-lang" x="250" y="81.0" font-size="9" class="t-mut b" text-anchor="start">LANG</text>
+  <text id="tpl-th-category" x="320" y="81.0" font-size="9" class="t-mut b" text-anchor="start">CATEGORY</text>
+  <text id="tpl-th-status" x="450" y="81.0" font-size="9" class="t-mut b" text-anchor="start">STATUS</text>
+  <text id="tpl-th-published" x="560" y="81.0" font-size="9" class="t-mut b" text-anchor="start">PUBLISHED</text>
+  <line x1="24" y1="92" x2="754" y2="92" class="line"/>
+  <text id="tpl-0-name" x="44" y="125" font-size="12" class="t b mono" text-anchor="start">check_contact</text>
+  <text id="tpl-0-lang" x="250" y="125" font-size="11" class="t-mut mono" text-anchor="start">en_US</text>
+  <text id="tpl-0-category" x="320" y="125" font-size="10" class="t-mut" text-anchor="start">UTILITY</text>
+  <rect id="tpl-0-status" x="450" y="111" width="70" height="18" rx="9" class="" style="fill:#EBFBEE"/>
+  <text id="tpl-0-status-text" x="485.0" y="124" font-size="9" class="t b" text-anchor="middle" style="fill:#2F9E44">approved</text>
+  <text id="tpl-0-published" x="578" y="125" font-size="11" class="t b" text-anchor="start" style="fill:#2F9E44">yes</text>
+  <text id="tpl-0-actions" x="712" y="125" font-size="10" class="t-mut" text-anchor="middle">Edit · Delete</text>
+  <line x1="24" y1="148" x2="754" y2="148" class="line"/>
+  <text id="tpl-1-name" x="44" y="181" font-size="12" class="t b mono" text-anchor="start">welcome</text>
+  <text id="tpl-1-lang" x="250" y="181" font-size="11" class="t-mut mono" text-anchor="start">he</text>
+  <text id="tpl-1-category" x="320" y="181" font-size="10" class="t-mut" text-anchor="start">UTILITY</text>
+  <rect id="tpl-1-status" x="450" y="167" width="70" height="18" rx="9" class="" style="fill:#FFF9DB"/>
+  <text id="tpl-1-status-text" x="485.0" y="180" font-size="9" class="t b" text-anchor="middle" style="fill:#E67700">pending</text>
+  <text id="tpl-1-published" x="578" y="181" font-size="11" class="t-mut" text-anchor="start">no</text>
+  <text id="tpl-1-actions" x="712" y="181" font-size="10" class="t-mut" text-anchor="middle">Edit · Delete</text>
+  <line x1="24" y1="204" x2="754" y2="204" class="line"/>
+  <text id="tpl-2-name" x="44" y="237" font-size="12" class="t b mono" text-anchor="start">promo_sept</text>
+  <text id="tpl-2-lang" x="250" y="237" font-size="11" class="t-mut mono" text-anchor="start">he</text>
+  <text id="tpl-2-category" x="320" y="237" font-size="10" class="t-mut" text-anchor="start">MARKETING</text>
+  <rect id="tpl-2-status" x="450" y="223" width="70" height="18" rx="9" class="" style="fill:#FFF5F5"/>
+  <text id="tpl-2-status-text" x="485.0" y="236" font-size="9" class="t b" text-anchor="middle" style="fill:#C92A2A">rejected</text>
+  <text id="tpl-2-published" x="578" y="237" font-size="11" class="t-mut" text-anchor="start">no</text>
+  <text id="tpl-2-actions" x="712" y="237" font-size="10" class="t-mut" text-anchor="middle">Edit · Delete</text>
+  <g id="callout-1">
+    <circle cx="128" cy="290" r="11" class="cal"/>
+    <text x="128" y="294" class="cal-t" text-anchor="middle">1</text>
+  </g>
+  <g id="callout-2">
+    <circle cx="768" cy="32" r="11" class="cal"/>
+    <text x="768" y="36" class="cal-t" text-anchor="middle">2</text>
+  </g>
+  <path class="dash" d="M 757 32 L 756 32"/>
+  <g id="callout-3">
+    <circle cx="485" cy="290" r="11" class="cal"/>
+    <text x="485" y="294" class="cal-t" text-anchor="middle">3</text>
+  </g>
+  <g id="callout-4">
+    <circle cx="594" cy="290" r="11" class="cal"/>
+    <text x="594" y="294" class="cal-t" text-anchor="middle">4</text>
+  </g>
+  <g id="callout-5">
+    <circle cx="712" cy="290" r="11" class="cal"/>
+    <text x="712" y="294" class="cal-t" text-anchor="middle">5</text>
+  </g>
+</svg>
