@@ -117,16 +117,43 @@ before you have added a single phone.
 
 ## ⚙️ Advanced
 
-### Trusted domain
+### Trusted domains
 
-The domain your own systems call the API from. Leave it empty if you are not
-using the API.
+The domains your **scenario code is allowed to call**. A `fetch` in a code step
+to anywhere else is refused when you save the scenario
+([Chapter 06](06-components.md#the-domain-has-to-be-approved-first)). Leave it
+empty if none of your scenarios call out.
 
-- Type the domain alone — `example.com`, not `https://example.com/`. A pasted
-  URL is cleaned up for you.
-- A **wildcard prefix** is allowed: `*.example.com` covers every subdomain.
-- An invalid value marks the tab with a dot and **blocks Save** until it is
-  fixed or cleared. Clearing the field is valid and removes the setting.
+**A domain is checked before it is accepted.** Saving does not simply store what
+you typed — the platform resolves the domain and completes a TLS handshake with
+it. It is accepted only if all of this holds:
+
+| Requirement | Rejected with |
+|---|---|
+| `https`, port 443 | *https only* · *only port 443 is allowed* |
+| a real domain, not an IP | *ip addresses are not allowed — use a domain* |
+| no `user:pass@` in the URL | *credentials in url are not allowed* |
+| not internal — `localhost`, `.local`, `.internal`, `.lan`, `.home`, `.corp`, `.intranet` | *internal domains are not allowed* |
+| resolves to **public** addresses only | *domain resolves to a non-public address* |
+| answers on 443 with a valid certificate | *certificate invalid* · *connection to port 443 failed* |
+| that certificate has **more than 7 days** left | *certificate expires too soon* |
+
+So the save can fail for reasons that are nothing to do with typing — a
+certificate about to lapse, or DNS pointing somewhere private. The message says
+which.
+
+Things worth knowing:
+
+- Type or paste the **URL** — `https://api.example.com`. It is the address that
+  is checked, and only the domain part is stored.
+- **Each host is separate.** `api.example.com` does not cover
+  `sub.api.example.com`; add both if you call both.
+- **Up to 20 domains** per account.
+- **All or nothing.** If you change the list and one entry fails, nothing is
+  saved — fix it and save again. Every failure is listed at once, not one at a
+  time.
+- Removing a domain from the list **revokes** it, and the next save of any
+  scenario that calls it will fail. Check your scenarios before removing one.
 
 ### Email notifications
 
@@ -174,10 +201,36 @@ is told which mode the page is in.
 | **🔔 Notifications** | top bar | the notification bell — see below |
 | **🌙 / ☀️ theme** | top bar | light or dark — see above |
 | **Language switcher** | top bar | English, Hebrew, Russian, Arabic — **your choice is remembered**, and the layout flips to right-to-left for Hebrew and Arabic |
-| **❓ Help** | top bar, beside ⚙️ | opens this guide |
-| **Your email and avatar** | top bar | shows which account you're in |
-| **Logout** | far end of the top bar | signs out |
+| **❓ Help** | **in the avatar menu**, with Settings and Logout | opens this guide in a dialog |
+| **Your avatar** | top bar | opens the account menu |
 | **Version number** | far end, small grey text | useful when reporting a problem |
+
+### The avatar menu
+
+Your name, email and four items:
+
+| Item | Opens |
+|---|---|
+| **⚙️ Settings** | this chapter's screen |
+| **❓ Help** | the guide, in a dialog over whatever you were doing |
+| **Privacy policy** | the policy, in a dialog |
+| **Logout** | signs you out |
+
+Help used to sit in the top bar as its own **❓** button. It moved into this
+menu — same guide, one click further in.
+
+### The Help dialog
+
+It shows the guide itself, with a **searchable index of topics** down the side,
+grouped into Getting started · Everyday use · Reference · Troubleshooting. The
+support contacts — WhatsApp and email — are at the bottom of that list.
+
+**↗ Open in a new tab** gives you the chapter as a full page, which is the one
+to use when you want it beside the app rather than over it.
+
+A link of the form `grossman.bot/guide/<chapter>` opens this dialog on that
+chapter when you are signed in, and goes straight to the guide site when you
+are not.
 
 ## Notifications
 
@@ -201,8 +254,21 @@ Clicking through takes you to that call ([Chapter 11](11-reading-a-call.md)).
 A scenario that finishes cleanly but with mismatches is deliberately a
 **warning, not a success** — it ran to the end, but not the way it was written.
 
-**The ❌ and ⚠️ ones are what reach your inbox** if you turned email
-notifications on with **Errors only** — see Advanced, above.
+### Rentals write notifications too
+
+A rented phone deletes its contents when the rental ends, so it tells you three
+times ([Chapter 20](20-rented-phones.md#you-get-told-three-times)): **ℹ️ info**
+when it starts, **⚠️ warning** part-way through, and **❌ error** when it ends.
+
+They name the number and the end time, in your language and your timezone. The
+last one has nothing to click through to — the phone isn't yours by then.
+
+**Only the ❌ ones reach your inbox** if you turned email notifications on with
+**Errors only** — see Advanced, above. ⚠️ warnings stay in the bell.
+
+That is worth knowing for rentals: the *ending soon* warning is a ⚠️, so with
+**Errors only** on you get the mail saying the rental **ended** but not the one
+warning you it was about to. Turn **Errors only** off if you want that one.
 
 ## Privacy policy
 

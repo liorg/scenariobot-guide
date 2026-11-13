@@ -123,13 +123,26 @@ skip), **stop**, **retry**. They mean the same things.
 
 ## Custom code steps
 
-Both code cards hold JavaScript, edited in a proper code editor inside the card
-and run in a sandbox.
+Both code cards hold **TypeScript**, edited in a proper code editor inside the
+card and run in a Deno sandbox.
+
+Every card is one default-exported async function, and its argument is always
+typed **`ScenarioPayload`**:
+
+```ts
+export default async function (payload: ScenarioPayload) {
+  // …
+}
+```
+
+`ScenarioPayload` is available without an import — it is the type of everything
+the step is given, so the editor can complete `payload.` for you and catch a
+misspelt field before you save. Every example below uses it.
 
 ### A SEND code card generates a reply
 
-```js
-export default async function(payload) {
+```ts
+export default async function (payload: ScenarioPayload) {
   const customer = payload.target_contact;
 
   return {
@@ -144,8 +157,8 @@ export default async function(payload) {
 
 ### An EXPECT code card judges a reply
 
-```js
-export default async function(payload) {
+```ts
+export default async function (payload: ScenarioPayload) {
   const received = payload.lastMessage.Value;
 
   if (!received?.trim()) {
@@ -167,10 +180,202 @@ a step that runs successfully and stores nothing — with no error anywhere.
 
 ### What your code can read
 
-Two things:
+The editor knows the whole shape — type `payload.` and it lists it — but these
+are the fields you will actually use:
 
-- **`payload.target_contact`** — the contact, including `.name`
-- **`payload.lastMessage.Value`** — the previous step's reply or output
+| Field | Holds |
+|---|---|
+| `payload.target_contact` | the contact: `.id`, `.name`, `.phone` |
+| `payload.lastMessage.Value` | the previous step's reply or output |
+| `payload.lastMessage.num` | which step that was |
+| `payload.source_phone.phone` | the bot's own number, as `972…` — not an id |
+| `payload.variables` | values earlier steps stored, e.g. `payload.variables.expected` |
+| `payload.scenarioId` / `payload.stepId` | the ids of this run and this step |
+
+`payload.variables` is the one people miss: it is how a value survives more than
+one step, where `lastMessage.Value` only ever holds the step immediately before.
+
+Plus anything you can reach over the network — see below.
+
+### Calling an external service
+
+The sandbox is **Deno**, so the standard web `fetch` is already there. Nothing
+to install, nothing to import — no `axios`, no `require`, no `node-fetch`.
+
+```ts
+export default async function (payload: ScenarioPayload) {
+  const customer = payload.target_contact;
+
+  const r = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+  const todo = await r.json();
+
+  return {
+    success: true,
+    selectedValue: `${customer.name} — ${todo.title}`,
+  };
+}
+```
+
+That is the whole pattern: fetch, read the response, put something into
+`selectedValue`. The next step receives it as `payload.lastMessage.Value`, so a
+value fetched here can be sent in the following message.
+
+### The domain has to be approved first
+
+**A code step can only call domains on your trusted list.** The check runs when
+you **save** the scenario, not when it runs — so an unapproved URL is a save
+error, with the step and the URL named:
+
+> `https://api.example.com — domain 'api.example.com' is not in trusted domains`
+
+You add a domain in [Settings → ⚙️ Advanced](https://grossman.bot/settings/advanced)
+([Chapter 14](14-settings.md)), and it is **verified before it is accepted**: the
+platform resolves it and completes a TLS handshake with it. A domain that does
+not exist, does not answer on 443, or has a certificate expiring within a week
+is refused there and then — which means by the time you write the `fetch`, the
+address is known to work.
+
+The rules the URL in your code must follow:
+
+| Rule | Why |
+|---|---|
+| **`https` only** | no plain HTTP, ever |
+| **port 443 only** | `https://api.example.com:8443/…` is refused |
+| **no IP addresses** | write the domain |
+| **no credentials in the URL** | `https://user:pass@…` is refused |
+| **the host must be written literally** | see below |
+| **the exact host must be on the list** | `sub.api.example.com` is not covered by `api.example.com` |
+
+**The host must be literal — the path does not.** This is the distinction to
+remember:
+
+```ts
+// ✅ fine — the host is written out, only the path is built
+await fetch(`https://api.example.com/orders/${id}`);
+
+// ❌ refused — "dynamic host is not allowed, write the domain literally"
+await fetch(`https://${host}/orders`);
+```
+
+Two things that surprise people:
+
+- **Every subdomain is its own entry.** Approving `example.com` does not approve
+  `api.example.com`. Add the host you actually call.
+- **URLs in comments are checked too.** A documentation link or a commented-out
+  endpoint will block the save with a complaint about a domain you are not
+  calling. Take the `https://` out of comments, or approve it.
+
+If your domain is non-Latin, write the **punycode** form in the code
+(`xn--6dbbec0c.co.il`, not `דוגמה.co.il`) — that is the form the list stores.
+
+The annotation is types only — it is erased before the code runs, so it costs
+nothing and buys you the editor's help. It is also the fastest way to catch the
+mistake below: a misspelt `payload` field is a **type error** in the editor,
+where plain JavaScript would hand you `undefined` at run time and send a message
+with a blank in it.
+
+**The conversation waits while you fetch.** This code runs between two WhatsApp
+messages, with the person on the other end looking at their phone. A service
+that takes eight seconds to answer is an eight-second silence in the middle of
+your conversation, so keep these calls to things that answer quickly.
+
+Four habits that make the difference between a step that works and one that
+fails strangely:
+
+**1. Set a timeout.** Without one, a hung service hangs the step.
+
+```ts
+const r = await fetch(url, { signal: AbortSignal.timeout(5000) });
+```
+
+**2. Check the status.** `fetch` does **not** throw on a 404 or a 500 — it
+returns a response with `ok: false`. A missing check means `r.json()` tries to
+parse an error page and the real cause disappears.
+
+```ts
+if (!r.ok) {
+  return { success: false, selectedValue: `HTTP ${r.status}` };
+}
+```
+
+**3. Wrap it.** A network failure throws, and an unhandled throw is a failed
+step with nothing useful recorded.
+
+```ts
+try {
+  const r = await fetch(url, { signal: AbortSignal.timeout(5000) });
+  if (!r.ok) return { success: false, selectedValue: `HTTP ${r.status}` };
+  const data = await r.json();
+  return { success: true, selectedValue: String(data.title ?? "") };
+} catch (e) {
+  return { success: false, selectedValue: `fetch failed: ${e}` };
+}
+```
+
+Returning `success: false` with a readable reason is what turns a mystery into a
+line you can read in the call's events ([Chapter 11](11-reading-a-call.md)).
+
+**4. `selectedValue` is text.** An object returned there is not a message. Pick
+the field you want, or format it yourself — `String(...)`, a template string, or
+`JSON.stringify` if you really do want the raw shape.
+
+### Don't put secrets in a code card
+
+An API key typed into a code card is **stored in the scenario** and visible to
+anyone who can open that scenario — and it travels with every copy of it, which
+is exactly what [parallel executions](13-executions.md) make lots of.
+
+If a call needs authentication, put a small endpoint of your own in front of it
+and let that endpoint hold the credentials. The scenario then calls something
+that is safe to read — and that endpoint's own domain is the one you approve,
+which is the tidier list anyway.
+
+The same goes for what comes back: whatever you put into `selectedValue` can end
+up in a WhatsApp message, so don't select a field you wouldn't want sent.
+
+### An EXPECT card can fetch too
+
+The same `fetch` works on an EXPECT card, which is how you validate an answer
+against your own system rather than against a pattern:
+
+```ts
+export default async function (payload: ScenarioPayload) {
+  const received = (payload.lastMessage.Value ?? "").trim();
+
+  const r = await fetch(`https://your-api.example.com/orders/${encodeURIComponent(received)}`,
+                        { signal: AbortSignal.timeout(5000) });
+
+  return {
+    expected: received,
+    proceed: r.ok,          // the order exists → carry on
+  };
+}
+```
+
+Note `encodeURIComponent`. `received` is whatever the person typed, and dropping
+it into a URL unescaped is how a stray `?` or `/` turns into a different
+request.
+
+### The editor
+
+The code box is a real editor — the same one as VS Code — with TypeScript
+checking as you type, autocomplete on `payload.`, and the errors listed
+underneath.
+
+| Control | Does |
+|---|---|
+| **⤢** | **expands the editor to fill the designer** |
+| **⤡** or **Esc** | back to the small box |
+| **▶ Check** | runs your code — also **Ctrl/Cmd + Enter** |
+| **copy** | the whole file to the clipboard |
+
+**Use the expand button.** The inline box is about ten lines tall — enough to
+see what a card does, not enough to write one. Expanded, it covers the designer,
+turns on the minimap, and keeps the error list visible beneath. Your cursor
+position and undo history survive the switch, both ways.
+
+Esc collapses it, unless the autocomplete or find box is open — then Esc closes
+that first, as you would expect.
 
 ### Checking it
 

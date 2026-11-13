@@ -45,14 +45,21 @@ two different places:
 
 | Template | Where it comes from | When |
 |---|---|---|
-| `check_contact` | created when the phone is provisioned | immediately |
+| `check_contact` | created when the phone is provisioned | immediately, **already approved and published** |
 | `hello_world` | the provider's standard catalog | within ~15 minutes |
 | `sample_issue_resolution` | the provider's catalog | ~15 minutes |
 | `sample_shipping_confirmation` | the provider's catalog | ~15 minutes |
 | `sample_movie_ticket_confirmation` | the provider's catalog | ~15 minutes |
 | `sample_purchase_feedback` | the provider's catalog | ~15 minutes |
 
-The first is ours — a one-line "Are you a bot?" used by the contact handshake.
+The first is ours — a one-line **"Are you a bot?"** used by the contact
+handshake. It is the one template that needs no waiting: on a linked phone it is
+created, **approved and published in the same step as the phone itself**, so the
+handshake works the moment the phone is connected. Nothing external approves it,
+because nothing external needs to — it is our own template on our own phone.
+
+That also repairs itself: if the template is already there but stuck pending or
+unpublished, provisioning the phone again approves and publishes it.
 The other five are the samples every new WhatsApp Business account is given,
 and they are **imported**, not created here. That is why they can appear on the
 Templates tab some minutes after the phone is connected rather than at once.

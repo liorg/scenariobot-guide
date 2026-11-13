@@ -27,13 +27,15 @@ phone or contact, the URL is a live link you can follow from here.
 | 10 | [Watching a call run](10-watching-a-call.md) | the live panel |
 | 11 | [Reading a finished call](11-reading-a-call.md) | history, flow diagram, events |
 | 12 | [The chat view](12-chat-view.md) | plain WhatsApp conversation with a contact |
-| 13 | [Parallel executions](13-executions.md) | running against many phones at once |
+| 13 | [Parallel executions](13-executions.md) | copying one scenario onto many phones, the wizard, running them |
 | 14 | [Settings and account](14-settings.md) | the three settings tabs, two-step verification, email notifications |
 | 15 | [Tips for a reliable setup](15-tips.md) | clean phone, keeping it online, support contacts |
 | 16 | [Troubleshooting](16-troubleshooting.md) | symptom → cause → fix |
 | 17 | [Glossary](17-glossary.md) | one-line definitions |
 | 18 | [API Explorer](18-api-explorer.md) | the built-in API console (developers and support) |
 | 19 | [API reference](19-api-reference.md) | every endpoint the API offers, and what it's for |
+| 20 | [Renting a phone](20-rented-phones.md) | the pool of real phones with SIMs — renting, the clock, what the wipe deletes |
+| 21 | [SMS on a rented phone](21-sms.md) | text messages arriving on a rented SIM |
 
 ## Every screen has an address
 
@@ -79,7 +81,11 @@ The product is a single web app, but **each screen has its own URL**. That means
 /scheduling/<schedule>                one schedule and its calls
 
 /executions                           parallel runs
+/executions/new                       create — the four-step wizard
+/executions/<execution>/run           run confirmation
 /api                                  the API console
+/rent                                 rented phones — the pool
+/phones/<phone>/sms                   SMS on a rented phone
 /settings                             account settings — opens the personal tab
 /settings/personal                    name, email, avatar, language
 /settings/2fa                         two-step verification
@@ -110,14 +116,24 @@ showing an error.
 | [grossman.bot/scheduling](https://grossman.bot/scheduling) | your schedules |
 | [grossman.bot/executions](https://grossman.bot/executions) | parallel runs |
 | [grossman.bot/api](https://grossman.bot/api) | the API console |
+| [grossman.bot/rent](https://grossman.bot/rent) | rent a phone with a SIM |
 | [grossman.bot/settings](https://grossman.bot/settings) | your profile |
 | [grossman.bot/settings/2fa](https://grossman.bot/settings/2fa) | verify your mobile number |
 | [grossman.bot/guide/16-troubleshooting](https://grossman.bot/guide/16-troubleshooting) | this guide's troubleshooting chapter |
 
 The last one is worth noting: **`grossman.bot/guide/<chapter>` opens this
 guide**, so any chapter can be linked from inside the product or from a
-message. The chapter name is the file name without its number — for example
+message — for example
 [grossman.bot/guide/08-templates](https://grossman.bot/guide/08-templates).
+Signed in, it opens the Help dialog on that chapter; signed out, it goes
+straight to the guide site.
+
+**The guide itself lives at
+<https://liorg.github.io/scenariobot-guide>**, one page per chapter —
+[.../08-templates.html](https://liorg.github.io/scenariobot-guide/08-templates.html).
+That is the address to use when linking the guide from outside the product.
+Inside it, **❓ Help** in the avatar menu shows the same pages in a dialog
+([Chapter 14](14-settings.md)).
 
 The **designer** and **playback** still open as full-screen views over the
 screen beneath, and closing one returns you where you were — but they now have

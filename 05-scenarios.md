@@ -34,13 +34,74 @@ touch on a tablet.
 | Redo | **Ctrl/Cmd + Y** or **Ctrl/Cmd + Shift + Z** |
 | Duplicate a step | the duplicate action on the step |
 | Reorder | drag, or the up/down arrows |
-| Export / import | buttons on the ribbon — raw JSON |
+| Export / import | buttons on the ribbon — see below |
 
 An **errors panel** flags problems as you go and pops open by itself whenever
 new issues are found.
 
 The two side columns can be **resized, pinned and collapsed**, and your layout
 choice is remembered between sessions.
+
+## Export and import
+
+**Export** writes the scenario to a `.json` file you can keep, send, or load
+onto another phone.
+
+**The templates travel with it.** If any step sends a template, the file carries
+the full definition of each one — body, header, footer, buttons, examples — so
+the scenario can be rebuilt on a phone that has never seen those templates. If a
+template the canvas uses no longer exists on this phone, the export says so and
+asks whether to continue without it.
+
+### Importing
+
+**Import** reads such a file and tells you what it will do **before** writing
+anything.
+
+**A name that already exists is a conflict, and you choose:**
+
+| Choice | Result |
+|---|---|
+| **Override** | replaces the existing scenario of that name |
+| **New** | creates a separate one, with a free name suggested for you |
+
+**Override turns the scenario back into a draft.** If it was published, it is
+unpublished — the new content hasn't been checked yet, so it is not allowed to
+keep running. Publish it again once you're happy with it.
+
+### Templates are matched by content, not by file
+
+This is what makes a file portable. For each template the scenario uses:
+
+1. **Already on this phone?** Reused — nothing is created.
+2. **Same content in the same language, under any name?** That one is reused. An
+   identical template you already approved is not duplicated just because it is
+   called something else.
+3. **Neither?** It is **created and submitted for approval automatically**, under
+   its name from the file. If that name is taken by a different template, a
+   number is added — `welcome_2`.
+4. **In the file but not valid?** Listed and skipped rather than created.
+5. **Not in the file and not on the phone?** Listed as missing — the step will
+   have no template, and publishing will tell you.
+
+The preview lists the decision for every template before you commit, so you can
+see exactly what is about to be created.
+
+**A template created this way still needs approval.** It goes through the same
+submission as one you create by hand. If the provider doesn't approve it
+straight away it stays pending — the import still succeeds, and the scenario
+simply cannot be published until the template is approved
+([Chapter 08](08-templates.md)).
+
+**The file name decides nothing.** The scenario's name is the one in the
+designer, and templates are matched by their own content and name. Renaming the
+file on disk changes nothing about the import.
+
+### What is not imported
+
+- **The bot contact**, if it belongs to a different phone — contacts are per
+  phone, so one from elsewhere is dropped rather than carried over.
+- **The publish state** — every import lands as a draft.
 
 ## Scenario settings
 

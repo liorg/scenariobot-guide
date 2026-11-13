@@ -635,6 +635,74 @@ arrives.
 
 ---
 
+## Executions
+
+Duplicating one scenario onto several phones against a single contact —
+[Chapter 13](13-executions.md).
+
+| Endpoint | Does |
+|---|---|
+| `GET /executions/` | the list, each row with a `pending` count |
+| `GET /executions/sources` | your phones, with how many scenarios each has |
+| `GET /executions/contacts?q=&limit=` | search your active contacts |
+| `GET /executions/seek/{number}` | which of your phones that contact is linked on |
+| `POST /executions/scenarios` | `{ phone_ids }` → those phones' scenarios |
+| `GET /executions/scenario-templates/{id}` | the templates one scenario uses |
+| `POST /executions/` | create — copies scenario, templates and jobs |
+| `POST /executions/{id}/run` | fire every target's job, in parallel |
+| `POST /executions/{id}/stop` | stop a run |
+| `DELETE /executions/{id}` | delete the execution |
+
+### Search
+
+`q` picks the mode: **empty** returns the contacts linked on the most phones
+first, **digits** match by number, **text** by name. Each row carries a `phones`
+count and the numbers behind it, so one call is enough to show "linked on 4
+phones".
+
+### Seek
+
+The mapping `create` needs:
+
+```json
+{ "contact_name": "Dana",
+  "phones": [ { "phone_id": "…", "contact_id": "…", "phone_number": "9725…",
+                "phone_status": "active", "provider": "baileys" } ] }
+```
+
+**`contact_id` is per phone** — the same person is a different contact row on
+each phone, which is why a target carries both ids.
+
+### Create
+
+```json
+{ "name": "run_20261025_1130",
+  "contact_phone_number": "972541234567",
+  "source_scenario_id": "…",
+  "template_prefix": "run_20261025_1130",
+  "targets": [ { "phone_id": "…", "contact_id": "…" } ] }
+```
+
+One call creates **three things per target**: the scenario as
+`{name} {scenario}`, each template as `{prefix}_{template}`, and a **manual**
+schedule as `{name} JOB`. A run against five phones using two templates is five
+scenarios, ten templates and five schedules.
+
+**Nothing runs.** `POST /{id}/run` is what fires the jobs.
+
+| Field | Rule |
+|---|---|
+| `contact_phone_number` | `972` + 8–10 digits |
+| `template_prefix` | starts with a letter, then `a-z`, `0-9`, `_`, max 40 |
+| `targets` | **Baileys phones only** — Cloud API templates belong to the business account, so there is nothing per-phone to copy |
+
+### Pending
+
+`pending` is how many jobs the Scheduler has not taken yet. While it is
+non-zero, run is refused — poll the list rather than retrying.
+
+---
+
 ## Notifications
 
 | Endpoint | Does |

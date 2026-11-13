@@ -212,6 +212,226 @@ interface.
 
 → [Chapter 15](15-tips.md#3-getting-help)
 
+## A contact disappeared from the conversation list
+
+**Cause:** it was **ignored** — ignored contacts are hidden from the list and
+from the counts by design. (Inactive ones stay visible, greyed out, at the
+bottom.)
+
+**Fix:** nothing was deleted. Send a new **PING** to that number and the contact
+comes back, restarting the handshake.
+
+→ [Chapter 04](04-contacts.md#ignored)
+
+## How do I delete a contact?
+
+**You don't** — there is no delete, on purpose. The messages and the handshake
+history are kept.
+
+**Fix:** use **⏸ Cancel** to set it aside (it stays under Inactive and can be
+brought back with 🔗 Connect), or **🚫 Ignore** to take it off the list.
+
+→ [Chapter 04](04-contacts.md#deactivating-ignoring-restoring)
+
+## Importing a scenario says the name already exists
+
+**Cause:** a scenario of that name is already on this phone. That is a question,
+not an error.
+
+**Fix:** **Override** replaces it — and **unpublishes it**, because the new
+content hasn't been checked; publish again when you're ready. **New** keeps both
+and suggests a free name.
+
+→ [Chapter 05](05-scenarios.md#importing)
+
+## An imported scenario won't publish — a template is pending
+
+**Cause:** the import created a template the phone didn't have, and the provider
+hasn't approved it yet. The import succeeded; the template is the hold-up.
+
+**Fix:** wait and refresh, then publish. If it was rejected, the Templates tab
+shows the reason.
+
+→ [Chapter 08](08-templates.md)
+
+## The ❓ Help button is gone from the top bar
+
+**Cause:** it moved into the **avatar menu**, with Settings and Logout.
+
+**Fix:** click your avatar → **❓ Help**. Same guide, in a dialog.
+
+→ [Chapter 14](14-settings.md#the-avatar-menu)
+
+## Saving a scenario fails with "not in trusted domains"
+
+**Cause:** a code step calls a URL whose domain is not on your trusted list. The
+message names the step and the URL. Common surprises: a **subdomain** (approving
+`example.com` does not approve `api.example.com`), and a URL sitting in a
+**comment**, which is checked like any other.
+
+**Fix:** add that exact host in
+[Settings → ⚙️ Advanced](https://grossman.bot/settings/advanced), or remove the
+`https://` from the comment. A non-Latin domain must be written in its punycode
+form in the code.
+
+→ [Chapter 06](06-components.md#the-domain-has-to-be-approved-first)
+
+## "dynamic host is not allowed"
+
+**Cause:** the domain in a `fetch` is built from a variable —
+`` `https://${host}/x` ``. The host has to be written out literally.
+
+**Fix:** write the domain in the code and build only the path:
+`` `https://api.example.com/orders/${id}` `` is fine.
+
+→ [Chapter 06](06-components.md#the-domain-has-to-be-approved-first)
+
+## A trusted domain won't save
+
+**Cause:** it is verified, not just stored. The usual causes are a certificate
+with under a week left, DNS pointing at a private address, nothing answering on
+port 443, or a URL that isn't `https` on 443.
+
+**Fix:** the error says which. Note that if you changed several domains at once,
+**none** of them were saved — fix the one that failed and save again.
+
+→ [Chapter 14](14-settings.md)
+
+## A code step that calls a URL hangs or stores nothing
+
+**Cause:** three usual ones, in order — no timeout on the `fetch`, so a hung
+service hangs the step; no status check, so an error page is parsed as JSON; or
+an object returned in `selectedValue`, which is a text field.
+
+**Fix:** `AbortSignal.timeout(5000)`, an `if (!r.ok)` branch, a `try/catch` that
+returns `success: false` with the reason, and `String(...)` around the value.
+The reason then shows up in the call's events instead of nowhere.
+
+→ [Chapter 06](06-components.md#calling-an-external-service)
+
+## An execution is stuck on "pending"
+
+**Cause:** the jobs are queued and the Scheduler has not picked them up. The
+screen refreshes itself every five seconds, and ▶ stays disabled until it
+clears.
+
+**Fix:** a few seconds is normal. Much longer means the Scheduler isn't
+running — report it.
+
+→ [Chapter 13](13-executions.md)
+
+## A phone can't be ticked as an execution target
+
+**Cause:** it is a Cloud API phone. Only linked phones (Baileys) can be targets,
+because the feature copies templates **per phone** and Cloud API templates
+belong to the business account instead.
+
+**Fix:** use linked phones for the run, or run the scenario on the Cloud API
+phone directly.
+
+→ [Chapter 13](13-executions.md)
+
+## I deleted an execution and the copied scenarios are still there
+
+**Cause:** that is by design. Deleting an execution removes the execution only —
+the scenarios, templates and schedules it created live on the target phones.
+
+**Fix:** they are all named after the run (`run_… <scenario>`,
+`prefix_<template>`, `run_… JOB`), so search that name on each phone and delete
+what you don't want.
+
+→ [Chapter 13](13-executions.md)
+
+## I got no warning before my rental ended
+
+**Cause:** two possibilities. The warning is a **share of the rental**, not a
+fixed lead time — on a very short rental it arrives seconds before the end. Or
+you have **Errors only** on for email, which filters it out, because the warning
+is a ⚠️ and only ❌ errors are mailed.
+
+**Fix:** the bell always shows it. For the email, turn **Errors only** off in
+[Settings → ⚙️ Advanced](https://grossman.bot/settings/advanced).
+
+→ [Chapter 20](20-rented-phones.md#you-get-told-three-times)
+
+## What is the striped frame around a phone card?
+
+**Cause:** nothing is wrong — a green-and-white frame marks a **rented** phone,
+and it disappears when the rental ends.
+
+→ [Chapter 20](20-rented-phones.md#how-it-looks-in-the-phone-list)
+
+## The battery icon on my phone is red
+
+**Cause:** it is the rental gauge, and red means the last stretch of your time.
+It turns red at the same moment the "ending soon" notification is sent.
+
+**Fix:** export anything you want to keep now
+([Chapter 05](05-scenarios.md#export-and-import)) — when the clock runs out
+everything on the phone is deleted.
+
+→ [Chapter 20](20-rented-phones.md#how-it-looks-in-the-phone-list)
+
+## The Rented phones tab isn't there
+
+**Cause:** like the API console, it is hidden until two-step verification is
+done.
+
+**Fix:** verify your mobile number in
+[Settings → 🔐](https://grossman.bot/settings/2fa).
+
+→ [Chapter 20](20-rented-phones.md)
+
+## "Rent" is greyed out on a phone
+
+**Cause:** one of three — the handset is **offline**, **WhatsApp isn't
+installed** on that SIM, or another action is still running.
+
+**Fix:** the first two are the rack's problem, not yours; pick another number.
+The Device column shows which it is.
+
+→ [Chapter 20](20-rented-phones.md)
+
+## My rented phone disappeared
+
+**Cause:** the rental ended — either you ended it or the clock ran out. The
+phone went back to the pool and everything on it was deleted.
+
+**Fix:** nothing to recover. Next time, export the scenario before the time is
+up and import it onto a phone of your own.
+
+→ [Chapter 20](20-rented-phones.md#ending-it)
+
+## There's no SMS tab on my phone
+
+**Cause:** the tab only exists on a **rented** phone. A phone you added yourself
+has no SIM the platform can read.
+
+**Fix:** rent one if you need to receive text messages.
+
+→ [Chapter 21](21-sms.md)
+
+## An SMS never arrived
+
+**Cause:** usually the handset is offline, or the message went to the other SIM
+in the same device — a different number from the one you rented.
+
+**Fix:** check the Device column on the rent screen. Delivery takes a few
+seconds, not a minute.
+
+→ [Chapter 21](21-sms.md#when-a-message-doesnt-arrive)
+
+## A phone is stuck greyed out after Disconnect
+
+**Cause:** disconnecting is asynchronous — the card stays grey until the phone's
+status actually changes.
+
+**Fix:** it clears itself after about three minutes even if the status never
+changes, which happens when the phone was already disconnected. If it is still
+grey after that, reload.
+
+→ [Chapter 03](03-phones.md)
+
 ## The API button has disappeared from the top bar
 
 **Cause:** it is hidden until two-step verification is done. Opening `/api`

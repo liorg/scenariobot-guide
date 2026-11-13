@@ -9,8 +9,6 @@ The parts in `<angle brackets>` are ids filled in as you click, so this one cann
 
 `…/contacts/<contact>/chat` opens the same conversation from the Contacts tab.
 
-`…/calls/<contact>/connect` opens the **Connect** dialog for an unidentified contact.
-
 ## What it is
 
 The plain WhatsApp conversation with a contact — the same thing you'd see on
@@ -23,83 +21,42 @@ the handset.
 
 ## The conversation list
 
-The Calls tab shows two groups:
+The 📞 Calls tab groups contacts into three sections, each with a count, most
+recent conversation first:
 
-| Group | Who is in it | Looks like |
+| Section | Who's in it | The row |
 |---|---|---|
-| **Unidentified — waiting to connect** | people who wrote to the phone but are not yet a known contact | name starts with **`~`**, in italics, with a dashed amber circle |
-| **Active** | contacts that finished the handshake ([Chapter 04](04-contacts.md)) or were connected here | normal name, solid circle |
+| **Not identified — waiting to connect** | created by a PING, or replied without being linked | dashed amber avatar, name in italics with a `~` in front |
+| **Active** | finished the handshake | normal |
+| **⏸ Inactive** | set aside | greyed out, dotted avatar, **⏸** badge and chip |
 
-The header counts both: *"3 active contacts · 2 unidentified"*.
+**Ignored contacts are in none of them** — they are off the list by design
+([Chapter 04](04-contacts.md#ignored)).
 
-### What `~` means
+The `~` means *not synced yet*: the name came from WhatsApp or from the number,
+and the contact has not been linked.
 
-**`~` marks a contact the system has not identified yet.** It is not part of the
-name — it is added on screen only, and removed the moment the contact is
-connected.
+### The 🔗 Connect button
 
-A contact gets `~` when:
+It appears on a row in two cases, and opens the same dialog in both:
 
-- it was created by a PING and the handshake was never finished (tag `new`), or
-- a message arrived from someone the phone did not know, and the system opened
-  a placeholder for them that is not linked to anyone (tag `draft`).
-
-You can open an unidentified conversation and read it like any other. What you
-**cannot** do is use it in a scenario — scenarios only run against active
-contacts.
-
-## Connecting an unidentified contact
-
-Each `~` row has two buttons:
-
-- **🔗 Connect** — turn it into a real contact
-- **🚫** — ignore it
-
-**Connect** is also in the green header when the conversation is open.
-
-### Connect
-
-The dialog asks for:
-
-| Field | |
+| On a row that is | Pressing 🔗 |
 |---|---|
-| **Full name** | required. A leading `~` is removed if you type one |
-| **Phone number** | required, 7–15 digits. Filled in when the system already knows it |
-| **Messaging language** | Hebrew, English, Russian or Arabic. Defaults to the contact's, then yours |
-| **Email** | optional |
-| **Move messages** | ticked by default — see below |
+| not identified | links it |
+| inactive | brings it back to Active |
 
-The WhatsApp name and the WhatsApp identity (LID), when known, are shown read
-only.
+That dialog is also where **⏸ Cancel** (make inactive) and **🚫 Ignore** live. It
+has its own address — `…/calls/<contact>/connect` — so it survives a refresh.
 
-What happens on **Connect** depends on whether that number already belongs to
-another contact on the same phone:
+It asks for the name, number, language and email, and shows the WhatsApp name
+and the LID read-only. One option worth knowing: **"move the messages to the
+existing contact"** — if that number already belongs to another contact,
+connecting merges into it, and the checkbox decides whether this conversation's
+messages come along.
 
-| The number is… | Result |
-|---|---|
-| **not used by anyone else** | this contact becomes **active** in place. The `~` disappears and the row moves to the Active group |
-| **already on another contact** | that **existing** contact becomes active and takes the name, language and email you entered. The `~` row is folded into it, and the screen opens the existing contact's chat |
-
-When the number is already taken and **Move messages** is ticked, the messages
-of the `~` row are moved to the existing contact, so the whole conversation is
-in one place. Untick it to leave them where they were.
-
-**"The number is already linked to a different WhatsApp identity."** The two
-contacts point at two different WhatsApp identities — usually a typo in the
-number, or the number really belongs to someone else. Check the number first.
-If you are sure, press **Connect anyway** to merge them regardless.
-
-Any open handshake for these contacts is closed as completed.
-
-### Ignore
-
-**🚫** asks for confirmation, then hides the contact from the Calls tab and from
-the Contacts tab. Its messages are kept.
-
-Use it for spam, wrong numbers and system senders you never want to deal with.
-
-There is no button to bring an ignored contact back yet; it can be restored
-through the API ([Chapter 19](19-api-reference.md#connect-ignore-conversation)).
+If the number is already linked to a different WhatsApp identity you get a
+conflict warning with a **Connect anyway** button. Read it before using it: the
+number and the identity disagreeing usually means you are linking the wrong row.
 
 ## The 24-hour window
 
@@ -205,7 +162,6 @@ diagram.
 - pushing a stuck scenario along by tapping a button or simulating a reply
 - reading the history before picking a reply during the contact handshake
   ([Chapter 04](04-contacts.md))
-- **identifying someone who wrote in first**, by connecting their `~` row
 
 ---
 

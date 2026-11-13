@@ -22,6 +22,41 @@ itself opens that phone** — see [Phone Detail](#what-is-inside-a-phone) below.
 
 There's also a **Templates** tab on this screen → [Chapter 08](08-templates.md).
 
+### Reading a card at a glance
+
+Three things on the card tell you where a phone stands without opening it.
+
+**📶 Signal bars** — on every phone:
+
+| Bars | Means |
+|---|---|
+| four, **green** | active and working |
+| four, **grey** | an action is in progress — the card is also dimmed |
+| empty outline with a **red ✕** | disconnected |
+
+**A green-and-white striped frame** means the phone is **rented** — the frame
+runs all the way round the card, so a rented phone is recognisable from across
+the screen without reading anything ([Chapter 20](20-rented-phones.md)).
+
+**🔋 A battery gauge**, on rented phones only, beside the signal bars:
+
+- it **drains as the rental runs**, so how full it is tells you how much of your
+  time is left at a glance
+- **green** over half, **amber** under half, **red** for the last stretch
+- the exact time left is printed next to it
+
+The red threshold is the same moment you get the "ending soon" notification, so
+a red battery and a bell are the same news twice.
+
+### A dimmed card means something is happening
+
+Disconnecting is not instant — the card dims, the bars go grey and the status
+reads **disconnecting**, with the buttons disabled until it finishes. It clears
+itself when the phone's status actually changes.
+
+If the phone was **already** disconnected there is no change to wait for, so the
+dimming clears on a timer instead, after about three minutes.
+
 ## Two kinds of phone
 
 Before adding one, the choice that shapes everything after it:
@@ -44,6 +79,17 @@ schedules and the chat view do not care which you picked.
 ## Adding a phone
 
 **Phones → + Add Phone.**
+
+### Or rent one instead
+
+You don't have to supply a handset. **Rented phones** are real phones with real
+SIMs that the platform keeps on a rack — you take one for an hour, it works like
+any other phone, and it goes back when you're done
+([Chapter 20](20-rented-phones.md)).
+
+A rented phone also has an **SMS tab**, which a phone of your own does not
+([Chapter 21](21-sms.md)). And it cannot be deleted — you end the rental
+instead.
 
 ### Before you can: two gates
 

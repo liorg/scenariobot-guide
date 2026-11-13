@@ -73,28 +73,72 @@ contact usable.
 
 Confirm, and the contact is ready.
 
-## The other way in: connecting from the Calls tab
-
-The wizard is for people **you** reach out to. Someone may also write to the
-phone first — they then appear on the **📞 Calls tab** as an unidentified
-contact, with **`~`** before the name.
-
-You don't need the wizard for them: press **🔗 Connect** on that row, fill in
-the name and number, and the contact becomes active. If the number already
-belongs to an existing contact, the two are merged into that one. Full details
-in [Chapter 12](12-chat-view.md#connecting-an-unidentified-contact).
-
-**URL:** `grossman.bot/phones/<phone>/calls/<contact>/connect`
-
 ## The contact table
 
-Once linked, contacts appear in a table on the same tab. The table shows
-contacts tagged **active** and **new**; ignored contacts are hidden. From there you can edit
+Once linked, contacts appear in a table on the same tab. From there you can edit
 a contact, and open its calls.
 
 **Clicking a contact opens that contact's calls** →
 [Chapter 10](10-watching-a-call.md) for a running call,
 [Chapter 11](11-reading-a-call.md) for finished ones.
+
+## Deactivating, ignoring, restoring
+
+**A contact is never deleted.** There is no delete — the messages, the PING
+records and the history all stay. What changes is the contact's **state**, and
+every change is stamped with the time it happened.
+
+| State | Where it appears | What it means |
+|---|---|---|
+| **Active** | the Active section | linked and usable |
+| **Not identified** | its own section at the top | created or replied, not linked yet |
+| **⏸ Inactive** | the Inactive section, at the bottom | set aside — still visible, can be brought back |
+| **🚫 Ignored** | **nowhere** | off the list entirely |
+
+### Inactive
+
+For a contact you are finished with for now. It keeps its place in the
+conversation list:
+
+- the row is **greyed out**, with a **⏸** badge on the avatar and a chip beside
+  the name
+- it sits in its own **Inactive** section at the bottom, with a count
+- the whole history is still there, and opening the row still opens the chat
+
+**Pressing 🔗 Connect on an inactive contact brings it back.** The dialog says so
+when you open it, and completing it returns the contact to Active.
+
+A **PING** also revives it — sending a new PING to that number restarts the
+handshake from the beginning.
+
+### Ignored
+
+For a number you never want to see again — a wrong number, a stranger who
+messaged the bot. An ignored contact **disappears from the conversation list**
+and from the counts. Nothing is deleted; it is simply not shown.
+
+Unlike inactive, there is no button to bring it back, because it isn't on screen
+any more. A new PING to that number still revives it.
+
+### Where the buttons are
+
+All three live in the **connect dialog** ([Chapter 12](12-chat-view.md) covers
+opening it):
+
+| Button | Does |
+|---|---|
+| 🔗 **Connect** | links the contact, or brings an inactive one back |
+| ⏸ **Cancel** | makes it inactive — it stays under Inactive |
+| 🚫 **Ignore** | takes it off the list |
+
+Each asks for confirmation, and the dialog says what it will do before you
+press it.
+
+### When the state last changed
+
+Every state change records its time. That is the field to look at when you are
+asking "when did this contact stop working" — it answers directly, rather than
+by inference from the last message.
 
 ## Common problem
 
