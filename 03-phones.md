@@ -24,6 +24,19 @@ There's also a **Templates** tab on this screen → [Chapter 08](08-templates.md
 
 ### Reading a card at a glance
 
+![A phone card in the phone list](img/screen-phone-card.svg)
+
+| # | Component | What it tells you |
+|---|---|---|
+| **1** | Rented frame | the green-and-white stripes mean this phone is **rented**, not yours ([Chapter 20](20-rented-phones.md)) |
+| **2** | Name and number | the nickname you gave it, then the number itself |
+| **3** | Rental battery | how much of the rental is left — rented phones only |
+| **4** | Signal and status | reception bars plus the status badge |
+| **5** | Actions | Disconnect / Reconnect, and Manage to open the phone |
+
+Clicking anywhere on the card except a button opens the phone.
+
+
 Three things on the card tell you where a phone stands without opening it.
 
 **📶 Signal bars** — on every phone:

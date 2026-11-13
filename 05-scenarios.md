@@ -42,6 +42,22 @@ new issues are found.
 The two side columns can be **resized, pinned and collapsed**, and your layout
 choice is remembered between sessions.
 
+## The designer
+
+![The scenario designer](img/screen-designer.svg)
+
+| # | Component | What it is |
+|---|---|---|
+| **1** | Ribbon | Save, Publish, Import, Export, Settings, Help — and the scenario's name |
+| **2** | EXPECT panel | the step types that **wait for a reply** — drag one onto the canvas |
+| **3** | Canvas | the conversation itself, top to bottom. A blue edge is an EXPECT step, an amber one a SEND step |
+| **4** | SEND panel | the step types that **send something** |
+| **5** | Errors panel | what is wrong, and what publishing would reject |
+| **6** | Status bar | event type, interval, step count, draft or active, saved or not |
+
+The two panels can be pinned open or left to slide out on hover, and the
+preference is remembered between sessions.
+
 ## Export and import
 
 **Export** writes the scenario to a `.json` file you can keep, send, or load

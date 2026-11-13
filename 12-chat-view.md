@@ -19,6 +19,19 @@ the handset.
 - **you can type and send a message yourself**
 - **you can send an approved template**
 
+## The chat screen
+
+![The chat view](img/screen-chat-view.svg)
+
+| # | Component | What it is |
+|---|---|---|
+| **1** | Contact header | who you're talking to, their number, and how many messages are loaded |
+| **2** | Window banner | whether the 24-hour window is **open**, **closed**, or never opened — the single most important thing on this screen |
+| **3** | Their messages | incoming, on the left |
+| **4** | Your messages | outgoing, on the right |
+| **5** | Template button | send an approved template — the only thing that works when the window is closed |
+| **6** | Send | free text, which needs the window open |
+
 ## The conversation list
 
 The 📞 Calls tab groups contacts into three sections, each with a count, most

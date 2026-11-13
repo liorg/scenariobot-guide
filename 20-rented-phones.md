@@ -25,17 +25,22 @@ WhatsApp registration, without buying a SIM.
 
 ## The list
 
-| Column | Shows |
-|---|---|
-| **Number** | the phone's number, and whether it is **Mine** or **Available** |
-| **WhatsApp** | WhatsApp, Business, or *Not installed* |
-| **Verified** | whether the linked device is connected, and when it was last checked |
-| **Device** | a green or grey dot — is the handset itself online |
-| **Time left** | your rental's countdown, ticking every second |
+![The rented phones list](img/screen-rent-list.svg)
 
-Your own rentals are highlighted and listed first. The list refreshes itself
-every half a minute, so a phone someone else takes disappears without you
-reloading.
+| # | Column | Shows |
+|---|---|---|
+| **1** | Number | the phone's number, and a **Mine** or **Available** chip |
+| **2** | WhatsApp | WhatsApp, Business, or *Not installed* |
+| **3** | Verified | whether the link to the handset is live, and when it was checked |
+| **4** | Device | green dot = the handset is online, red = unplugged |
+| **5** | Time left | your rental's countdown, ticking every second |
+| **6** | Action | **Rent** on an available row, **End** on yours |
+
+Your own rentals are highlighted and listed first. A greyed-out **Rent** means
+the row cannot be rented — see below.
+
+The list refreshes itself every half a minute, so a phone someone else takes
+disappears without you reloading.
 
 **Search** filters by number.
 

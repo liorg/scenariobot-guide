@@ -6,6 +6,17 @@ closes it.
 
 **URL:** [grossman.bot/settings](https://grossman.bot/settings)
 
+![The settings dialog](img/screen-settings.svg)
+
+| # | Component | What it is |
+|---|---|---|
+| **1** | Title bar | Settings opens over the screen you were on; **✕** closes it |
+| **2** | Tabs | personal details, two-step verification, advanced |
+| **3** | Alert dot | an orange dot marks a tab that needs attention |
+| **4** | Fields | name, email (read-only), language |
+| **5** | Avatar | click it to upload a picture |
+| **6** | Save | one button for all three tabs |
+
 Settings has **three tabs**, and each one has its own address, so you can link
 straight to a tab:
 
