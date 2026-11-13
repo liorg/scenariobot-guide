@@ -2,6 +2,10 @@
  "guide": "ScenarioBot user guide",
  "site": "https://liorg.github.io/scenariobot-guide",
  "note": "One entry per chapter. Element-level ids are in img/index.json.",
+ "action_types": {
+  "highlight": "The screen's URL contains ids that cannot be typed — the user has to already be on it. Point at the element.",
+  "navigate-highlight": "Open the screen's url, then point at the element."
+ },
  "chapters": {
   "01-what-it-does": {
    "title": "What ScenarioBot does",
@@ -28,7 +32,8 @@
     "What ScenarioBot does",
     "The six things you work with",
     "How they fit together"
-   ]
+   ],
+   "actions": []
   },
   "02-signing-in": {
    "title": "Signing in and creating an account",
@@ -63,6 +68,11 @@
     "Signing out",
     "After signing in",
     "Privacy policy"
+   ],
+   "actions": [
+    "sign-in",
+    "sign-in-submit",
+    "sign-in-with-google"
    ]
   },
   "03-phones": {
@@ -101,6 +111,14 @@
     "Adding a phone",
     "Reconnecting",
     "What is inside a phone"
+   ],
+   "actions": [
+    "manage-phone",
+    "disconnect-phone",
+    "check-phone-status",
+    "check-phone-signal",
+    "check-rental-battery",
+    "open-phone-tabs"
    ]
   },
   "04-contacts": {
@@ -135,6 +153,12 @@
     "The contact table",
     "Deactivating, ignoring, restoring",
     "Common problem"
+   ],
+   "actions": [
+    "add-contact",
+    "check-contact-status",
+    "edit-contact",
+    "find-contact"
    ]
   },
   "05-scenarios": {
@@ -175,6 +199,13 @@
     "Scenario settings",
     "Saving vs publishing",
     "Testing before it goes out"
+   ],
+   "actions": [
+    "new-scenario",
+    "open-designer",
+    "check-scenario-status",
+    "save-or-publish",
+    "why-publish-blocked"
    ]
   },
   "06-components": {
@@ -211,6 +242,11 @@
     "When the reply is wrong",
     "Custom code steps",
     "`{{ }}` parameters"
+   ],
+   "actions": [
+    "find-expect-steps",
+    "find-send-steps",
+    "read-scenario-canvas"
    ]
   },
   "07-playback": {
@@ -240,6 +276,10 @@
     "Why use it",
     "What it doesn't do",
     "Getting back to editing"
+   ],
+   "actions": [
+    "run-playback",
+    "trace-step"
    ]
   },
   "08-templates": {
@@ -276,6 +316,12 @@
     "Approval happens by itself",
     "Sending one by hand",
     "Using one in a scenario"
+   ],
+   "actions": [
+    "new-template",
+    "check-template-status",
+    "publish-template",
+    "filter-templates"
    ]
   },
   "09-schedules": {
@@ -309,6 +355,12 @@
     "Running one now",
     "The log",
     "What can stop a scheduled call"
+   ],
+   "actions": [
+    "new-schedule",
+    "run-schedule-now",
+    "check-next-run",
+    "filter-schedules"
    ]
   },
   "10-watching-a-call": {
@@ -337,7 +389,8 @@
     "The two buttons",
     "If it warns about multiple active calls",
     "If there's no panel"
-   ]
+   ],
+   "actions": []
   },
   "11-reading-a-call": {
    "title": "Reading a finished call",
@@ -369,6 +422,12 @@
     "The flow diagram",
     "The events tab",
     "Using the two together"
+   ],
+   "actions": [
+    "check-call-outcome",
+    "find-unmatched-replies",
+    "find-last-step",
+    "inspect-failed-reply"
    ]
   },
   "12-chat-view": {
@@ -405,6 +464,12 @@
     "Reading the conversation",
     "How it differs from scenario calls",
     "When to use it"
+   ],
+   "actions": [
+    "connect-unsynced-contact",
+    "check-24h-window",
+    "send-template-message",
+    "send-free-text"
    ]
   },
   "13-executions": {
@@ -438,6 +503,11 @@
     "The list",
     "Running one",
     "Worth knowing"
+   ],
+   "actions": [
+    "new-execution",
+    "check-execution-status",
+    "run-execution"
    ]
   },
   "14-settings": {
@@ -476,6 +546,13 @@
     "Elsewhere in the top bar",
     "Notifications",
     "Privacy policy"
+   ],
+   "actions": [
+    "open-two-step-verification",
+    "open-trusted-domains",
+    "edit-personal-details",
+    "change-avatar",
+    "save-settings"
    ]
   },
   "16-troubleshooting": {
@@ -555,6 +632,13 @@
     "I verified my number, but it says unverified again",
     "I'm not getting notification emails",
     "Save is blocked and the ⚙️ tab has a dot"
+   ],
+   "actions": [
+    "diagnose-phone-offline",
+    "diagnose-contact-handshake",
+    "diagnose-blocked-publish",
+    "diagnose-schedule-never-fires",
+    "diagnose-two-step-required"
    ]
   },
   "17-glossary": {
@@ -575,7 +659,8 @@
     "01-what-it-does",
     "06-components"
    ],
-   "sections": []
+   "sections": [],
+   "actions": []
   },
   "18-api-explorer": {
    "title": "The API Explorer console",
@@ -610,6 +695,11 @@
     "Copy as curl",
     "Careful",
     "Useful first calls"
+   ],
+   "actions": [
+    "send-api-request",
+    "find-api-token",
+    "read-api-response"
    ]
   },
   "19-api-reference": {
@@ -647,6 +737,9 @@
     "Regex AI",
     "System",
     "Quick diagnostics"
+   ],
+   "actions": [
+    "try-endpoint-live"
    ]
   },
   "20-rented-phones": {
@@ -684,6 +777,13 @@
     "You get told three times",
     "Ending it",
     "Worth knowing"
+   ],
+   "actions": [
+    "rent-phone",
+    "end-rental",
+    "check-rental-time-left",
+    "check-handset-online",
+    "check-whatsapp-installed"
    ]
   },
   "21-sms": {
@@ -715,7 +815,590 @@
     "Reading a conversation",
     "When a message doesn't arrive",
     "Worth knowing"
+   ],
+   "actions": [
+    "read-sms",
+    "search-sms",
+    "find-unknown-sender-sms"
    ]
+  }
+ },
+ "actions": {
+  "sign-in": {
+   "description": "Show where to sign in",
+   "chapter": "02-signing-in",
+   "screen": "screen-login",
+   "target": "lg-email",
+   "type": "navigate-highlight",
+   "url": "/",
+   "element": "Email and password, or a provider below"
+  },
+  "sign-in-submit": {
+   "description": "Show the Sign in button",
+   "chapter": "02-signing-in",
+   "screen": "screen-login",
+   "target": "lg-submit",
+   "type": "navigate-highlight",
+   "url": "/",
+   "element": "Sign in"
+  },
+  "sign-in-with-google": {
+   "description": "Show sign-in with Google or GitHub",
+   "chapter": "02-signing-in",
+   "screen": "screen-login",
+   "target": "lg-google",
+   "type": "navigate-highlight",
+   "url": "/",
+   "element": "Google and GitHub sign-in — same account either way"
+  },
+  "manage-phone": {
+   "description": "Open phone management",
+   "chapter": "03-phones",
+   "screen": "screen-phone-card",
+   "target": "btn-manage",
+   "type": "navigate-highlight",
+   "url": "/phones",
+   "element": "Manage — opens the phone"
+  },
+  "disconnect-phone": {
+   "description": "Show where to disconnect a phone",
+   "chapter": "03-phones",
+   "screen": "screen-phone-card",
+   "target": "btn-disconnect",
+   "type": "navigate-highlight",
+   "url": "/phones",
+   "element": "Disconnect — asks first"
+  },
+  "check-phone-status": {
+   "description": "Show the phone connection status",
+   "chapter": "03-phones",
+   "screen": "screen-phone-card",
+   "target": "status-badge",
+   "type": "navigate-highlight",
+   "url": "/phones",
+   "element": "The phone's status"
+  },
+  "check-phone-signal": {
+   "description": "Show the reception indicator on a phone card",
+   "chapter": "03-phones",
+   "screen": "screen-phone-card",
+   "target": "signal-bars",
+   "type": "navigate-highlight",
+   "url": "/phones",
+   "element": "Reception: green active, grey busy, outline disconnected"
+  },
+  "check-rental-battery": {
+   "description": "Show how much rental time is left on a card",
+   "chapter": "03-phones",
+   "screen": "screen-phone-card",
+   "target": "rent-battery-fill",
+   "type": "navigate-highlight",
+   "url": "/phones",
+   "element": "Rental battery — drains as the rental runs"
+  },
+  "open-phone-tabs": {
+   "description": "Show the tabs inside a phone",
+   "chapter": "03-phones",
+   "screen": "screen-phone-detail",
+   "target": "pd-tab-0",
+   "type": "highlight",
+   "url": "/phones/<phone>/calls",
+   "element": "Calls — the WhatsApp conversations"
+  },
+  "add-contact": {
+   "description": "Show where to add a contact",
+   "chapter": "04-contacts",
+   "screen": "screen-contacts",
+   "target": "ct-add",
+   "type": "highlight",
+   "url": "/phones/<phone>/contacts",
+   "element": "Add Contact — starts the PING handshake"
+  },
+  "check-contact-status": {
+   "description": "Show a contact's state",
+   "chapter": "04-contacts",
+   "screen": "screen-contacts",
+   "target": "ct-0-status",
+   "type": "highlight",
+   "url": "/phones/<phone>/contacts",
+   "element": "The contact's state — active, new, draft, inactive"
+  },
+  "edit-contact": {
+   "description": "Show where to edit a contact",
+   "chapter": "04-contacts",
+   "screen": "screen-contacts",
+   "target": "ct-0-edit",
+   "type": "highlight",
+   "url": "/phones/<phone>/contacts",
+   "element": "Edit — name, email, language"
+  },
+  "find-contact": {
+   "description": "Show the contact search",
+   "chapter": "04-contacts",
+   "screen": "screen-contacts",
+   "target": "ct-search",
+   "type": "highlight",
+   "url": "/phones/<phone>/contacts",
+   "element": "Search by name or number"
+  },
+  "new-scenario": {
+   "description": "Show where to create a scenario",
+   "chapter": "05-scenarios",
+   "screen": "screen-scenarios",
+   "target": "sc-new",
+   "type": "highlight",
+   "url": "/phones/<phone>/scenarios",
+   "element": "New scenario — opens the designer empty"
+  },
+  "open-designer": {
+   "description": "Open a scenario in the designer",
+   "chapter": "05-scenarios",
+   "screen": "screen-scenarios",
+   "target": "sc-0-design",
+   "type": "highlight",
+   "url": "/phones/<phone>/scenarios",
+   "element": "Design — opens the canvas"
+  },
+  "check-scenario-status": {
+   "description": "Show whether a scenario is draft or active",
+   "chapter": "05-scenarios",
+   "screen": "screen-scenarios",
+   "target": "sc-0-status",
+   "type": "highlight",
+   "url": "/phones/<phone>/scenarios",
+   "element": "draft or active — only an active one runs"
+  },
+  "save-or-publish": {
+   "description": "Show Save, Publish, Import and Export",
+   "chapter": "05-scenarios",
+   "screen": "screen-designer",
+   "target": "designer-ribbon",
+   "type": "highlight",
+   "url": "/phones/<phone>/scenarios/<scenario>/design",
+   "element": "Save, Publish, Import, Export, Settings, Help"
+  },
+  "why-publish-blocked": {
+   "description": "Show what is blocking publishing",
+   "chapter": "05-scenarios",
+   "screen": "screen-designer",
+   "target": "errors-panel",
+   "type": "highlight",
+   "url": "/phones/<phone>/scenarios/<scenario>/design",
+   "element": "What would block publishing"
+  },
+  "find-expect-steps": {
+   "description": "Show the EXPECT step types",
+   "chapter": "06-components",
+   "screen": "screen-designer",
+   "target": "panel-expect",
+   "type": "highlight",
+   "url": "/phones/<phone>/scenarios/<scenario>/design",
+   "element": "EXPECT step types — wait for a reply"
+  },
+  "find-send-steps": {
+   "description": "Show the SEND step types",
+   "chapter": "06-components",
+   "screen": "screen-designer",
+   "target": "panel-send",
+   "type": "highlight",
+   "url": "/phones/<phone>/scenarios/<scenario>/design",
+   "element": "SEND step types — send something"
+  },
+  "read-scenario-canvas": {
+   "description": "Show the conversation canvas",
+   "chapter": "06-components",
+   "screen": "screen-designer",
+   "target": "panel-canvas",
+   "type": "highlight",
+   "url": "/phones/<phone>/scenarios/<scenario>/design",
+   "element": "The conversation, top to bottom"
+  },
+  "run-playback": {
+   "description": "Show where to start playback",
+   "chapter": "07-playback",
+   "screen": "screen-playback",
+   "target": "pb-play",
+   "type": "highlight",
+   "url": "/phones/<phone>/scenarios/<scenario>/playback",
+   "element": "Play, or walk it one step at a time"
+  },
+  "trace-step": {
+   "description": "Show which step produced a message",
+   "chapter": "07-playback",
+   "screen": "screen-playback",
+   "target": "pb-msg-0-step",
+   "type": "highlight",
+   "url": "/phones/<phone>/scenarios/<scenario>/playback",
+   "element": "Which step produced this message"
+  },
+  "new-template": {
+   "description": "Show where to create a template",
+   "chapter": "08-templates",
+   "screen": "screen-templates",
+   "target": "tpl-new",
+   "type": "navigate-highlight",
+   "url": "/phones/templates/<phone>",
+   "element": "New template — saves as a draft, nothing is sent yet"
+  },
+  "check-template-status": {
+   "description": "Show a template's approval status",
+   "chapter": "08-templates",
+   "screen": "screen-templates",
+   "target": "tpl-0-status",
+   "type": "navigate-highlight",
+   "url": "/phones/templates/<phone>",
+   "element": "approved is the provider's answer, not yours"
+  },
+  "publish-template": {
+   "description": "Show whether a template is published",
+   "chapter": "08-templates",
+   "screen": "screen-templates",
+   "target": "tpl-0-published",
+   "type": "navigate-highlight",
+   "url": "/phones/templates/<phone>",
+   "element": "Published — only a published template can be used in a scenario"
+  },
+  "filter-templates": {
+   "description": "Filter templates by status",
+   "chapter": "08-templates",
+   "screen": "screen-templates",
+   "target": "tpl-filter-2",
+   "type": "navigate-highlight",
+   "url": "/phones/templates/<phone>",
+   "element": "Filter by status — the counts come from the server"
+  },
+  "new-schedule": {
+   "description": "Show where to create a schedule",
+   "chapter": "09-schedules",
+   "screen": "screen-schedules",
+   "target": "sh-new",
+   "type": "navigate-highlight",
+   "url": "/scheduling",
+   "element": "New schedule — scenario, phone, when"
+  },
+  "run-schedule-now": {
+   "description": "Show where to run a schedule immediately",
+   "chapter": "09-schedules",
+   "screen": "screen-schedules",
+   "target": "sh-0-run",
+   "type": "navigate-highlight",
+   "url": "/scheduling",
+   "element": "Run it now, without waiting"
+  },
+  "check-next-run": {
+   "description": "Show when a schedule fires next",
+   "chapter": "09-schedules",
+   "screen": "screen-schedules",
+   "target": "sh-0-next",
+   "type": "navigate-highlight",
+   "url": "/scheduling",
+   "element": "When it fires next — the clearest sign it is really set up"
+  },
+  "filter-schedules": {
+   "description": "Filter schedules to one phone",
+   "chapter": "09-schedules",
+   "screen": "screen-schedules",
+   "target": "sh-phone-filter",
+   "type": "navigate-highlight",
+   "url": "/scheduling",
+   "element": "Filter to one phone"
+  },
+  "check-call-outcome": {
+   "description": "Show how a call ended",
+   "chapter": "11-reading-a-call",
+   "screen": "screen-call-history",
+   "target": "ch-outcome",
+   "type": "highlight",
+   "url": "/phones/<phone>/contacts/<contact>/calls/<call>",
+   "element": "How the call ended"
+  },
+  "find-unmatched-replies": {
+   "description": "Show replies that matched no branch",
+   "chapter": "11-reading-a-call",
+   "screen": "screen-call-history",
+   "target": "ch-stat-2-value",
+   "type": "highlight",
+   "url": "/phones/<phone>/contacts/<contact>/calls/<call>",
+   "element": "Replies that matched no branch — the number to watch"
+  },
+  "find-last-step": {
+   "description": "Show the last step a call reached",
+   "chapter": "11-reading-a-call",
+   "screen": "screen-call-history",
+   "target": "ch-stat-3-value",
+   "type": "highlight",
+   "url": "/phones/<phone>/contacts/<contact>/calls/<call>",
+   "element": "The last step reached — where it stopped"
+  },
+  "inspect-failed-reply": {
+   "description": "Show the reply that did not match",
+   "chapter": "11-reading-a-call",
+   "screen": "screen-call-history",
+   "target": "ch-ev-2-flag",
+   "type": "highlight",
+   "url": "/phones/<phone>/contacts/<contact>/calls/<call>",
+   "element": "The reply that did not match, and what was expected"
+  },
+  "connect-unsynced-contact": {
+   "description": "Show where to connect an unidentified chat",
+   "chapter": "12-chat-view",
+   "screen": "screen-calls-list",
+   "target": "cl-unsynced-0-connect",
+   "type": "highlight",
+   "url": "/phones/<phone>/calls",
+   "element": "Connect — links a contact, or brings an inactive one back"
+  },
+  "check-24h-window": {
+   "description": "Show whether the 24-hour window is open",
+   "chapter": "12-chat-view",
+   "screen": "screen-chat-view",
+   "target": "chat-window-banner",
+   "type": "highlight",
+   "url": "/phones/<phone>/calls/<contact>",
+   "element": "Whether the 24-hour window is open"
+  },
+  "send-template-message": {
+   "description": "Show where to send a template",
+   "chapter": "12-chat-view",
+   "screen": "screen-chat-view",
+   "target": "chat-template-btn",
+   "type": "highlight",
+   "url": "/phones/<phone>/calls/<contact>",
+   "element": "Send a template — works when the window is closed"
+  },
+  "send-free-text": {
+   "description": "Show where to send free text",
+   "chapter": "12-chat-view",
+   "screen": "screen-chat-view",
+   "target": "chat-send-btn",
+   "type": "highlight",
+   "url": "/phones/<phone>/calls/<contact>",
+   "element": "Send free text — needs the window open"
+  },
+  "new-execution": {
+   "description": "Show where to create an execution",
+   "chapter": "13-executions",
+   "screen": "screen-executions",
+   "target": "ex-new",
+   "type": "navigate-highlight",
+   "url": "/executions",
+   "element": "New Execution — the four-step wizard"
+  },
+  "check-execution-status": {
+   "description": "Show an execution's status",
+   "chapter": "13-executions",
+   "screen": "screen-executions",
+   "target": "ex-0-status",
+   "type": "navigate-highlight",
+   "url": "/executions",
+   "element": "pending n = the Scheduler has not picked the jobs up yet"
+  },
+  "run-execution": {
+   "description": "Show where to run an execution",
+   "chapter": "13-executions",
+   "screen": "screen-executions",
+   "target": "ex-0-run",
+   "type": "navigate-highlight",
+   "url": "/executions",
+   "element": "Run — disabled while anything is pending"
+  },
+  "open-two-step-verification": {
+   "description": "Open two-step verification",
+   "chapter": "14-settings",
+   "screen": "screen-settings",
+   "target": "settings-tab-two-step",
+   "type": "navigate-highlight",
+   "url": "/settings",
+   "element": "Two-step verification"
+  },
+  "open-trusted-domains": {
+   "description": "Open trusted domains and email notifications",
+   "chapter": "14-settings",
+   "screen": "screen-settings",
+   "target": "settings-tab-advanced",
+   "type": "navigate-highlight",
+   "url": "/settings",
+   "element": "Trusted domains and email notifications"
+  },
+  "edit-personal-details": {
+   "description": "Open personal details",
+   "chapter": "14-settings",
+   "screen": "screen-settings",
+   "target": "settings-tab-personal",
+   "type": "navigate-highlight",
+   "url": "/settings",
+   "element": "Personal details"
+  },
+  "change-avatar": {
+   "description": "Show where to upload a picture",
+   "chapter": "14-settings",
+   "screen": "screen-settings",
+   "target": "settings-avatar",
+   "type": "navigate-highlight",
+   "url": "/settings",
+   "element": "Click to upload a picture"
+  },
+  "save-settings": {
+   "description": "Show the Save button",
+   "chapter": "14-settings",
+   "screen": "screen-settings",
+   "target": "settings-save",
+   "type": "navigate-highlight",
+   "url": "/settings",
+   "element": "One Save for all three tabs"
+  },
+  "diagnose-phone-offline": {
+   "description": "Show the phone's status on its card",
+   "chapter": "16-troubleshooting",
+   "screen": "screen-phone-card",
+   "target": "status-badge",
+   "type": "navigate-highlight",
+   "url": "/phones",
+   "element": "The phone's status"
+  },
+  "diagnose-contact-handshake": {
+   "description": "Show the contact's state",
+   "chapter": "16-troubleshooting",
+   "screen": "screen-contacts",
+   "target": "ct-0-status",
+   "type": "highlight",
+   "url": "/phones/<phone>/contacts",
+   "element": "The contact's state — active, new, draft, inactive"
+  },
+  "diagnose-blocked-publish": {
+   "description": "Show what is blocking publishing",
+   "chapter": "16-troubleshooting",
+   "screen": "screen-designer",
+   "target": "errors-panel",
+   "type": "highlight",
+   "url": "/phones/<phone>/scenarios/<scenario>/design",
+   "element": "What would block publishing"
+  },
+  "diagnose-schedule-never-fires": {
+   "description": "Show when a schedule fires next",
+   "chapter": "16-troubleshooting",
+   "screen": "screen-schedules",
+   "target": "sh-0-next",
+   "type": "navigate-highlight",
+   "url": "/scheduling",
+   "element": "When it fires next — the clearest sign it is really set up"
+  },
+  "diagnose-two-step-required": {
+   "description": "Open two-step verification",
+   "chapter": "16-troubleshooting",
+   "screen": "screen-settings",
+   "target": "settings-tab-two-step",
+   "type": "navigate-highlight",
+   "url": "/settings",
+   "element": "Two-step verification"
+  },
+  "send-api-request": {
+   "description": "Show where to send a request",
+   "chapter": "18-api-explorer",
+   "screen": "screen-api",
+   "target": "api-send",
+   "type": "navigate-highlight",
+   "url": "/api",
+   "element": "Send — this is a real request against your own data"
+  },
+  "find-api-token": {
+   "description": "Show the session token",
+   "chapter": "18-api-explorer",
+   "screen": "screen-api",
+   "target": "api-token",
+   "type": "navigate-highlight",
+   "url": "/api",
+   "element": "Your session token — the console signs requests as you"
+  },
+  "read-api-response": {
+   "description": "Show the response panel",
+   "chapter": "18-api-explorer",
+   "screen": "screen-api",
+   "target": "api-response",
+   "type": "navigate-highlight",
+   "url": "/api",
+   "element": "The real response"
+  },
+  "try-endpoint-live": {
+   "description": "Open the API console to try an endpoint",
+   "chapter": "19-api-reference",
+   "screen": "screen-api",
+   "target": "api-send",
+   "type": "navigate-highlight",
+   "url": "/api",
+   "element": "Send — this is a real request against your own data"
+  },
+  "rent-phone": {
+   "description": "Show where to rent a phone",
+   "chapter": "20-rented-phones",
+   "screen": "screen-rent-list",
+   "target": "rent-row-1-btn",
+   "type": "navigate-highlight",
+   "url": "/rent",
+   "element": "Rent on an available row, End on yours"
+  },
+  "end-rental": {
+   "description": "Show where to end your rental",
+   "chapter": "20-rented-phones",
+   "screen": "screen-rent-list",
+   "target": "rent-row-1-btn",
+   "type": "navigate-highlight",
+   "url": "/rent",
+   "element": "Rent on an available row, End on yours"
+  },
+  "check-rental-time-left": {
+   "description": "Show how long is left on a rental",
+   "chapter": "20-rented-phones",
+   "screen": "screen-rent-list",
+   "target": "rent-row-1-left",
+   "type": "navigate-highlight",
+   "url": "/rent",
+   "element": "Your rental's countdown"
+  },
+  "check-handset-online": {
+   "description": "Show whether the handset is online",
+   "chapter": "20-rented-phones",
+   "screen": "screen-rent-list",
+   "target": "rent-row-1-dot",
+   "type": "navigate-highlight",
+   "url": "/rent",
+   "element": "Green = handset online, red = unplugged"
+  },
+  "check-whatsapp-installed": {
+   "description": "Show whether WhatsApp is on the handset",
+   "chapter": "20-rented-phones",
+   "screen": "screen-rent-list",
+   "target": "rent-row-1-whatsapp",
+   "type": "navigate-highlight",
+   "url": "/rent",
+   "element": "WhatsApp, Business, or not installed"
+  },
+  "read-sms": {
+   "description": "Show where to open an SMS conversation",
+   "chapter": "21-sms",
+   "screen": "screen-sms",
+   "target": "sms-0-sender",
+   "type": "highlight",
+   "url": "/phones/<phone>/sms",
+   "element": "One row per sender — tap to open the conversation"
+  },
+  "search-sms": {
+   "description": "Search the SMS list",
+   "chapter": "21-sms",
+   "screen": "screen-sms",
+   "target": "sms-search",
+   "type": "highlight",
+   "url": "/phones/<phone>/sms",
+   "element": "Search covers the sender and the text"
+  },
+  "find-unknown-sender-sms": {
+   "description": "Show where messages with no sender land",
+   "chapter": "21-sms",
+   "screen": "screen-sms",
+   "target": "sms-2-sender",
+   "type": "highlight",
+   "url": "/phones/<phone>/sms",
+   "element": "Messages with no readable sender land here"
   }
  }
 }

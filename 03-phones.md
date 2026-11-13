@@ -24,6 +24,37 @@ related:
   - 20-rented-phones
   - 04-contacts
   - 16-troubleshooting
+actions:
+  - id: manage-phone
+    description: Open phone management
+    screen: screen-phone-card
+    target: btn-manage
+    type: navigate-highlight
+  - id: disconnect-phone
+    description: Show where to disconnect a phone
+    screen: screen-phone-card
+    target: btn-disconnect
+    type: navigate-highlight
+  - id: check-phone-status
+    description: Show the phone connection status
+    screen: screen-phone-card
+    target: status-badge
+    type: navigate-highlight
+  - id: check-phone-signal
+    description: Show the reception indicator on a phone card
+    screen: screen-phone-card
+    target: signal-bars
+    type: navigate-highlight
+  - id: check-rental-battery
+    description: Show how much rental time is left on a card
+    screen: screen-phone-card
+    target: rent-battery-fill
+    type: navigate-highlight
+  - id: open-phone-tabs
+    description: Show the tabs inside a phone
+    screen: screen-phone-detail
+    target: pd-tab-0
+    type: highlight
 ---
 # 03. Connecting a phone
 

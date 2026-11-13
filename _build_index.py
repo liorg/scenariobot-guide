@@ -18,7 +18,9 @@ except ImportError:
 GUIDE = pathlib.Path(__file__).resolve().parent
 screens = json.loads((GUIDE / "img/index.json").read_text())["screens"]
 
-chapters, problems = {}, []
+ACTION_TYPES = {"highlight", "navigate-highlight"}
+
+chapters, actions, problems = {}, {}, []
 for md in sorted(GUIDE.glob("[0-9]*.md")):
     text = md.read_text(encoding="utf-8")
     if not text.startswith("---\n"):
@@ -45,7 +47,28 @@ for md in sorted(GUIDE.glob("[0-9]*.md")):
         "keywords": fm.get("keywords", []),
         "related": fm.get("related", []),
         "sections": re.findall(r"^## (.+)$", text, re.M),
+        "actions": [a["id"] for a in fm.get("actions", [])],
     }
+
+    for a in fm.get("actions", []):
+        sc, tgt = a["screen"], a["target"]
+        if a["type"] not in ACTION_TYPES:
+            problems.append(f"{md.name}/{a['id']}: type {a['type']} is not one of {sorted(ACTION_TYPES)}")
+        if sc not in screens:
+            problems.append(f"{md.name}/{a['id']}: unknown screen {sc}")
+        elif tgt not in screens[sc]["elements"]:
+            problems.append(f"{md.name}/{a['id']}: {sc} has no element {tgt}")
+        if a["id"] in actions:
+            problems.append(f"{md.name}/{a['id']}: action id already used in {actions[a['id']]['chapter']}")
+        actions[a["id"]] = {
+            "description": a["description"],
+            "chapter": fm["id"],
+            "screen": sc,
+            "target": tgt,
+            "type": a["type"],
+            "url": screens[sc]["url"] if sc in screens else None,
+            "element": screens[sc]["elements"][tgt] if sc in screens and tgt in screens[sc]["elements"] else None,
+        }
 
 for cid, c in chapters.items():
     for r in c["related"]:
@@ -56,10 +79,16 @@ for cid, c in chapters.items():
     "guide": "ScenarioBot user guide",
     "site": "https://liorg.github.io/scenariobot-guide",
     "note": "One entry per chapter. Element-level ids are in img/index.json.",
+    "action_types": {
+        "highlight": "The screen's URL contains ids that cannot be typed — "
+                     "the user has to already be on it. Point at the element.",
+        "navigate-highlight": "Open the screen's url, then point at the element.",
+    },
     "chapters": chapters,
+    "actions": actions,
 }, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
-print(f"index.json: {len(chapters)} chapters, "
+print(f"index.json: {len(chapters)} chapters, {len(actions)} actions, "
       f"{sum(len(c['keywords']) for c in chapters.values())} keywords, "
       f"{sum(len(c['sections']) for c in chapters.values())} sections")
 if problems:

@@ -23,6 +23,32 @@ related:
   - 06-components
   - 07-playback
   - 08-templates
+actions:
+  - id: new-scenario
+    description: Show where to create a scenario
+    screen: screen-scenarios
+    target: sc-new
+    type: highlight
+  - id: open-designer
+    description: Open a scenario in the designer
+    screen: screen-scenarios
+    target: sc-0-design
+    type: highlight
+  - id: check-scenario-status
+    description: Show whether a scenario is draft or active
+    screen: screen-scenarios
+    target: sc-0-status
+    type: highlight
+  - id: save-or-publish
+    description: Show Save, Publish, Import and Export
+    screen: screen-designer
+    target: designer-ribbon
+    type: highlight
+  - id: why-publish-blocked
+    description: Show what is blocking publishing
+    screen: screen-designer
+    target: errors-panel
+    type: highlight
 ---
 # 05. Building a scenario
 

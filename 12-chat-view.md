@@ -18,6 +18,27 @@ keywords:
 related:
   - 08-templates
   - 04-contacts
+actions:
+  - id: connect-unsynced-contact
+    description: Show where to connect an unidentified chat
+    screen: screen-calls-list
+    target: cl-unsynced-0-connect
+    type: highlight
+  - id: check-24h-window
+    description: Show whether the 24-hour window is open
+    screen: screen-chat-view
+    target: chat-window-banner
+    type: highlight
+  - id: send-template-message
+    description: Show where to send a template
+    screen: screen-chat-view
+    target: chat-template-btn
+    type: highlight
+  - id: send-free-text
+    description: Show where to send free text
+    screen: screen-chat-view
+    target: chat-send-btn
+    type: highlight
 ---
 # 12. The chat view
 

@@ -20,6 +20,22 @@ keywords:
 related:
   - 05-scenarios
   - 10-watching-a-call
+actions:
+  - id: find-expect-steps
+    description: Show the EXPECT step types
+    screen: screen-designer
+    target: panel-expect
+    type: highlight
+  - id: find-send-steps
+    description: Show the SEND step types
+    screen: screen-designer
+    target: panel-send
+    type: highlight
+  - id: read-scenario-canvas
+    description: Show the conversation canvas
+    screen: screen-designer
+    target: panel-canvas
+    type: highlight
 ---
 # 06. Scenario components
 

@@ -14,6 +14,17 @@ keywords:
 related:
   - 05-scenarios
   - 10-watching-a-call
+actions:
+  - id: run-playback
+    description: Show where to start playback
+    screen: screen-playback
+    target: pb-play
+    type: highlight
+  - id: trace-step
+    description: Show which step produced a message
+    screen: screen-playback
+    target: pb-msg-0-step
+    type: highlight
 ---
 # 07. Playback
 

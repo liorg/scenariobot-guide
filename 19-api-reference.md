@@ -13,6 +13,12 @@ keywords:
   - integration
 related:
   - 18-api-explorer
+actions:
+  - id: try-endpoint-live
+    description: Open the API console to try an endpoint
+    screen: screen-api
+    target: api-send
+    type: navigate-highlight
 ---
 # 19. API reference
 

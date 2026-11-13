@@ -17,6 +17,22 @@ keywords:
 related:
   - 14-settings
   - 03-phones
+actions:
+  - id: sign-in
+    description: Show where to sign in
+    screen: screen-login
+    target: lg-email
+    type: navigate-highlight
+  - id: sign-in-submit
+    description: Show the Sign in button
+    screen: screen-login
+    target: lg-submit
+    type: navigate-highlight
+  - id: sign-in-with-google
+    description: Show sign-in with Google or GitHub
+    screen: screen-login
+    target: lg-google
+    type: navigate-highlight
 ---
 # 02. Signing in
 

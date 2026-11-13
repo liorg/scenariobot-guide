@@ -17,6 +17,27 @@ keywords:
 related:
   - 10-watching-a-call
   - 16-troubleshooting
+actions:
+  - id: check-call-outcome
+    description: Show how a call ended
+    screen: screen-call-history
+    target: ch-outcome
+    type: highlight
+  - id: find-unmatched-replies
+    description: Show replies that matched no branch
+    screen: screen-call-history
+    target: ch-stat-2-value
+    type: highlight
+  - id: find-last-step
+    description: Show the last step a call reached
+    screen: screen-call-history
+    target: ch-stat-3-value
+    type: highlight
+  - id: inspect-failed-reply
+    description: Show the reply that did not match
+    screen: screen-call-history
+    target: ch-ev-2-flag
+    type: highlight
 ---
 # 11. Reading a finished call
 

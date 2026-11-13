@@ -18,6 +18,27 @@ related:
   - 13-executions
   - 10-watching-a-call
   - 16-troubleshooting
+actions:
+  - id: new-schedule
+    description: Show where to create a schedule
+    screen: screen-schedules
+    target: sh-new
+    type: navigate-highlight
+  - id: run-schedule-now
+    description: Show where to run a schedule immediately
+    screen: screen-schedules
+    target: sh-0-run
+    type: navigate-highlight
+  - id: check-next-run
+    description: Show when a schedule fires next
+    screen: screen-schedules
+    target: sh-0-next
+    type: navigate-highlight
+  - id: filter-schedules
+    description: Filter schedules to one phone
+    screen: screen-schedules
+    target: sh-phone-filter
+    type: navigate-highlight
 ---
 # 09. Schedules
 

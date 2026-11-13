@@ -18,6 +18,27 @@ related:
   - 05-scenarios
   - 12-chat-view
   - 16-troubleshooting
+actions:
+  - id: new-template
+    description: Show where to create a template
+    screen: screen-templates
+    target: tpl-new
+    type: navigate-highlight
+  - id: check-template-status
+    description: Show a template's approval status
+    screen: screen-templates
+    target: tpl-0-status
+    type: navigate-highlight
+  - id: publish-template
+    description: Show whether a template is published
+    screen: screen-templates
+    target: tpl-0-published
+    type: navigate-highlight
+  - id: filter-templates
+    description: Filter templates by status
+    screen: screen-templates
+    target: tpl-filter-2
+    type: navigate-highlight
 ---
 # 08. Templates
 

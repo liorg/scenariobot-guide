@@ -20,6 +20,32 @@ related:
   - 02-signing-in
   - 18-api-explorer
   - 20-rented-phones
+actions:
+  - id: open-two-step-verification
+    description: Open two-step verification
+    screen: screen-settings
+    target: settings-tab-two-step
+    type: navigate-highlight
+  - id: open-trusted-domains
+    description: Open trusted domains and email notifications
+    screen: screen-settings
+    target: settings-tab-advanced
+    type: navigate-highlight
+  - id: edit-personal-details
+    description: Open personal details
+    screen: screen-settings
+    target: settings-tab-personal
+    type: navigate-highlight
+  - id: change-avatar
+    description: Show where to upload a picture
+    screen: screen-settings
+    target: settings-avatar
+    type: navigate-highlight
+  - id: save-settings
+    description: Show the Save button
+    screen: screen-settings
+    target: settings-save
+    type: navigate-highlight
 ---
 # 14. Settings and account
 

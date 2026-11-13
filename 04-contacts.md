@@ -18,6 +18,27 @@ keywords:
 related:
   - 10-watching-a-call
   - 16-troubleshooting
+actions:
+  - id: add-contact
+    description: Show where to add a contact
+    screen: screen-contacts
+    target: ct-add
+    type: highlight
+  - id: check-contact-status
+    description: Show a contact's state
+    screen: screen-contacts
+    target: ct-0-status
+    type: highlight
+  - id: edit-contact
+    description: Show where to edit a contact
+    screen: screen-contacts
+    target: ct-0-edit
+    type: highlight
+  - id: find-contact
+    description: Show the contact search
+    screen: screen-contacts
+    target: ct-search
+    type: highlight
 ---
 # 04. Adding a contact
 

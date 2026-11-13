@@ -18,6 +18,22 @@ keywords:
 related:
   - 19-api-reference
   - 14-settings
+actions:
+  - id: send-api-request
+    description: Show where to send a request
+    screen: screen-api
+    target: api-send
+    type: navigate-highlight
+  - id: find-api-token
+    description: Show the session token
+    screen: screen-api
+    target: api-token
+    type: navigate-highlight
+  - id: read-api-response
+    description: Show the response panel
+    screen: screen-api
+    target: api-response
+    type: navigate-highlight
 ---
 # 18. API Explorer
 

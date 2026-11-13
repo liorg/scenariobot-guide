@@ -186,6 +186,44 @@ related:
 | `two_fa` | only on gated chapters — `tab-hidden` (the tab isn't there until the mobile number is verified), `run-blocked` (visible, but the run is refused), `add-phone-gated` |
 | `keywords` | what someone would actually type, including words the screen doesn't use |
 | `related` | chapter ids, nearest first |
+| `actions` | things a user can be shown on a screen — see below |
+
+### Actions
+
+An action is one thing a user can be *shown*, rather than told:
+
+```yaml
+actions:
+  - id: disconnect-phone
+    description: Show where to disconnect a phone
+    screen: screen-phone-card
+    target: btn-disconnect
+    type: navigate-highlight
+```
+
+| Key | |
+|---|---|
+| `id` | unique across the whole guide, verb first |
+| `description` | what the user asked for, in their words — this is what gets matched |
+| `screen` | a diagram in `img/` |
+| `target` | an element `id` in that diagram, checked against `img/index.json` |
+| `type` | `navigate-highlight` — open the screen's URL, then point at the element. `highlight` — the screen's URL contains ids that can't be typed, so the user has to already be on it |
+
+`index.json` resolves every action into one flat record under `actions`, with
+the URL to open, the element to highlight, that element's own description and
+the chapter to read for the rest:
+
+```json
+"disconnect-phone": {
+  "description": "Show where to disconnect a phone",
+  "chapter": "03-phones", "screen": "screen-phone-card",
+  "target": "btn-disconnect", "type": "navigate-highlight",
+  "url": "/phones", "element": "Disconnect — asks first"
+}
+```
+
+An action's `screen` doesn't have to be the chapter's own — Troubleshooting
+points at five different screens.
 
 If the site build doesn't strip YAML frontmatter, it will print at the top of
 the page — check one rendered chapter after the first publish.

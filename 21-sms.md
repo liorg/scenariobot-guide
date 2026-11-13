@@ -15,6 +15,22 @@ keywords:
 related:
   - 20-rented-phones
   - 03-phones
+actions:
+  - id: read-sms
+    description: Show where to open an SMS conversation
+    screen: screen-sms
+    target: sms-0-sender
+    type: highlight
+  - id: search-sms
+    description: Search the SMS list
+    screen: screen-sms
+    target: sms-search
+    type: highlight
+  - id: find-unknown-sender-sms
+    description: Show where messages with no sender land
+    screen: screen-sms
+    target: sms-2-sender
+    type: highlight
 ---
 # 21. SMS on a rented phone
 

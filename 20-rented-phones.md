@@ -20,6 +20,32 @@ related:
   - 21-sms
   - 03-phones
   - 14-settings
+actions:
+  - id: rent-phone
+    description: Show where to rent a phone
+    screen: screen-rent-list
+    target: rent-row-1-btn
+    type: navigate-highlight
+  - id: end-rental
+    description: Show where to end your rental
+    screen: screen-rent-list
+    target: rent-row-1-btn
+    type: navigate-highlight
+  - id: check-rental-time-left
+    description: Show how long is left on a rental
+    screen: screen-rent-list
+    target: rent-row-1-left
+    type: navigate-highlight
+  - id: check-handset-online
+    description: Show whether the handset is online
+    screen: screen-rent-list
+    target: rent-row-1-dot
+    type: navigate-highlight
+  - id: check-whatsapp-installed
+    description: Show whether WhatsApp is on the handset
+    screen: screen-rent-list
+    target: rent-row-1-whatsapp
+    type: navigate-highlight
 ---
 # 20. Renting a phone
 

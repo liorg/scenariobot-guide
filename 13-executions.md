@@ -17,6 +17,22 @@ related:
   - 09-schedules
   - 08-templates
   - 16-troubleshooting
+actions:
+  - id: new-execution
+    description: Show where to create an execution
+    screen: screen-executions
+    target: ex-new
+    type: navigate-highlight
+  - id: check-execution-status
+    description: Show an execution's status
+    screen: screen-executions
+    target: ex-0-status
+    type: navigate-highlight
+  - id: run-execution
+    description: Show where to run an execution
+    screen: screen-executions
+    target: ex-0-run
+    type: navigate-highlight
 ---
 # 13. Parallel executions
 

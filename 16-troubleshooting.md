@@ -16,6 +16,32 @@ related:
   - 10-watching-a-call
   - 11-reading-a-call
   - 17-glossary
+actions:
+  - id: diagnose-phone-offline
+    description: Show the phone's status on its card
+    screen: screen-phone-card
+    target: status-badge
+    type: navigate-highlight
+  - id: diagnose-contact-handshake
+    description: Show the contact's state
+    screen: screen-contacts
+    target: ct-0-status
+    type: highlight
+  - id: diagnose-blocked-publish
+    description: Show what is blocking publishing
+    screen: screen-designer
+    target: errors-panel
+    type: highlight
+  - id: diagnose-schedule-never-fires
+    description: Show when a schedule fires next
+    screen: screen-schedules
+    target: sh-0-next
+    type: navigate-highlight
+  - id: diagnose-two-step-required
+    description: Open two-step verification
+    screen: screen-settings
+    target: settings-tab-two-step
+    type: navigate-highlight
 ---
 # 16. Troubleshooting
 
