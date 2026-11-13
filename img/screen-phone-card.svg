@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 236" width="600" height="236" role="img" aria-label="A phone card in the phone list">
+  <title>A phone card in the phone list</title>
+
+  <style>
+    .bg     { fill: #F7F9FC; }
+    .panel  { fill: #FFFFFF; stroke: #E4EAF4; stroke-width: 1.5; }
+    .sub    { fill: #F1F5F9; stroke: #E4EAF4; stroke-width: 1; }
+    .line   { stroke: #E4EAF4; }
+    .t      { font-family: 'Segoe UI', Tahoma, sans-serif; fill: #1A2332; }
+    .t-mut  { font-family: 'Segoe UI', Tahoma, sans-serif; fill: #8896A7; }
+    .b      { font-weight: 700; }
+    .mono   { font-family: Consolas, 'JetBrains Mono', monospace; }
+    .cal    { fill: #7048E8; }
+    .cal-t  { font-family: 'Segoe UI', Tahoma, sans-serif; fill: #FFFFFF; font-weight: 700; font-size: 11px; }
+    .dash   { stroke: #7048E8; stroke-width: 1.2; stroke-dasharray: 3 3; fill: none; }
+    @media (prefers-color-scheme: dark) {
+      .bg    { fill: #121826; }
+      .panel { fill: #171D2B; stroke: #2A3347; }
+      .sub   { fill: #1F2633; stroke: #2A3347; }
+      .line  { stroke: #2A3347; }
+      .t     { fill: #E6EAF2; }
+      .t-mut { fill: #7D8899; }
+      .cal   { fill: #9775FA; }
+      .dash  { stroke: #9775FA; }
+    }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="600" height="236" rx="10"/>
+  <rect id="phone-card" x="60" y="46" width="520" height="170" rx="8" class="panel" style="fill:#FFFFFF"/>
+  <rect x="60" y="46" width="40" height="8" fill="#0B7A2A"/>
+  <rect x="60" y="208" width="40" height="8" fill="#0B7A2A"/>
+  <rect x="100" y="46" width="40" height="8" fill="#FFFFFF"/>
+  <rect x="100" y="208" width="40" height="8" fill="#FFFFFF"/>
+  <rect x="140" y="46" width="40" height="8" fill="#0B7A2A"/>
+  <rect x="140" y="208" width="40" height="8" fill="#0B7A2A"/>
+  <rect x="180" y="46" width="40" height="8" fill="#FFFFFF"/>
+  <rect x="180" y="208" width="40" height="8" fill="#FFFFFF"/>
+  <rect x="220" y="46" width="40" height="8" fill="#0B7A2A"/>
+  <rect x="220" y="208" width="40" height="8" fill="#0B7A2A"/>
+  <rect x="260" y="46" width="40" height="8" fill="#FFFFFF"/>
+  <rect x="260" y="208" width="40" height="8" fill="#FFFFFF"/>
+  <rect x="300" y="46" width="40" height="8" fill="#0B7A2A"/>
+  <rect x="300" y="208" width="40" height="8" fill="#0B7A2A"/>
+  <rect x="340" y="46" width="40" height="8" fill="#FFFFFF"/>
+  <rect x="340" y="208" width="40" height="8" fill="#FFFFFF"/>
+  <rect x="380" y="46" width="40" height="8" fill="#0B7A2A"/>
+  <rect x="380" y="208" width="40" height="8" fill="#0B7A2A"/>
+  <rect x="420" y="46" width="40" height="8" fill="#FFFFFF"/>
+  <rect x="420" y="208" width="40" height="8" fill="#FFFFFF"/>
+  <rect x="460" y="46" width="40" height="8" fill="#0B7A2A"/>
+  <rect x="460" y="208" width="40" height="8" fill="#0B7A2A"/>
+  <rect x="500" y="46" width="40" height="8" fill="#FFFFFF"/>
+  <rect x="500" y="208" width="40" height="8" fill="#FFFFFF"/>
+  <rect x="540" y="46" width="40" height="8" fill="#0B7A2A"/>
+  <rect x="540" y="208" width="40" height="8" fill="#0B7A2A"/>
+  <rect x="60" y="46" width="8" height="40" fill="#0B7A2A"/>
+  <rect x="572" y="46" width="8" height="40" fill="#0B7A2A"/>
+  <rect x="60" y="86" width="8" height="40" fill="#FFFFFF"/>
+  <rect x="572" y="86" width="8" height="40" fill="#FFFFFF"/>
+  <rect x="60" y="126" width="8" height="40" fill="#0B7A2A"/>
+  <rect x="572" y="126" width="8" height="40" fill="#0B7A2A"/>
+  <rect x="60" y="166" width="8" height="40" fill="#FFFFFF"/>
+  <rect x="572" y="166" width="8" height="40" fill="#FFFFFF"/>
+  <rect x="60" y="206" width="8" height="10" fill="#0B7A2A"/>
+  <rect x="572" y="206" width="8" height="10" fill="#0B7A2A"/>
+  <rect id="phone-card-plate" x="60" y="46" width="520" height="170" rx="8" class="" fill="none" stroke="#B8BEC4" stroke-width="2"/>
+  <rect id="phone-card-inner" x="68" y="54" width="504" height="154" rx="6" class="panel" />
+  <circle id="phone-avatar" cx="118" cy="100" r="22" fill="#3B5BDB"/>
+  <text id="phone-avatar-letter" x="118" y="106" font-size="18" class="t b" text-anchor="middle" style="fill:#fff">S</text>
+  <text id="phone-name" x="150" y="95" font-size="13" class="t b" text-anchor="start" >Sales  972501234567</text>
+  <text id="phone-label" x="150" y="112" font-size="11" class="t-mut" text-anchor="start" >general</text>
+  <rect id="rent-battery-shell" x="360" y="92" width="26" height="13" rx="3" class="" fill="none" stroke="#E67700" stroke-width="1.5"/>
+  <rect id="rent-battery-tip" x="386" y="95" width="2.5" height="5" rx="1" fill="#E67700"/>
+  <rect id="rent-battery-fill" x="362" y="94" width="9" height="9" rx="1.2" fill="#E67700"/>
+  <text id="rent-battery-time" x="393" y="103" font-size="11" class="t b mono" text-anchor="start" style="fill:#E67700">0:21:47</text>
+  <g id="signal-bars"><rect x="462.0" y="102" width="3" height="4" rx="0.8" fill="#2F9E44"/><rect x="466.5" y="99" width="3" height="7" rx="0.8" fill="#2F9E44"/><rect x="471.0" y="96" width="3" height="10" rx="0.8" fill="#2F9E44"/><rect x="475.5" y="93" width="3" height="13" rx="0.8" fill="#2F9E44"/></g>
+  <rect id="status-badge" x="492" y="92" width="62" height="18" rx="9" class="" fill="#EBFBEE"/>
+  <text id="status-badge-text" x="523" y="105" font-size="10" class="t b" text-anchor="middle" style="fill:#2F9E44">active</text>
+  <rect id="phone-progress-bg" x="82" y="140" width="476" height="3" rx="2" fill="#3B5BDB" opacity="0.15"/>
+  <rect id="phone-progress" x="82" y="140" width="476" height="3" rx="2" fill="#3B5BDB"/>
+  <rect id="btn-disconnect" x="82" y="160" width="232" height="30" rx="8" class="" fill="#FFF5F5" stroke="#FFC9C9"/>
+  <text id="btn-disconnect-label" x="198" y="179" font-size="11" class="t b" text-anchor="middle" style="fill:#C92A2A">Disconnect</text>
+  <rect id="btn-manage" x="326" y="160" width="232" height="30" rx="8" class="panel" />
+  <text id="btn-manage-label" x="442" y="179" font-size="11" class="t b" text-anchor="middle" >Manage</text>
+  <g id="callout-1">
+    <circle cx="18" cy="60" r="11" class="cal"/>
+    <text x="18" y="64" class="cal-t" text-anchor="middle">1</text>
+  </g>
+  <path class="dash" d="M 29 60 L 60 52"/>
+  <g id="callout-2">
+    <circle cx="230" cy="70" r="11" class="cal"/>
+    <text x="230" y="74" class="cal-t" text-anchor="middle">2</text>
+  </g>
+  <g id="callout-3">
+    <circle cx="373" cy="68" r="11" class="cal"/>
+    <text x="373" y="72" class="cal-t" text-anchor="middle">3</text>
+  </g>
+  <g id="callout-4">
+    <circle cx="509" cy="68" r="11" class="cal"/>
+    <text x="509" y="72" class="cal-t" text-anchor="middle">4</text>
+  </g>
+  <g id="callout-5">
+    <circle cx="582" cy="175" r="11" class="cal"/>
+    <text x="582" y="179" class="cal-t" text-anchor="middle">5</text>
+  </g>
+  <path class="dash" d="M 571 175 L 560 175"/>
+</svg>

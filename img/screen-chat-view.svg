@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 606 396" width="606" height="396" role="img" aria-label="The chat view">
+  <title>The chat view</title>
+
+  <style>
+    .bg     { fill: #F7F9FC; }
+    .panel  { fill: #FFFFFF; stroke: #E4EAF4; stroke-width: 1.5; }
+    .sub    { fill: #F1F5F9; stroke: #E4EAF4; stroke-width: 1; }
+    .line   { stroke: #E4EAF4; }
+    .t      { font-family: 'Segoe UI', Tahoma, sans-serif; fill: #1A2332; }
+    .t-mut  { font-family: 'Segoe UI', Tahoma, sans-serif; fill: #8896A7; }
+    .b      { font-weight: 700; }
+    .mono   { font-family: Consolas, 'JetBrains Mono', monospace; }
+    .cal    { fill: #7048E8; }
+    .cal-t  { font-family: 'Segoe UI', Tahoma, sans-serif; fill: #FFFFFF; font-weight: 700; font-size: 11px; }
+    .dash   { stroke: #7048E8; stroke-width: 1.2; stroke-dasharray: 3 3; fill: none; }
+    @media (prefers-color-scheme: dark) {
+      .bg    { fill: #121826; }
+      .panel { fill: #171D2B; stroke: #2A3347; }
+      .sub   { fill: #1F2633; stroke: #2A3347; }
+      .line  { stroke: #2A3347; }
+      .t     { fill: #E6EAF2; }
+      .t-mut { fill: #7D8899; }
+      .cal   { fill: #9775FA; }
+      .dash  { stroke: #9775FA; }
+    }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="606" height="396" rx="10"/>
+  <rect id="chat-frame" x="64" y="20" width="440" height="330" rx="10" class="panel" />
+  <path id="chat-header" d="M 64 30 a10 10 0 0 1 10 -10 h 420 a10 10 0 0 1 10 10 v 38 h -440 z" fill="#075E54"/>
+  <circle id="chat-avatar" cx="106" cy="49" r="15" fill="#128C7E"/>
+  <text id="chat-avatar-letter" x="106" y="54" font-size="13" class="t b" text-anchor="middle" fill="#fff">D</text>
+  <text id="chat-contact-name" x="132" y="46" font-size="13" class="t b" text-anchor="start" fill="#fff">Dana</text>
+  <text id="chat-contact-number" x="132" y="60" font-size="10" class="t mono" text-anchor="start" style="fill:#CFE3E0">972541234567</text>
+  <text id="chat-msg-count" x="478" y="54" font-size="10" class="t" text-anchor="end" style="fill:#CFE3E0">18 messages</text>
+  <rect id="chat-window-banner" x="64" y="68" width="440" height="40" rx="0" class="" style="fill:#DCFCE7"/>
+  <text id="chat-window-icon" x="82" y="93" font-size="13" class="t" text-anchor="start" style="fill:#15803D">●</text>
+  <text id="chat-window-title" x="100" y="86" font-size="11" class="t b" text-anchor="start" style="fill:#15803D">The conversation window is open</text>
+  <text id="chat-window-sub" x="100" y="100" font-size="10" class="t" text-anchor="start" style="fill:#15803D">free text allowed for another 7 hours</text>
+  <rect id="chat-body" x="64" y="108" width="440" height="180" rx="0" class="" style="fill:#ECE5DD"/>
+  <rect id="msg-in-1" x="80" y="122" width="200" height="34" rx="8" class="" style="fill:#FFFFFF"/>
+  <text id="msg-in-1-text" x="94" y="143" font-size="10" class="t" text-anchor="start" >Hi, is this still available?</text>
+  <rect id="msg-out-1" x="288" y="164" width="200" height="34" rx="8" class="" style="fill:#DCF8C6"/>
+  <text id="msg-out-1-text" x="302" y="185" font-size="10" class="t" text-anchor="start" style="fill:#1A2332">Yes — want me to hold it?</text>
+  <rect id="msg-in-2" x="80" y="206" width="170" height="34" rx="8" class="" style="fill:#FFFFFF"/>
+  <text id="msg-in-2-text" x="94" y="227" font-size="10" class="t" text-anchor="start" >Yes please</text>
+  <rect id="chat-composer" x="64" y="288" width="440" height="62" rx="0" class="" style="fill:#F0F2F5"/>
+  <rect id="chat-input" x="80" y="302" width="300" height="34" rx="17" class="" fill="#FFFFFF" stroke="#D0D7DE"/>
+  <text id="chat-input-ph" x="98" y="323" font-size="10" class="t-mut" text-anchor="start" >Type a message…</text>
+  <circle id="chat-template-btn" cx="412" cy="319" r="17" fill="#FFFFFF" stroke="#128C7E"/>
+  <text id="chat-template-icon" x="412" y="324" font-size="12" class="t b" text-anchor="middle" style="fill:#128C7E">T</text>
+  <circle id="chat-send-btn" cx="460" cy="319" r="17" fill="#128C7E"/>
+  <path id="chat-send-icon" d="M 453 312 L 468 319 L 453 326 L 456 319 z" fill="#FFFFFF"/>
+  <g id="callout-1">
+    <circle cx="552" cy="46" r="11" class="cal"/>
+    <text x="552" y="50" class="cal-t" text-anchor="middle">1</text>
+  </g>
+  <path class="dash" d="M 541 46 L 508 46"/>
+  <g id="callout-2">
+    <circle cx="552" cy="88" r="11" class="cal"/>
+    <text x="552" y="92" class="cal-t" text-anchor="middle">2</text>
+  </g>
+  <path class="dash" d="M 541 88 L 508 88"/>
+  <g id="callout-3">
+    <circle cx="30" cy="139" r="11" class="cal"/>
+    <text x="30" y="143" class="cal-t" text-anchor="middle">3</text>
+  </g>
+  <path class="dash" d="M 41 139 L 76 139"/>
+  <g id="callout-4">
+    <circle cx="552" cy="181" r="11" class="cal"/>
+    <text x="552" y="185" class="cal-t" text-anchor="middle">4</text>
+  </g>
+  <path class="dash" d="M 541 181 L 492 181"/>
+  <g id="callout-5">
+    <circle cx="412" cy="372" r="11" class="cal"/>
+    <text x="412" y="376" class="cal-t" text-anchor="middle">5</text>
+  </g>
+  <g id="callout-6">
+    <circle cx="460" cy="372" r="11" class="cal"/>
+    <text x="460" y="376" class="cal-t" text-anchor="middle">6</text>
+  </g>
+</svg>

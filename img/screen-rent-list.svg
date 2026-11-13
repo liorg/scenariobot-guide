@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 290" width="760" height="290" role="img" aria-label="The rented phones list">
+  <title>The rented phones list</title>
+
+  <style>
+    .bg     { fill: #F7F9FC; }
+    .panel  { fill: #FFFFFF; stroke: #E4EAF4; stroke-width: 1.5; }
+    .sub    { fill: #F1F5F9; stroke: #E4EAF4; stroke-width: 1; }
+    .line   { stroke: #E4EAF4; }
+    .t      { font-family: 'Segoe UI', Tahoma, sans-serif; fill: #1A2332; }
+    .t-mut  { font-family: 'Segoe UI', Tahoma, sans-serif; fill: #8896A7; }
+    .b      { font-weight: 700; }
+    .mono   { font-family: Consolas, 'JetBrains Mono', monospace; }
+    .cal    { fill: #7048E8; }
+    .cal-t  { font-family: 'Segoe UI', Tahoma, sans-serif; fill: #FFFFFF; font-weight: 700; font-size: 11px; }
+    .dash   { stroke: #7048E8; stroke-width: 1.2; stroke-dasharray: 3 3; fill: none; }
+    @media (prefers-color-scheme: dark) {
+      .bg    { fill: #121826; }
+      .panel { fill: #171D2B; stroke: #2A3347; }
+      .sub   { fill: #1F2633; stroke: #2A3347; }
+      .line  { stroke: #2A3347; }
+      .t     { fill: #E6EAF2; }
+      .t-mut { fill: #7D8899; }
+      .cal   { fill: #9775FA; }
+      .dash  { stroke: #9775FA; }
+    }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="760" height="290" rx="10"/>
+  <rect id="rent-panel" x="20" y="62" width="700" height="210" rx="8" class="panel" />
+  <rect id="rent-head" x="20" y="62" width="700" height="32" rx="0" class="sub" />
+  <text id="rent-th-number" x="40" y="82" font-size="9" class="t-mut b" text-anchor="start" >NUMBER</text>
+  <text id="rent-th-whatsapp" x="215" y="82" font-size="9" class="t-mut b" text-anchor="start" >WHATSAPP</text>
+  <text id="rent-th-verified" x="330" y="82" font-size="9" class="t-mut b" text-anchor="start" >VERIFIED</text>
+  <text id="rent-th-device" x="440" y="82" font-size="9" class="t-mut b" text-anchor="start" >DEVICE</text>
+  <text id="rent-th-time-left" x="540" y="82" font-size="9" class="t-mut b" text-anchor="start" >TIME LEFT</text>
+  <rect id="rent-row-1-mine" x="20" y="94" width="700" height="56" rx="0" class="" style="fill:#EEF2FF"/>
+  <line x1="20" y1="150" x2="720" y2="150" class="line"/>
+  <text id="rent-row-1-number" x="40" y="122" font-size="11" class="t b mono" text-anchor="start" >972504477197</text>
+  <rect id="rent-row-1-chip" x="142" y="110" width="54" height="17" rx="9" class="" style="fill:#D3F9D8"/>
+  <text id="rent-row-1-chip-text" x="169" y="122" font-size="9" class="t b" text-anchor="middle" style="fill:#2F9E44">Mine</text>
+  <text id="rent-row-1-whatsapp" x="215" y="126" font-size="10" class="t" text-anchor="start" >WhatsApp</text>
+  <text id="rent-row-1-verified" x="330" y="126" font-size="10" class="t" text-anchor="start" >Verified</text>
+  <circle id="rent-row-1-dot" cx="446" cy="122" r="4" fill="#2F9E44"/>
+  <text id="rent-row-1-device" x="458" y="126" font-size="10" class="t-mut" text-anchor="start" >Online</text>
+  <text id="rent-row-1-left" x="540" y="126" font-size="11" class="t b mono" text-anchor="start" >0:42:10</text>
+  <rect id="rent-row-1-btn" x="630" y="110" width="70" height="24" rx="7" class="panel" />
+  <text id="rent-row-1-btn-label" x="665" y="126" font-size="10" class="t b" text-anchor="middle" style="fill:#C92A2A">End</text>
+  <line x1="20" y1="206" x2="720" y2="206" class="line"/>
+  <text id="rent-row-2-number" x="40" y="178" font-size="11" class="t b mono" text-anchor="start" >972508375877</text>
+  <rect id="rent-row-2-chip" x="142" y="166" width="54" height="17" rx="9" class="" style="fill:#F1F5F9"/>
+  <text id="rent-row-2-chip-text" x="169" y="178" font-size="9" class="t b" text-anchor="middle" style="fill:#8896A7">Available</text>
+  <text id="rent-row-2-whatsapp" x="215" y="182" font-size="10" class="t" text-anchor="start" >Business</text>
+  <text id="rent-row-2-verified" x="330" y="182" font-size="10" class="t" text-anchor="start" >Verified</text>
+  <circle id="rent-row-2-dot" cx="446" cy="178" r="4" fill="#2F9E44"/>
+  <text id="rent-row-2-device" x="458" y="182" font-size="10" class="t-mut" text-anchor="start" >Online</text>
+  <text id="rent-row-2-left" x="540" y="182" font-size="11" class="t b mono" text-anchor="start" >—</text>
+  <rect id="rent-row-2-btn" x="630" y="166" width="70" height="24" rx="7" class="" style="fill:#3B5BDB"/>
+  <text id="rent-row-2-btn-label" x="665" y="182" font-size="10" class="t b" text-anchor="middle" style="fill:#FFFFFF">Rent</text>
+  <line x1="20" y1="262" x2="720" y2="262" class="line"/>
+  <text id="rent-row-3-number" x="40" y="234" font-size="11" class="t b mono" text-anchor="start" >972501119999</text>
+  <rect id="rent-row-3-chip" x="142" y="222" width="54" height="17" rx="9" class="" style="fill:#F1F5F9"/>
+  <text id="rent-row-3-chip-text" x="169" y="234" font-size="9" class="t b" text-anchor="middle" style="fill:#8896A7">Available</text>
+  <text id="rent-row-3-whatsapp" x="215" y="238" font-size="10" class="t-mut" text-anchor="start" >Not installed</text>
+  <text id="rent-row-3-verified" x="330" y="238" font-size="10" class="t-mut" text-anchor="start" >Not verified</text>
+  <circle id="rent-row-3-dot" cx="446" cy="234" r="4" fill="#C92A2A"/>
+  <text id="rent-row-3-device" x="458" y="238" font-size="10" class="t-mut" text-anchor="start" >Offline</text>
+  <text id="rent-row-3-left" x="540" y="238" font-size="11" class="t b mono" text-anchor="start" >—</text>
+  <rect id="rent-row-3-btn" x="630" y="222" width="70" height="24" rx="7" class="" style="fill:#E4EAF4"/>
+  <text id="rent-row-3-btn-label" x="665" y="238" font-size="10" class="t b" text-anchor="middle" style="fill:#8896A7">Rent</text>
+  <g id="callout-1">
+    <circle cx="48" cy="30" r="11" class="cal"/>
+    <text x="48" y="34" class="cal-t" text-anchor="middle">1</text>
+  </g>
+  <g id="callout-2">
+    <circle cx="232" cy="30" r="11" class="cal"/>
+    <text x="232" y="34" class="cal-t" text-anchor="middle">2</text>
+  </g>
+  <g id="callout-3">
+    <circle cx="345" cy="30" r="11" class="cal"/>
+    <text x="345" y="34" class="cal-t" text-anchor="middle">3</text>
+  </g>
+  <g id="callout-4">
+    <circle cx="452" cy="30" r="11" class="cal"/>
+    <text x="452" y="34" class="cal-t" text-anchor="middle">4</text>
+  </g>
+  <g id="callout-5">
+    <circle cx="556" cy="30" r="11" class="cal"/>
+    <text x="556" y="34" class="cal-t" text-anchor="middle">5</text>
+  </g>
+  <g id="callout-6">
+    <circle cx="665" cy="30" r="11" class="cal"/>
+    <text x="665" y="34" class="cal-t" text-anchor="middle">6</text>
+  </g>
+</svg>

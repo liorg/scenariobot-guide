@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 856 430" width="856" height="430" role="img" aria-label="The scenario designer">
+  <title>The scenario designer</title>
+
+  <style>
+    .bg     { fill: #F7F9FC; }
+    .panel  { fill: #FFFFFF; stroke: #E4EAF4; stroke-width: 1.5; }
+    .sub    { fill: #F1F5F9; stroke: #E4EAF4; stroke-width: 1; }
+    .line   { stroke: #E4EAF4; }
+    .t      { font-family: 'Segoe UI', Tahoma, sans-serif; fill: #1A2332; }
+    .t-mut  { font-family: 'Segoe UI', Tahoma, sans-serif; fill: #8896A7; }
+    .b      { font-weight: 700; }
+    .mono   { font-family: Consolas, 'JetBrains Mono', monospace; }
+    .cal    { fill: #7048E8; }
+    .cal-t  { font-family: 'Segoe UI', Tahoma, sans-serif; fill: #FFFFFF; font-weight: 700; font-size: 11px; }
+    .dash   { stroke: #7048E8; stroke-width: 1.2; stroke-dasharray: 3 3; fill: none; }
+    @media (prefers-color-scheme: dark) {
+      .bg    { fill: #121826; }
+      .panel { fill: #171D2B; stroke: #2A3347; }
+      .sub   { fill: #1F2633; stroke: #2A3347; }
+      .line  { stroke: #2A3347; }
+      .t     { fill: #E6EAF2; }
+      .t-mut { fill: #7D8899; }
+      .cal   { fill: #9775FA; }
+      .dash  { stroke: #9775FA; }
+    }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="856" height="430" rx="10"/>
+  <rect id="designer-ribbon" x="56" y="16" width="748" height="44" rx="8" class="panel" />
+  <rect id="ribbon-save" x="70" y="28" width="46" height="22" rx="5" class="sub" />
+  <text id="ribbon-save-label" x="93.0" y="43" font-size="10" class="t" text-anchor="middle" >Save</text>
+  <rect id="ribbon-publish" x="124" y="28" width="54" height="22" rx="5" class="sub" />
+  <text id="ribbon-publish-label" x="151.0" y="43" font-size="10" class="t" text-anchor="middle" >Publish</text>
+  <rect id="ribbon-import" x="190" y="28" width="54" height="22" rx="5" class="sub" />
+  <text id="ribbon-import-label" x="217.0" y="43" font-size="10" class="t" text-anchor="middle" >Import</text>
+  <rect id="ribbon-export" x="248" y="28" width="54" height="22" rx="5" class="sub" />
+  <text id="ribbon-export-label" x="275.0" y="43" font-size="10" class="t" text-anchor="middle" >Export</text>
+  <rect id="ribbon-settings" x="306" y="28" width="54" height="22" rx="5" class="sub" />
+  <text id="ribbon-settings-label" x="333.0" y="43" font-size="10" class="t" text-anchor="middle" >Settings</text>
+  <rect id="ribbon-help" x="372" y="28" width="46" height="22" rx="5" class="sub" />
+  <text id="ribbon-help-label" x="395.0" y="43" font-size="10" class="t" text-anchor="middle" >Help</text>
+  <text id="ribbon-filename" x="790" y="43" font-size="11" class="t-mut mono" text-anchor="end" >welcome_flow</text>
+  <rect id="panel-expect" x="56" y="72" width="150" height="240" rx="8" class="panel" />
+  <text id="panel-expect-title" x="131" y="92" font-size="11" class="t b" text-anchor="middle" style="fill:#3B5BDB">EXPECT</text>
+  <rect id="expect-text" x="68" y="104" width="126" height="26" rx="6" class="sub" />
+  <text id="expect-text-label" x="80" y="121" font-size="10" class="t mono" text-anchor="start" >text</text>
+  <rect id="expect-menu" x="68" y="138" width="126" height="26" rx="6" class="sub" />
+  <text id="expect-menu-label" x="80" y="155" font-size="10" class="t mono" text-anchor="start" >menu</text>
+  <rect id="expect-buttons" x="68" y="172" width="126" height="26" rx="6" class="sub" />
+  <text id="expect-buttons-label" x="80" y="189" font-size="10" class="t mono" text-anchor="start" >buttons</text>
+  <rect id="expect-card_expect" x="68" y="206" width="126" height="26" rx="6" class="sub" />
+  <text id="expect-card_expect-label" x="80" y="223" font-size="10" class="t mono" text-anchor="start" >card_expect</text>
+  <rect id="panel-canvas" x="218" y="72" width="464" height="240" rx="8" class="sub" />
+  <rect id="canvas-step-1" x="246" y="88" width="408" height="54" rx="8" class="panel" stroke="#E67700"/>
+  <rect id="canvas-step-1-side" x="246" y="88" width="5" height="54" rx="2" fill="#E67700"/>
+  <text id="canvas-step-1-type" x="264" y="110" font-size="11" class="t b mono" text-anchor="start" >input</text>
+  <text id="canvas-step-1-hint" x="264" y="128" font-size="10" class="t-mut" text-anchor="start" >step 1</text>
+  <path id="canvas-arrow-1" d="M 450 142 L 450 158" stroke="#8896A7" stroke-width="1.5" marker-end="url(#ar)"/>
+  <rect id="canvas-step-2" x="246" y="162" width="408" height="54" rx="8" class="panel" stroke="#3B5BDB"/>
+  <rect id="canvas-step-2-side" x="246" y="162" width="5" height="54" rx="2" fill="#3B5BDB"/>
+  <text id="canvas-step-2-type" x="264" y="184" font-size="11" class="t b mono" text-anchor="start" >text</text>
+  <text id="canvas-step-2-hint" x="264" y="202" font-size="10" class="t-mut" text-anchor="start" >step 2</text>
+  <path id="canvas-arrow-2" d="M 450 216 L 450 232" stroke="#8896A7" stroke-width="1.5" marker-end="url(#ar)"/>
+  <rect id="canvas-step-3" x="246" y="236" width="408" height="54" rx="8" class="panel" stroke="#E67700"/>
+  <rect id="canvas-step-3-side" x="246" y="236" width="5" height="54" rx="2" fill="#E67700"/>
+  <text id="canvas-step-3-type" x="264" y="258" font-size="11" class="t b mono" text-anchor="start" >card_sender</text>
+  <text id="canvas-step-3-hint" x="264" y="276" font-size="10" class="t-mut" text-anchor="start" >step 3</text>
+  <defs><marker id="ar" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0,0 L6,3.5 L0,7 z" fill="#8896A7"/></marker></defs>
+  <rect id="panel-send" x="694" y="72" width="150" height="240" rx="8" class="panel" />
+  <text id="panel-send-title" x="769" y="92" font-size="11" class="t b" text-anchor="middle" style="fill:#E67700">SEND</text>
+  <rect id="send-button_select" x="706" y="104" width="126" height="26" rx="6" class="sub" />
+  <text id="send-button_select-label" x="718" y="121" font-size="9" class="t mono" text-anchor="start" >button_select</text>
+  <rect id="send-menu_select" x="706" y="138" width="126" height="26" rx="6" class="sub" />
+  <text id="send-menu_select-label" x="718" y="155" font-size="9" class="t mono" text-anchor="start" >menu_select</text>
+  <rect id="send-input" x="706" y="172" width="126" height="26" rx="6" class="sub" />
+  <text id="send-input-label" x="718" y="189" font-size="9" class="t mono" text-anchor="start" >input</text>
+  <rect id="send-card_sender" x="706" y="206" width="126" height="26" rx="6" class="sub" />
+  <text id="send-card_sender-label" x="718" y="223" font-size="9" class="t mono" text-anchor="start" >card_sender</text>
+  <rect id="errors-panel" x="56" y="348" width="748" height="34" rx="8" class="sub" />
+  <text id="errors-panel-text" x="70" y="369" font-size="11" class="t-mut" text-anchor="start" >2 components valid  ·  no errors</text>
+  <rect id="status-bar" x="56" y="390" width="748" height="26" rx="6" class="sub" />
+  <text id="status-bar-text" x="70" y="407" font-size="10" class="t-mut" text-anchor="start" >trigger  ·  3m  ·  3 steps  ·  draft  ·  saved</text>
+  <g id="callout-1">
+    <circle cx="30" cy="38" r="11" class="cal"/>
+    <text x="30" y="42" class="cal-t" text-anchor="middle">1</text>
+  </g>
+  <g id="callout-2">
+    <circle cx="131" cy="328" r="11" class="cal"/>
+    <text x="131" y="332" class="cal-t" text-anchor="middle">2</text>
+  </g>
+  <g id="callout-3">
+    <circle cx="450" cy="328" r="11" class="cal"/>
+    <text x="450" y="332" class="cal-t" text-anchor="middle">3</text>
+  </g>
+  <g id="callout-4">
+    <circle cx="769" cy="328" r="11" class="cal"/>
+    <text x="769" y="332" class="cal-t" text-anchor="middle">4</text>
+  </g>
+  <g id="callout-5">
+    <circle cx="826" cy="365" r="11" class="cal"/>
+    <text x="826" y="369" class="cal-t" text-anchor="middle">5</text>
+  </g>
+  <g id="callout-6">
+    <circle cx="826" cy="403" r="11" class="cal"/>
+    <text x="826" y="407" class="cal-t" text-anchor="middle">6</text>
+  </g>
+</svg>
