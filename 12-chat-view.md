@@ -34,6 +34,16 @@ the handset.
 
 ## The conversation list
 
+![The conversation list](img/screen-calls-list.svg)
+
+| # | What it is |
+|---|---|
+| **1** | Not identified yet — a ~ before the name, dashed ring |
+| **2** | Active — the handshake finished |
+| **3** | Inactive — set aside, still listed |
+| **4** | Connect — links a contact, or brings an inactive one back |
+
+
 The 📞 Calls tab groups contacts into three sections, each with a count, most
 recent conversation first:
 

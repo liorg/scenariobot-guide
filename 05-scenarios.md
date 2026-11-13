@@ -42,6 +42,16 @@ new issues are found.
 The two side columns can be **resized, pinned and collapsed**, and your layout
 choice is remembered between sessions.
 
+![The scenarios tab](img/screen-scenarios.svg)
+
+| # | What it is |
+|---|---|
+| **1** | New scenario — opens the designer empty |
+| **2** | draft or active — only an active one runs |
+| **3** | Design — opens the canvas |
+| **4** | Playback — replay it without sending |
+| **5** | The bot contact this scenario talks to |
+
 ## The designer
 
 ![The scenario designer](img/screen-designer.svg)

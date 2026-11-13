@@ -8,6 +8,16 @@ The parts in `<angle brackets>` are ids filled in as you click, so this one cann
 
 `…/contacts/new` opens the wizard · `…/contacts/<contact>/edit` edits one.
 
+![The contacts tab](img/screen-contacts.svg)
+
+| # | What it is |
+|---|---|
+| **1** | Add Contact — starts the PING handshake |
+| **2** | Search by name or number |
+| **3** | The contact's state — active, new, draft, inactive |
+| **4** | Language used for the PING and the bot's messages |
+| **5** | Edit — name, email, language |
+
 ## Why this isn't just a form
 
 Adding a contact is a **handshake**, not a text field. ScenarioBot has to be

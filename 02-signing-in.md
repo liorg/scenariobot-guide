@@ -5,6 +5,15 @@ automatically.
 
 **URL:** [grossman.bot/](https://grossman.bot/)
 
+![Signing in](img/screen-login.svg)
+
+| # | What it is |
+|---|---|
+| **1** | Email and password, or a provider below |
+| **2** | Sign in |
+| **3** | Google and GitHub sign-in — same account either way |
+| **4** | First sign-in creates the account |
+
 ## First screen
 
 Signed out, you see the landing page with a **Log in** button. Pressing it opens

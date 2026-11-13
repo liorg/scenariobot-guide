@@ -172,6 +172,19 @@ something ends it. See [Chapter 15](15-tips.md) for what keeps it alive.
 
 ## What is inside a phone
 
+![A phone's own screen](img/screen-phone-detail.svg)
+
+| # | What it is |
+|---|---|
+| **1** | Back to the phone list |
+| **2** | The phone itself — name, number, live status |
+| **3** | Rental countdown — only on a rented phone |
+| **4** | Calls — the WhatsApp conversations |
+| **5** | Contacts — who this phone can talk to |
+| **6** | Scenarios — what it runs |
+| **7** | SMS — rented phones only |
+
+
 Clicking a phone card opens **Phone Detail**, which has three tabs:
 
 | Tab | Contents | Chapter |

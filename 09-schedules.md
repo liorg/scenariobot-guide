@@ -6,6 +6,16 @@
 
 Also [grossman.bot/scheduling/new](https://grossman.bot/scheduling/new) to create one, and `grossman.bot/scheduling/<schedule>` for a single schedule.
 
+![The schedules screen](img/screen-schedules.svg)
+
+| # | What it is |
+|---|---|
+| **1** | New schedule — scenario, phone, when |
+| **2** | Filter to one phone |
+| **3** | cron, once or manual |
+| **4** | When it fires next — the clearest sign it is really set up |
+| **5** | Run it now, without waiting |
+
 ## What a schedule is
 
 A rule that fires a scenario at chosen times, so you don't have to start each

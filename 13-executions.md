@@ -7,6 +7,16 @@
 Also [grossman.bot/executions/new](https://grossman.bot/executions/new) for the
 wizard, and `grossman.bot/executions/<execution>/run` for the run confirmation.
 
+![Parallel executions](img/screen-executions.svg)
+
+| # | What it is |
+|---|---|
+| **1** | New Execution — the four-step wizard |
+| **2** | The target phones — first two, then +n |
+| **3** | How many templates were copied, and their prefix |
+| **4** | pending n = the Scheduler has not picked the jobs up yet |
+| **5** | Run — disabled while anything is pending |
+
 ## What it is
 
 One scenario, **copied onto several phones**, all talking to the **same

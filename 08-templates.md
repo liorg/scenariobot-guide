@@ -6,6 +6,16 @@
 
 One phone: `grossman.bot/phones/templates/<phone>` · create: `…/new` · edit: `…/<template>/edit` · test: `…/<template>/test`.
 
+![The templates tab](img/screen-templates.svg)
+
+| # | What it is |
+|---|---|
+| **1** | Filter by status — the counts come from the server |
+| **2** | New template — saves as a draft, nothing is sent yet |
+| **3** | approved is the provider's answer, not yours |
+| **4** | Published — only a published template can be used in a scenario |
+| **5** | Editing a published template is blocked — unpublish first |
+
 ## What a template is
 
 A **pre-approved WhatsApp message format** with numbered placeholders:

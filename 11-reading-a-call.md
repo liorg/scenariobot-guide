@@ -7,6 +7,15 @@ contact.** The list below the live panel is every past call, newest first.
 
 The parts in `<angle brackets>` are ids filled in as you click, so this one cannot be opened by typing it.
 
+![A finished call](img/screen-call-history.svg)
+
+| # | What it is |
+|---|---|
+| **1** | How the call ended |
+| **2** | Replies that matched no branch — the number to watch |
+| **3** | The last step reached — where it stopped |
+| **4** | The reply that did not match, and what was expected |
+
 ## The list
 
 Each row shows scenario, status, start time, duration, message counts,

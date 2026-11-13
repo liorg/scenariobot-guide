@@ -11,6 +11,15 @@ cannot be opened by typing it.
 > A phone you added yourself has no SIM the platform can read, so there is
 > nothing to show. Opening the `sms` address on such a phone lands on Calls.
 
+![SMS on a rented phone](img/screen-sms.svg)
+
+| # | What it is |
+|---|---|
+| **1** | One row per sender — tap to open the conversation |
+| **2** | How many messages from that sender |
+| **3** | Messages with no readable sender land here |
+| **4** | Search covers the sender and the text |
+
 ## What it is
 
 The **text messages that arrived on the phone's SIM** — not WhatsApp messages.

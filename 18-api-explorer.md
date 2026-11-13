@@ -15,6 +15,16 @@ it is behind verification and the rest of the app is not. Everything it can do,
 an unverified account could otherwise do without ever proving it owns a phone
 number.
 
+![The API console](img/screen-api.svg)
+
+| # | What it is |
+|---|---|
+| **1** | Your session token — the console signs requests as you |
+| **2** | Endpoints grouped by tag |
+| **3** | The method, colour-coded |
+| **4** | Send — this is a real request against your own data |
+| **5** | The real response |
+
 ## What it is
 
 A built-in console for the ScenarioBot API — the same idea as Swagger UI, inside
