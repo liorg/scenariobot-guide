@@ -305,7 +305,7 @@ finishes writes one** — whether it succeeded or not.
 | cancelled | ℹ️ info |
 | expired, or timed out | ⚠️ warning |
 
-Each one names the contact, how long the call took, how many messages were sent
+Each one names the bot (agent), how long the call took, how many messages were sent
 and received, and how many didn't match. When something went wrong it also
 names the **last step reached**, which is usually the first thing you want.
 

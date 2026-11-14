@@ -121,7 +121,7 @@ a sender does not know the number changed hands. Treat anything from before your
 rental as not yours.
 
 **This is a different thing from the chat view.** [Chapter 12](12-chat-view.md)
-is the WhatsApp conversation with a contact. This tab is the SIM's text
+is the WhatsApp conversation with a bot (agent). This tab is the SIM's text
 messages. The two never mix, and a WhatsApp message will never appear here.
 
 ---

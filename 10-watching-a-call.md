@@ -17,8 +17,8 @@ related:
 ---
 # 10. Watching a call run
 
-**How to get there:** **Top bar → Phones → a phone → 👥 Contacts → click a
-contact.** If a call is running, a live panel sits at the top of that screen.
+**How to get there:** **Top bar → Phones → a phone → 👥 Bots (Agents) → click a
+bot (agent).** If a call is running, a live panel sits at the top of that screen.
 
 **URL:** `grossman.bot/phones/<phone>/contacts/<contact>/calls`
 
@@ -49,13 +49,13 @@ later.
 
 ## If it warns about multiple active calls
 
-A contact is only supposed to have **one** call running. If the panel says more
+A bot (agent) is only supposed to have **one** call running. If the panel says more
 than one is active, tell whoever runs the system — that's a fault, not something
 you can fix from the interface.
 
 ## If there's no panel
 
-No call is running for that contact. The screen below is the history →
+No call is running for that bot (agent). The screen below is the history →
 [Chapter 11](11-reading-a-call.md).
 
 ---

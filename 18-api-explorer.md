@@ -74,7 +74,7 @@ interface, this is where you check what the server actually returns.
 ## The screen
 
 **Left** — every endpoint, grouped by area, with a search box at the top. The
-current groups are **phones**, **contacts**, **messages**, and a small untagged
+current groups are **phones**, **bots (agents)**, **messages**, and a small untagged
 group with `/`, `/health` and `/whoami`.
 
 Each entry shows its method as a coloured pill:
@@ -154,7 +154,7 @@ when you just want to check the connection.
 | `GET /health` | the backend is up |
 | `GET /whoami` | your token is valid and which account it belongs to |
 | `GET /api/phones/` | every phone on your account, with its real stored state |
-| `GET /api/contacts?phone_id=…` | whether a contact really is linked |
+| `GET /api/contacts?phone_id=…` | whether a bot (agent) really is linked |
 
 That third one is the quickest way to settle "the interface says disconnected
 but the phone looks fine" — it shows what the database actually holds.

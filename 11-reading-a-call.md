@@ -41,8 +41,8 @@ actions:
 ---
 # 11. Reading a finished call
 
-**How to get there:** **Top bar → Phones → a phone → 👥 Contacts → click a
-contact.** The list below the live panel is every past call, newest first.
+**How to get there:** **Top bar → Phones → a phone → 👥 Bots (Agents) → click a
+bot (agent).** The list below the live panel is every past call, newest first.
 
 **URL:** `grossman.bot/phones/<phone>/contacts/<contact>/calls/<call>`
 

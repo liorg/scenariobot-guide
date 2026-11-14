@@ -65,7 +65,7 @@ is up it goes back to the pool.
 
 The difference from a phone you add yourself ([Chapter 03](03-phones.md)) is
 simply whose handset it is. Once rented it behaves like any other phone — the
-same contacts, scenarios, schedules and templates — **plus** an SMS tab, because
+same bots (agents), scenarios, schedules and templates — **plus** an SMS tab, because
 a rented phone has a SIM that receives text messages
 ([Chapter 21](21-sms.md)).
 
@@ -119,7 +119,7 @@ everyone and cannot be extended from this screen.
 
 The phone is a normal phone:
 
-- it is in **Phones**, with its own contacts, scenarios and schedules
+- it is in **Phones**, with its own bots (agents), scenarios and schedules
 - it has an extra **SMS** tab ([Chapter 21](21-sms.md))
 
 ### How it looks in the phone list
@@ -180,7 +180,7 @@ one is ended, not deleted — the handset stays in the pool for the next person.
 **End** on your row, or let the clock run out. Either way the same thing
 happens, and the confirmation says it plainly:
 
-> Everything on the phone (contacts, calls, scenarios, SMS) will be deleted.
+> Everything on the phone (bots (agents), calls, scenarios, SMS) will be deleted.
 
 **Take anything you want to keep before the time runs out.** A scenario you
 built on a rented phone is gone when the rental ends — export it first

@@ -7,6 +7,7 @@ screen:
 url: /phones
 two_fa: add-phone-gated
 keywords:
+  - bots (agents)
   - add phone
   - connect phone
   - QR code
@@ -144,7 +145,7 @@ A linked phone is the quick way to start and the right choice for a number you
 already own and keep powered on. Cloud API is Meta's official route: nothing to
 keep charged, nothing to re-scan, and it is the one that scales.
 
-The rest of the product behaves identically either way. Scenarios, contacts,
+The rest of the product behaves identically either way. Scenarios, bots (agents),
 schedules and the chat view do not care which you picked.
 
 ## Adding a phone
@@ -169,7 +170,7 @@ message says which one is in the way:
 
 | Gate | What to do |
 |---|---|
-| **Beta access** — adding phones is limited while the platform is in beta | contact **contact@grossman.bot** |
+| **Beta access** — adding phones is limited while the platform is in beta | bot (agent) **contact@grossman.bot** |
 | **Two-step verification** — your mobile number must be verified | [Settings → 🔐](https://grossman.bot/settings/2fa), see [Chapter 14](14-settings.md) |
 
 Beta access is checked first, so if you are not on the list yet, verifying your
@@ -238,7 +239,7 @@ something ends it. See [Chapter 15](15-tips.md) for what keeps it alive.
 | **2** | The phone itself — name, number, live status |
 | **3** | Rental countdown — only on a rented phone |
 | **4** | Calls — the WhatsApp conversations |
-| **5** | Contacts — who this phone can talk to |
+| **5** | Bots (Agents) — who this phone can talk to |
 | **6** | Scenarios — what it runs |
 | **7** | SMS — rented phones only |
 
@@ -248,11 +249,11 @@ Clicking a phone card opens **Phone Detail**, which has three tabs:
 | Tab | Contents | Chapter |
 |---|---|---|
 | **📞 Calls** | chat view and call history | [12](12-chat-view.md), [11](11-reading-a-call.md) |
-| **👥 Contacts** | contact list and the contact wizard | [04](04-contacts.md) |
+| **👥 Bots (Agents)** | bot (agent) list and the bot (agent) wizard | [04](04-contacts.md) |
 | **🤖 Scenarios** | scenario list and the designer | [05](05-scenarios.md) |
 
 The back arrow at the top-left returns to the phone list.
 
 ---
 
-**Next:** [Adding a contact](04-contacts.md)
+**Next:** [Adding a bot (agent)](04-contacts.md)

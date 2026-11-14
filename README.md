@@ -9,7 +9,7 @@ single chapter without needing the rest.
 **Every chapter opens with a "How to get there" line and the screen's URL.** If
 someone asks "where do I do X", those two lines are the answer — one to click
 through, one to open directly. Where the screen doesn't depend on a particular
-phone or contact, the URL is a live link you can follow from here.
+phone or bot (agent), the URL is a live link you can follow from here.
 
 ## Chapters
 
@@ -18,7 +18,7 @@ phone or contact, the URL is a live link you can follow from here.
 | 01 | [What ScenarioBot does](01-what-it-does.md) | what the product is, the six things you work with |
 | 02 | [Signing in](02-signing-in.md) | login, password reset, new accounts |
 | 03 | [Connecting a phone](03-phones.md) | the phone list, the add-phone wizard, reconnecting |
-| 04 | [Adding a contact](04-contacts.md) | the PING/PONG handshake and why it exists |
+| 04 | [Adding a bot (agent)](04-contacts.md) | the PING/PONG handshake and why it exists |
 | 05 | [Building a scenario](05-scenarios.md) | the scenarios tab, the designer, saving and publishing |
 | 06 | [Scenario components](06-components.md) | every step type, matching, failure handling, custom code, `{{ }}` |
 | 07 | [Playback](07-playback.md) | reading a scenario as a chat before it runs |
@@ -26,7 +26,7 @@ phone or contact, the URL is a live link you can follow from here.
 | 09 | [Schedules](09-schedules.md) | running a scenario on a timer |
 | 10 | [Watching a call run](10-watching-a-call.md) | the live panel |
 | 11 | [Reading a finished call](11-reading-a-call.md) | history, flow diagram, events |
-| 12 | [The chat view](12-chat-view.md) | plain WhatsApp conversation with a contact |
+| 12 | [The chat view](12-chat-view.md) | plain WhatsApp conversation with a bot (agent) |
 | 13 | [Parallel executions](13-executions.md) | copying one scenario onto many phones, the wizard, running them |
 | 14 | [Settings and account](14-settings.md) | the three settings tabs, two-step verification, email notifications |
 | 15 | [Tips for a reliable setup](15-tips.md) | clean phone, keeping it online, support contacts |
@@ -42,7 +42,7 @@ phone or contact, the URL is a live link you can follow from here.
 The product is a single web app, but **each screen has its own URL**. That means:
 
 - **The back and forward buttons work** the way you expect.
-- **Any screen can be bookmarked**, including a specific contact, a specific
+- **Any screen can be bookmarked**, including a specific bot (agent), a specific
   scenario or one finished call.
 - **A URL can be shared.** Sending a colleague the link to a failed call opens
   that call for them — provided they have access to that phone.
@@ -230,7 +230,7 @@ the page — check one rendered chapter after the first publish.
 
 ## Conventions in this guide
 
-- **Bold** with arrows is a click path: **Phones → a phone → 👥 Contacts**.
+- **Bold** with arrows is a click path: **Phones → a phone → 👥 Bots (Agents)**.
 - **`URL:`** under it is the same screen's address. It is a **live link** when
   the screen doesn't depend on a particular record, and plain text containing
   `<phone>`, `<contact>` or similar when it does.

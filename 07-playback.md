@@ -61,7 +61,7 @@ back-to-back, before any of it reaches a real person.
 It does not send anything and does not create a call. Placeholders show as
 placeholders; custom code is not run.
 
-For a real test you need a real linked contact and an actual run.
+For a real test you need a real linked bot (agent) and an actual run.
 
 ## Getting back to editing
 

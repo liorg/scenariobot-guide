@@ -289,7 +289,11 @@ when `jid` is empty. New code should send `jid`.
 
 ---
 
-## Contacts
+## Bots (Agents)
+
+> **The API still calls these `contacts`.** Every path, field and tag
+> below keeps that name — `/api/contacts`, `contact_id`, `check_contact`.
+> Only the screens were renamed.
 
 ### The PING handshake
 
@@ -304,16 +308,16 @@ step 3  POST /api/contacts/select-response
 ```
 
 **`link-draft-to-parent` is not a user action.** The agent calls it when a
-message arrives, to attach a draft contact to the newest pending PING on that
+message arrives, to attach a draft bot (agent) to the newest pending PING on that
 phone. You will not call it from the Explorer in normal use.
 
 **First, `GET /api/contacts/check-phone?phone_id=…&number=…`**
 
 | `status` | Means |
 |---|---|
-| `new` | no contact for this number |
-| `blocked` | the contact already has a real LID — it's linked, leave it alone |
-| `override` | a contact exists and can be reset and re-PINGed |
+| `new` | no bot (agent) for this number |
+| `blocked` | the bot (agent) already has a real LID — it's linked, leave it alone |
+| `override` | a bot (agent) exists and can be reset and re-PINGed |
 
 It also returns `ping_step` — the state of the latest open PING, either
 `pending` or `waiting_reply` — plus `contact_id`, `contact_name`,
@@ -334,13 +338,13 @@ Note the wizard's three outcomes in [Chapter 04](04-contacts.md) map to these:
 }
 ```
 
-Creates, reuses or overrides the contact, then **sends the PING in the contact's
+Creates, reuses or overrides the bot (agent), then **sends the PING in the bot (agent)'s
 language**. Any unlinked drafts that already carry a real LID are linked to this
-contact at the same time.
+bot (agent) at the same time.
 
 **Step 2 — `outgoing-with-replies/{phone_id}`**
 
-Draft contacts with a valid LID that have messages **from the last 24 hours**,
+Draft bots (agents) with a valid LID that have messages **from the last 24 hours**,
 with those messages attached. That 24-hour window is why an old unfinished
 handshake shows an empty list: the replies aged out.
 
@@ -355,18 +359,18 @@ handshake shows an empty list: the replies aged out.
 ```
 
 This is the step that does the linking. It takes the LID from the chosen
-message, sets it on the target contact, **tags that contact `active`**, clears
+message, sets it on the target bot (agent), **tags that bot (agent) `active`**, clears
 the LID from the draft, links any remaining drafts, and completes the pending
 PING.
 
-Until this runs the contact is not active — which is exactly the "I added a
-contact but nothing works" case in [Chapter 16](16-troubleshooting.md).
+Until this runs the bot (agent) is not active — which is exactly the "I added a
+bot (agent) but nothing works" case in [Chapter 16](16-troubleshooting.md).
 
 ### The rest
 
 | Endpoint | Does |
 |---|---|
-| `GET /api/contacts?phone_id=…` | the phone's contacts, **most recently updated first** |
+| `GET /api/contacts?phone_id=…` | the phone's bots (agents), **most recently updated first** |
 | `POST /api/contacts?phone_id=…` | create one directly |
 | `GET /api/contacts/{id}` | a **fresh** copy from the database |
 | `PATCH /api/contacts/{id}` | `name`, `email`, `tag`, `lid`, `lang` — only what you send |
@@ -374,20 +378,20 @@ contact but nothing works" case in [Chapter 16](16-troubleshooting.md).
 | `GET /api/contacts/{id}/messages` | raw stored rows, oldest first |
 | `GET /api/calls/{call_id}/messages` | every message of one scenario call, oldest first |
 
-**`DELETE` is a cascade.** It removes the contact **together with its messages
+**`DELETE` is a cascade.** It removes the bot (agent) **together with its messages
 and PING records**, unlinks drafts that pointed at it, and returns the number of
 deleted messages. Not a soft delete.
 
 `POST /api/contacts` takes `phone`, `name`, `email`, `tag` (default `new`),
 `lid`, `lang`. Without `lang` the phone owner's language is used. The body has
 no schema, so nothing is validated — prefer the handshake, which produces a
-verified contact.
+verified bot (agent).
 
 ### `GET /api/phones/{phone_id}/contacts/active`
 
-Its own group. The phone's contacts tagged `active`, ordered by name, returning
+Its own group. The phone's bots (agents) tagged `active`, ordered by name, returning
 just `id`, `name`, `number`, `avatar`, `is_bot`. This is the picker list — the
-contacts that are actually usable.
+bots (agents) that are actually usable.
 
 ---
 
@@ -409,8 +413,8 @@ paging can repeat or skip a row. Returns `{ messages, has_more, next_cursor }`.
 
 ### `GET /api/messages/phone/{phone_id}/last`
 
-The last message of **every** contact on the phone, in one call, keyed by
-`contact_id`. This draws the conversation list without one request per contact.
+The last message of **every** bot (agent) on the phone, in one call, keyed by
+`contact_id`. This draws the conversation list without one request per bot (agent).
 
 ### The simpler reads
 
@@ -427,7 +431,7 @@ Two details worth knowing:
 - `GET /api/messages/contact/{id}` takes a **`phone_number`** parameter, used to
   tell bot messages from user messages **when `direction` is missing** on the
   stored row. Omit it and old rows may render on the wrong side.
-- `GET /api/messages/phone/{p}/contact/{c}` **falls back to the contact's
+- `GET /api/messages/phone/{p}/contact/{c}` **falls back to the bot (agent)'s
   messages that have no `phone_id`**, so pre-migration rows still appear.
 
 ### `GET /api/messages/media/{phone_id}/{message_id}`
@@ -519,7 +523,7 @@ registered twice — with and without the trailing slash — so `/api/schedules`
 ```
 
 **`contact_id` is taken from the scenario** and overwritten whenever
-`scenario_id` is set — you do not choose the contact on the schedule. That's a
+`scenario_id` is set — you do not choose the bot (agent) on the schedule. That's a
 correction worth noting against [Chapter 09](09-schedules.md): it's three
 choices, not four.
 
@@ -659,15 +663,15 @@ arrives.
 
 ## Executions
 
-Duplicating one scenario onto several phones against a single contact —
+Duplicating one scenario onto several phones against a single bot (agent) —
 [Chapter 13](13-executions.md).
 
 | Endpoint | Does |
 |---|---|
 | `GET /executions/` | the list, each row with a `pending` count |
 | `GET /executions/sources` | your phones, with how many scenarios each has |
-| `GET /executions/contacts?q=&limit=` | search your active contacts |
-| `GET /executions/seek/{number}` | which of your phones that contact is linked on |
+| `GET /executions/contacts?q=&limit=` | search your active bots (agents) |
+| `GET /executions/seek/{number}` | which of your phones that bot (agent) is linked on |
 | `POST /executions/scenarios` | `{ phone_ids }` → those phones' scenarios |
 | `GET /executions/scenario-templates/{id}` | the templates one scenario uses |
 | `POST /executions/` | create — copies scenario, templates and jobs |
@@ -677,7 +681,7 @@ Duplicating one scenario onto several phones against a single contact —
 
 ### Search
 
-`q` picks the mode: **empty** returns the contacts linked on the most phones
+`q` picks the mode: **empty** returns the bots (agents) linked on the most phones
 first, **digits** match by number, **text** by name. Each row carries a `phones`
 count and the numbers behind it, so one call is enough to show "linked on 4
 phones".
@@ -692,7 +696,7 @@ The mapping `create` needs:
                 "phone_status": "active", "provider": "baileys" } ] }
 ```
 
-**`contact_id` is per phone** — the same person is a different contact row on
+**`contact_id` is per phone** — the same person is a different bot (agent) row on
 each phone, which is why a target carries both ids.
 
 ### Create
@@ -794,7 +798,7 @@ These three are **not** under `/api`.
 | Is the backend up? | `GET /health` |
 | Is my login valid? | `GET /whoami` |
 | Is the phone really connected? | `GET /api/phones/{id}/qrcode` |
-| Is this contact really linked? | `GET /api/phones/{id}/contacts/active` |
+| Is this bot (agent) really linked? | `GET /api/phones/{id}/contacts/active` |
 | Why won't this scenario publish? | `POST /…/scenarios/{id}/publish` — read the 422 issues |
 | Why won't this template publish? | `POST /…/templates/{id}/validate` |
 | Did the schedule fire? | `GET /api/schedules/{id}/calls` |

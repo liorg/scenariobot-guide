@@ -2,6 +2,8 @@
 id: 17-glossary
 title: Glossary of terms
 keywords:
+  - bot (agent)
+  - agent
   - glossary
   - terms
   - definitions
@@ -17,10 +19,14 @@ related:
 
 **Active** — a phone whose WhatsApp session is connected and working.
 
-**Bot contact** — which contact identity the bot presents as, set in scenario
-settings.
+**Bot (agent)** — a verified WhatsApp identity a phone can talk to. Verified
+through the PING/PONG handshake. The API and the URLs still call this a
+`contact`.
 
-**Call** — one run of one scenario against one contact. A contact can only have
+**Bot (agent) setting** — which bot (agent) a scenario talks to, set in scenario
+settings. Stored as `bot_contact`.
+
+**Call** — one run of one scenario against one bot (agent). A bot (agent) can only have
 one running at a time.
 
 **Canvas** — the middle column of the designer, holding the conversation top to
@@ -29,9 +35,6 @@ bottom.
 **Code card** — a step that runs your own TypeScript, as one default async
 function taking `payload: ScenarioPayload`. Exists in both EXPECT and SEND
 forms.
-
-**Contact** — a verified WhatsApp identity a phone can talk to. Verified through
-the PING/PONG handshake.
 
 **Designer** — the full-screen scenario editor.
 
@@ -53,18 +56,18 @@ products in future.
 **Flow diagram** — the visual record of a finished call, showing which steps ran
 and which failed.
 
-**Linked** — a contact that completed the handshake and is usable.
+**Linked** — a bot (agent) that completed the handshake and is usable.
 
 **Match mode** — how strictly a reply must match: exact, contains, pattern, any.
 
-**Override** — the wizard's answer when a partly-finished contact already exists
+**Override** — the wizard's answer when a partly-finished bot (agent) already exists
 for a number.
 
 **Parallel execution** — running one scenario against many phones at once.
 
-**Phone** — a connected WhatsApp number. Owns its own contacts and scenarios.
+**Phone** — a connected WhatsApp number. Owns its own bots (agents) and scenarios.
 
-**PING / PONG** — the two halves of the contact handshake: a message out, and
+**PING / PONG** — the two halves of the bot (agent) handshake: a message out, and
 picking the reply that comes back.
 
 **Placeholder** — a `{{ }}` value in a text field, filled at run time. Shown as

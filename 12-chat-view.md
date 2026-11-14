@@ -1,11 +1,13 @@
 ---
 id: 12-chat-view
-title: The chat view — talking to a contact by hand
+title: The chat view — talking to a bot (agent) by hand
 screen:
   - screen-calls-list
   - screen-chat-view
 url: /phones/<phone>/calls
 keywords:
+  - bot (agent)
+  - agent chat
   - chat
   - conversation
   - manual message
@@ -43,17 +45,17 @@ actions:
 # 12. The chat view
 
 **How to get there:** **Top bar → Phones → a phone → 📞 Calls tab**, then click
-a contact.
+a bot (agent).
 
 **URL:** `grossman.bot/phones/<phone>/calls/<contact>`
 
 The parts in `<angle brackets>` are ids filled in as you click, so this one cannot be opened by typing it.
 
-`…/contacts/<contact>/chat` opens the same conversation from the Contacts tab.
+`…/contacts/<contact>/chat` opens the same conversation from the Bots (Agents) tab.
 
 ## What it is
 
-The plain WhatsApp conversation with a contact — the same thing you'd see on
+The plain WhatsApp conversation with a bot (agent) — the same thing you'd see on
 the handset.
 
 - full conversation history, scrolling back as you go
@@ -67,7 +69,7 @@ the handset.
 
 | # | Component | What it is |
 |---|---|---|
-| **1** | Contact header | who you're talking to, their number, and how many messages are loaded |
+| **1** | Bot (Agent) header | who you're talking to, their number, and how many messages are loaded |
 | **2** | Window banner | whether the 24-hour window is **open**, **closed**, or never opened — the single most important thing on this screen |
 | **3** | Their messages | incoming, on the left |
 | **4** | Your messages | outgoing, on the right |
@@ -83,10 +85,10 @@ the handset.
 | **1** | Not identified yet — a ~ before the name, dashed ring |
 | **2** | Active — the handshake finished |
 | **3** | Inactive — set aside, still listed |
-| **4** | Connect — links a contact, or brings an inactive one back |
+| **4** | Connect — links a bot (agent), or brings an inactive one back |
 
 
-The 📞 Calls tab groups contacts into three sections, each with a count, most
+The 📞 Calls tab groups bots (agents) into three sections, each with a count, most
 recent conversation first:
 
 | Section | Who's in it | The row |
@@ -95,11 +97,11 @@ recent conversation first:
 | **Active** | finished the handshake | normal |
 | **⏸ Inactive** | set aside | greyed out, dotted avatar, **⏸** badge and chip |
 
-**Ignored contacts are in none of them** — they are off the list by design
+**Ignored bots (agents) are in none of them** — they are off the list by design
 ([Chapter 04](04-contacts.md#ignored)).
 
 The `~` means *not synced yet*: the name came from WhatsApp or from the number,
-and the contact has not been linked.
+and the bot (agent) has not been linked.
 
 ### The 🔗 Connect button
 
@@ -115,7 +117,7 @@ has its own address — `…/calls/<contact>/connect` — so it survives a refre
 
 It asks for the name, number, language and email, and shows the WhatsApp name
 and the LID read-only. One option worth knowing: **"move the messages to the
-existing contact"** — if that number already belongs to another contact,
+existing bot (agent)"** — if that number already belongs to another bot (agent),
 connecting merges into it, and the checkbox decides whether this conversation's
 messages come along.
 
@@ -131,7 +133,7 @@ WhatsApp lets a business send **free-form text only within 24 hours** of the
 person's last incoming message. Outside that window, only an approved template
 gets through.
 
-The coloured strip under the contact's name tells you where you stand:
+The coloured strip under the bot (agent)'s name tells you where you stand:
 
 | Strip | Means | What you can send |
 |---|---|---|
@@ -184,7 +186,7 @@ If the template has quick-reply buttons, the picker shows them, and below them
 a **"simulate a reply after sending"** row.
 
 Pick one and, about a second after the template goes out, the system sends that
-button's label back **as if the contact had tapped it**. The scenario waiting on
+button's label back **as if the bot (agent) had tapped it**. The scenario waiting on
 that reply then carries on.
 
 **This is for testing.** It puts a message into a real conversation with a real
@@ -213,7 +215,7 @@ your position is kept. The counter in the header shows how many are loaded — a
 
 This is the **human conversation**. Scenario calls are a separate view
 ([Chapter 11](11-reading-a-call.md)), even though both involve the same phone
-and the same contact.
+and the same bot (agent).
 
 Messages a scenario sent do appear here — they were real WhatsApp messages. But
 this screen shows them as chat, with no step structure, no statuses and no
@@ -225,7 +227,7 @@ diagram.
 - answering someone by hand when a scenario isn't the right tool
 - **reopening a conversation that has gone quiet**, with a template
 - pushing a stuck scenario along by tapping a button or simulating a reply
-- reading the history before picking a reply during the contact handshake
+- reading the history before picking a reply during the bot (agent) handshake
   ([Chapter 04](04-contacts.md))
 
 ---

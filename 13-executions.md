@@ -4,6 +4,7 @@ title: Parallel executions across many phones
 screen: screen-executions
 url: /executions
 keywords:
+  - bot (agent)
   - execution
   - parallel
   - many phones
@@ -56,12 +57,12 @@ wizard, and `grossman.bot/executions/<execution>/run` for the run confirmation.
 ## What it is
 
 One scenario, **copied onto several phones**, all talking to the **same
-contact**. Instead of building the same conversation by hand on every phone, you
+bot (agent)**. Instead of building the same conversation by hand on every phone, you
 pick a scenario that already works on one phone and the platform reproduces it
 on the others.
 
 That is the whole idea: a **source** scenario on one phone, duplicated to as
-many **target** phones as you choose, each against the one contact you name.
+many **target** phones as you choose, each against the one bot (agent) you name.
 
 ### What actually gets created
 
@@ -86,19 +87,19 @@ execution is what runs them, all of them, in parallel.
 **＋ New** opens a four-step wizard at
 [/executions/new](https://grossman.bot/executions/new).
 
-### Step 1 — the contact
+### Step 1 — the bot (agent)
 
 Type a name or a number and pick from the list. The search covers **your active
-contacts** across all your phones, and it behaves differently depending on what
+bots (agents)** across all your phones, and it behaves differently depending on what
 you type:
 
 | You type | You get |
 |---|---|
-| nothing | the contacts linked on the **most** phones first |
+| nothing | the bots (agents) linked on the **most** phones first |
 | digits | matches by number |
 | text | matches by name |
 
-Each result shows how many of your phones that contact is already linked on —
+Each result shows how many of your phones that bot (agent) is already linked on —
 that count is the useful one, because those are the phones the run can use.
 
 The number must be in international form without a plus: **`972` followed by
@@ -107,7 +108,7 @@ the slow path. Enter moves on.
 
 ### Step 2 — the target phones
 
-The contact's card appears with the phones it is linked on. Tick the ones to run
+The bot (agent)'s card appears with the phones it is linked on. Tick the ones to run
 against.
 
 **Only linked phones (Baileys) can be targets.** A Cloud API phone is shown but
@@ -115,7 +116,7 @@ cannot be ticked, and hovering it says why. Cloud API templates live on the
 business account rather than on the phone, so the per-phone template copying
 this feature relies on has nothing to copy to.
 
-A phone that is linked to the contact but **disconnected** can still be ticked —
+A phone that is linked to the bot (agent) but **disconnected** can still be ticked —
 its status is shown in amber. It will not run until it is back.
 
 ### Step 3 — the source
@@ -141,7 +142,7 @@ yourself**; after that it is yours and stops being overwritten. It must start
 with a letter and may hold only `a-z`, `0-9` and `_`. An invalid prefix outlines
 the field in red and blocks the finish button.
 
-The summary beneath lists the contact, the source, every target phone, and the
+The summary beneath lists the bot (agent), the source, every target phone, and the
 exact names of every scenario, template and job that is about to be created.
 **Read it.** This is the step where "five phones" rather than "two" is cheap to
 notice.
@@ -154,7 +155,7 @@ One row per execution:
 
 | Column | Shows |
 |---|---|
-| **Contact** | the number the run talks to, and the contact's name |
+| **Bot (Agent)** | the number the run talks to, and the bot (agent)'s name |
 | **Job** | the schedule name, and `manual` beneath it |
 | **Phones** | the first two target numbers, then `+n` |
 | **Source** | the scenario that was copied, and the phone it came from |
@@ -174,7 +175,7 @@ for much longer, the Scheduler is the thing to check.
 
 ## Running one
 
-▶ **Run** opens a confirmation listing the job name, the contact and how many
+▶ **Run** opens a confirmation listing the job name, the bot (agent) and how many
 phones are about to be used. Nothing is sent until you confirm.
 
 The confirmation has its own address, `/executions/<execution>/run`, so it
@@ -190,9 +191,9 @@ longer exists.
 
 ## Worth knowing
 
-**The one-call-per-contact rule still applies.** Many phones calling one contact
+**The one-call-per-bot (agent) rule still applies.** Many phones calling one bot (agent)
 at once is exactly what this feature is for and is allowed. The same *phone*
-calling the same contact twice at once is not, and the second attempt is
+calling the same bot (agent) twice at once is not, and the second attempt is
 refused.
 
 **Deleting an execution** removes the execution, not the scenarios, templates and

@@ -86,6 +86,7 @@
    ],
    "two_fa": "add-phone-gated",
    "keywords": [
+    "bots (agents)",
     "add phone",
     "connect phone",
     "QR code",
@@ -122,7 +123,7 @@
    ]
   },
   "04-contacts": {
-   "title": "Adding a contact and the PING/PONG handshake",
+   "title": "Adding a bot (agent) and the PING/PONG handshake",
    "file": "04-contacts.md",
    "html": "04-contacts.html",
    "url": "/phones/<phone>/contacts",
@@ -131,6 +132,10 @@
    ],
    "two_fa": null,
    "keywords": [
+    "add bot",
+    "add agent",
+    "bot (agent)",
+    "bots agents",
     "add contact",
     "contact wizard",
     "PING PONG",
@@ -150,7 +155,7 @@
    "sections": [
     "Why this isn't just a form",
     "The wizard, step by step",
-    "The contact table",
+    "The bot (agent) table",
     "Deactivating, ignoring, restoring",
     "Common problem"
    ],
@@ -431,7 +436,7 @@
    ]
   },
   "12-chat-view": {
-   "title": "The chat view — talking to a contact by hand",
+   "title": "The chat view — talking to a bot (agent) by hand",
    "file": "12-chat-view.md",
    "html": "12-chat-view.html",
    "url": "/phones/<phone>/calls",
@@ -441,6 +446,8 @@
    ],
    "two_fa": null,
    "keywords": [
+    "bot (agent)",
+    "agent chat",
     "chat",
     "conversation",
     "manual message",
@@ -482,6 +489,7 @@
    ],
    "two_fa": null,
    "keywords": [
+    "bot (agent)",
     "execution",
     "parallel",
     "many phones",
@@ -563,6 +571,8 @@
    "screens": [],
    "two_fa": null,
    "keywords": [
+    "bot (agent)",
+    "agent not working",
     "troubleshooting",
     "not working",
     "error",
@@ -580,8 +590,8 @@
     "17-glossary"
    ],
    "sections": [
-    "A contact was added but nothing works",
-    "A call won't start for a contact",
+    "A bot (agent) was added but nothing works",
+    "A call won't start for a bot (agent)",
     "The phone shows disconnected",
     "A call expired without a reply, but the person says they answered",
     "The pattern assistant won't generate",
@@ -596,14 +606,14 @@
     "A template has been pending for a long time",
     "The Templates tab looks empty on a new phone",
     "A duplicate template appeared",
-    "The contact handshake won't start at all",
+    "The bot (agent) handshake won't start at all",
     "A template isn't in the designer's list",
     "I can't edit or delete a template",
     "Running a schedule now does nothing",
     "Can a scenario be tested without messaging a real person?",
     "The panel warns that multiple calls are active",
-    "A contact disappeared from the conversation list",
-    "How do I delete a contact?",
+    "A bot (agent) disappeared from the conversation list",
+    "How do I delete a bot (agent)?",
     "Importing a scenario says the name already exists",
     "An imported scenario won't publish — a template is pending",
     "The ❓ Help button is gone from the top bar",
@@ -649,6 +659,8 @@
    "screens": [],
    "two_fa": null,
    "keywords": [
+    "bot (agent)",
+    "agent",
     "glossary",
     "terms",
     "definitions",
@@ -727,7 +739,7 @@
     "Before anything else",
     "Auth",
     "Phones",
-    "Contacts",
+    "Bots (Agents)",
     "Messages",
     "Scenarios",
     "Schedules",
@@ -906,25 +918,25 @@
    "element": "Calls — the WhatsApp conversations"
   },
   "add-contact": {
-   "description": "Show where to add a contact",
+   "description": "Show where to add a bot (agent)",
    "chapter": "04-contacts",
    "screen": "screen-contacts",
    "target": "ct-add",
    "type": "highlight",
    "url": "/phones/<phone>/contacts",
-   "element": "Add Contact — starts the PING handshake"
+   "element": "Add Bot (Agent) — starts the PING handshake"
   },
   "check-contact-status": {
-   "description": "Show a contact's state",
+   "description": "Show a bot (agent)'s state",
    "chapter": "04-contacts",
    "screen": "screen-contacts",
    "target": "ct-0-status",
    "type": "highlight",
    "url": "/phones/<phone>/contacts",
-   "element": "The contact's state — active, new, draft, inactive"
+   "element": "The bot (agent) state — active, new, draft, inactive"
   },
   "edit-contact": {
-   "description": "Show where to edit a contact",
+   "description": "Show where to edit a bot (agent)",
    "chapter": "04-contacts",
    "screen": "screen-contacts",
    "target": "ct-0-edit",
@@ -933,7 +945,7 @@
    "element": "Edit — name, email, language"
   },
   "find-contact": {
-   "description": "Show the contact search",
+   "description": "Show the bot (agent) search",
    "chapter": "04-contacts",
    "screen": "screen-contacts",
    "target": "ct-search",
@@ -1146,7 +1158,7 @@
    "target": "cl-unsynced-0-connect",
    "type": "highlight",
    "url": "/phones/<phone>/calls",
-   "element": "Connect — links a contact, or brings an inactive one back"
+   "element": "Connect — links a bot (agent), or brings an inactive one back"
   },
   "check-24h-window": {
    "description": "Show whether the 24-hour window is open",
@@ -1257,13 +1269,13 @@
    "element": "The phone's status"
   },
   "diagnose-contact-handshake": {
-   "description": "Show the contact's state",
+   "description": "Show the bot (agent)'s state",
    "chapter": "16-troubleshooting",
    "screen": "screen-contacts",
    "target": "ct-0-status",
    "type": "highlight",
    "url": "/phones/<phone>/contacts",
-   "element": "The contact's state — active, new, draft, inactive"
+   "element": "The bot (agent) state — active, new, draft, inactive"
   },
   "diagnose-blocked-publish": {
    "description": "Show what is blocking publishing",

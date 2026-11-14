@@ -104,7 +104,7 @@ two different places:
 | `sample_movie_ticket_confirmation` | the provider's catalog | ~15 minutes |
 | `sample_purchase_feedback` | the provider's catalog | ~15 minutes |
 
-The first is ours — a one-line **"Are you a bot?"** used by the contact
+The first is ours — a one-line **"Are you a bot?"** used by the bot (agent)
 handshake. It is the one template that needs no waiting: on a linked phone it is
 created, **approved and published in the same step as the phone itself**, so the
 handshake works the moment the phone is connected. Nothing external approves it,

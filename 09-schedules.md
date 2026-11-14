@@ -82,11 +82,11 @@ Create a schedule and choose three things:
 2. **the scenario** to run — it must belong to that phone
 3. **the timing** — either a one-off time, or a repeating cron expression
 
-**You do not pick the contact.** It comes from the scenario, and is overwritten
+**You do not pick the bot (agent).** It comes from the scenario, and is overwritten
 whenever you change which scenario the schedule runs.
 
 The scenario must be **published**
-([Chapter 05](05-scenarios.md#saving-vs-publishing)) and its contact must be
+([Chapter 05](05-scenarios.md#saving-vs-publishing)) and its bot (agent) must be
 **linked** ([Chapter 04](04-contacts.md)), or nothing will run.
 
 ## Running one now
@@ -109,7 +109,7 @@ check whether last night's run actually happened.
 ## What can stop a scheduled call
 
 - The phone is **disconnected** → [Chapter 03](03-phones.md)
-- The contact already has a **call running** — only one at a time per contact
+- The bot (agent) already has a **call running** — only one at a time per bot (agent)
 - The scenario was **unpublished** after the schedule was made
 
 All three show up in the schedule's log rather than as an alert, so it's worth

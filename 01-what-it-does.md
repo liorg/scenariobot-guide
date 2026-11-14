@@ -74,18 +74,18 @@ colleague ([the map](README.md#every-screen-has-an-address)).
 ## The six things you work with
 
 **Phone** — a WhatsApp number you've connected. Each one runs in isolation, has
-its own contacts and its own scenarios. A phone is either active or
+its own bots (agents) and its own scenarios. A phone is either active or
 disconnected. → [Chapter 03](03-phones.md)
 
-**Contact** — someone that phone can talk to. Not just a number typed into a
-box; a contact has to be verified through a handshake before anything will run
+**Bot (Agent)** — someone that phone can talk to. Not just a number typed into a
+box; a bot (agent) has to be verified through a handshake before anything will run
 against it. → [Chapter 04](04-contacts.md)
 
 **Scenario** — the conversation script. Built visually, saved as a draft, then
 published when it's ready to run. → [Chapter 05](05-scenarios.md)
 
-**Call** — one execution of one scenario against one contact. This is the unit
-you look at afterwards. **A contact can only have one call running at a time.**
+**Call** — one execution of one scenario against one bot (agent). This is the unit
+you look at afterwards. **A bot (agent) can only have one call running at a time.**
 → [Chapter 11](11-reading-a-call.md)
 
 **Schedule** — a rule that fires a scenario at chosen times.
@@ -104,5 +104,5 @@ Phone ──┬── has many Contacts ──── has many Calls
                           Schedule ─┘  (fires it on a timer)
 ```
 
-A call always needs three things: **a phone, a scenario, and a contact.** If any
+A call always needs three things: **a phone, a scenario, and a bot (agent).** If any
 one of them is missing or not ready, nothing runs.

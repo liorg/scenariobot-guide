@@ -224,7 +224,7 @@ are the fields you will actually use:
 
 | Field | Holds |
 |---|---|
-| `payload.target_contact` | the contact: `.id`, `.name`, `.phone` |
+| `payload.target_contact` | the bot (agent): `.id`, `.name`, `.phone` |
 | `payload.lastMessage.Value` | the previous step's reply or output |
 | `payload.lastMessage.num` | which step that was |
 | `payload.source_phone.phone` | the bot's own number, as `972…` — not an id |

@@ -1,9 +1,13 @@
 ---
 id: 04-contacts
-title: Adding a contact and the PING/PONG handshake
+title: Adding a bot (agent) and the PING/PONG handshake
 screen: screen-contacts
 url: /phones/<phone>/contacts
 keywords:
+  - add bot
+  - add agent
+  - bot (agent)
+  - bots agents
   - add contact
   - contact wizard
   - PING PONG
@@ -20,29 +24,32 @@ related:
   - 16-troubleshooting
 actions:
   - id: add-contact
-    description: Show where to add a contact
+    description: Show where to add a bot (agent)
     screen: screen-contacts
     target: ct-add
     type: highlight
   - id: check-contact-status
-    description: Show a contact's state
+    description: Show a bot (agent)'s state
     screen: screen-contacts
     target: ct-0-status
     type: highlight
   - id: edit-contact
-    description: Show where to edit a contact
+    description: Show where to edit a bot (agent)
     screen: screen-contacts
     target: ct-0-edit
     type: highlight
   - id: find-contact
-    description: Show the contact search
+    description: Show the bot (agent) search
     screen: screen-contacts
     target: ct-search
     type: highlight
 ---
-# 04. Adding a contact
+# 04. Adding a bot (agent)
 
-**How to get there:** **Top bar → Phones → click a phone → 👥 Contacts tab**.
+> **These used to be called contacts.** The screens now say **bot (agent)**;
+> the URL, the API and the stored fields still say `contact`.
+
+**How to get there:** **Top bar → Phones → click a phone → 👥 Bots (Agents) tab**.
 
 **URL:** `grossman.bot/phones/<phone>/contacts`
 
@@ -50,24 +57,24 @@ The parts in `<angle brackets>` are ids filled in as you click, so this one cann
 
 `…/contacts/new` opens the wizard · `…/contacts/<contact>/edit` edits one.
 
-![The contacts tab](img/screen-contacts.svg)
+![The bots (agents) tab](img/screen-contacts.svg)
 
 | # | What it is |
 |---|---|
-| **1** | Add Contact — starts the PING handshake |
+| **1** | Add Bot (Agent) — starts the PING handshake |
 | **2** | Search by name or number |
-| **3** | The contact's state — active, new, draft, inactive |
+| **3** | The bot (agent)'s state — active, new, draft, inactive |
 | **4** | Language used for the PING and the bot's messages |
 | **5** | Edit — name, email, language |
 
 ## Why this isn't just a form
 
-Adding a contact is a **handshake**, not a text field. ScenarioBot has to be
+Adding a bot (agent) is a **handshake**, not a text field. ScenarioBot has to be
 certain that the number you typed is the same WhatsApp identity that actually
 replies — WhatsApp numbers and WhatsApp identities are not the same thing, and
 guessing wrong means messages go to the wrong person.
 
-**Nothing in the product works against an unlinked contact.** Finishing this
+**Nothing in the product works against an unlinked bot (agent).** Finishing this
 properly is the single most important setup step.
 
 ## The wizard, step by step
@@ -79,8 +86,8 @@ answers:
 
 | Answer | Meaning | What to do |
 |---|---|---|
-| **new** | no contact for this number | continue |
-| **override** | a contact exists and can be reset | restart the handshake and continue |
+| **new** | no bot (agent) for this number | continue |
+| **override** | a bot (agent) exists and can be reset | restart the handshake and continue |
 | **blocked** | already linked to a real WhatsApp identity | cancel — edit it from the table instead |
 
 The check also reports how far any half-finished handshake got: **pending** (the
@@ -117,27 +124,27 @@ rather than waiting.
 
 ### 4. PONG
 
-Picking the reply links the contact to the real WhatsApp identity behind it —
-its **LID** — and tags the contact **active**. This is the step that makes the
-contact usable.
+Picking the reply links the bot (agent) to the real WhatsApp identity behind it —
+its **LID** — and tags the bot (agent) **active**. This is the step that makes the
+bot (agent) usable.
 
 ### 5. Summary
 
-Confirm, and the contact is ready.
+Confirm, and the bot (agent) is ready.
 
-## The contact table
+## The bot (agent) table
 
-Once linked, contacts appear in a table on the same tab. From there you can edit
-a contact, and open its calls.
+Once linked, bots (agents) appear in a table on the same tab. From there you can edit
+a bot (agent), and open its calls.
 
-**Clicking a contact opens that contact's calls** →
+**Clicking a bot (agent) opens that bot (agent)'s calls** →
 [Chapter 10](10-watching-a-call.md) for a running call,
 [Chapter 11](11-reading-a-call.md) for finished ones.
 
 ## Deactivating, ignoring, restoring
 
-**A contact is never deleted.** There is no delete — the messages, the PING
-records and the history all stay. What changes is the contact's **state**, and
+**A bot (agent) is never deleted.** There is no delete — the messages, the PING
+records and the history all stay. What changes is the bot (agent)'s **state**, and
 every change is stamped with the time it happened.
 
 | State | Where it appears | What it means |
@@ -149,7 +156,7 @@ every change is stamped with the time it happened.
 
 ### Inactive
 
-For a contact you are finished with for now. It keeps its place in the
+For a bot (agent) you are finished with for now. It keeps its place in the
 conversation list:
 
 - the row is **greyed out**, with a **⏸** badge on the avatar and a chip beside
@@ -157,8 +164,8 @@ conversation list:
 - it sits in its own **Inactive** section at the bottom, with a count
 - the whole history is still there, and opening the row still opens the chat
 
-**Pressing 🔗 Connect on an inactive contact brings it back.** The dialog says so
-when you open it, and completing it returns the contact to Active.
+**Pressing 🔗 Connect on an inactive bot (agent) brings it back.** The dialog says so
+when you open it, and completing it returns the bot (agent) to Active.
 
 A **PING** also revives it — sending a new PING to that number restarts the
 handshake from the beginning.
@@ -166,7 +173,7 @@ handshake from the beginning.
 ### Ignored
 
 For a number you never want to see again — a wrong number, a stranger who
-messaged the bot. An ignored contact **disappears from the conversation list**
+messaged the bot. An ignored bot (agent) **disappears from the conversation list**
 and from the counts. Nothing is deleted; it is simply not shown.
 
 Unlike inactive, there is no button to bring it back, because it isn't on screen
@@ -179,7 +186,7 @@ opening it):
 
 | Button | Does |
 |---|---|
-| 🔗 **Connect** | links the contact, or brings an inactive one back |
+| 🔗 **Connect** | links the bot (agent), or brings an inactive one back |
 | ⏸ **Cancel** | makes it inactive — it stays under Inactive |
 | 🚫 **Ignore** | takes it off the list |
 
@@ -189,12 +196,12 @@ press it.
 ### When the state last changed
 
 Every state change records its time. That is the field to look at when you are
-asking "when did this contact stop working" — it answers directly, rather than
+asking "when did this bot (agent) stop working" — it answers directly, rather than
 by inference from the last message.
 
 ## Common problem
 
-**"I added a contact but nothing works."** The handshake almost certainly wasn't
+**"I added a bot (agent) but nothing works."** The handshake almost certainly wasn't
 finished — step 3 was left open without picking a reply. Reopen the wizard for
 that number; you'll get the **Override** answer, and you can complete it.
 

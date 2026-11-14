@@ -102,7 +102,7 @@ choice is remembered between sessions.
 | **2** | draft or active — only an active one runs |
 | **3** | Design — opens the canvas |
 | **4** | Playback — replay it without sending |
-| **5** | The bot contact this scenario talks to |
+| **5** | The bot (agent) this scenario talks to |
 
 ## The designer
 
@@ -177,7 +177,7 @@ file on disk changes nothing about the import.
 
 ### What is not imported
 
-- **The bot contact**, if it belongs to a different phone — contacts are per
+- **The bot (agent)**, if it belongs to a different phone — bots (agents) are per
   phone, so one from elsewhere is dropped rather than carried over.
 - **The publish state** — every import lands as a draft.
 
@@ -187,7 +187,7 @@ The **⚙️ settings** button on the ribbon holds everything that applies to th
 whole scenario rather than one step:
 
 - description
-- **bot contact** — which contact identity the bot presents as
+- **bot (agent)** — which bot (agent) identity the bot presents as
 - interval between messages
 - estimated duration — set by hand, or calculated automatically
 - event type — **scheduler** (started by a schedule) or **trigger** (starts on
@@ -219,7 +219,7 @@ again, unpublish first.
 - **Check code** validates a custom-code step against a sandbox →
   [Chapter 06](06-components.md#custom-code-steps)
 
-A real send still needs a real linked contact.
+A real send still needs a real linked bot (agent).
 
 ---
 

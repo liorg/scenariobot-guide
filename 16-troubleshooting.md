@@ -2,6 +2,8 @@
 id: 16-troubleshooting
 title: Troubleshooting — symptoms and fixes
 keywords:
+  - bot (agent)
+  - agent not working
   - troubleshooting
   - not working
   - error
@@ -23,7 +25,7 @@ actions:
     target: status-badge
     type: navigate-highlight
   - id: diagnose-contact-handshake
-    description: Show the contact's state
+    description: Show the bot (agent)'s state
     screen: screen-contacts
     target: ct-0-status
     type: highlight
@@ -47,21 +49,21 @@ actions:
 
 **How to get there:** each entry says where to go.
 
-## A contact was added but nothing works
+## A bot (agent) was added but nothing works
 
 **Cause:** the PING/PONG handshake wasn't finished — the reply was never picked.
 
-**Fix:** **Phones → a phone → 👥 Contacts** → reopen the wizard for that number.
+**Fix:** **Phones → a phone → 👥 Bots (Agents)** → reopen the wizard for that number.
 You'll get the **Override** answer; complete step 3 by picking the reply.
 
 → [Chapter 04](04-contacts.md)
 
-## A call won't start for a contact
+## A call won't start for a bot (agent)
 
-**Cause:** a contact can only run **one call at a time**, and one is probably
+**Cause:** a bot (agent) can only run **one call at a time**, and one is probably
 still open.
 
-**Fix:** **Phones → a phone → 👥 Contacts → the contact.** If the live panel
+**Fix:** **Phones → a phone → 👥 Bots (Agents) → the bot (agent).** If the live panel
 shows a running call, end it with **⏹ End call**.
 
 → [Chapter 10](10-watching-a-call.md)
@@ -130,7 +132,7 @@ time, and that snapshot is what the flow diagram renders.
 ## A scheduled call didn't happen
 
 **Check the schedule's own log first.** The three usual causes are: the phone
-was disconnected, the contact already had a call running, or the scenario was
+was disconnected, the bot (agent) already had a call running, or the scenario was
 unpublished after the schedule was made.
 
 → [Chapter 09](09-schedules.md)
@@ -155,7 +157,7 @@ doesn't compile, or the whole-scenario compile.
 ## My message was rejected, or never arrived
 
 **Cause:** the 24-hour window is closed. WhatsApp only allows free text within
-24 hours of the contact's last incoming message.
+24 hours of the bot (agent)'s last incoming message.
 
 **Fix:** send an approved template instead — the **📋** button beside the send
 arrow. The coloured strip at the top of the chat tells you which state you are
@@ -205,7 +207,7 @@ renaming an established one.
 
 → [Chapter 08](08-templates.md#rules-that-catch-people-out)
 
-## The contact handshake won't start at all
+## The bot (agent) handshake won't start at all
 
 **Cause:** the PING is sent as a template, and the phone has no approved,
 published template to send. Usually `check_contact` was deleted.
@@ -246,7 +248,7 @@ yet.
 ## Can a scenario be tested without messaging a real person?
 
 Use **Playback** to read it as a conversation, and the **check** button for
-custom code steps. A real send still needs a real linked contact.
+custom code steps. A real send still needs a real linked bot (agent).
 
 → [Chapter 07](07-playback.md)
 
@@ -257,18 +259,18 @@ interface.
 
 → [Chapter 15](15-tips.md#3-getting-help)
 
-## A contact disappeared from the conversation list
+## A bot (agent) disappeared from the conversation list
 
-**Cause:** it was **ignored** — ignored contacts are hidden from the list and
+**Cause:** it was **ignored** — ignored bots (agents) are hidden from the list and
 from the counts by design. (Inactive ones stay visible, greyed out, at the
 bottom.)
 
-**Fix:** nothing was deleted. Send a new **PING** to that number and the contact
+**Fix:** nothing was deleted. Send a new **PING** to that number and the bot (agent)
 comes back, restarting the handshake.
 
 → [Chapter 04](04-contacts.md#ignored)
 
-## How do I delete a contact?
+## How do I delete a bot (agent)?
 
 **You don't** — there is no delete, on purpose. The messages and the handshake
 history are kept.
@@ -496,7 +498,7 @@ without it, so the schedule looks fine — but every run is refused.
 **Fix:** verify your mobile number in
 [Settings → 🔐](https://grossman.bot/settings/2fa). If the banner is already
 gone, check the usual causes instead: the scenario must be published and its
-contact linked.
+bot (agent) linked.
 
 → [Chapter 09](09-schedules.md)
 
@@ -542,7 +544,7 @@ accounts, or your mobile number is not verified. The button's own message says
 which.
 
 **Fix:** verify your number in [Settings → 🔐](https://grossman.bot/settings/2fa),
-or contact **contact@grossman.bot** for beta access. Beta access is checked
+or bot (agent) **contact@grossman.bot** for beta access. Beta access is checked
 first, so verifying won't help if that's what's missing.
 
 → [Chapter 03](03-phones.md)
