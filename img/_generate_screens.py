@@ -107,14 +107,14 @@ d.chip("pd-rent-clock", 230, 86, 92, "0:42:10", C["pri"], C["priL"], 11)
 d.raw(f'<circle id="pd-status-dot" cx="700" cy="95" r="5" style="fill:{C["ok"]}"/>')
 d.text("pd-status", 714, 100, "Active", 12, "t b", "start", f"fill:{C['ok']}")
 d.rect("pd-body", 24, 142, 772, 164)
-d.tabs("pd-tab", 40, 152, ["📞 Calls", "👥 Contacts", "🤖 Scenarios", "SMS"], 0)
+d.tabs("pd-tab", 40, 152, ["📞 Calls", "👥 Bots (Agents)", "🤖 Scenarios", "SMS"], 0)
 d.line(24, 194, 796, 194)
 d.text("pd-content", 410, 250, "the selected tab's content", 12, "t-mut", "middle")
 d.note("pd-back", "Back to the phone list", 814, 34, (803, 34, 106, 34))
 d.note("pd-header", "The phone itself — name, number, live status", 814, 95, (803, 95, 800, 95))
 d.note("pd-rent-clock", "Rental countdown — only on a rented phone", 276, 62)
 d.note("pd-tab-0", "Calls — the WhatsApp conversations", 70, 320)
-d.note("pd-tab-1", "Contacts — who this phone can talk to", 160, 320)
+d.note("pd-tab-1", "Bots (Agents) — who this phone can talk to", 160, 320)
 d.note("pd-tab-2", "Scenarios — what it runs", 258, 320)
 d.note("pd-tab-3", "SMS — rented phones only", 352, 320)
 d.save()
@@ -126,7 +126,7 @@ SECS = [("unsynced", "Unidentified — waiting to connect", [("~Dana", "97254123
 ROW, PAD = 52, 12
 height = 56 + sum(18 + PAD*2 + ROW*len(r) + 14 for _, _, r in SECS) + 14
 d = Dia("screen-calls-list", 760, height, "The conversation list", "12-chat-view", "/phones/<phone>/calls")
-d.text("cl-count", 28, 36, "4 active contacts · 2 unidentified · 1 inactive", 12, "t-mut b")
+d.text("cl-count", 28, 36, "4 active bots (agents) · 2 unidentified · 1 inactive", 12, "t-mut b")
 d.btn("cl-refresh", 652, 20, 84, "Refresh", "ghost", 26)
 y = 56
 for sec, title, rows in SECS:
@@ -151,15 +151,15 @@ for sec, title, rows in SECS:
 d.note("cl-unsynced", "Not identified yet — a ~ before the name, dashed ring", 748, 100, (737, 100, 739, 100))
 d.note("cl-active", "Active — the handshake finished", 748, 196, (737, 196, 739, 196))
 d.note("cl-inactive", "Inactive — set aside, still listed", 748, 344, (737, 344, 739, 344))
-d.note("cl-unsynced-0-connect", "Connect — links a contact, or brings an inactive one back", 510, 96, (521, 96, 536, 96))
+d.note("cl-unsynced-0-connect", "Connect — links a bot (agent), or brings an inactive one back", 510, 96, (521, 96, 536, 96))
 d.save()
 
 # ══════════════════════════════════════════════════ contacts ══
-d = Dia("screen-contacts", 760, 300, "The contacts tab", "04-contacts", "/phones/<phone>/contacts")
-d.text("ct-title", 28, 36, "12 Contacts", 14, "t b")
+d = Dia("screen-contacts", 760, 300, "The bots (agents) tab", "04-contacts", "/phones/<phone>/contacts")
+d.text("ct-title", 28, 36, "12 Bots (Agents)", 14, "t b")
 d.rect("ct-search", 420, 20, 180, 28, cls="sub", rx=8)
 d.text("ct-search-ph", 436, 39, "Search…", 11, "t-mut")
-d.btn("ct-add", 616, 20, 118, "+ Add Contact", "primary")
+d.btn("ct-add", 600, 20, 134, "+ Add Bot (Agent)", "primary")
 d.rect("ct-list", 24, 60, 712, 216, rx=10)
 cols = [("name", 56, "Name"), ("number", 250, "Number"), ("status", 420, "Status"), ("lang", 540, "Lang")]
 d.head("ct", 24, 60, 712, cols)
@@ -176,9 +176,9 @@ for i, (nm, num, st, tone, lang) in enumerate([
     d.chip(f"ct-{i}-status", 420, ry + 19, 62, st, tone, {"#2F9E44":"#EBFBEE","#F59F00":"#FFF9DB","#868E96":"#F1F3F5"}[tone])
     d.text(f"ct-{i}-lang", 546, ry + 33, lang, 11, "t-mut mono")
     d.text(f"ct-{i}-edit", 690, ry + 33, "Edit", 11, "t b", "start", f"fill:{C['pri']}")
-d.note("ct-add", "Add Contact — starts the PING handshake", 748, 34, (737, 34, 738, 34))
+d.note("ct-add", "Add Bot (Agent) — starts the PING handshake", 748, 34, (737, 34, 738, 34))
 d.note("ct-search", "Search by name or number", 410, 34, (399, 34, 416, 34))
-d.note("ct-0-status", "The contact's state — active, new, draft, inactive", 486, 118)
+d.note("ct-0-status", "The bot (agent) state — active, new, draft, inactive", 486, 118)
 d.note("ct-0-lang", "Language used for the PING and the bot's messages", 586, 118)
 d.note("ct-0-edit", "Edit — name, email, language", 748, 118, (737, 118, 718, 118))
 d.save()
@@ -203,7 +203,7 @@ d.note("sc-new", "New scenario — opens the designer empty", 748, 34, (737, 34,
 d.note("sc-0-status", "draft or active — only an active one runs", 459, 268)
 d.note("sc-0-design", "Design — opens the canvas", 544, 268)
 d.note("sc-0-playback", "Playback — replay it without sending", 642, 268)
-d.note("sc-0-contact", "The bot contact this scenario talks to", 134, 268)
+d.note("sc-0-contact", "The bot (agent) this scenario talks to", 134, 268)
 d.save()
 
 # ══════════════════════════════════════════════════ templates ══
@@ -268,11 +268,11 @@ d.save()
 # ══════════════════════════════════════════════════ executions ══
 d = Dia("screen-executions", 840, 280, "Parallel executions", "13-executions", "/executions")
 d.text("ex-title", 28, 34, "Parallel Executions", 15, "t b")
-d.text("ex-sub", 28, 52, "one scenario, many phones, one contact", 11, "t-mut")
+d.text("ex-sub", 28, 52, "one scenario, many phones, one bot (agent)", 11, "t-mut")
 d.btn("ex-refresh", 646, 22, 40, "⟳", "ghost", 26)
 d.btn("ex-new", 694, 22, 116, "+ New Execution", "primary", 26)
 d.rect("ex-table", 24, 70, 792, 186, rx=10)
-cols = [("contact", 44, "Contact"), ("job", 190, "Run / JOB"), ("phones", 320, "Phones"),
+cols = [("contact", 44, "Bot (Agent)"), ("job", 190, "Run / JOB"), ("phones", 320, "Phones"),
         ("source", 440, "Source"), ("templates", 560, "Templates"), ("status", 680, "Status")]
 d.head("ex", 24, 70, 792, cols)
 for i, (job, st, col, bg) in enumerate([("run_1130 JOB", "pending 3", C["pri"], C["priL"]),
@@ -451,7 +451,7 @@ MANUAL = {
    "errors-panel": "What would block publishing",
    "status-bar": "Event type, interval, steps, draft/active, saved"}),
  "screen-chat-view": ("The chat view", "12-chat-view", "/phones/<phone>/calls/<contact>", {
-   "chat-header": "The contact and how many messages are loaded",
+   "chat-header": "The bot (agent) and how many messages are loaded",
    "chat-window-banner": "Whether the 24-hour window is open",
    "msg-in-1": "Incoming messages, on the left",
    "msg-out-1": "Outgoing messages, on the right",

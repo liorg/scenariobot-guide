@@ -20,14 +20,14 @@
 
   <rect class="bg" x="0" y="0" width="840" height="280" rx="10"/>
   <text id="ex-title" x="28" y="34" font-size="15" class="t b" text-anchor="start">Parallel Executions</text>
-  <text id="ex-sub" x="28" y="52" font-size="11" class="t-mut" text-anchor="start">one scenario, many phones, one contact</text>
+  <text id="ex-sub" x="28" y="52" font-size="11" class="t-mut" text-anchor="start">one scenario, many phones, one bot (agent)</text>
   <rect id="ex-refresh" x="646" y="22" width="40" height="26" rx="8" class="panel"/>
   <text id="ex-refresh-label" x="666.0" y="39.0" font-size="11" class="t b" text-anchor="middle">⟳</text>
   <rect id="ex-new" x="694" y="22" width="116" height="26" rx="8" class="" style="fill:#3B5BDB"/>
   <text id="ex-new-label" x="752.0" y="39.0" font-size="11" class="t b" text-anchor="middle" style="fill:#FFFFFF">+ New Execution</text>
   <rect id="ex-table" x="24" y="70" width="792" height="186" rx="10" class="panel"/>
   <rect id="ex-head" x="24" y="70" width="792" height="30" rx="0" class="sub"/>
-  <text id="ex-th-contact" x="44" y="89.0" font-size="9" class="t-mut b" text-anchor="start">CONTACT</text>
+  <text id="ex-th-contact" x="44" y="89.0" font-size="9" class="t-mut b" text-anchor="start">BOT (AGENT)</text>
   <text id="ex-th-job" x="190" y="89.0" font-size="9" class="t-mut b" text-anchor="start">RUN / JOB</text>
   <text id="ex-th-phones" x="320" y="89.0" font-size="9" class="t-mut b" text-anchor="start">PHONES</text>
   <text id="ex-th-source" x="440" y="89.0" font-size="9" class="t-mut b" text-anchor="start">SOURCE</text>

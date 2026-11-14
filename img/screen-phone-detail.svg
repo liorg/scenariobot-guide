@@ -33,12 +33,12 @@
   <rect id="pd-body" x="24" y="142" width="772" height="164" rx="8" class="panel"/>
   <rect id="pd-tab-0" x="40" y="152" width="74" height="30" rx="8" class="" style="fill:#EEF2FF;stroke:#3B5BDB"/>
   <text id="pd-tab-0-label" x="77.0" y="171" font-size="10" class="t b" text-anchor="middle" style="fill:#3B5BDB">📞 Calls</text>
-  <rect id="pd-tab-1" x="120" y="152" width="81.0" height="30" rx="8" class="sub"/>
-  <text id="pd-tab-1-label" x="160.5" y="171" font-size="10" class="t-mut" text-anchor="middle">👥 Contacts</text>
-  <rect id="pd-tab-2" x="207.0" y="152" width="88.2" height="30" rx="8" class="sub"/>
-  <text id="pd-tab-2-label" x="251.1" y="171" font-size="10" class="t-mut" text-anchor="middle">🤖 Scenarios</text>
-  <rect id="pd-tab-3" x="301.2" y="152" width="74" height="30" rx="8" class="sub"/>
-  <text id="pd-tab-3-label" x="338.2" y="171" font-size="10" class="t-mut" text-anchor="middle">SMS</text>
+  <rect id="pd-tab-1" x="120" y="152" width="117.0" height="30" rx="8" class="sub"/>
+  <text id="pd-tab-1-label" x="178.5" y="171" font-size="10" class="t-mut" text-anchor="middle">👥 Bots (Agents)</text>
+  <rect id="pd-tab-2" x="243.0" y="152" width="88.2" height="30" rx="8" class="sub"/>
+  <text id="pd-tab-2-label" x="287.1" y="171" font-size="10" class="t-mut" text-anchor="middle">🤖 Scenarios</text>
+  <rect id="pd-tab-3" x="337.2" y="152" width="74" height="30" rx="8" class="sub"/>
+  <text id="pd-tab-3-label" x="374.2" y="171" font-size="10" class="t-mut" text-anchor="middle">SMS</text>
   <line x1="24" y1="194" x2="796" y2="194" class="line"/>
   <text id="pd-content" x="410" y="250" font-size="12" class="t-mut" text-anchor="middle">the selected tab&#x27;s content</text>
   <g id="callout-1">

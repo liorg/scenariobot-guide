@@ -46,7 +46,7 @@
         "cl-unsynced": "Not identified yet — a ~ before the name, dashed ring",
         "cl-active": "Active — the handshake finished",
         "cl-inactive": "Inactive — set aside, still listed",
-        "cl-unsynced-0-connect": "Connect — links a contact, or brings an inactive one back"
+        "cl-unsynced-0-connect": "Connect — links a bot (agent), or brings an inactive one back"
       },
       "callouts": {
         "1": "cl-unsynced",
@@ -60,7 +60,7 @@
       "chapter": "12-chat-view",
       "url": "/phones/<phone>/calls/<contact>",
       "elements": {
-        "chat-header": "The contact and how many messages are loaded",
+        "chat-header": "The bot (agent) and how many messages are loaded",
         "chat-window-banner": "Whether the 24-hour window is open",
         "msg-in-1": "Incoming messages, on the left",
         "msg-out-1": "Outgoing messages, on the right",
@@ -70,13 +70,13 @@
       "callouts": {}
     },
     "screen-contacts": {
-      "title": "The contacts tab",
+      "title": "The bots (agents) tab",
       "chapter": "04-contacts",
       "url": "/phones/<phone>/contacts",
       "elements": {
-        "ct-add": "Add Contact — starts the PING handshake",
+        "ct-add": "Add Bot (Agent) — starts the PING handshake",
         "ct-search": "Search by name or number",
-        "ct-0-status": "The contact's state — active, new, draft, inactive",
+        "ct-0-status": "The bot (agent) state — active, new, draft, inactive",
         "ct-0-lang": "Language used for the PING and the bot's messages",
         "ct-0-edit": "Edit — name, email, language"
       },
@@ -162,7 +162,7 @@
         "pd-header": "The phone itself — name, number, live status",
         "pd-rent-clock": "Rental countdown — only on a rented phone",
         "pd-tab-0": "Calls — the WhatsApp conversations",
-        "pd-tab-1": "Contacts — who this phone can talk to",
+        "pd-tab-1": "Bots (Agents) — who this phone can talk to",
         "pd-tab-2": "Scenarios — what it runs",
         "pd-tab-3": "SMS — rented phones only"
       },
@@ -216,7 +216,7 @@
         "sc-0-status": "draft or active — only an active one runs",
         "sc-0-design": "Design — opens the canvas",
         "sc-0-playback": "Playback — replay it without sending",
-        "sc-0-contact": "The bot contact this scenario talks to"
+        "sc-0-contact": "The bot (agent) this scenario talks to"
       },
       "callouts": {
         "1": "sc-new",
