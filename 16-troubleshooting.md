@@ -270,6 +270,34 @@ comes back, restarting the handshake.
 
 → [Chapter 04](04-contacts.md#ignored)
 
+## A bot (agent) is marked ⛔ Unwanted and I can't send anything
+
+That number replied STOP to the first message, or used the unsubscribe link
+in it. The block is on the **number**, applies to every customer on the
+platform, and is enforced in the database — so no screen, import or API call
+can get around it, and deleting the bot (agent) and re-adding it brings back
+the same ⛔.
+
+**There is no button for this.** Only support can revoke it, with the
+`UNW-…` reference or the number. [Chapter 23](23-unwanted.md).
+
+## One screen is in English while the rest is translated
+
+That string has no translation in your language yet, and a missing string
+falls back to English one at a time rather than dropping the whole screen.
+It is fixed centrally — report it and it arrives on its own.
+
+If **everything** reverted to English, the language list didn't load; the
+previously loaded languages are cached in the browser, so this usually means
+a first visit on a new machine while the server was unreachable.
+[Chapter 22](22-languages.md).
+
+## My country isn't in the phone number field
+
+Phone fields only offer the countries ticked in **Settings → 🌍 Language &
+countries**. Tick it there. If it isn't in that table at all, the platform
+hasn't enabled it yet. [Chapter 22](22-languages.md).
+
 ## How do I delete a bot (agent)?
 
 **You don't** — there is no delete, on purpose. The messages and the handshake

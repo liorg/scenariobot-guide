@@ -23,6 +23,9 @@ related:
 through the PING/PONG handshake. The API and the URLs still call this a
 `contact`.
 
+**Bot (agent) language** — the language the platform writes to a number in,
+taken from the number's dial code, not from your interface language.
+
 **Bot (agent) setting** — which bot (agent) a scenario talks to, set in scenario
 settings. Stored as `bot_contact`.
 
@@ -60,6 +63,12 @@ and which failed.
 
 **Match mode** — how strictly a reply must match: exact, contains, pattern, any.
 
+**Mother tongue** — the one language a country maps to. Decides the second
+language of the platform's own messages to a number with that dial code.
+
+**Opt-in message** — the notice the platform sends with the first PING: who is
+testing, how to reply STOP, and an unsubscribe link.
+
 **Override** — the wizard's answer when a partly-finished bot (agent) already exists
 for a number.
 
@@ -94,6 +103,9 @@ change when you edit.
 outside the 24-hour window.
 
 **Trigger** — a scenario that fires on an incoming event rather than a timer.
+
+**Unwanted** — a number that asked to stop. Blocked for every customer on the
+platform, enforced in the database, revocable only by support.
 
 ---
 

@@ -36,6 +36,8 @@ phone or bot (agent), the URL is a live link you can follow from here.
 | 19 | [API reference](19-api-reference.md) | every endpoint the API offers, and what it's for |
 | 20 | [Renting a phone](20-rented-phones.md) | the pool of real phones with SIMs — renting, the clock, what the wipe deletes |
 | 21 | [SMS on a rented phone](21-sms.md) | text messages arriving on a rented SIM |
+| 22 | [Languages and countries](22-languages.md) | the language menu, your four languages, dial codes, mother tongue |
+| 23 | [When someone asks to stop](23-unwanted.md) | STOP, the unsubscribe link, and what ⛔ Unwanted means |
 
 ## Every screen has an address
 

@@ -133,7 +133,10 @@ WhatsApp lets a business send **free-form text only within 24 hours** of the
 person's last incoming message. Outside that window, only an approved template
 gets through.
 
-The coloured strip under the bot (agent)'s name tells you where you stand:
+The coloured strip under the bot (agent)'s name tells you where you stand.
+**A red ⛔ strip is not about the window at all** — that number asked to stop,
+and nothing can be sent to it ever again ([Chapter 23](23-unwanted.md)).
+Otherwise:
 
 | Strip | Means | What you can send |
 |---|---|---|

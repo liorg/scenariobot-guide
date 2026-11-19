@@ -60,13 +60,13 @@ closes it.
 | # | Component | What it is |
 |---|---|---|
 | **1** | Title bar | Settings opens over the screen you were on; **✕** closes it |
-| **2** | Tabs | personal details, two-step verification, advanced |
+| **2** | Tabs | personal details, 🌍 language & countries, two-step verification, advanced |
 | **3** | Alert dot | an orange dot marks a tab that needs attention |
 | **4** | Fields | name, email (read-only), language |
 | **5** | Avatar | click it to upload a picture |
 | **6** | Save | one button for all three tabs |
 
-Settings has **three tabs**, and each one has its own address, so you can link
+Settings has **four tabs**, and each one has its own address, so you can link
 straight to a tab:
 
 | Tab | URL | What's in it |
@@ -91,7 +91,7 @@ itself, which takes effect the moment it is accepted — there is nothing to sav
 | **Full name** | shown in the top bar and used in the WhatsApp code message |
 | **Email** | **read-only** — it is your sign-in identity, so it cannot be changed here |
 | **Avatar** | click the circle to pick an image; it uploads immediately and the circle shows your initials until it finishes |
-| **Language** | English, Hebrew, Russian, Arabic |
+| **Language** | the interface language — the 🌍 tab decides which ones are on offer ([Chapter 22](22-languages.md)) |
 | **Package** | Basic, Pro, Business, Enterprise — **display only** |
 
 **The language preview is live.** Pick a language and the dialog's own labels

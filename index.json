@@ -613,6 +613,9 @@
     "Can a scenario be tested without messaging a real person?",
     "The panel warns that multiple calls are active",
     "A bot (agent) disappeared from the conversation list",
+    "A bot (agent) is marked ⛔ Unwanted and I can't send anything",
+    "One screen is in English while the rest is translated",
+    "My country isn't in the phone number field",
     "How do I delete a bot (agent)?",
     "Importing a scenario says the name already exists",
     "An imported scenario won't publish — a template is pending",
@@ -832,6 +835,106 @@
     "read-sms",
     "search-sms",
     "find-unknown-sender-sms"
+   ]
+  },
+  "22-languages": {
+   "title": "Languages and countries",
+   "file": "22-languages.md",
+   "html": "22-languages.html",
+   "url": "/settings/locale",
+   "screens": [
+    "screen-lang-menu",
+    "screen-settings-locale"
+   ],
+   "two_fa": null,
+   "keywords": [
+    "language",
+    "change language",
+    "switch language",
+    "interface language",
+    "my languages",
+    "Hebrew",
+    "Arabic",
+    "Russian",
+    "German",
+    "Polish",
+    "RTL",
+    "country",
+    "countries",
+    "dial code",
+    "country code",
+    "phone prefix",
+    "mother tongue",
+    "translation missing",
+    "English instead of my language"
+   ],
+   "related": [
+    "14-settings",
+    "04-contacts",
+    "23-unwanted"
+   ],
+   "sections": [
+    "Two different things",
+    "Changing the language",
+    "Your languages",
+    "Countries",
+    "Mother tongue — what the recipient gets",
+    "When you are not signed in",
+    "Common questions"
+   ],
+   "actions": [
+    "change-language",
+    "manage-my-languages",
+    "add-a-language",
+    "pick-countries",
+    "set-default-country"
+   ]
+  },
+  "23-unwanted": {
+   "title": "When someone asks to stop — unwanted",
+   "file": "23-unwanted.md",
+   "html": "23-unwanted.html",
+   "url": "/phones/<phone>/calls",
+   "screens": [
+    "screen-unwanted"
+   ],
+   "two_fa": null,
+   "keywords": [
+    "unwanted",
+    "STOP",
+    "opt out",
+    "optout",
+    "unsubscribe",
+    "blocked number",
+    "asked not to receive",
+    "cannot send",
+    "sending blocked",
+    "first message",
+    "PING message",
+    "opt-in message",
+    "reference number",
+    "UNW",
+    "unblock"
+   ],
+   "related": [
+    "04-contacts",
+    "12-chat-view",
+    "16-troubleshooting"
+   ],
+   "sections": [
+    "What it is",
+    "The first message",
+    "STOP has a window — the link does not",
+    "The unsubscribe page",
+    "What you see",
+    "It applies everywhere, and it sticks",
+    "Why it is this strict",
+    "Getting it undone",
+    "Common questions"
+   ],
+   "actions": [
+    "spot-unwanted-bot",
+    "read-unwanted-banner"
    ]
   }
  },
@@ -1411,6 +1514,69 @@
    "type": "highlight",
    "url": "/phones/<phone>/sms",
    "element": "Messages with no readable sender land here"
+  },
+  "change-language": {
+   "description": "Show where to change the interface language",
+   "chapter": "22-languages",
+   "screen": "screen-lang-menu",
+   "target": "lang-btn",
+   "type": "highlight",
+   "url": "/",
+   "element": "The flag in the top bar — the language you are reading now"
+  },
+  "manage-my-languages": {
+   "description": "Open the language and country settings",
+   "chapter": "22-languages",
+   "screen": "screen-settings-locale",
+   "target": "loc-tabs-1",
+   "type": "navigate-highlight",
+   "url": "/settings/locale",
+   "element": "The 🌍 tab"
+  },
+  "add-a-language": {
+   "description": "Show where to add a language to the menu",
+   "chapter": "22-languages",
+   "screen": "screen-settings-locale",
+   "target": "loc-lang-2",
+   "type": "navigate-highlight",
+   "url": "/settings/locale",
+   "element": "Click a language to add it — or again to remove it"
+  },
+  "pick-countries": {
+   "description": "Show where to choose which countries appear in phone fields",
+   "chapter": "22-languages",
+   "screen": "screen-settings-locale",
+   "target": "loc-country-table",
+   "type": "navigate-highlight",
+   "url": "/settings/locale",
+   "element": "The countries offered in every phone field"
+  },
+  "set-default-country": {
+   "description": "Show where to set the default country for phone numbers",
+   "chapter": "22-languages",
+   "screen": "screen-settings-locale",
+   "target": "loc-default-1",
+   "type": "navigate-highlight",
+   "url": "/settings/locale",
+   "element": "The country pre-selected in an empty phone field"
+  },
+  "spot-unwanted-bot": {
+   "description": "Show how a bot (agent) that opted out is marked",
+   "chapter": "23-unwanted",
+   "screen": "screen-calls-list",
+   "target": "cl-unwanted-0-badge",
+   "type": "highlight",
+   "url": "/phones/<phone>/calls",
+   "element": "Unwanted — this number asked to stop. No Connect, no sending, ever"
+  },
+  "read-unwanted-banner": {
+   "description": "Show the banner explaining why sending is blocked",
+   "chapter": "23-unwanted",
+   "screen": "screen-unwanted",
+   "target": "unw-body",
+   "type": "highlight",
+   "url": "/unwanted/<token>",
+   "element": "One block per language — English plus the number's mother tongue"
   }
  }
 }

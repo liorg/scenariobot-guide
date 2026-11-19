@@ -108,6 +108,15 @@ placeholders if that one is missing.
 start.** A new phone gets `check_contact` automatically, so this only comes up
 if it was deleted. See [Chapter 08](08-templates.md).
 
+> **A second message goes out with it — not from you.** The platform adds its
+> own opt-in notice: that this is automated testing, **your name, your phone
+> number and your email**, how to reply STOP, and an unsubscribe link. It is
+> sent in English plus the mother tongue of that number's prefix.
+>
+> If the person uses either one, that number is blocked for the whole
+> platform and you cannot undo it. [Chapter 23](23-unwanted.md) is the whole
+> story — read it before your first real campaign.
+
 ### 3. They reply — and you pick the reply
 
 The wizard polls for incoming replies and lists them as they arrive. **You pick
@@ -166,6 +175,9 @@ conversation list:
 
 **Pressing 🔗 Connect on an inactive bot (agent) brings it back.** The dialog says so
 when you open it, and completing it returns the bot (agent) to Active.
+
+A number that opted out is the exception: it comes back **⛔ Unwanted** and no
+PING can revive it ([Chapter 23](23-unwanted.md)).
 
 A **PING** also revives it — sending a new PING to that number restarts the
 handshake from the beginning.
