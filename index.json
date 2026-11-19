@@ -1,6 +1,8 @@
 {
  "guide": "ScenarioBot user guide",
  "site": "https://liorg.github.io/scenariobot-guide",
+ "language": "en",
+ "language_note": "This guide is written in English only. The product interface is not — it is translated into every enabled language and each user picks their own, so a reader may be looking at a screen in Hebrew, Arabic, Russian, German or Polish while reading this. Answer in the reader's language; quote UI labels as they appear here and expect the reader to see the translated wording. Chapter 22-languages covers how the interface language is chosen, and why the platform's own messages to a number follow that number's dial code rather than the reader's language.",
  "note": "One entry per chapter. Element-level ids are in img/index.json.",
  "action_types": {
   "highlight": "The screen's URL contains ids that cannot be typed — the user has to already be on it. Point at the element.",

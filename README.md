@@ -155,6 +155,11 @@ answer "where do I do X" without reading every chapter:
 | `index.json` | chapter | title, URL, screens, keywords, section headings, related chapters, 2FA gate |
 | `img/index.json` | screen element | every `id` in every diagram, what it is, which chapter it belongs to |
 
+`index.json` opens with `language: "en"` and a `language_note`. **The guide is
+English; the product is not.** A reader may be looking at the interface in
+Hebrew, Arabic, Russian, German or Polish, so an assistant answering from these
+files should reply in the reader's language even though the source is English.
+
 `index.json` is generated — run `python3 guide/_build_index.py` after editing
 any chapter's frontmatter or headings. It fails loudly if a chapter points at a
 screen that isn't filed under it, or at a `related:` chapter that doesn't exist.
