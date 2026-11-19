@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" width="820" height="440" role="img" aria-label="Language and country settings">
+  <title>Language and country settings</title>
+
+  <style>
+    .bg{fill:#F7F9FC}.panel{fill:#FFFFFF;stroke:#E4EAF4;stroke-width:1.5}
+    .sub{fill:#F1F5F9;stroke:#E4EAF4;stroke-width:1}.line{stroke:#E4EAF4}
+    .t{font-family:'Segoe UI',Tahoma,sans-serif;fill:#1A2332}
+    .t-mut{font-family:'Segoe UI',Tahoma,sans-serif;fill:#8896A7}
+    .t-dis{font-family:'Segoe UI',Tahoma,sans-serif;fill:#BCC5D3}
+    .b{font-weight:700}.mono{font-family:Consolas,'JetBrains Mono',monospace}
+    .cal{fill:#7048E8}
+    .cal-t{font-family:'Segoe UI',Tahoma,sans-serif;fill:#FFF;font-weight:700;font-size:11px}
+    .dash{stroke:#7048E8;stroke-width:1.2;stroke-dasharray:3 3;fill:none}
+    @media (prefers-color-scheme:dark){
+      .bg{fill:#0F1420}.panel{fill:#171D2B;stroke:#2A3347}.sub{fill:#1F2738;stroke:#2A3347}
+      .line{stroke:#2A3347}.t{fill:#E6EAF2}.t-mut{fill:#7D8899}.t-dis{fill:#4F5A6B}
+      .cal{fill:#9775FA}.dash{stroke:#9775FA}
+    }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="820" height="440" rx="10"/>
+  <rect id="loc-dialog" x="24" y="18" width="772" height="404" rx="14" class="panel"/>
+  <text id="loc-title" x="48" y="48" font-size="15" class="t b" text-anchor="start">Settings</text>
+  <rect id="loc-tabs-0" x="48" y="66" width="81.0" height="30" rx="8" class="sub"/>
+  <text id="loc-tabs-0-label" x="88.5" y="85" font-size="10" class="t-mut" text-anchor="middle">👤 Personal</text>
+  <rect id="loc-tabs-1" x="135.0" y="66" width="167.4" height="30" rx="8" class="" style="fill:#EEF2FF;stroke:#3B5BDB"/>
+  <text id="loc-tabs-1-label" x="218.7" y="85" font-size="10" class="t b" text-anchor="middle" style="fill:#3B5BDB">🌍 Language &amp; countries</text>
+  <rect id="loc-tabs-2" x="308.4" y="66" width="81.0" height="30" rx="8" class="sub"/>
+  <text id="loc-tabs-2-label" x="348.9" y="85" font-size="10" class="t-mut" text-anchor="middle">🔐 Two-step</text>
+  <rect id="loc-tabs-3" x="395.4" y="66" width="81.0" height="30" rx="8" class="sub"/>
+  <text id="loc-tabs-3-label" x="435.9" y="85" font-size="10" class="t-mut" text-anchor="middle">⚙ Advanced</text>
+  <line x1="24" y1="108" x2="796" y2="108" class="line"/>
+  <text id="loc-langs-label" x="48" y="136" font-size="9" class="t-mut b" text-anchor="start">MY LANGUAGES · 3 OF 4</text>
+  <text id="loc-langs-hint" x="48" y="154" font-size="10" class="t-mut" text-anchor="start">Up to 4 languages. Only these appear in the language menu.</text>
+  <rect id="loc-lang-0" x="48" y="166" width="160" height="32" rx="10" class="" style="fill:#EEF2FF;stroke:#3B5BDB"/>
+  <text id="loc-lang-0-flag" x="62" y="187" font-size="13" class="t" text-anchor="start">🇺🇸</text>
+  <text id="loc-lang-0-name" x="86" y="187" font-size="12" class="t b" text-anchor="start" style="fill:#3B5BDB">English</text>
+  <text id="loc-lang-0-mark" x="192" y="187" font-size="12" class="t b" text-anchor="end" style="fill:#3B5BDB">★</text>
+  <rect id="loc-lang-1" x="220" y="166" width="160" height="32" rx="10" class="" style="fill:#EEF2FF;stroke:#3B5BDB"/>
+  <text id="loc-lang-1-flag" x="234" y="187" font-size="13" class="t" text-anchor="start">🇮🇱</text>
+  <text id="loc-lang-1-name" x="258" y="187" font-size="12" class="t b" text-anchor="start" style="fill:#3B5BDB">עברית</text>
+  <text id="loc-lang-1-mark" x="364" y="187" font-size="12" class="t b" text-anchor="end" style="fill:#3B5BDB">✓</text>
+  <rect id="loc-lang-2" x="392" y="166" width="160" height="32" rx="10" class="" style="fill:#EEF2FF;stroke:#3B5BDB"/>
+  <text id="loc-lang-2-flag" x="406" y="187" font-size="13" class="t" text-anchor="start">🇷🇺</text>
+  <text id="loc-lang-2-name" x="430" y="187" font-size="12" class="t b" text-anchor="start" style="fill:#3B5BDB">Русский</text>
+  <text id="loc-lang-2-mark" x="536" y="187" font-size="12" class="t b" text-anchor="end" style="fill:#3B5BDB">✓</text>
+  <rect id="loc-lang-3" x="48" y="206" width="160" height="32" rx="10" class="panel"/>
+  <text id="loc-lang-3-flag" x="62" y="227" font-size="13" class="t" text-anchor="start">🇸🇦</text>
+  <text id="loc-lang-3-name" x="86" y="227" font-size="12" class="t-mut" text-anchor="start">العربية</text>
+  <rect id="loc-lang-4" x="220" y="206" width="160" height="32" rx="10" class="panel"/>
+  <text id="loc-lang-4-flag" x="234" y="227" font-size="13" class="t" text-anchor="start">🇩🇪</text>
+  <text id="loc-lang-4-name" x="258" y="227" font-size="12" class="t-mut" text-anchor="start">Deutsch</text>
+  <rect id="loc-lang-5" x="392" y="206" width="160" height="32" rx="10" class="" style="fill:#F1F5F9;stroke:#E4EAF4;opacity:0.5"/>
+  <text id="loc-lang-5-flag" x="406" y="227" font-size="13" class="t" text-anchor="start">🇵🇱</text>
+  <text id="loc-lang-5-name" x="430" y="227" font-size="12" class="t-mut" text-anchor="start">Polski</text>
+  <text id="loc-countries-label" x="48" y="268" font-size="9" class="t-mut b" text-anchor="start">COUNTRIES</text>
+  <rect id="loc-country-table" x="48" y="278" width="724" height="126" rx="10" class="panel"/>
+  <rect id="loc-country-head" x="48" y="278" width="724" height="30" rx="0" class="sub"/>
+  <text id="loc-country-th-c" x="112" y="297.0" font-size="9" class="t-mut b" text-anchor="start">COUNTRY</text>
+  <text id="loc-country-th-d" x="330" y="297.0" font-size="9" class="t-mut b" text-anchor="start">CODE</text>
+  <text id="loc-country-th-l" x="450" y="297.0" font-size="9" class="t-mut b" text-anchor="start">LANGUAGES</text>
+  <text id="loc-country-th-def" x="640" y="297.0" font-size="9" class="t-mut b" text-anchor="start">DEFAULT</text>
+  <rect id="loc-row-0-tick" x="62" y="312" width="14" height="14" rx="4" style="fill:#3B5BDB"/>
+  <text id="loc-row-0-tick-mark" x="69" y="323" font-size="9" class="t b" text-anchor="middle" style="fill:#FFFFFF">✓</text>
+  <text id="loc-row-0-flag" x="90" y="324" font-size="12" class="t" text-anchor="start">🇺🇸</text>
+  <text id="loc-row-0-name" x="112" y="324" font-size="11" class="t b" text-anchor="start">United States</text>
+  <text id="loc-row-0-dial" x="330" y="324" font-size="11" class="t mono" text-anchor="start">+1</text>
+  <text id="loc-row-0-langs" x="450" y="324" font-size="10" class="t-mut" text-anchor="start">English</text>
+  <circle id="loc-default-0" cx="648" cy="319" r="7" style="fill:#FFFFFF;stroke:#BCC5D3;stroke-width:1.5"/>
+  <line x1="48" y1="334" x2="772" y2="334" class="line"/>
+  <rect id="loc-row-1-tick" x="62" y="344" width="14" height="14" rx="4" style="fill:#3B5BDB"/>
+  <text id="loc-row-1-tick-mark" x="69" y="355" font-size="9" class="t b" text-anchor="middle" style="fill:#FFFFFF">✓</text>
+  <text id="loc-row-1-flag" x="90" y="356" font-size="12" class="t" text-anchor="start">🇮🇱</text>
+  <text id="loc-row-1-name" x="112" y="356" font-size="11" class="t b" text-anchor="start">Israel</text>
+  <text id="loc-row-1-dial" x="330" y="356" font-size="11" class="t mono" text-anchor="start">+972</text>
+  <text id="loc-row-1-langs" x="450" y="356" font-size="10" class="t-mut" text-anchor="start">Hebrew · Arabic · Russian</text>
+  <circle id="loc-default-1" cx="648" cy="351" r="7" style="fill:#3B5BDB;stroke:#3B5BDB;stroke-width:1.5"/>
+  <line x1="48" y1="366" x2="772" y2="366" class="line"/>
+  <rect id="loc-row-2-tick" x="62" y="376" width="14" height="14" rx="4" style="fill:#3B5BDB"/>
+  <text id="loc-row-2-tick-mark" x="69" y="387" font-size="9" class="t b" text-anchor="middle" style="fill:#FFFFFF">✓</text>
+  <text id="loc-row-2-flag" x="90" y="388" font-size="12" class="t" text-anchor="start">🇩🇪</text>
+  <text id="loc-row-2-name" x="112" y="388" font-size="11" class="t b" text-anchor="start">Germany</text>
+  <text id="loc-row-2-dial" x="330" y="388" font-size="11" class="t mono" text-anchor="start">+49</text>
+  <text id="loc-row-2-langs" x="450" y="388" font-size="10" class="t-mut" text-anchor="start">German</text>
+  <circle id="loc-default-2" cx="648" cy="383" r="7" style="fill:#FFFFFF;stroke:#BCC5D3;stroke-width:1.5"/>
+  <g id="callout-1">
+    <circle cx="196" cy="128" r="11" class="cal"/>
+    <text x="196" y="132" class="cal-t" text-anchor="middle">1</text>
+  </g>
+  <path class="dash" d="M 196 118 L 196 96"/>
+  <g id="callout-2">
+    <circle cx="790" cy="182" r="11" class="cal"/>
+    <text x="790" y="186" class="cal-t" text-anchor="middle">2</text>
+  </g>
+  <path class="dash" d="M 779 182 L 556 182"/>
+  <g id="callout-3">
+    <circle cx="36" cy="182" r="11" class="cal"/>
+    <text x="36" y="186" class="cal-t" text-anchor="middle">3</text>
+  </g>
+  <path class="dash" d="M 47 182 L 60 182"/>
+  <g id="callout-4">
+    <circle cx="36" cy="330" r="11" class="cal"/>
+    <text x="36" y="334" class="cal-t" text-anchor="middle">4</text>
+  </g>
+  <path class="dash" d="M 47 330 L 60 330"/>
+  <g id="callout-5">
+    <circle cx="790" cy="340" r="11" class="cal"/>
+    <text x="790" y="344" class="cal-t" text-anchor="middle">5</text>
+  </g>
+  <path class="dash" d="M 779 340 L 660 340"/>
+</svg>

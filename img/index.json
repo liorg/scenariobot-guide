@@ -46,13 +46,15 @@
         "cl-unsynced": "Not identified yet — a ~ before the name, dashed ring",
         "cl-active": "Active — the handshake finished",
         "cl-inactive": "Inactive — set aside, still listed",
-        "cl-unsynced-0-connect": "Connect — links a bot (agent), or brings an inactive one back"
+        "cl-unsynced-0-connect": "Connect — links a bot (agent), or brings an inactive one back",
+        "cl-unwanted-0-badge": "Unwanted — this number asked to stop. No Connect, no sending, ever"
       },
       "callouts": {
         "1": "cl-unsynced",
         "2": "cl-active",
         "3": "cl-inactive",
-        "4": "cl-unsynced-0-connect"
+        "4": "cl-unsynced-0-connect",
+        "5": "cl-unwanted-0-badge"
       }
     },
     "screen-chat-view": {
@@ -119,6 +121,23 @@
         "3": "ex-0-templates",
         "4": "ex-0-status",
         "5": "ex-0-run"
+      }
+    },
+    "screen-lang-menu": {
+      "title": "The language menu",
+      "chapter": "22-languages",
+      "url": "/",
+      "elements": {
+        "lang-btn": "The flag in the top bar — the language you are reading now",
+        "lang-row-0-check": "The tick marks the current language",
+        "lang-list": "Your languages only — the ones chosen in Settings",
+        "lang-manage": "Opens Settings → 🌍, where the list is chosen"
+      },
+      "callouts": {
+        "1": "lang-btn",
+        "2": "lang-row-0-check",
+        "3": "lang-list",
+        "4": "lang-manage"
       }
     },
     "screen-login": {
@@ -260,6 +279,25 @@
       },
       "callouts": {}
     },
+    "screen-settings-locale": {
+      "title": "Language and country settings",
+      "chapter": "22-languages",
+      "url": "/settings/locale",
+      "elements": {
+        "loc-tabs-1": "The 🌍 tab",
+        "loc-lang-2": "Click a language to add it — or again to remove it",
+        "loc-lang-0": "★ is the interface language — it cannot be removed",
+        "loc-country-table": "The countries offered in every phone field",
+        "loc-default-1": "The country pre-selected in an empty phone field"
+      },
+      "callouts": {
+        "1": "loc-tabs-1",
+        "2": "loc-lang-2",
+        "3": "loc-lang-0",
+        "4": "loc-country-table",
+        "5": "loc-default-1"
+      }
+    },
     "screen-sms": {
       "title": "SMS on a rented phone",
       "chapter": "21-sms",
@@ -294,6 +332,23 @@
         "3": "tpl-0-status",
         "4": "tpl-0-published",
         "5": "tpl-1-actions"
+      }
+    },
+    "screen-unwanted": {
+      "title": "The unsubscribe page",
+      "chapter": "23-unwanted",
+      "url": "/unwanted/<token>",
+      "elements": {
+        "unw-number": "The number, partly masked",
+        "unw-body": "One block per language — English plus the number's mother tongue",
+        "unw-btn": "Opening the page does nothing — only this blocks the number",
+        "unw-ref": "The reference to quote to support — the only way back"
+      },
+      "callouts": {
+        "1": "unw-number",
+        "2": "unw-body",
+        "3": "unw-btn",
+        "4": "unw-ref"
       }
     }
   }

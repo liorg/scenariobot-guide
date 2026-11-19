@@ -122,11 +122,12 @@ d.save()
 # ══════════════════════════════════════════════════ calls list ══
 SECS = [("unsynced", "Unidentified — waiting to connect", [("~Dana", "972541234567", "amber")]),
         ("active", "Active", [("Avi Cohen", "Yes please", "ok"), ("Noa", "Thanks!", "ok")]),
-        ("inactive", "Inactive", [("Old lead", "972500000000", "mut")])]
+        ("inactive", "Inactive", [("Old lead", "972500000000", "mut")]),
+        ("unwanted", "Unwanted — asked to stop", [("Ron", "972509998888", "bad")])]
 ROW, PAD = 52, 12
 height = 56 + sum(18 + PAD*2 + ROW*len(r) + 14 for _, _, r in SECS) + 14
 d = Dia("screen-calls-list", 760, height, "The conversation list", "12-chat-view", "/phones/<phone>/calls")
-d.text("cl-count", 28, 36, "4 active bots (agents) · 2 unidentified · 1 inactive", 12, "t-mut b")
+d.text("cl-count", 28, 36, "4 active bots (agents) · 2 unidentified · 1 inactive · 1 unwanted", 12, "t-mut b")
 d.btn("cl-refresh", 652, 20, 84, "Refresh", "ghost", 26)
 y = 56
 for sec, title, rows in SECS:
@@ -135,7 +136,7 @@ for sec, title, rows in SECS:
     d.rect(f"cl-{sec}", 24, y + 18, 712, ph, rx=10)
     for i, (nm, sub, tone) in enumerate(rows):
         ry = y + 18 + PAD + i*ROW
-        col = {"amber": "#F59F00", "ok": C["pri"], "mut": "#868E96"}[tone]
+        col = {"amber": "#F59F00", "ok": C["pri"], "mut": "#868E96", "bad": C["bad"]}[tone]
         dash = ' stroke-dasharray="4 3"' if tone == "amber" else (' stroke-dasharray="1 3"' if tone == "mut" else "")
         d.raw(f'<circle id="cl-{sec}-{i}-avatar" cx="62" cy="{ry+26}" r="18" fill="{col}" '
               f'fill-opacity="0.15" stroke="{col}" stroke-width="2"{dash}/>')
@@ -143,6 +144,8 @@ for sec, title, rows in SECS:
         d.text(f"cl-{sec}-{i}-name", 92, ry + 23, nm, 13, "t b")
         if tone == "mut":
             d.chip(f"cl-{sec}-{i}-badge", 168, ry + 11, 60, "Inactive", "#868E96", "#F1F3F5")
+        if tone == "bad":
+            d.chip(f"cl-{sec}-{i}-badge", 134, ry + 11, 76, "⛔ Unwanted", C["bad"], C["badL"])
         d.text(f"cl-{sec}-{i}-last", 92, ry + 40, sub, 11, "t-mut")
         d.text(f"cl-{sec}-{i}-time", 700, ry + 23, "14:05", 11, "t-mut", "end")
         if tone in ("amber", "mut"):
@@ -152,6 +155,7 @@ d.note("cl-unsynced", "Not identified yet — a ~ before the name, dashed ring",
 d.note("cl-active", "Active — the handshake finished", 748, 196, (737, 196, 739, 196))
 d.note("cl-inactive", "Inactive — set aside, still listed", 748, 344, (737, 344, 739, 344))
 d.note("cl-unsynced-0-connect", "Connect — links a bot (agent), or brings an inactive one back", 510, 96, (521, 96, 536, 96))
+d.note("cl-unwanted-0-badge", "Unwanted — this number asked to stop. No Connect, no sending, ever", 748, 440, (737, 440, 739, 440))
 d.save()
 
 # ══════════════════════════════════════════════════ contacts ══
@@ -434,6 +438,100 @@ d.note("lg-github", "First sign-in creates the account", 378, 290)
 d.save()
 
 # ── write the index ───────────────────────────────────────────────────────
+# ══════════════════════════════════════════════════ language menu ══
+d = Dia("screen-lang-menu", 560, 300, "The language menu", "22-languages", "/")
+d.rect("lang-topbar", 20, 18, 520, 46)
+d.text("lang-brand", 40, 46, "ScenarioBot", 13, "t b")
+d.btn("lang-btn", 398, 26, 122, "🇮🇱  עברית  ▾", "ghost", 30)
+d.rect("lang-list", 340, 76, 180, 150, rx=10)
+for i, (flag, name, cur) in enumerate([("🇮🇱", "עברית", True), ("🇺🇸", "English", False), ("🇷🇺", "Русский", False)]):
+    ry = 84 + i * 34
+    if cur:
+        d.rect("lang-row-0-sel", 346, ry, 168, 30, cls="", rx=8, style=f"fill:{C['priL']}")
+    d.text(f"lang-row-{i}-flag", 362, ry + 20, flag, 13)
+    d.text(f"lang-row-{i}-name", 386, ry + 20, name, 12,
+           "t b" if cur else "t", style=f"fill:{C['pri']}" if cur else None)
+    if cur:
+        d.text("lang-row-0-check", 500, ry + 20, "✓", 12, "t b", "end", f"fill:{C['pri']}")
+d.line(346, 188, 514, 188)
+d.text("lang-manage", 362, 210, "⚙ Manage languages", 11, "t b", "start", f"fill:{C['pri']}")
+d.note("lang-btn", "The flag in the top bar — the language you are reading now", 540, 41, (529, 41, 524, 41))
+d.note("lang-row-0-check", "The tick marks the current language", 318, 100, (329, 100, 338, 100))
+d.note("lang-list", "Your languages only — the ones chosen in Settings", 318, 152, (329, 152, 338, 152))
+d.note("lang-manage", "Opens Settings → 🌍, where the list is chosen", 318, 210, (329, 210, 344, 210))
+d.save()
+
+# ══════════════════════════════════════════════ settings · locale ══
+d = Dia("screen-settings-locale", 820, 440, "Language and country settings", "22-languages", "/settings/locale")
+d.rect("loc-dialog", 24, 18, 772, 404, rx=14)
+d.text("loc-title", 48, 48, "Settings", 15, "t b")
+d.tabs("loc-tabs", 48, 66, ["👤 Personal", "🌍 Language & countries", "🔐 Two-step", "⚙ Advanced"], 1)
+d.line(24, 108, 796, 108)
+d.text("loc-langs-label", 48, 136, "MY LANGUAGES · 3 OF 4", 9, "t-mut b")
+d.text("loc-langs-hint", 48, 154, "Up to 4 languages. Only these appear in the language menu.", 10, "t-mut")
+for i, (flag, name, state) in enumerate([("🇺🇸", "English", "ui"), ("🇮🇱", "עברית", "on"), ("🇷🇺", "Русский", "on"),
+                                          ("🇸🇦", "العربية", "off"), ("🇩🇪", "Deutsch", "off"), ("🇵🇱", "Polski", "full")]):
+    cx, cy = 48 + (i % 3) * 172, 166 + (i // 3) * 40
+    on = state in ("ui", "on")
+    style = (f"fill:{C['priL']};stroke:{C['pri']}" if on else
+             "fill:#F1F5F9;stroke:#E4EAF4;opacity:0.5" if state == "full" else None)
+    d.rect(f"loc-lang-{i}", cx, cy, 160, 32, cls="panel" if state == "off" else "", rx=10, style=style)
+    d.text(f"loc-lang-{i}-flag", cx + 14, cy + 21, flag, 13)
+    d.text(f"loc-lang-{i}-name", cx + 38, cy + 21, name, 12, "t b" if on else "t-mut",
+           style=f"fill:{C['pri']}" if on else None)
+    if state in ("ui", "on"):
+        d.text(f"loc-lang-{i}-mark", cx + 144, cy + 21, "★" if state == "ui" else "✓", 12,
+               "t b", "end", f"fill:{C['pri']}")
+d.text("loc-countries-label", 48, 268, "COUNTRIES", 9, "t-mut b")
+d.rect("loc-country-table", 48, 278, 724, 126, rx=10)
+d.head("loc-country", 48, 278, 724, [("c", 112, "Country"), ("d", 330, "Code"),
+                                     ("l", 450, "Languages"), ("def", 640, "Default")])
+for i, (flag, name, dial, langs, dflt) in enumerate([
+        ("🇺🇸", "United States", "+1", "English", False),
+        ("🇮🇱", "Israel", "+972", "Hebrew · Arabic · Russian", True),
+        ("🇩🇪", "Germany", "+49", "German", False)]):
+    ry = 308 + i * 32
+    d.raw(f'<rect id="loc-row-{i}-tick" x="62" y="{ry+4}" width="14" height="14" rx="4" '
+          f'style="fill:{C["pri"]}"/>')
+    d.text(f"loc-row-{i}-tick-mark", 69, ry + 15, "✓", 9, "t b", "middle", style="fill:#FFFFFF")
+    d.text(f"loc-row-{i}-flag", 90, ry + 16, flag, 12)
+    d.text(f"loc-row-{i}-name", 112, ry + 16, name, 11, "t b")
+    d.text(f"loc-row-{i}-dial", 330, ry + 16, dial, 11, "t mono")
+    d.text(f"loc-row-{i}-langs", 450, ry + 16, langs, 10, "t-mut")
+    d.raw(f'<circle id="loc-default-{i}" cx="648" cy="{ry+11}" r="7" '
+          f'style="fill:{C["pri"] if dflt else "#FFFFFF"};stroke:{C["pri"] if dflt else "#BCC5D3"};stroke-width:1.5"/>')
+    if i < 2:
+        d.line(48, ry + 26, 772, ry + 26)
+d.note("loc-tabs-1", "The 🌍 tab", 196, 128, (196, 118, 196, 96))
+d.note("loc-lang-2", "Click a language to add it — or again to remove it", 790, 182, (779, 182, 556, 182))
+d.note("loc-lang-0", "★ is the interface language — it cannot be removed", 36, 182, (47, 182, 60, 182))
+d.note("loc-country-table", "The countries offered in every phone field", 36, 330, (47, 330, 60, 330))
+d.note("loc-default-1", "The country pre-selected in an empty phone field", 790, 340, (779, 340, 660, 340))
+d.save()
+
+# ══════════════════════════════════════════════ unsubscribe page ══
+d = Dia("screen-unwanted", 560, 420, "The unsubscribe page", "23-unwanted", "/unwanted/<token>")
+d.rect("unw-card", 40, 24, 480, 372, rx=18)
+d.text("unw-brand", 280, 58, "△ ○ □   grossman.bot", 11, "t-mut b", "middle")
+d.text("unw-title", 280, 90, "Stop messages from grossman.bot", 14, "t b", "middle")
+d.rect("unw-body", 68, 106, 424, 92, cls="sub", rx=10)
+d.text("unw-body-en", 88, 132, "The number", 11, "t")
+d.text("unw-number", 160, 132, "+972•••••567", 11, "t b mono")
+d.text("unw-body-en2", 88, 150, "will no longer receive messages from any", 11, "t")
+d.text("unw-body-en3", 88, 168, "grossman.bot customer.", 11, "t")
+d.line(68, 182, 492, 182)
+d.text("unw-body-he", 472, 196, "לא יקבל עוד הודעות מאף לקוח", 11, "t", "end")
+d.btn("unw-btn", 180, 222, 200, "Unsubscribe", "primary", 36)
+d.text("unw-hint", 280, 278, "Nothing happens until this is pressed", 10, "t-mut", "middle")
+d.rect("unw-ref", 180, 296, 200, 30, cls="", rx=8, style=f"fill:{C['okL']}")
+d.text("unw-ref-text", 280, 316, "UNW-000123", 12, "t b mono", "middle", f"fill:{C['ok']}")
+d.text("unw-support", 280, 356, "Support · contact@grossman.bot", 10, "t-mut", "middle")
+d.note("unw-number", "The number, partly masked", 540, 132, (529, 132, 496, 132))
+d.note("unw-body", "One block per language — English plus the number's mother tongue", 20, 152, (31, 152, 64, 152))
+d.note("unw-btn", "Opening the page does nothing — only this blocks the number", 20, 240, (31, 240, 176, 240))
+d.note("unw-ref", "The reference to quote to support — the only way back", 540, 311, (529, 311, 384, 311))
+d.save()
+
 MANUAL = {
  "screen-phone-card": ("A phone card in the phone list", "03-phones", "/phones", {
    "phone-card": "The card itself — click it to open the phone",

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" width="560" height="300" role="img" aria-label="The language menu">
+  <title>The language menu</title>
+
+  <style>
+    .bg{fill:#F7F9FC}.panel{fill:#FFFFFF;stroke:#E4EAF4;stroke-width:1.5}
+    .sub{fill:#F1F5F9;stroke:#E4EAF4;stroke-width:1}.line{stroke:#E4EAF4}
+    .t{font-family:'Segoe UI',Tahoma,sans-serif;fill:#1A2332}
+    .t-mut{font-family:'Segoe UI',Tahoma,sans-serif;fill:#8896A7}
+    .t-dis{font-family:'Segoe UI',Tahoma,sans-serif;fill:#BCC5D3}
+    .b{font-weight:700}.mono{font-family:Consolas,'JetBrains Mono',monospace}
+    .cal{fill:#7048E8}
+    .cal-t{font-family:'Segoe UI',Tahoma,sans-serif;fill:#FFF;font-weight:700;font-size:11px}
+    .dash{stroke:#7048E8;stroke-width:1.2;stroke-dasharray:3 3;fill:none}
+    @media (prefers-color-scheme:dark){
+      .bg{fill:#0F1420}.panel{fill:#171D2B;stroke:#2A3347}.sub{fill:#1F2738;stroke:#2A3347}
+      .line{stroke:#2A3347}.t{fill:#E6EAF2}.t-mut{fill:#7D8899}.t-dis{fill:#4F5A6B}
+      .cal{fill:#9775FA}.dash{stroke:#9775FA}
+    }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="560" height="300" rx="10"/>
+  <rect id="lang-topbar" x="20" y="18" width="520" height="46" rx="8" class="panel"/>
+  <text id="lang-brand" x="40" y="46" font-size="13" class="t b" text-anchor="start">ScenarioBot</text>
+  <rect id="lang-btn" x="398" y="26" width="122" height="30" rx="8" class="panel"/>
+  <text id="lang-btn-label" x="459.0" y="45.0" font-size="11" class="t b" text-anchor="middle">🇮🇱  עברית  ▾</text>
+  <rect id="lang-list" x="340" y="76" width="180" height="150" rx="10" class="panel"/>
+  <rect id="lang-row-0-sel" x="346" y="84" width="168" height="30" rx="8" class="" style="fill:#EEF2FF"/>
+  <text id="lang-row-0-flag" x="362" y="104" font-size="13" class="t" text-anchor="start">🇮🇱</text>
+  <text id="lang-row-0-name" x="386" y="104" font-size="12" class="t b" text-anchor="start" style="fill:#3B5BDB">עברית</text>
+  <text id="lang-row-0-check" x="500" y="104" font-size="12" class="t b" text-anchor="end" style="fill:#3B5BDB">✓</text>
+  <text id="lang-row-1-flag" x="362" y="138" font-size="13" class="t" text-anchor="start">🇺🇸</text>
+  <text id="lang-row-1-name" x="386" y="138" font-size="12" class="t" text-anchor="start">English</text>
+  <text id="lang-row-2-flag" x="362" y="172" font-size="13" class="t" text-anchor="start">🇷🇺</text>
+  <text id="lang-row-2-name" x="386" y="172" font-size="12" class="t" text-anchor="start">Русский</text>
+  <line x1="346" y1="188" x2="514" y2="188" class="line"/>
+  <text id="lang-manage" x="362" y="210" font-size="11" class="t b" text-anchor="start" style="fill:#3B5BDB">⚙ Manage languages</text>
+  <g id="callout-1">
+    <circle cx="540" cy="41" r="11" class="cal"/>
+    <text x="540" y="45" class="cal-t" text-anchor="middle">1</text>
+  </g>
+  <path class="dash" d="M 529 41 L 524 41"/>
+  <g id="callout-2">
+    <circle cx="318" cy="100" r="11" class="cal"/>
+    <text x="318" y="104" class="cal-t" text-anchor="middle">2</text>
+  </g>
+  <path class="dash" d="M 329 100 L 338 100"/>
+  <g id="callout-3">
+    <circle cx="318" cy="152" r="11" class="cal"/>
+    <text x="318" y="156" class="cal-t" text-anchor="middle">3</text>
+  </g>
+  <path class="dash" d="M 329 152 L 338 152"/>
+  <g id="callout-4">
+    <circle cx="318" cy="210" r="11" class="cal"/>
+    <text x="318" y="214" class="cal-t" text-anchor="middle">4</text>
+  </g>
+  <path class="dash" d="M 329 210 L 344 210"/>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" width="560" height="420" role="img" aria-label="The unsubscribe page">
+  <title>The unsubscribe page</title>
+
+  <style>
+    .bg{fill:#F7F9FC}.panel{fill:#FFFFFF;stroke:#E4EAF4;stroke-width:1.5}
+    .sub{fill:#F1F5F9;stroke:#E4EAF4;stroke-width:1}.line{stroke:#E4EAF4}
+    .t{font-family:'Segoe UI',Tahoma,sans-serif;fill:#1A2332}
+    .t-mut{font-family:'Segoe UI',Tahoma,sans-serif;fill:#8896A7}
+    .t-dis{font-family:'Segoe UI',Tahoma,sans-serif;fill:#BCC5D3}
+    .b{font-weight:700}.mono{font-family:Consolas,'JetBrains Mono',monospace}
+    .cal{fill:#7048E8}
+    .cal-t{font-family:'Segoe UI',Tahoma,sans-serif;fill:#FFF;font-weight:700;font-size:11px}
+    .dash{stroke:#7048E8;stroke-width:1.2;stroke-dasharray:3 3;fill:none}
+    @media (prefers-color-scheme:dark){
+      .bg{fill:#0F1420}.panel{fill:#171D2B;stroke:#2A3347}.sub{fill:#1F2738;stroke:#2A3347}
+      .line{stroke:#2A3347}.t{fill:#E6EAF2}.t-mut{fill:#7D8899}.t-dis{fill:#4F5A6B}
+      .cal{fill:#9775FA}.dash{stroke:#9775FA}
+    }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="560" height="420" rx="10"/>
+  <rect id="unw-card" x="40" y="24" width="480" height="372" rx="18" class="panel"/>
+  <text id="unw-brand" x="280" y="58" font-size="11" class="t-mut b" text-anchor="middle">△ ○ □   grossman.bot</text>
+  <text id="unw-title" x="280" y="90" font-size="14" class="t b" text-anchor="middle">Stop messages from grossman.bot</text>
+  <rect id="unw-body" x="68" y="106" width="424" height="92" rx="10" class="sub"/>
+  <text id="unw-body-en" x="88" y="132" font-size="11" class="t" text-anchor="start">The number</text>
+  <text id="unw-number" x="160" y="132" font-size="11" class="t b mono" text-anchor="start">+972•••••567</text>
+  <text id="unw-body-en2" x="88" y="150" font-size="11" class="t" text-anchor="start">will no longer receive messages from any</text>
+  <text id="unw-body-en3" x="88" y="168" font-size="11" class="t" text-anchor="start">grossman.bot customer.</text>
+  <line x1="68" y1="182" x2="492" y2="182" class="line"/>
+  <text id="unw-body-he" x="472" y="196" font-size="11" class="t" text-anchor="end">לא יקבל עוד הודעות מאף לקוח</text>
+  <rect id="unw-btn" x="180" y="222" width="200" height="36" rx="8" class="" style="fill:#3B5BDB"/>
+  <text id="unw-btn-label" x="280.0" y="244.0" font-size="11" class="t b" text-anchor="middle" style="fill:#FFFFFF">Unsubscribe</text>
+  <text id="unw-hint" x="280" y="278" font-size="10" class="t-mut" text-anchor="middle">Nothing happens until this is pressed</text>
+  <rect id="unw-ref" x="180" y="296" width="200" height="30" rx="8" class="" style="fill:#EBFBEE"/>
+  <text id="unw-ref-text" x="280" y="316" font-size="12" class="t b mono" text-anchor="middle" style="fill:#2F9E44">UNW-000123</text>
+  <text id="unw-support" x="280" y="356" font-size="10" class="t-mut" text-anchor="middle">Support · contact@grossman.bot</text>
+  <g id="callout-1">
+    <circle cx="540" cy="132" r="11" class="cal"/>
+    <text x="540" y="136" class="cal-t" text-anchor="middle">1</text>
+  </g>
+  <path class="dash" d="M 529 132 L 496 132"/>
+  <g id="callout-2">
+    <circle cx="20" cy="152" r="11" class="cal"/>
+    <text x="20" y="156" class="cal-t" text-anchor="middle">2</text>
+  </g>
+  <path class="dash" d="M 31 152 L 64 152"/>
+  <g id="callout-3">
+    <circle cx="20" cy="240" r="11" class="cal"/>
+    <text x="20" y="244" class="cal-t" text-anchor="middle">3</text>
+  </g>
+  <path class="dash" d="M 31 240 L 176 240"/>
+  <g id="callout-4">
+    <circle cx="540" cy="311" r="11" class="cal"/>
+    <text x="540" y="315" class="cal-t" text-anchor="middle">4</text>
+  </g>
+  <path class="dash" d="M 529 311 L 384 311"/>
+</svg>
