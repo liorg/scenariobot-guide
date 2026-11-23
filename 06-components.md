@@ -66,6 +66,35 @@ row means the bot sends twice and only waits once.**
 | **Menu** | sends a WhatsApp list, waits for a selection | the message, the list items, match mode |
 | **Buttons** | sends up to 3 buttons, waits for a tap | header, the buttons, match mode |
 | **Code card** | runs your own code against the reply | the code, sample input, failure action, timeout |
+| **📧 Receive mail** | waits for an email to the phone's address and captures a value from it | senders, subject, what to capture, timeout |
+
+### Receive mail
+
+**Every phone has an email address** — its number at `grossmanbot.download` —
+and this card waits for a mail to arrive there and pulls a value out of it.
+It is how a scenario gets a verification code that is sent by email rather
+than by WhatsApp.
+
+Narrow it with **who sends** (`noreply@bank.co.il`, or `@bank.co.il` for the
+whole domain) and **which subject** — each can be *is*, *contains*, *starts
+with* or *ends with*, and both ignore upper and lower case. Leave them empty
+and any mail counts.
+
+**What to capture** is one of `6 digits`, `4 digits`, `3+3 digits`, `Link`,
+`Format` — `Your code is <?>` — or a regex. The subject and the body are both
+searched. Only one value comes out: one `<?>`, or the regex's group 1, with
+any further groups landing in `MailParam01` onwards.
+
+The card has a **Test** box. Paste a real mail into it and it says whether
+the value would be captured, and if not, which part failed.
+
+Two things that are easy to get wrong: **the wait is counted from the last
+message the scenario sent**, not from when the card is reached; and a mail
+that arrives up to **ten minutes early still counts**, because services often
+send the code before the scenario gets that far.
+
+[Chapter 24](24-mail.md) covers the address, the Mail tab and what the
+statuses mean.
 
 ### Match mode
 
@@ -128,6 +157,7 @@ presets.
 | **Menu select** | supplies a list-row selection | row id, display text |
 | **Input** | supplies free text, or a template | the text, or a template + its values |
 | **Code card** | generates the reply with your own code | the code, failure action |
+| **✉️ Send mail code** | sends on the value the mail card captured | the value, by default the last capture |
 
 **Button select and menu select carry both an id and a text** because WhatsApp
 actually receives the text, while the scenario matches on the id.

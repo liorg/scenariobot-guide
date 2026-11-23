@@ -23,11 +23,15 @@
     "brand",
     "concepts",
     "phone contact scenario template",
-    "how it fits together"
+    "how it fits together",
+    "logo",
+    "triangle circle square",
+    "languages"
    ],
    "related": [
     "17-glossary",
-    "05-scenarios"
+    "05-scenarios",
+    "22-languages"
    ],
    "sections": [
     "Brand structure",
@@ -616,6 +620,10 @@
     "The panel warns that multiple calls are active",
     "A bot (agent) disappeared from the conversation list",
     "A bot (agent) is marked ⛔ Unwanted and I can't send anything",
+    "No mail is arriving on a phone",
+    "The mail is in the Mail tab but the scenario never got it",
+    "The mail arrived but no code was captured",
+    "The mail I wanted to keep has gone",
     "One screen is in English while the rest is translated",
     "My country isn't in the phone number field",
     "How do I delete a bot (agent)?",
@@ -937,6 +945,52 @@
    "actions": [
     "spot-unwanted-bot",
     "read-unwanted-banner"
+   ]
+  },
+  "24-mail": {
+   "title": "Mail — every phone has an email address",
+   "file": "24-mail.md",
+   "html": "24-mail.html",
+   "url": "/phones/<phone>/mail",
+   "screens": [
+    "screen-mail"
+   ],
+   "two_fa": null,
+   "keywords": [
+    "mail",
+    "email",
+    "inbox",
+    "email address",
+    "phone address",
+    "grossmanbot.download",
+    "receive mail",
+    "mail code",
+    "verification code by email",
+    "OTP by email",
+    "code from email",
+    "sender",
+    "subject",
+    "no mail arrived",
+    "not sent to scenario"
+   ],
+   "related": [
+    "06-components",
+    "21-sms",
+    "03-phones"
+   ],
+   "sections": [
+    "The address",
+    "What it is for",
+    "The Mail tab",
+    "Using it in a scenario",
+    "Mail is per phone, and it does not outlive a rental",
+    "When something doesn't arrive"
+   ],
+   "actions": [
+    "open-mail-tab",
+    "find-mail-address",
+    "search-mail",
+    "check-mail-forwarded"
    ]
   }
  },
@@ -1579,6 +1633,42 @@
    "type": "highlight",
    "url": "/unwanted/<token>",
    "element": "One block per language — English plus the number's mother tongue"
+  },
+  "open-mail-tab": {
+   "description": "Open the mail a phone has received",
+   "chapter": "24-mail",
+   "screen": "screen-mail",
+   "target": "mail-title",
+   "type": "highlight",
+   "url": "/phones/<phone>/mail",
+   "element": "How many senders have written to this phone"
+  },
+  "find-mail-address": {
+   "description": "Show where to find the phone's email address",
+   "chapter": "24-mail",
+   "screen": "screen-phone-card",
+   "target": "btn-manage",
+   "type": "navigate-highlight",
+   "url": "/phones",
+   "element": "Manage — opens the phone"
+  },
+  "search-mail": {
+   "description": "Search the mail by sender, subject or text",
+   "chapter": "24-mail",
+   "screen": "screen-mail",
+   "target": "mail-search",
+   "type": "highlight",
+   "url": "/phones/<phone>/mail",
+   "element": "Search covers the sender, the subject and the body"
+  },
+  "check-mail-forwarded": {
+   "description": "Show whether a mail reached the scenario",
+   "chapter": "24-mail",
+   "screen": "screen-mail",
+   "target": "mail-0-status",
+   "type": "highlight",
+   "url": "/phones/<phone>/mail",
+   "element": "Whether a scenario actually received it"
   }
  }
 }

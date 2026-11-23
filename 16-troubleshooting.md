@@ -281,6 +281,33 @@ the same ⛔.
 **There is no button for this.** Only support can revoke it, with the
 `UNW-…` reference or the number. [Chapter 23](23-unwanted.md).
 
+## No mail is arriving on a phone
+
+Check the address on **Phone details** against what you sent to — it is the
+phone's own number at `grossmanbot.download`, so a wrong digit is easy. On a
+phone added minutes ago the inbox may still be going up; the dialog says so.
+[Chapter 24](24-mail.md).
+
+## The mail is in the Mail tab but the scenario never got it
+
+Read the status on the message. **Too old, not sent** means it took more than
+ten minutes to reach us and the code would have expired anyway. **Phone has
+no host** means the phone isn't running. **No status at all** means nothing
+was waiting for it — the call was not sitting on a **Receive mail** card.
+
+## The mail arrived but no code was captured
+
+Open the **Receive mail** card and use its **Test** box with the real sender,
+subject and body. It names the part that failed — the sender, the subject, or
+the value itself. Remember the sender and subject filters ignore case, but a
+`Format` or `Regex` capture can be set to match case.
+
+## The mail I wanted to keep has gone
+
+A rented phone's mail is deleted when the rental ends or the phone is rented
+by someone else. The mailbox belongs to the phone, not to you — copy out
+anything you need while the rental is live. [Chapter 24](24-mail.md).
+
 ## One screen is in English while the rest is translated
 
 That string has no translation in your language yet, and a missing string

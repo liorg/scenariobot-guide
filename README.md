@@ -38,6 +38,7 @@ phone or bot (agent), the URL is a live link you can follow from here.
 | 21 | [SMS on a rented phone](21-sms.md) | text messages arriving on a rented SIM |
 | 22 | [Languages and countries](22-languages.md) | the language menu, your four languages, dial codes, mother tongue |
 | 23 | [When someone asks to stop](23-unwanted.md) | STOP, the unsubscribe link, and what ⛔ Unwanted means |
+| 24 | [Mail](24-mail.md) | every phone's email address, the Mail tab, pulling a code out of an email |
 
 ## Every screen has an address
 

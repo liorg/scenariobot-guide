@@ -159,6 +159,11 @@ SIMs that the platform keeps on a rack — you take one for an hour, it works li
 any other phone, and it goes back when you're done
 ([Chapter 20](20-rented-phones.md)).
 
+**Phone details**, on the card, shows the two addresses an outside service can
+reach this phone on: its **email address**, which every phone has
+([Chapter 24](24-mail.md)), and its **number for SMS**, which only a rented
+phone has. Both have a Copy button.
+
 A rented phone also has an **SMS tab**, which a phone of your own does not
 ([Chapter 21](21-sms.md)). And it cannot be deleted — you end the rental
 instead.
@@ -244,13 +249,15 @@ something ends it. See [Chapter 15](15-tips.md) for what keeps it alive.
 | **7** | SMS — rented phones only |
 
 
-Clicking a phone card opens **Phone Detail**, which has three tabs:
+Clicking a phone card opens **Phone Detail**, which has up to five tabs:
 
 | Tab | Contents | Chapter |
 |---|---|---|
 | **📞 Calls** | chat view and call history | [12](12-chat-view.md), [11](11-reading-a-call.md) |
 | **👥 Bots (Agents)** | bot (agent) list and the bot (agent) wizard | [04](04-contacts.md) |
 | **🤖 Scenarios** | scenario list and the designer | [05](05-scenarios.md) |
+| **📧 Mail** | the mail this phone received — **every phone has one** | [24](24-mail.md) |
+| **📱 SMS** | text messages on the SIM — **rented phones only** | [21](21-sms.md) |
 
 The back arrow at the top-left returns to the phone list.
 

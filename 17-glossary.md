@@ -61,6 +61,10 @@ and which failed.
 
 **Linked** — a bot (agent) that completed the handshake and is usable.
 
+**Mail address** — the inbox every phone has, its number at
+`grossmanbot.download`. Mail sent there can be read in the Mail tab and
+captured by a Receive mail card.
+
 **Match mode** — how strictly a reply must match: exact, contains, pattern, any.
 
 **Mother tongue** — the one language a country maps to. Decides the second
