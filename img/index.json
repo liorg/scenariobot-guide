@@ -157,6 +157,25 @@
         "4": "lg-github"
       }
     },
+    "screen-mail": {
+      "title": "The mail tab",
+      "chapter": "24-mail",
+      "url": "/phones/<phone>/mail",
+      "elements": {
+        "mail-title": "How many senders have written to this phone",
+        "mail-search": "Search covers the sender, the subject and the body",
+        "mail-0-sender": "One row per sender, not per message",
+        "mail-0-count": "How many mails that sender has sent",
+        "mail-0-status": "Whether a scenario actually received it"
+      },
+      "callouts": {
+        "1": "mail-title",
+        "2": "mail-search",
+        "3": "mail-0-sender",
+        "4": "mail-0-count",
+        "5": "mail-0-status"
+      }
+    },
     "screen-phone-card": {
       "title": "A phone card in the phone list",
       "chapter": "03-phones",

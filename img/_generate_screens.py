@@ -327,6 +327,39 @@ d.note("sms-2-sender", "Messages with no readable sender land here", 748, 232, (
 d.note("sms-search", "Search covers the sender and the text", 506, 34, (517, 34, 516, 34))
 d.save()
 
+# ═════════════════════════════════════════════════════════ mail ══
+d = Dia("screen-mail", 780, 320, "The mail tab", "24-mail", "/phones/<phone>/mail")
+d.text("mail-title", 28, 36, "3 senders", 14, "t b")
+d.rect("mail-search", 520, 20, 234, 28, cls="sub", rx=8)
+d.text("mail-search-ph", 536, 39, "Search sender, subject or text", 11, "t-mut")
+d.rect("mail-list", 24, 60, 730, 236, rx=10)
+for i, (who, subj, body, n, status) in enumerate([
+        ("noreply@bank.co.il", "Your verification code", "Your code is 482913. It expires in…", "4", "ok"),
+        ("alerts@shop.com",    "Order confirmed",        "Thanks for your order #8812",       "9", "stale"),
+        ("Unknown sender",     "",                       "Welcome aboard!",                   "1", None)]):
+    ry = 72 + i * 76
+    if i:
+        d.line(40, ry - 8, 738, ry - 8)
+    d.raw(f'<circle id="mail-{i}-avatar" cx="66" cy="{ry+26}" r="18" fill="{C["pri"]}" fill-opacity="0.15"/>')
+    d.text(f"mail-{i}-icon", 66, ry + 32, "@", 15, "t b", "middle", f"fill:{C['pri']}")
+    d.text(f"mail-{i}-sender", 98, ry + 18, who, 11,
+           "t b mono" if "@" in who else "t b")
+    d.chip(f"mail-{i}-count", 258, ry + 6, 30, n, C["pri"], C["priL"])
+    if subj:
+        d.text(f"mail-{i}-subject", 98, ry + 38, subj, 11, "t b")
+    d.text(f"mail-{i}-preview", 98, ry + (56 if subj else 38), body, 11, "t-mut")
+    if status == "ok":
+        d.chip(f"mail-{i}-status", 560, ry + 6, 112, "Sent to scenario", C["ok"], C["okL"])
+    elif status == "stale":
+        d.chip(f"mail-{i}-status", 560, ry + 6, 112, "Too old, not sent", C["warn"], C["warnL"])
+    d.text(f"mail-{i}-time", 722, ry + 18, "23/11 20:14", 10, "t-mut", "end")
+d.note("mail-title", "How many senders have written to this phone", 136, 36, (125, 36, 112, 36))
+d.note("mail-search", "Search covers the sender, the subject and the body", 506, 34, (517, 34, 516, 34))
+d.note("mail-0-sender", "One row per sender, not per message", 20, 90, (31, 90, 92, 90))
+d.note("mail-0-count", "How many mails that sender has sent", 300, 84)
+d.note("mail-0-status", "Whether a scenario actually received it", 768, 86, (757, 86, 676, 86))
+d.save()
+
 # ══════════════════════════════════════════════════ api explorer ══
 d = Dia("screen-api", 820, 320, "The API console", "18-api-explorer", "/api")
 d.text("api-title", 28, 36, "API Explorer", 15, "t b")
