@@ -11,6 +11,12 @@ keywords:
   - how it fits together
   - logo
   - triangle circle square
+  - why the logo
+  - logo meaning
+  - perceptron
+  - Frank Rosenblatt
+  - neural network
+  - brand colours
   - languages
   - automation
   - performance
@@ -50,19 +56,41 @@ products may sit under the same brand later.
 
 ### The story behind the logo
 
-The logo draws on the work of **Frank Rosenblatt**, who built the Perceptron in
-the late 1950s — one of the earliest models of an artificial neural network.
+![The grossman.bot mark](img/logo-grossman-bot.png)
 
-The geometric shapes — **triangle △, circle ○, square □** — stand for simple inputs
-and patterns. On their own they are basic forms. Together they carry the idea
-underneath artificial intelligence: recognising patterns, learning from
-information, and turning inputs into meaningful decisions.
+A purple **triangle △**, a blue **circle ○**, a cyan **square □**. They are not
+decoration, and they are not arbitrary — they are the first thing a machine was
+ever taught to recognise.
 
-That is what the platform does. ScenarioBot takes messages, scenarios, data and
-user interactions, and turns them into intelligent, automated workflows.
+In 1958 **Frank Rosenblatt**, at the Cornell Aeronautical Laboratory, built the
+**Perceptron**: one of the earliest working models of an artificial neural
+network, and the ancestor of everything that is now called AI. It was a room of
+hardware wired to a grid of photocells, and what it was trained to do was look
+at a simple shape and say which one it was.
 
-The visual language therefore ties the origins of machine learning to a modern
-AI and automation platform.
+![How a perceptron sorts a triangle, a circle and a square](img/logo-shapes.svg)
+
+**The important part is what it was not.** Nobody wrote a rule that a triangle
+has three sides. The machine was shown examples, it guessed, it was told when it
+was wrong, and the connection strengths shifted a little each time. The
+behaviour was *learned from examples*, not programmed — the idea every model
+since has been built on.
+
+![Frank Rosenblatt — illustration](img/rosenblatt-illustration.jpg)
+
+> *Frank Rosenblatt (1928–1971). Illustration, not a photograph.*
+
+That is why the three shapes are the mark. On their own they are the simplest
+things you can show something. Together they stand for the whole idea: take raw
+input, recognise the pattern, produce a decision.
+
+And it is a fair description of the product. ScenarioBot takes messages,
+scenarios, data and the replies people actually send, and turns them into
+decisions that run by themselves — a conversation that reacts to the answer it
+gets rather than reading from a script.
+
+From a machine learning to tell a triangle from a square, to a platform that
+learns what to do with an answer.
 
 ## What ScenarioBot does
 
