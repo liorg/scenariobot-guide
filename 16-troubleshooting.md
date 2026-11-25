@@ -281,6 +281,17 @@ the same ⛔.
 **There is no button for this.** Only support can revoke it, with the
 `UNW-…` reference or the number. [Chapter 23](23-unwanted.md).
 
+## There is a message on my phone that I did not send
+
+Read the recent calls for that phone ([Chapter 11](11-reading-a-call.md)) — a
+scheduled scenario you had forgotten is the usual answer, and the call history
+names the scenario and the step that sent it.
+
+If nothing there accounts for it, treat it as a compromised session: disconnect
+the phone, then mail **contact@grossman.bot** with the number and roughly when
+it happened. Don't wait until you are certain.
+[Your phone, your responsibility](03-phones.md#your-phone-your-responsibility).
+
 ## No mail is arriving on a phone
 
 Check the address on **Phone details** against what you sent to — it is the

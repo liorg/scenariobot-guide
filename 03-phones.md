@@ -21,6 +21,14 @@ keywords:
   - Cloud API
   - Baileys
   - provision
+  - responsibility
+  - my responsibility
+  - who is responsible
+  - check the phone
+  - refresh the session
+  - weekly
+  - suspicious activity
+  - report abuse
 related:
   - 20-rented-phones
   - 04-contacts
@@ -233,6 +241,45 @@ revoked access token rather than anything on a handset.
 
 The session behaves like any WhatsApp Web session: it stays linked until
 something ends it. See [Chapter 15](15-tips.md) for what keeps it alive.
+
+## Your phone, your responsibility
+
+**The number you connect stays yours.** ScenarioBot drives it; it does not take
+it over. Everything it sends goes out under your name, from your number, and
+counts as yours.
+
+That has four practical consequences, and they are worth reading once before
+your first real campaign rather than after it:
+
+**You are responsible for what goes out.** Every message a scenario sends is
+your message. Before putting a scenario on a schedule, run it in
+[playback](07-playback.md) and read what it will actually say.
+
+**Look in from time to time.** Open the phone and read the recent conversations
+([Chapter 12](12-chat-view.md)) and the last few calls
+([Chapter 11](11-reading-a-call.md)). A scenario that has quietly been sending
+the wrong thing, or a person replying to a message they never asked for, both
+show up there first and nowhere else.
+
+**Refresh the link about once a week.** A linked phone's session stays valid
+until something ends it — but a session that has been open for months is the one
+that drops at the worst moment. Reconnecting it on a quiet day is a minute's
+work; discovering it dropped mid-campaign is not. A Cloud API phone has no
+session to refresh, but its access token does expire.
+
+**Anything that looks wrong — write to us.** A message you did not send, a
+conversation you do not recognise, a sign-in you cannot place: mail
+**contact@grossman.bot** with the phone's number and roughly when. Do not wait
+to be sure.
+
+> **The responsibility for the phone is yours alone.** ScenarioBot provides the
+> tooling; the number, the content it sends and the consent of the people it
+> writes to remain the account holder's. If a number is used in a way that
+> breaks WhatsApp's rules, it is that number that gets banned.
+
+Related: a recipient can block your number across the whole platform by replying
+STOP ([Chapter 23](23-unwanted.md)). That is a safety net, not a substitute for
+watching your own phone.
 
 ## What is inside a phone
 

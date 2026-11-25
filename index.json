@@ -26,11 +26,20 @@
     "how it fits together",
     "logo",
     "triangle circle square",
-    "languages"
+    "languages",
+    "automation",
+    "performance",
+    "load testing",
+    "monitoring",
+    "what is it for",
+    "plan",
+    "plan limits",
+    "pricing"
    ],
    "related": [
     "17-glossary",
     "05-scenarios",
+    "13-executions",
     "22-languages"
    ],
    "sections": [
@@ -105,7 +114,15 @@
     "signal",
     "Cloud API",
     "Baileys",
-    "provision"
+    "provision",
+    "responsibility",
+    "my responsibility",
+    "who is responsible",
+    "check the phone",
+    "refresh the session",
+    "weekly",
+    "suspicious activity",
+    "report abuse"
    ],
    "related": [
     "20-rented-phones",
@@ -117,6 +134,7 @@
     "Two kinds of phone",
     "Adding a phone",
     "Reconnecting",
+    "Your phone, your responsibility",
     "What is inside a phone"
    ],
    "actions": [
@@ -620,6 +638,7 @@
     "The panel warns that multiple calls are active",
     "A bot (agent) disappeared from the conversation list",
     "A bot (agent) is marked ⛔ Unwanted and I can't send anything",
+    "There is a message on my phone that I did not send",
     "No mail is arriving on a phone",
     "The mail is in the Mail tab but the scenario never got it",
     "The mail arrived but no code was captured",

@@ -1,7 +1,11 @@
 # ScenarioBot User Guide
 
-**ScenarioBot** is the product; **Grossman.bot** is the company and brand behind
-it. [Chapter 01](01-what-it-does.md) sets out the distinction.
+**ScenarioBot** runs scripted WhatsApp conversations — for **automation**
+(a conversation that runs itself), **performance** (the same one against many
+phones at once) and **monitoring** (a scheduled run that checks another bot
+still answers). **Grossman.bot** is the company and brand behind it;
+[Chapter 01](01-what-it-does.md) sets out the distinction and what you work
+with.
 
 Written for end users, and structured so a chat assistant can answer from a
 single chapter without needing the rest.
@@ -15,9 +19,9 @@ phone or bot (agent), the URL is a live link you can follow from here.
 
 | # | Chapter | Answers |
 |---|---|---|
-| 01 | [What ScenarioBot does](01-what-it-does.md) | what the product is, the six things you work with |
+| 01 | [What ScenarioBot does](01-what-it-does.md) | what the product is for, the six things you work with |
 | 02 | [Signing in](02-signing-in.md) | login, password reset, new accounts |
-| 03 | [Connecting a phone](03-phones.md) | the phone list, the add-phone wizard, reconnecting |
+| 03 | [Connecting a phone](03-phones.md) | the phone list, the add-phone wizard, reconnecting, **what you are responsible for** |
 | 04 | [Adding a bot (agent)](04-contacts.md) | the PING/PONG handshake and why it exists |
 | 05 | [Building a scenario](05-scenarios.md) | the scenarios tab, the designer, saving and publishing |
 | 06 | [Scenario components](06-components.md) | every step type, matching, failure handling, custom code, `{{ }}` |

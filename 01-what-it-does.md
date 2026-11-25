@@ -9,9 +9,22 @@ keywords:
   - concepts
   - phone contact scenario template
   - how it fits together
+  - logo
+  - triangle circle square
+  - languages
+  - automation
+  - performance
+  - load testing
+  - monitoring
+  - what is it for
+  - plan
+  - plan limits
+  - pricing
 related:
   - 17-glossary
   - 05-scenarios
+  - 13-executions
+  - 22-languages
 ---
 # 01. What ScenarioBot does
 
@@ -40,7 +53,7 @@ products may sit under the same brand later.
 The logo draws on the work of **Frank Rosenblatt**, who built the Perceptron in
 the late 1950s — one of the earliest models of an artificial neural network.
 
-The geometric shapes — **triangle, circle, square** — stand for simple inputs
+The geometric shapes — **triangle △, circle ○, square □** — stand for simple inputs
 and patterns. On their own they are basic forms. Together they carry the idea
 underneath artificial intelligence: recognising patterns, learning from
 information, and turning inputs into meaningful decisions.
@@ -61,12 +74,31 @@ sends, what it expects back, what to do when the answer isn't what you expected
 recorded, so you can open any past conversation and see exactly which step sent
 what, what came back, and where it went wrong.
 
-Typical uses: appointment reminders that confirm or reschedule, recurring
-check-ins, intake questionnaires, and monitoring that another WhatsApp bot still
-answers correctly.
+### Three things it is for
 
-The interface is available in English, Hebrew, Russian and Arabic, and flips to
-right-to-left for Hebrew and Arabic. It comes in **light and dark**
+| | |
+|---|---|
+| **Automation** | a conversation that runs itself — reminders that confirm or reschedule, recurring check-ins, intake questionnaires |
+| **Performance** | the same conversation run against many phones at once, to see how a bot holds up under load ([Chapter 13](13-executions.md)) |
+| **Monitoring** | a scheduled run that checks another WhatsApp bot still answers correctly, and tells you when it stops ([Chapter 09](09-schedules.md)) |
+
+They are the same machinery, pointed at three different problems. A scenario
+you wrote to remind customers of an appointment is also, unchanged, a probe
+that tells you at 7am that your own bot has stopped replying.
+
+A run can collect what it needs from outside WhatsApp too: a code that arrives
+by **SMS** on a rented handset ([Chapter 21](21-sms.md)), or by **email** to the
+phone's own address ([Chapter 24](24-mail.md)) — which is how a scenario can
+sign in to a service that verifies by email.
+
+**What you can do depends on your plan** — how many bots (agents), phones and
+schedules you may have, and whether the API and load testing are switched on.
+The limits are on the pricing page; the screens are the same either way, and a
+limit shows up as an action being refused rather than a feature disappearing.
+
+The interface is **translated**, and you pick the languages you want in the
+🌐 menu — Hebrew and Arabic flip the whole layout right-to-left
+([Chapter 22](22-languages.md)). It comes in **light and dark**
 ([Chapter 14](14-settings.md#light-and-dark-mode)), and **every screen has its
 own address**, so anything you are looking at can be bookmarked or sent to a
 colleague ([the map](README.md#every-screen-has-an-address)).
