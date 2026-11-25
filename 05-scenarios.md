@@ -19,6 +19,14 @@ keywords:
   - fullscreen
   - Monaco
   - scenario settings
+  - navigate
+  - navigator
+  - go to component
+  - component palette
+  - add component
+  - long scenario
+  - scroll canvas
+  - pin panel
 related:
   - 06-components
   - 07-playback
@@ -110,7 +118,7 @@ choice is remembered between sessions.
 
 | # | Component | What it is |
 |---|---|---|
-| **1** | Ribbon | Save, Publish, Import, Export, Settings, Help — and the scenario's name |
+| **1** | Ribbon | grouped tools — History, File, **View**, Scenario — and the scenario's name |
 | **2** | EXPECT panel | the step types that **wait for a reply** — drag one onto the canvas |
 | **3** | Canvas | the conversation itself, top to bottom. A blue edge is an EXPECT step, an amber one a SEND step |
 | **4** | SEND panel | the step types that **send something** |
@@ -118,7 +126,37 @@ choice is remembered between sessions.
 | **6** | Status bar | event type, interval, step count, draft or active, saved or not |
 
 The two panels can be pinned open or left to slide out on hover, and the
-preference is remembered between sessions.
+preference is remembered between sessions. **📌 pins one open**; unpinned, it
+closes again when the pointer leaves.
+
+### Two ways round a long scenario
+
+A scenario of thirty steps is hard to work with by scrolling, so the ribbon's
+**View** group has two dialogs:
+
+| | |
+|---|---|
+| **🧭 Navigate** | every step in the scenario as a list — pick one and the canvas scrolls to it and selects it |
+| **🧩 Components** | every step type there is, EXPECT and SEND together, to add without hunting through the side panels |
+
+**🧩 Components adds *after the step you have selected*,** not at the bottom —
+and then selects what it just added, so adding three in a row builds them in
+order in the middle of an existing flow. Close it and the canvas scrolls to the
+last one you added.
+
+The canvas also has **▲ ▼ buttons** when there is more above or below. Click to
+page, hold to scroll continuously — and **dragging a card over one scrolls the
+canvas while you drag**, which is how you move a step a long way without
+letting go.
+
+### Adding without dragging
+
+Click a step type in a side panel instead of dragging it: it stays selected,
+marked 🎯, and **Enter** drops it at the end of the canvas. Useful for building
+a long run of steps quickly, and the only practical way on a keyboard.
+
+Drag still works — from either side panel, from the collapsed strip, and by
+touch with a long press.
 
 ## Export and import
 

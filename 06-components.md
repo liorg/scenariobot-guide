@@ -16,6 +16,13 @@ keywords:
   - parameters
   - placeholders
   - retry
+  - arrow
+  - arrows
+  - pause
+  - wait between steps
+  - skip
+  - stop
+  - timing
   - wrong reply
 related:
   - 05-scenarios
@@ -145,9 +152,16 @@ Two things worth knowing:
 
 ### Per-step timeout
 
-The **code card** is the only step with its own timeout. Left alone it inherits
-the scenario's interval; switched on, you set minutes and seconds, with quick
+**Every EXPECT step can have its own wait**, set from the **⏳ button** beside
+the card. Left alone it inherits the scenario's interval; set, it replaces the
+interval for that step and the badge shows the value (`45s`, `2m`, `2m30s`).
+
+The **code card** additionally has its timeout in the card itself, with quick
 presets.
+
+Use it where one answer genuinely takes longer than the rest — a reply that
+needs someone to go and look something up — rather than raising the interval
+for the whole scenario.
 
 ## SEND steps
 
@@ -171,6 +185,33 @@ actually receives the text, while the scenario matches on the id.
 Switching from template back to text clears the template selection, so pick your
 mode before filling values in. Templates are the only way to open a conversation
 outside WhatsApp's 24-hour window → [Chapter 08](08-templates.md).
+
+## The arrows between steps
+
+The arrow joining two steps is not just a line. **Click it to decide what
+happens in the gap.**
+
+![What an arrow between two steps can do](img/canvas-arrows.svg)
+
+| Set it to | What it does |
+|---|---|
+| *(nothing)* | wait the scenario's interval, then carry on |
+| **a fixed pause** | wait the minutes and seconds you give it |
+| **skip n intervals** | wait n × the scenario's interval |
+| **stop** | the flow ends here |
+
+There is an arrow above the first step too, so a scenario can pause before its
+first message.
+
+**All of it feeds the time estimate in the status bar**, along with each step's
+own ⏳ wait and the retries on any step set to retry. That estimate is the
+quickest check that a scenario is not accidentally an eight-hour one: add a few
+pauses and watch it move.
+
+> A **stop** arrow ends the flow there and the estimate counts nothing past it.
+> Keeping steps below one is a way to park a draft section without deleting it
+> — but it is easy to forget, so check the arrows before publishing if a
+> scenario ends sooner than you expect.
 
 ## When the reply is wrong
 

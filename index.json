@@ -219,7 +219,15 @@
     "import",
     "fullscreen",
     "Monaco",
-    "scenario settings"
+    "scenario settings",
+    "navigate",
+    "navigator",
+    "go to component",
+    "component palette",
+    "add component",
+    "long scenario",
+    "scroll canvas",
+    "pin panel"
    ],
    "related": [
     "06-components",
@@ -264,6 +272,13 @@
     "parameters",
     "placeholders",
     "retry",
+    "arrow",
+    "arrows",
+    "pause",
+    "wait between steps",
+    "skip",
+    "stop",
+    "timing",
     "wrong reply"
    ],
    "related": [
@@ -274,6 +289,7 @@
     "EXPECT and SEND — which is which",
     "EXPECT steps",
     "SEND steps",
+    "The arrows between steps",
     "When the reply is wrong",
     "Custom code steps",
     "`{{ }}` parameters"
