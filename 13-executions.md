@@ -54,6 +54,9 @@ wizard, and `grossman.bot/executions/<execution>/run` for the run confirmation.
 | **4** | pending n = the Scheduler has not picked the jobs up yet |
 | **5** | Run — disabled while anything is pending |
 
+> **Parallel executions are a plan feature.** On a plan without them the
+> section is not in the top bar at all ([Chapter 25](25-plans.md)).
+
 ## What it is
 
 One scenario, **copied onto several phones**, all talking to the **same

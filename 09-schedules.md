@@ -63,6 +63,9 @@ Also [grossman.bot/scheduling/new](https://grossman.bot/scheduling/new) to creat
 A rule that fires a scenario at chosen times, so you don't have to start each
 call by hand.
 
+> **Your plan sets how many schedules you may have**, not counting finished
+> ones ([Chapter 25](25-plans.md)).
+
 ## Creating one
 
 **Two-step verification is required for a schedule to run.** The screen stays

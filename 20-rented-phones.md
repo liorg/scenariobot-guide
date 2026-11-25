@@ -93,6 +93,11 @@ disappears without you reloading.
 
 **Search** filters by number.
 
+> **A rental is charged by the hour and does not use a plan phone slot.**
+> The price per duration is shown as you pick, the amount joins your balance
+> for that month, and **the price is fixed when you book**
+> ([Chapter 25](25-plans.md)). A duration priced at zero shows as **Free**.
+
 ## Renting one
 
 Press **Rent** on an available row. A dialog tells you how long you get —

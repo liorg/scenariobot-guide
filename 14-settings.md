@@ -60,13 +60,14 @@ closes it.
 | # | Component | What it is |
 |---|---|---|
 | **1** | Title bar | Settings opens over the screen you were on; **✕** closes it |
-| **2** | Tabs | personal details, 🌍 language & countries, two-step verification, advanced |
+| **2** | Tabs | personal details, 💎 plan, 💳 billing, 🌍 language & countries, two-step verification, advanced |
 | **3** | Alert dot | an orange dot marks a tab that needs attention |
 | **4** | Fields | name, email (read-only), language |
 | **5** | Avatar | click it to upload a picture |
 | **6** | Save | one button for all three tabs |
 
-Settings has **four tabs**, and each one has its own address, so you can link
+Settings has **six tabs** — 💎 **Plan** and 💳 **Billing** are covered in
+[Chapter 25](25-plans.md) — and each one has its own address, so you can link
 straight to a tab:
 
 | Tab | URL | What's in it |
@@ -260,7 +261,7 @@ is told which mode the page is in.
 |---|---|---|
 | **🔔 Notifications** | top bar | the notification bell — see below |
 | **🌙 / ☀️ theme** | top bar | light or dark — see above |
-| **Language switcher** | top bar | English, Hebrew, Russian, Arabic — **your choice is remembered**, and the layout flips to right-to-left for Hebrew and Arabic |
+| **Language switcher** | top bar | the languages you picked in 🌍 — **your choice is remembered**, and Hebrew and Arabic flip the layout right-to-left ([Chapter 22](22-languages.md)) |
 | **❓ Help** | **in the avatar menu**, with Settings and Logout | opens this guide in a dialog |
 | **Your avatar** | top bar | opens the account menu |
 | **Version number** | far end, small grey text | useful when reporting a problem |

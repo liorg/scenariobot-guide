@@ -41,6 +41,9 @@ actions:
 
 **URL:** [grossman.bot/api](https://grossman.bot/api)
 
+> **The API is also a plan feature** — on a plan without it there is no API
+> button whatever your verification status ([Chapter 25](25-plans.md)).
+
 > **The API button only appears after two-step verification.** Until your
 > mobile number is verified there is no API button in the top bar, and opening
 > [/api](https://grossman.bot/api) directly sends you back to the phone list.

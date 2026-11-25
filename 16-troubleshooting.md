@@ -281,6 +281,33 @@ the same ⛔.
 **There is no button for this.** Only support can revoke it, with the
 `UNW-…` reference or the number. [Chapter 23](23-unwanted.md).
 
+## "Plan limit reached" — I can't add a phone, bot (agent) or schedule
+
+You are at your plan's number for that resource. Remove one, or upgrade from
+the 💎 badge. Note that **rented phones do not count** towards the phone limit.
+[Chapter 25](25-plans.md).
+
+## I deleted a bot (agent) but still cannot add a new one
+
+Its slot stays taken for **24 hours**. The ⏳ banner gives the exact time it
+frees up. This applies however the bot (agent) left — deleted, deactivated,
+ignored, STOPped, or a rental that ended — and it is what prevents a small plan
+being used for mass messaging. [Chapter 25](25-plans.md).
+
+## The API or Executions button is missing from the top bar
+
+Two different reasons, and the plan one is checked first: the feature may not be
+included in your plan at all ([Chapter 25](25-plans.md)), and the API button
+additionally needs your mobile number verified
+([Chapter 14](14-settings.md)).
+
+## I paid but the balance still shows
+
+A payment is only marked paid once the platform has confirmed it with the
+payment provider directly, which can take a minute. If you were returned with a
+failure, nothing was charged. Still wrong after a few minutes — write to
+**contact@grossman.bot** with the date and amount. [Chapter 25](25-plans.md).
+
 ## There is a message on my phone that I did not send
 
 Read the recent calls for that phone ([Chapter 11](11-reading-a-call.md)) — a

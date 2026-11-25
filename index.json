@@ -644,6 +644,10 @@
     "The panel warns that multiple calls are active",
     "A bot (agent) disappeared from the conversation list",
     "A bot (agent) is marked ⛔ Unwanted and I can't send anything",
+    "\"Plan limit reached\" — I can't add a phone, bot (agent) or schedule",
+    "I deleted a bot (agent) but still cannot add a new one",
+    "The API or Executions button is missing from the top bar",
+    "I paid but the balance still shows",
     "There is a message on my phone that I did not send",
     "No mail is arriving on a phone",
     "The mail is in the Mail tab but the scenario never got it",
@@ -1016,6 +1020,61 @@
     "find-mail-address",
     "search-mail",
     "check-mail-forwarded"
+   ]
+  },
+  "25-plans": {
+   "title": "Your plan, your limits and the bill",
+   "file": "25-plans.md",
+   "html": "25-plans.html",
+   "url": "/settings/plan",
+   "screens": [
+    "screen-plan"
+   ],
+   "two_fa": null,
+   "keywords": [
+    "plan",
+    "plans",
+    "pricing",
+    "price",
+    "upgrade",
+    "downgrade",
+    "change plan",
+    "quota",
+    "limit",
+    "limit reached",
+    "cannot add",
+    "how many phones",
+    "how many bots",
+    "billing",
+    "bill",
+    "balance",
+    "pay",
+    "payment",
+    "card",
+    "CardCom",
+    "invoice",
+    "free plan",
+    "cooldown",
+    "wait before adding"
+   ],
+   "related": [
+    "14-settings",
+    "20-rented-phones",
+    "16-troubleshooting"
+   ],
+   "sections": [
+    "What a plan limits",
+    "When you hit a limit",
+    "Changing plan",
+    "The bill",
+    "Renting a phone",
+    "Common questions"
+   ],
+   "actions": [
+    "see-my-plan",
+    "change-plan",
+    "open-billing",
+    "pay-balance"
    ]
   }
  },
@@ -1694,6 +1753,42 @@
    "type": "highlight",
    "url": "/phones/<phone>/mail",
    "element": "Whether a scenario actually received it"
+  },
+  "see-my-plan": {
+   "description": "Show the current plan and what is used",
+   "chapter": "25-plans",
+   "screen": "screen-plan",
+   "target": "plan-usage",
+   "type": "navigate-highlight",
+   "url": "/settings/plan",
+   "element": "What you use against what the plan allows"
+  },
+  "change-plan": {
+   "description": "Show where to change plan",
+   "chapter": "25-plans",
+   "screen": "screen-plan",
+   "target": "plan-change",
+   "type": "navigate-highlight",
+   "url": "/settings/plan",
+   "element": "Change plan — nothing is deleted when you go down"
+  },
+  "open-billing": {
+   "description": "Show what is owed, on the billing tab",
+   "chapter": "25-plans",
+   "screen": "screen-plan",
+   "target": "plan-balance",
+   "type": "navigate-highlight",
+   "url": "/settings/plan",
+   "element": "What the 💳 Billing tab owes — charges minus payments"
+  },
+  "pay-balance": {
+   "description": "Show where to pay the balance",
+   "chapter": "25-plans",
+   "screen": "screen-plan",
+   "target": "plan-pay",
+   "type": "navigate-highlight",
+   "url": "/settings/plan",
+   "element": "Pay the whole balance, when you choose to"
   }
  }
 }

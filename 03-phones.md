@@ -242,6 +242,10 @@ revoked access token rather than anything on a handset.
 The session behaves like any WhatsApp Web session: it stays linked until
 something ends it. See [Chapter 15](15-tips.md) for what keeps it alive.
 
+> **Your plan sets how many phones you may add.** At the limit, **Add Phone**
+> is blocked and a banner says so. **Rented phones are not counted** — they
+> are billed by the hour instead ([Chapter 25](25-plans.md)).
+
 ## Your phone, your responsibility
 
 **The number you connect stays yours.** ScenarioBot drives it; it does not take

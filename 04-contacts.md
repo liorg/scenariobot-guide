@@ -150,6 +150,13 @@ a bot (agent), and open its calls.
 [Chapter 10](10-watching-a-call.md) for a running call,
 [Chapter 11](11-reading-a-call.md) for finished ones.
 
+> **Two plan rules apply here** ([Chapter 25](25-plans.md)). Only **active**
+> bots (agents) count against your plan — and **a bot (agent) you remove
+> keeps its slot for 24 hours afterwards**, however it left: deleted, made
+> inactive, ignored, STOPped, or a rental that ended. Deleting one to make
+> room for another does not work until that time is up, and the banner names
+> the hour. It is what stops a one-bot plan being used to message everyone.
+
 ## Deactivating, ignoring, restoring
 
 **A bot (agent) is never deleted.** There is no delete — the messages, the PING

@@ -29,6 +29,9 @@ taken from the number's dial code, not from your interface language.
 **Bot (agent) setting** — which bot (agent) a scenario talks to, set in scenario
 settings. Stored as `bot_contact`.
 
+**Balance** — what you have been charged minus what you have paid. Charges
+accrue as you go; you pay when you choose.
+
 **Call** — one run of one scenario against one bot (agent). A bot (agent) can only have
 one running at a time.
 
@@ -65,6 +68,9 @@ and which failed.
 `grossmanbot.download`. Mail sent there can be read in the Mail tab and
 captured by a Receive mail card.
 
+**Cooldown** — the 24 hours a removed bot (agent) keeps its plan slot, so a
+small plan cannot be cycled through many numbers.
+
 **Match mode** — how strictly a reply must match: exact, contains, pattern, any.
 
 **Mother tongue** — the one language a country maps to. Decides the second
@@ -85,6 +91,9 @@ picking the reply that comes back.
 
 **Placeholder** — a `{{ }}` value in a text field, filled at run time. Shown as
 a yellow chip.
+
+**Plan** — what your account may have: how many phones, bots (agents) and
+schedules, and whether the API and parallel executions are included.
 
 **Playback** — reading a scenario as a chat window rather than a diagram.
 Doesn't send anything.
