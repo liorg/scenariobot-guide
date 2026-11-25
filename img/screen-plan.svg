@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" width="820" height="420" role="img" aria-label="Plan and billing">
+  <title>Plan and billing</title>
+
+  <style>
+    .bg{fill:#F7F9FC}.panel{fill:#FFFFFF;stroke:#E4EAF4;stroke-width:1.5}
+    .sub{fill:#F1F5F9;stroke:#E4EAF4;stroke-width:1}.line{stroke:#E4EAF4}
+    .t{font-family:'Segoe UI',Tahoma,sans-serif;fill:#1A2332}
+    .t-mut{font-family:'Segoe UI',Tahoma,sans-serif;fill:#8896A7}
+    .t-dis{font-family:'Segoe UI',Tahoma,sans-serif;fill:#BCC5D3}
+    .b{font-weight:700}.mono{font-family:Consolas,'JetBrains Mono',monospace}
+    .cal{fill:#7048E8}
+    .cal-t{font-family:'Segoe UI',Tahoma,sans-serif;fill:#FFF;font-weight:700;font-size:11px}
+    .dash{stroke:#7048E8;stroke-width:1.2;stroke-dasharray:3 3;fill:none}
+    @media (prefers-color-scheme:dark){
+      .bg{fill:#0F1420}.panel{fill:#171D2B;stroke:#2A3347}.sub{fill:#1F2738;stroke:#2A3347}
+      .line{stroke:#2A3347}.t{fill:#E6EAF2}.t-mut{fill:#7D8899}.t-dis{fill:#4F5A6B}
+      .cal{fill:#9775FA}.dash{stroke:#9775FA}
+    }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="820" height="420" rx="10"/>
+  <rect id="plan-dialog" x="24" y="18" width="772" height="384" rx="14" class="panel"/>
+  <text id="plan-title" x="48" y="48" font-size="15" class="t b" text-anchor="start">Settings</text>
+  <rect id="plan-tab-0" x="48" y="66" width="81.0" height="30" rx="8" class="sub"/>
+  <text id="plan-tab-0-label" x="88.5" y="85" font-size="10" class="t-mut" text-anchor="middle">👤 Personal</text>
+  <rect id="plan-tab-1" x="135.0" y="66" width="74" height="30" rx="8" class="" style="fill:#EEF2FF;stroke:#3B5BDB"/>
+  <text id="plan-tab-1-label" x="172.0" y="85" font-size="10" class="t b" text-anchor="middle" style="fill:#3B5BDB">💎 Plan</text>
+  <rect id="plan-tab-2" x="215.0" y="66" width="74" height="30" rx="8" class="sub"/>
+  <text id="plan-tab-2-label" x="252.0" y="85" font-size="10" class="t-mut" text-anchor="middle">💳 Billing</text>
+  <rect id="plan-tab-3" x="295.0" y="66" width="81.0" height="30" rx="8" class="sub"/>
+  <text id="plan-tab-3-label" x="335.5" y="85" font-size="10" class="t-mut" text-anchor="middle">🌍 Language</text>
+  <rect id="plan-tab-4" x="382.0" y="66" width="81.0" height="30" rx="8" class="sub"/>
+  <text id="plan-tab-4-label" x="422.5" y="85" font-size="10" class="t-mut" text-anchor="middle">🔐 Two-step</text>
+  <line x1="24" y1="108" x2="796" y2="108" class="line"/>
+  <text id="plan-current-label" x="48" y="136" font-size="9" class="t-mut b" text-anchor="start">CURRENT PLAN</text>
+  <text id="plan-current" x="48" y="160" font-size="17" class="t b" text-anchor="start">Advanced</text>
+  <rect id="plan-price" x="152" y="144" width="92" height="18" rx="9" class="" style="fill:#EEF2FF"/>
+  <text id="plan-price-text" x="198.0" y="157" font-size="10" class="t b" text-anchor="middle" style="fill:#3B5BDB">$149 / month</text>
+  <rect id="plan-change" x="640" y="142" width="132" height="28" rx="8" class="" style="fill:#3B5BDB"/>
+  <text id="plan-change-label" x="706.0" y="160.0" font-size="11" class="t b" text-anchor="middle" style="fill:#FFFFFF">Change plan</text>
+  <text id="plan-usage-label" x="48" y="196" font-size="9" class="t-mut b" text-anchor="start">USAGE</text>
+  <rect id="plan-usage" x="48" y="206" width="724" height="112" rx="10" class="sub"/>
+  <text id="plan-res-0" x="68" y="236" font-size="11" class="t b" text-anchor="start">Phones</text>
+  <rect id="plan-bar-0-bg" x="212" y="227" width="320" height="12" rx="6" style="fill:#E4EAF4"/>
+  <rect id="plan-bar-0" x="212" y="227" width="192" height="12" rx="6" style="fill:#3B5BDB"/>
+  <text id="plan-count-0" x="552" y="237" font-size="11" class="t-mut" text-anchor="start">3 of 5</text>
+  <text id="plan-res-1" x="68" y="268" font-size="11" class="t b" text-anchor="start">Bots (agents)</text>
+  <rect id="plan-bar-1-bg" x="212" y="259" width="320" height="12" rx="6" style="fill:#E4EAF4"/>
+  <rect id="plan-bar-1" x="212" y="259" width="288" height="12" rx="6" style="fill:#E67700"/>
+  <text id="plan-count-1" x="552" y="269" font-size="11" class="t-mut" text-anchor="start">9 of 10</text>
+  <rect id="plan-cooling" x="660" y="256" width="100" height="18" rx="9" class="" style="fill:#FFF9DB"/>
+  <text id="plan-cooling-text" x="710.0" y="269" font-size="9" class="t b" text-anchor="middle" style="fill:#E67700">⏳ 2 freeing up</text>
+  <text id="plan-res-2" x="68" y="300" font-size="11" class="t b" text-anchor="start">Schedules</text>
+  <rect id="plan-bar-2-bg" x="212" y="291" width="320" height="12" rx="6" style="fill:#E4EAF4"/>
+  <rect id="plan-bar-2" x="212" y="291" width="224" height="12" rx="6" style="fill:#3B5BDB"/>
+  <text id="plan-count-2" x="552" y="301" font-size="11" class="t-mut" text-anchor="start">14 · unlimited</text>
+  <rect id="plan-balance" x="48" y="334" width="724" height="54" rx="10" class="" style="fill:#EEF2FF"/>
+  <text id="plan-balance-label" x="68" y="356" font-size="9" class="t-mut b" text-anchor="start">BALANCE DUE</text>
+  <text id="plan-balance-amt" x="68" y="378" font-size="17" class="t b" text-anchor="start" style="fill:#3B5BDB">$298</text>
+  <text id="plan-balance-hint" x="150" y="378" font-size="11" class="t-mut" text-anchor="start">Advanced · November, plus 2 phone rentals</text>
+  <rect id="plan-pay" x="640" y="348" width="112" height="28" rx="8" class="" style="fill:#3B5BDB"/>
+  <text id="plan-pay-label" x="696.0" y="366.0" font-size="11" class="t b" text-anchor="middle" style="fill:#FFFFFF">Pay now</text>
+  <g id="callout-1">
+    <circle cx="196" cy="128" r="11" class="cal"/>
+    <text x="196" y="132" class="cal-t" text-anchor="middle">1</text>
+  </g>
+  <path class="dash" d="M 196 118 L 196 96"/>
+  <g id="callout-2">
+    <circle cx="36" cy="262" r="11" class="cal"/>
+    <text x="36" y="266" class="cal-t" text-anchor="middle">2</text>
+  </g>
+  <path class="dash" d="M 47 262 L 60 262"/>
+  <g id="callout-3">
+    <circle cx="790" cy="256" r="11" class="cal"/>
+    <text x="790" y="260" class="cal-t" text-anchor="middle">3</text>
+  </g>
+  <path class="dash" d="M 779 256 L 764 256"/>
+  <g id="callout-4">
+    <circle cx="790" cy="156" r="11" class="cal"/>
+    <text x="790" y="160" class="cal-t" text-anchor="middle">4</text>
+  </g>
+  <path class="dash" d="M 779 156 L 776 156"/>
+  <g id="callout-5">
+    <circle cx="36" cy="362" r="11" class="cal"/>
+    <text x="36" y="366" class="cal-t" text-anchor="middle">5</text>
+  </g>
+  <path class="dash" d="M 47 362 L 60 362"/>
+  <g id="callout-6">
+    <circle cx="790" cy="362" r="11" class="cal"/>
+    <text x="790" y="366" class="cal-t" text-anchor="middle">6</text>
+  </g>
+  <path class="dash" d="M 779 362 L 756 362"/>
+</svg>

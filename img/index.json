@@ -214,6 +214,27 @@
         "7": "pd-tab-3"
       }
     },
+    "screen-plan": {
+      "title": "Plan and billing",
+      "chapter": "25-plans",
+      "url": "/settings/plan",
+      "elements": {
+        "plan-tab-1": "The 💎 tab — 💳 Billing is next to it",
+        "plan-usage": "What you use against what the plan allows",
+        "plan-cooling": "Slots freeing up — removed bots (agents) hold theirs for 24 hours",
+        "plan-change": "Change plan — nothing is deleted when you go down",
+        "plan-balance": "What the 💳 Billing tab owes — charges minus payments",
+        "plan-pay": "Pay the whole balance, when you choose to"
+      },
+      "callouts": {
+        "1": "plan-tab-1",
+        "2": "plan-usage",
+        "3": "plan-cooling",
+        "4": "plan-change",
+        "5": "plan-balance",
+        "6": "plan-pay"
+      }
+    },
     "screen-playback": {
       "title": "Playback",
       "chapter": "07-playback",

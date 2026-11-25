@@ -327,6 +327,51 @@ d.note("sms-2-sender", "Messages with no readable sender land here", 748, 232, (
 d.note("sms-search", "Search covers the sender and the text", 506, 34, (517, 34, 516, 34))
 d.save()
 
+# ════════════════════════════════════════════════════════ plan ══
+d = Dia("screen-plan", 820, 420, "Plan and billing", "25-plans", "/settings/plan")
+d.rect("plan-dialog", 24, 18, 772, 384, rx=14)
+d.text("plan-title", 48, 48, "Settings", 15, "t b")
+d.tabs("plan-tab", 48, 66, ["👤 Personal", "💎 Plan", "💳 Billing", "🌍 Language", "🔐 Two-step"], 1)
+d.line(24, 108, 796, 108)
+
+d.text("plan-current-label", 48, 136, "CURRENT PLAN", 9, "t-mut b")
+d.text("plan-current", 48, 160, "Advanced", 17, "t b")
+d.chip("plan-price", 152, 144, 92, "$149 / month", C["pri"], C["priL"], 10)
+d.btn("plan-change", 640, 142, 132, "Change plan", "primary")
+
+d.text("plan-usage-label", 48, 196, "USAGE", 9, "t-mut b")
+d.rect("plan-usage", 48, 206, 724, 112, cls="sub", rx=10)
+for i, (name, used, limit, cooling) in enumerate([("Phones", 3, 5, 0),
+                                                   ("Bots (agents)", 9, 10, 2),
+                                                   ("Schedules", 14, None, 0)]):
+    ry = 222 + i * 32
+    d.text(f"plan-res-{i}", 68, ry + 14, name, 11, "t b")
+    full = limit or 20
+    frac = min(used / full, 1.0)
+    d.raw(f'<rect id="plan-bar-{i}-bg" x="212" y="{ry+5}" width="320" height="12" rx="6" '
+          f'style="fill:#E4EAF4"/>')
+    col = C["warn"] if limit and used / limit >= 0.8 else C["pri"]
+    d.raw(f'<rect id="plan-bar-{i}" x="212" y="{ry+5}" width="{int(320*frac)}" height="12" rx="6" '
+          f'style="fill:{col}"/>')
+    label = f"{used} of {limit}" if limit else f"{used} · unlimited"
+    d.text(f"plan-count-{i}", 552, ry + 15, label, 11, "t-mut")
+    if cooling:
+        d.chip(f"plan-cooling", 660, ry + 2, 100, f"⏳ {cooling} freeing up", C["warn"], C["warnL"], 9)
+
+d.rect("plan-balance", 48, 334, 724, 54, cls="", rx=10, style=f"fill:{C['priL']}")
+d.text("plan-balance-label", 68, 356, "BALANCE DUE", 9, "t-mut b")
+d.text("plan-balance-amt", 68, 378, "$298", 17, "t b", style=f"fill:{C['pri']}")
+d.text("plan-balance-hint", 150, 378, "Advanced · November, plus 2 phone rentals", 11, "t-mut")
+d.btn("plan-pay", 640, 348, 112, "Pay now", "primary")
+
+d.note("plan-tab-1", "The 💎 tab — 💳 Billing is next to it", 196, 128, (196, 118, 196, 96))
+d.note("plan-usage", "What you use against what the plan allows", 36, 262, (47, 262, 60, 262))
+d.note("plan-cooling", "Slots freeing up — removed bots (agents) hold theirs for 24 hours", 790, 256, (779, 256, 764, 256))
+d.note("plan-change", "Change plan — nothing is deleted when you go down", 790, 156, (779, 156, 776, 156))
+d.note("plan-balance", "What the 💳 Billing tab owes — charges minus payments", 36, 362, (47, 362, 60, 362))
+d.note("plan-pay", "Pay the whole balance, when you choose to", 790, 362, (779, 362, 756, 362))
+d.save()
+
 # ═════════════════════════════════════════════════════════ mail ══
 d = Dia("screen-mail", 780, 320, "The mail tab", "24-mail", "/phones/<phone>/mail")
 d.text("mail-title", 28, 36, "3 senders", 14, "t b")
