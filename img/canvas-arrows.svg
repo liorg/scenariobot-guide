@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" width="700" height="420"
+     role="img" aria-label="The arrows between steps on the designer canvas">
+<title>What the arrow between two steps can do</title>
+<style>
+  .bg{fill:#F7F9FC}
+  .t{font:600 12px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#1A2332}
+  .t-b{font:800 12px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#1A2332}
+  .t-mut{font:500 11px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#8896A7}
+  .card{fill:#FFFFFF;stroke:#E4EAF4;stroke-width:1.5}
+  .exp{stroke:#3B5BDB}
+  .snd{fill:#DCF8C6;stroke:#E67700}
+  .line{stroke:#B9C4D6;stroke-width:2;fill:none}
+  .pill{fill:#FFFFFF;stroke:#B9C4D6;stroke-width:1.5}
+  @media (prefers-color-scheme:dark){
+    .bg{fill:#0F1420}.t,.t-b{fill:#E6EAF2}.t-mut{fill:#7D8899}
+    .card{fill:#171D2B;stroke:#2A3347}.snd{fill:#1F3326;stroke:#E67700}
+    .line{stroke:#3D4B6B}.pill{fill:#171D2B;stroke:#3D4B6B}
+  }
+</style>
+<defs>
+  <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0 0 L10 5 L0 10 z" fill="#B9C4D6"/>
+  </marker>
+</defs>
+<rect class="bg" width="700" height="420"/>
+
+<!-- Start -->
+<rect class="pill" x="268" y="18" width="110" height="30" rx="15"/>
+<text class="t-b" x="323" y="38" text-anchor="middle">Start</text>
+
+<path class="line" d="M323 48 V 78" marker-end="url(#ar)"/>
+
+<!-- card 1 : SEND -->
+<rect class="card snd" x="200" y="84" width="246" height="42" rx="10"/>
+<text class="t-b" x="220" y="110">📤 SEND · input</text>
+
+<!-- arrow 1 : wait -->
+<path class="line" d="M323 126 V 170" marker-end="url(#ar)"/>
+<rect class="pill" x="356" y="134" width="150" height="28" rx="14"/>
+<text class="t" x="372" y="152">⏳ wait 2m 30s</text>
+<text class="t-mut" x="516" y="152">a fixed pause</text>
+
+<!-- card 2 : EXPECT -->
+<rect class="card exp" x="200" y="176" width="246" height="42" rx="10"/>
+<text class="t-b" x="220" y="202">📥 EXPECT · text</text>
+<rect class="pill" x="452" y="184" width="62" height="26" rx="13"/>
+<text class="t" x="466" y="202">⏳ 45s</text>
+<text class="t-mut" x="522" y="202">this step's own wait</text>
+
+<!-- arrow 2 : skip -->
+<path class="line" d="M323 218 V 262" marker-end="url(#ar)"/>
+<rect class="pill" x="356" y="226" width="150" height="28" rx="14"/>
+<text class="t" x="372" y="244">⏭ skip 3 intervals</text>
+<text class="t-mut" x="516" y="244">3 × the interval</text>
+
+<!-- card 3 : SEND -->
+<rect class="card snd" x="200" y="268" width="246" height="42" rx="10"/>
+<text class="t-b" x="220" y="294">📤 SEND · menu_select</text>
+
+<!-- arrow 3 : stop -->
+<path class="line" d="M323 310 V 348" marker-end="url(#ar)"/>
+<rect class="pill" x="356" y="316" width="150" height="28" rx="14"/>
+<text class="t" x="372" y="334">⏹ stop here</text>
+<text class="t-mut" x="516" y="334">the flow ends</text>
+
+<rect class="pill" x="252" y="354" width="142" height="30" rx="15"/>
+<text class="t-mut" x="323" y="374" text-anchor="middle">nothing below runs</text>
+
+<text class="t-mut" x="24" y="404">Click an arrow to set it. A plain arrow waits the scenario's interval and nothing more.</text>
+</svg>

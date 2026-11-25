@@ -55,6 +55,7 @@ Three files here are not screen diagrams and are **not** in `index.json`:
 |---|---|
 | `logo-grossman-bot.png` | the brand mark |
 | `logo-shapes.svg` | the perceptron drawing in chapter 01, hand-written, not generated |
+| `canvas-arrows.svg` | what an arrow between two steps can do, chapter 06, hand-written |
 | `rosenblatt-illustration.jpg` | an **illustration** of Frank Rosenblatt — not a photograph, and captioned as such in the chapter |
 
 `logo-shapes.svg` uses the brand colours sampled from the mark —
