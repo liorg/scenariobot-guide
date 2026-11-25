@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300"
+     role="img" aria-label="A perceptron sorting a triangle, a circle and a square">
+<title>Why the logo is a triangle, a circle and a square</title>
+<style>
+  .bg{fill:#F7F9FC}
+  .t{font:600 13px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#1A2332}
+  .t-b{font:800 14px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#1A2332}
+  .t-mut{font:500 11.5px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#8896A7}
+  .node{fill:#FFFFFF;stroke:#B9C4D6;stroke-width:1.5}
+  .wire{stroke:#B9C4D6;stroke-width:1.4;fill:none}
+  .wire-on{stroke:#2090FC;stroke-width:2.2;fill:none}
+  .panel{fill:#FFFFFF;stroke:#E4EAF4;stroke-width:1.5}
+  @media (prefers-color-scheme:dark){
+    .bg{fill:#0F1420}
+    .t,.t-b{fill:#E6EAF2}.t-mut{fill:#7D8899}
+    .node{fill:#171D2B;stroke:#3D4B6B}
+    .wire{stroke:#3D4B6B}
+    .panel{fill:#171D2B;stroke:#2A3347}
+  }
+</style>
+<rect class="bg" width="760" height="300"/>
+
+<text class="t-mut" x="40" y="36">INPUT — SIMPLE SHAPES</text>
+<text class="t-mut" x="330" y="36">A LAYER OF WEIGHTS</text>
+<text class="t-mut" x="596" y="36">A DECISION</text>
+
+<!-- the three shapes, in the brand colours -->
+<polygon id="shape-triangle" points="86,58 50,112 122,112" fill="#A144FB"/>
+<circle  id="shape-circle"   cx="86" cy="164" r="28"           fill="#2090FC"/>
+<rect    id="shape-square"   x="58"  y="208" width="56" height="56" rx="12" fill="#07F0FC"/>
+
+<!-- wires -->
+<path class="wire-on" d="M126 86 C 220 86, 240 140, 332 140"/>
+<path class="wire"    d="M126 164 C 220 164, 250 150, 332 150"/>
+<path class="wire"    d="M126 232 C 220 232, 250 164, 332 160"/>
+<path class="wire-on" d="M126 86 C 230 100, 250 200, 332 206"/>
+<path class="wire"    d="M126 164 C 230 180, 260 210, 332 216"/>
+<path class="wire"    d="M126 232 C 230 240, 260 226, 332 226"/>
+
+<!-- the units -->
+<circle class="node" cx="352" cy="150" r="20"/>
+<circle class="node" cx="352" cy="216" r="20"/>
+<text class="t" x="352" y="155" text-anchor="middle">Σ</text>
+<text class="t" x="352" y="221" text-anchor="middle">Σ</text>
+
+<path class="wire-on" d="M372 150 C 440 150, 470 120, 528 120"/>
+<path class="wire"    d="M372 216 C 440 216, 470 190, 528 186"/>
+
+<!-- the answer -->
+<rect class="panel" x="528" y="96" width="196" height="48" rx="10"/>
+<text class="t-b" x="552" y="126">It is a triangle</text>
+<rect class="panel" x="528" y="162" width="196" height="48" rx="10"/>
+<text class="t-mut" x="552" y="192">something else</text>
+
+<text class="t-mut" x="40" y="286">Rosenblatt's Perceptron, 1958 — the weights are not programmed, they are learned from examples.</text>
+</svg>

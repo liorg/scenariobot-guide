@@ -47,6 +47,20 @@ assistant reading one chapter.
 | `screen-sms.svg` | [21-sms](../21-sms.md) | `/phones/<phone>/sms` |
 | `screen-templates.svg` | [08-templates](../08-templates.md) | `/phones/templates/<phone>` |
 
+## Not screens
+
+Three files here are not screen diagrams and are **not** in `index.json`:
+
+| File | What it is |
+|---|---|
+| `logo-grossman-bot.png` | the brand mark |
+| `logo-shapes.svg` | the perceptron drawing in chapter 01, hand-written, not generated |
+| `rosenblatt-illustration.jpg` | an **illustration** of Frank Rosenblatt — not a photograph, and captioned as such in the chapter |
+
+`logo-shapes.svg` uses the brand colours sampled from the mark —
+`#A144FB` triangle, `#2090FC` circle, `#07F0FC` square — and follows the same
+light/dark rule as the generated diagrams.
+
 ## `index.json`
 
 Every element id on every screen, with what it is, the chapter it belongs to
